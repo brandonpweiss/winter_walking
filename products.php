@@ -12,17 +12,7 @@
 	<script src="js/bootstrap-slider.js"></script>
 </head>
 <body>
-<header>
-	<nav>
-		<ul>
-			<li><a href="#">HOME</a></li>
-			<li><a href="#">PRODUCTS</a></li>
-			<li><img id="boot" src="img/boot.png" alt="boot"></li>
-			<li><a href="#">THE FACTS</a></li>
-			<li><a href="#">CONTACT</a></li>
-		</ul>
-	</nav>
-</header>
+<?php include('header.php');?>
 <div class="divider"></div>
 <section id="top" class="clearfix">
 <div class="wrap" class="clearfix">
@@ -246,30 +236,7 @@
 </section>
 <section></section>
 <section></section>
-<footer class="clearfix">
-	<div class="wrap">
-		<div class="column" id="column1">
-		<p>Winter Walking's full line of All-Traction Footwear™ can help you to reduce accidents, lower worker's compensation costs and keep employees working safely.</p>
-
-		<p>If you would like to place an order or get a specific quote, please visit the Ordering page.</p>
-</div>
-	<div class="column" id="column2">
-		<img src="img/xfr.png" alt="">
-</div>
-	<div class="column" id="column3">
-<ul>
-<li>Winter Walking Safety</li>
-<li>400 Babylon Road Horsham, PA 19044</li>
-</ul>
-<a href="mailto: info@winterwalking.com">info@winterwalking.com</a>
-<p>P 1-888-NO-SLIPS</p> 
-<p>P 1-888-667-5477</p>
-<p>F 1-215-441-9642</p>
-</div>
-
-	</div>
-
-</footer>
+<?php include('footer.php');?>
 	<script type="text/javascript">
 	$('.slider').slider();
 	</script>

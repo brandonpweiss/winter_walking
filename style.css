@@ -148,17 +148,15 @@ nav{
 	background: #000000 url(img/subtle_grunge.png) center center;
 	text-align: center;
 	height: 21px;
-	margin-top: 60px;
+	margin-top: 61px;
 	padding: 5px 0px 4px 0px;
 	z-index: 99999;
-	-webkit-box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .4);
-        
-        box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .4);
+	-webkit-box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .4); 
+    box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .4);
 }
 
 nav a{
 	font-family: nexalight;
-	font-weight: 700;
 	font-size: 16px;
 	text-decoration: none;
 	color: #333333;
@@ -180,7 +178,7 @@ nav ul{
 }
 nav ul li{
 	display:inline;
-	margin: -4px;
+	margin:0px -4px 0px -4px;
 }
 
 #boot{
@@ -453,10 +451,22 @@ footer{
 }
 
 #column1, #column3{
-	padding-top: 20px;
+	padding-top: 16px;
 	font-family: nexalight;
 	font-weight: 100;
 	font-size: 14px;
+}
+.column a{
+	color: #FFFFFF;
+	-webkit-transition:color .3s ease-in-out;
+	-moz-transition:color .3s ease-in-out;
+	-o-transition:color .3s ease-in-out;
+	-ms-transition:color .3s ease-in-out;
+	transition:color .3s ease-in-out;
+}
+
+.column a:hover{
+	color: #4fd2e8;
 }
 #column2{
 	text-align: center;
