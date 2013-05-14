@@ -290,9 +290,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4fd2e8', end
 }
 
 button.product#supergrip img{
-	-moz-box-shadow: 0 0 2px 4px #ccc;
--webkit-box-shadow: 0 0 2px 4px#ccc;
-box-shadow: 0 0 2px 4px #ccc;
+-moz-box-shadow: 0 0 2px 4px #4fd2e8;
+-webkit-box-shadow: 0 0 2px #4fd2e8;
+box-shadow: 0 0 2px 4px #4fd2e8;
 }
 
 button.product{
@@ -306,9 +306,9 @@ a.product{
 	text-decoration: none;
 }
 a.product img:hover, button.product img:hover{
--moz-box-shadow: 0 0 2px 4px #ccc;
--webkit-box-shadow: 0 0 2px 4px#ccc;
-box-shadow: 0 0 2px 4px #ccc;
+-moz-box-shadow: 0 0 2px 4px #4fd2e8;
+-webkit-box-shadow: 0 0 2px #4fd2e8;
+box-shadow: 0 0 2px 4px #4fd2e8;
 }
 
 .product{
