@@ -283,10 +283,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4fd2e8', end
 		margin-top:5px;
 }
 
+#productlist{
+	text-align: center;
+}
+
 #products{
 	clear:both;
 	background: url(img/subtle_grunge.png) 0 0 repeat; 
-	padding: 40px 0px 40px 0px;
+	padding: 20px 0px 40px 0px;
 }
 
 button.product#supergrip img{
@@ -313,8 +317,7 @@ box-shadow: 0 0 2px 4px #4fd2e8;
 
 .product{
 	display:inline-block;
-	margin-right:9px;
-	margin-left: 9px;
+	margin: 30px 13px 0px 13px;
 }
 
 .product img{
@@ -336,17 +339,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	padding: 15px;
 }
 
-#productlist{
-		padding-top:20px;
-}
 .title{
 	display: block;
 	text-align:center;
-	color: #000000;
 	text-decoration: none;
 	font-size: 12px;
 	letter-spacing: 1px;
 	font-family: langdon;
+	margin: 0 auto;
+	max-width: 70px;
 	margin-bottom: 7px;
 }
 

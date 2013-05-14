@@ -120,8 +120,6 @@ print('<div class="'.$fetchdetails[model].' collapse">
 mysqli_close($con);
 ?>
 </section>
-<section></section>
-<section></section>
 <?php include('footer.php');?>
 	<script type="text/javascript">
 	$('.slider').slider();
