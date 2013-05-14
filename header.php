@@ -1,3 +1,5 @@
+<?php
+echo '
 <header>
 	<nav>
 		<ul>
@@ -8,4 +10,5 @@
 			<li><a href="#">CONTACT</a></li>
 		</ul>
 	</nav>
-</header>
+</header>';
+?>

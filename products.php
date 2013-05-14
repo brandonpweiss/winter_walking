@@ -30,7 +30,7 @@
 		<div class="category">
 
 
-			<input class="span2 slider" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
+			<input class="span2 slider" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
 
 
 			<div class="options">
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<div class="category">
-			<input class="span2 slider" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
+			<input class="span2 slider" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
 
 			<div class="options">
 				<div class="option1">EASY ON/OFF</div>
@@ -47,7 +47,7 @@
 			</div>
 		</div>
 		<div class="category">
-			<input class="span2 slider" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
+			<input class="span2 slider" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
 
 			<div class="options">
 				<div class="option1">ECONOMICAL</div>
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 		<div class="category">
-			<input class="span2 slider" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
+			<input class="span2 slider" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
 
 			<div class="options">
 				<div class="option1">SHOE PROTECTION/WARMTH</div>
@@ -66,55 +66,38 @@
 	</div>
 </div>
 </section>
-
-
-
+<!-- /////////////////////// -->
 <section id="products">
 	<div id="productlist">
 		<div class="wrap clearfix">
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">KENOFLO</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-
-<button class="product" data-toggle="collapse" id="supergrip" data-target=".details" type="button">
-			<span class="title">SUPERGRIP</span>
-			<img src="img/products/2.png" alt="shoe">
-</button>
-
-
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">EASYRUN</span>
-			<img src="img/products/3.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">MASSIVE</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">SHOEZ</span>
-			<img src="img/products/2.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">RUNFAST</span>
-			<img src="img/products/3.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">THE GRIPPER</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
+<!-- //////////////////////// -->
+<?php
+include ('config.php');
+$query = mysqli_query ($con, 'SELECT * FROM products');
+//print list of products.
+while ($fetch = mysqli_fetch_array($query)) {
+print ('<button class="product" data-toggle="collapse" data-parent="#productlist" data-target=".'.$fetch[model].' " type="button">
+			<span class="title">'.$fetch[name].'</span>
+			<img src=" '.$fetch[img_url].' " alt="shoe">
+		</button>');
+};
+?>
+<!-- ////////////////////////// -->
 	</div>
 </div>
-
-
-<div class="details collapse">
+<!-- ///////////////////////// -->
+<?php
+$query = mysqli_query ($con, 'SELECT * FROM products');
+//Print product details.
+while ($fetchdetails = mysqli_fetch_array($query)) {
+print('<div class="'.$fetchdetails[model].' collapse">
 	<div class="detailsInner clearfix">
 	<div class="wrap">
 		<div class="arrow-up"></div>
 		<div id="left">
 			<div class="inner">
-				<h1>SUPERGRIP</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, aliquam, iste, dolore omnis quasi dolorem eius blanditiis qui odio asperiores non nisi officiis voluptates. Pariatur, officia facere ipsam vitae totam cupiditate voluptatibus eos nostrum adipisci modi dignissimos atque sunt laborum debitis molestias autem voluptatem? Voluptatum non fuga facere nesciunt. Voluptatibus, dignissimos, esse ipsa a culpa itaque excepturi commodi tempora quidem perferendis vitae est facilis sit beatae repellat in aliquam. Quia, suscipit harum vitae nam molestias.</p>
+				<h1>'.$fetchdetails[name].'</h1>
+				<p>'.$fetchdetails[description].'</p>
 					<div id="sizes">
 						<a href="#" class="size"><div class="sizebox">S</div></a>
 						<a href="#" class="size"><div class="sizebox">M</div></a>
@@ -122,123 +105,36 @@
 						<a href="#" class="size"><div class="sizebox">XL</div></a>
 						<a href="#" class="expert">CONTACT AN EXPERT ></a>
 					</div>
-	</div>
-</div>
-		
-				<div id="right">
-					<div class="inner">
-						<img src="img/products/2.png" alt="SUPERGRIP">
-					</div>
-				</div>
-				</div>
-			</div>
 			</div>
 		</div>
 
-
-
-		<div id="productlist">
-		<div class="wrap clearfix">
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">KENOFLO</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">SUPERGRIP</span>
-			<img src="img/products/2.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">EASYRUN</span>
-			<img src="img/products/3.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">MASSIVE</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">SHOEZ</span>
-			<img src="img/products/2.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">RUNFAST</span>
-			<img src="img/products/3.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">THE GRIPPER</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
+				<div id="right">
+					<div class="inner">
+						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
+					</div>
+				</div>
 	</div>
 	</div>
-	<div id="productlist">
-		<div class="wrap clearfix">
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">KENOFLO</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">SUPERGRIP</span>
-			<img src="img/products/2.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">EASYRUN</span>
-			<img src="img/products/3.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">MASSIVE</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">SHOEZ</span>
-			<img src="img/products/2.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">RUNFAST</span>
-			<img src="img/products/3.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">THE GRIPPER</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-	</div>
-	</div>
-	<div id="productlist">
-		<div class="wrap clearfix">
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">KENOFLO</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">SUPERGRIP</span>
-			<img src="img/products/2.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">EASYRUN</span>
-			<img src="img/products/3.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">MASSIVE</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">SHOEZ</span>
-			<img src="img/products/2.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">RUNFAST</span>
-			<img src="img/products/3.png" alt="shoe">
-		</button>
-		<button class="product" data-toggle="collapse" data-target=".details" type="button">
-			<span class="title">THE GRIPPER</span>
-			<img src="img/products/1.png" alt="shoe">
-		</button>
-	</div>
-	</div>
+</div>');
+};
+mysqli_close($con);
+?>
 </section>
 <section></section>
 <section></section>
 <?php include('footer.php');?>
 	<script type="text/javascript">
 	$('.slider').slider();
+
+	$(document).ready(function()
+		{
+			$('.product').click(function()
+			{
+				if ($('.collapse').hasClass('in')) {
+				$('.collapse').removeClass('in').removeAttr('style');
+				};
+			});
+		});
 	</script>
 </body>
 </html>
