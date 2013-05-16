@@ -10,6 +10,25 @@
 	<script src="jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-slider.js"></script>
+
+<script>
+// var point_to_pos = $('.pointTo').offset().left;
+
+// 	$(window).resize(function()
+// 	{
+// 			point_to_pos = $('.pointTo').offset().left;
+// 	});
+
+	// $(document).ready(function()
+	// {
+	// 	$('.product').click(function()
+	// 	{
+	// 		$(this).toggleClass('pointTo');
+	// 		var point_to_pos = $('.pointTo').offset().left;
+	// 	});
+
+	// });
+</script>
 </head>
 <body>
 <?php include('header.php');?>
@@ -30,7 +49,7 @@
 		<div class="category">
 
 
-			<input class="span2 slider" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
+			<input class="span2 slider" id="s1" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
 
 
 			<div class="options">
@@ -39,7 +58,7 @@
 			</div>
 		</div>
 		<div class="category">
-			<input class="span2 slider" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
+			<input class="span2 slider" id="s2" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
 
 			<div class="options">
 				<div class="option1">EASY ON/OFF</div>
@@ -47,7 +66,7 @@
 			</div>
 		</div>
 		<div class="category">
-			<input class="span2 slider" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
+			<input class="span2 slider" id="s3" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
 
 			<div class="options">
 				<div class="option1">ECONOMICAL</div>
@@ -55,7 +74,7 @@
 			</div>
 		</div>
 		<div class="category">
-			<input class="span2 slider" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
+			<input class="span2 slider" id="s4" value="" data-slider-min="0" data-slider-max="20" data-slider-step="2" data-slider-value="10" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" data-slider-handle="triangle">
 
 			<div class="options">
 				<div class="option1">SHOE PROTECTION/WARMTH</div>
@@ -68,28 +87,154 @@
 </section>
 <!-- /////////////////////// -->
 <section id="products">
-	<div id="productlist">
-		<div class="wrap clearfix">
 <!-- //////////////////////// -->
 <?php
 include ('config.php');
-$query = mysqli_query ($con, 'SELECT * FROM products');
+print('<div id="productlist1">
+		<div class="wrap clearfix">');
+$query = mysqli_query ($con, 'SELECT * FROM products WHERE id <= 7');
 //print list of products.
 while ($fetch = mysqli_fetch_array($query)) {
-print ('<button class="product" data-toggle="collapse" data-parent="#productlist" data-target=".'.$fetch[model].' " type="button">
+// $fetch = mysqli_fetch_assoc($query);
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#productlist1" data-target=".'.$fetch[model].' " type="button">
 			<span class="title">'.$fetch[name].'</span>
 			<img src=" '.$fetch[img_url].' " alt="shoe">
 		</button>');
 };
-?>
-<!-- ////////////////////////// -->
-	</div>
-</div>
-<!-- ///////////////////////// -->
-<?php
-$query = mysqli_query ($con, 'SELECT * FROM products');
+print('</div></div>');
+
+$query = mysqli_query ($con, 'SELECT * FROM products WHERE id <= 7');
 //Print product details.
 while ($fetchdetails = mysqli_fetch_array($query)) {
+print('<div class="'.$fetchdetails[model].' collapse">
+	<div class="detailsInner clearfix">
+	<div class="wrap">
+		<div class="arrow-up"></div>
+		<div id="left">
+			<div class="inner">
+				<h1>'.$fetchdetails[name].'</h1>
+				<p>'.$fetchdetails[description].'</p>
+					<div id="sizes">
+						<a href="#" class="size"><div class="sizebox">S</div></a>
+						<a href="#" class="size"><div class="sizebox">M</div></a>
+						<a href="#" class="size"><div class="sizebox">L</div></a>
+						<a href="#" class="size"><div class="sizebox">XL</div></a>
+						<a href="#" class="expert">CONTACT AN EXPERT ></a>
+					</div>
+			</div>
+		</div>
+
+				<div id="right">
+					<div class="inner">
+						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
+					</div>
+				</div>
+	</div>
+	</div>
+</div>');
+};
+/////////////////////////
+print('<div id="productlist2">
+		<div class="wrap clearfix">');
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 8 AND id <=14');
+//print list of products.
+while ($fetch = mysqli_fetch_array($query2)) {
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#productlist2" data-target=".'.$fetch[model].' " type="button">
+			<span class="title">'.$fetch[name].'</span>
+			<img src=" '.$fetch[img_url].' " alt="shoe">
+		</button>');
+};
+print('</div></div>');
+
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=8 AND id <=14');
+//Print product details.
+while ($fetchdetails = mysqli_fetch_array($query2)) {
+print('<div class="'.$fetchdetails[model].' collapse">
+	<div class="detailsInner clearfix">
+	<div class="wrap">
+		<div class="arrow-up"></div>
+		<div id="left">
+			<div class="inner">
+				<h1>'.$fetchdetails[name].'</h1>
+				<p>'.$fetchdetails[description].'</p>
+					<div id="sizes">
+						<a href="#" class="size"><div class="sizebox">S</div></a>
+						<a href="#" class="size"><div class="sizebox">M</div></a>
+						<a href="#" class="size"><div class="sizebox">L</div></a>
+						<a href="#" class="size"><div class="sizebox">XL</div></a>
+						<a href="#" class="expert">CONTACT AN EXPERT ></a>
+					</div>
+			</div>
+		</div>
+
+				<div id="right">
+					<div class="inner">
+						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
+					</div>
+				</div>
+	</div>
+	</div>
+</div>');
+};
+/////////////////////////
+print('<div id="productlist3">
+		<div class="wrap clearfix">');
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 15 AND id <=21');
+//print list of products.
+while ($fetch = mysqli_fetch_array($query2)) {
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#productlist3" data-target=".'.$fetch[model].' " type="button">
+			<span class="title">'.$fetch[name].'</span>
+			<img src=" '.$fetch[img_url].' " alt="shoe">
+		</button>');
+};
+print('</div></div>');
+
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=15 AND id <=21');
+//Print product details.
+while ($fetchdetails = mysqli_fetch_array($query2)) {
+print('<div class="'.$fetchdetails[model].' collapse">
+	<div class="detailsInner clearfix">
+	<div class="wrap">
+		<div class="arrow-up"></div>
+		<div id="left">
+			<div class="inner">
+				<h1>'.$fetchdetails[name].'</h1>
+				<p>'.$fetchdetails[description].'</p>
+					<div id="sizes">
+						<a href="#" class="size"><div class="sizebox">S</div></a>
+						<a href="#" class="size"><div class="sizebox">M</div></a>
+						<a href="#" class="size"><div class="sizebox">L</div></a>
+						<a href="#" class="size"><div class="sizebox">XL</div></a>
+						<a href="#" class="expert">CONTACT AN EXPERT ></a>
+					</div>
+			</div>
+		</div>
+
+				<div id="right">
+					<div class="inner">
+						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
+					</div>
+				</div>
+	</div>
+	</div>
+</div>');
+};
+/////////////////////////
+print('<div id="productlist4">
+		<div class="wrap clearfix">');
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 22 AND id <=28');
+//print list of products.
+while ($fetch = mysqli_fetch_array($query2)) {
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#productlist4" data-target=".'.$fetch[model].' " type="button">
+			<span class="title">'.$fetch[name].'</span>
+			<img src=" '.$fetch[img_url].' " alt="shoe">
+		</button>');
+};
+print('</div></div>');
+
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=22 AND id <=28');
+//Print product details.
+while ($fetchdetails = mysqli_fetch_array($query2)) {
 print('<div class="'.$fetchdetails[model].' collapse">
 	<div class="detailsInner clearfix">
 	<div class="wrap">
@@ -124,15 +269,22 @@ mysqli_close($con);
 	<script type="text/javascript">
 	$('.slider').slider();
 
-	$(document).ready(function()
-		{
+	$(document).ready(function(){
+
+var s1val = $('#s1').slider().data('slider');
+
+	if (s1val > 10) {
+		$('.traction').css('display', 'none');
+	} else if (s1val < 10) {
+		$('.versatility').css('display', 'none');
+	};
 			$('.product').click(function()
 			{
-				if ($('.collapse').hasClass('in')) {
-				$('.collapse').removeClass('in').removeAttr('style');
-				};
+				var point_to_pos = $(this).offset().left + 28;
+				$('.arrow-up').css({ 'left': point_to_pos});
 			});
 		});
+
 	</script>
 </body>
 </html>
