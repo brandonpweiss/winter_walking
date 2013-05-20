@@ -69,35 +69,42 @@
 <!-- /////////////////////// -->
 <section id="products">
 <?php
-$i = 0;
+// $i = 1;
+/*
 $a = 7;
 $b = 1;
 $c = 0;
+*/
 include ('config.php');
 
 $query = mysqli_query ($con, 'SELECT * FROM products');
-
+print('<div class="wrap clearfix">');
 while ($fetch = mysqli_fetch_array($query)) {
+/*
 if ($c == 0) {
 print('<div class="wrap clearfix">');
 };
-print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" product-row="'.$b.'" type="button">
+*/
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" id="" type="button">
 			<span class="title">'.$fetch[name].'</span>
 			<img src=" '.$fetch[img_url].' " alt="shoe">
 		</button>');
-$i++;
-$c++;
+// $i++;
+// $c++;
 // };
 
+/*
 if ($i == $a) {
-print('</div>');
+// print('</div>');
 print('<div class="details" id="row'.$b.'" product-row="'.$b.'"></div>');
 $a = $a + 7;
 $b++;
 $c = 0;
 };
+*/
 
 };
+print('</div>');
 mysqli_close($con);
 ?>
 </section>
@@ -114,7 +121,6 @@ if (s1val > 10) {
 } else if (s1val < 10) {
 	$('.versatility').addClass('hide1').fadeOut('slow','swing');
 } else if (s1val = 10) {
-
 $('.versatility').each(function(){
 	if ($(this).hasClass('hide2') || $(this).hasClass('hide3') || $(this).hasClass('hide4')) {
 		if ($(this).hasClass('hide1')) {
@@ -136,6 +142,9 @@ $('.traction').each(function(){
 });
 
 }
+
+
+
 
 }
 });
@@ -173,6 +182,9 @@ $('.easyonoff').each(function(){
 
 }
 
+
+
+
 }
 });
 
@@ -208,6 +220,9 @@ $('.economical').each(function(){
 });
 
 }
+
+
+
 
 }
 });
@@ -245,6 +260,9 @@ $('.protectionwarmth').each(function(){
 
 }
 
+
+
+
 }
 });
 
@@ -263,49 +281,71 @@ $(document).ready(function(){
 
 		$('.product').click(function()
 	{
-		var row = $(this).attr('product-row');
+///////////////////////////////////////////////
 		var number = $(this).attr('product-number');
 		var name = $(this).attr('product-name');
 		var description = $(this).attr('product-description');
 		var imgurl = $(this).attr('product-image');
-
-		var openRow = $('.open').attr('product-row');
-
-		if ($(this).hasClass('clicked'))
-		{
-			console.log("close same button");
-		$('.details').slideUp();
-		$(this).removeClass('clicked');
-		}
-		else if ($('.product').hasClass('clicked'))
-		{
-			if (row == openRow) {
-				console.log("open another button in same row");
-				console.log(row , openRow);
-				$('.clicked').removeClass('clicked');
-				$('.open').removeClass('open');
-
-				$('#row'+row+'').html('<div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div>');
-
-				$(this).addClass('clicked');
-				$('#row'+row+'').addClass('open');
-			} else {
-				console.log("open another button in diff row");
-				console.log(row , openRow);
-				$('.open').slideUp().removeClass('open');
-				$('.clicked').removeClass('clicked');
-				$('#row'+row+'').html('<div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div>');
-				$('#row'+row+'').addClass('open').slideDown();
-				$(this).addClass('clicked');
-			};
-		}
-		else
-		{
-			console.log("open same button");
-			$('#row'+row+'').html('<div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div>');
-			$('#row'+row+'').addClass('open').slideDown();
-			$(this).addClass('clicked');
+		// var currentrow = 'null';
+//////////////number visibile items //////////
+		var i = 1;
+		$('.product').each(function(){
+		if ($(this).hasClass('hide1') || $(this).hasClass('hide2') || $(this).hasClass('hide3') || $(this).hasClass('hide4')) {
+			$(this).attr('id', 'NULL');
+		} else {
+			$(this).attr('id',(i));
+			i++;
+	};
+});
+////////////// find current row //////////////
+		var itemnumber = $(this).attr('id');
+		if (itemnumber <= 7){
+			var currentrow = 1;
+			var lastitem = 7;
+		} else if (itemnumber >= 8 && itemnumber <= 14){
+			var currentrow = 2;
+			var lastitem = 14;
+		} else if (itemnumber >= 15 && itemnumber <= 21){
+			var currentrow = 3;
+			var lastitem = 21;
+		} else if (itemnumber >= 22 && itemnumber <= 28){
+			var currentrow = 4;
+			var lastitem = 28;
+		} else if (itemnumber >= 29 && itemnumber <= 35){
+			var currentrow = 5;
+			var lastitem = 35;
 		};
+/////////////////////////////////////////////
+if ($('.details').length){
+
+var detailsrow = $('.details').attr('current-row');
+
+if (currentrow == detailsrow) {
+	if ($(this).hasClass('on')) {
+	$('.details').slideUp(function() {
+    $('.details').remove();
+    $(this).removeClass('on');
+	});
+		} else {
+$('.details').remove();
+$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+$('.details').slideDown();
+		};
+
+} else {
+	$('.details').slideUp(function() {
+    $('.details').remove();
+    $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+			$('.details').slideDown();
+	});
+  };
+
+} else {
+			$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+			$('.details').slideDown();
+			$(this).addClass('on');
+};
+
 
 		var point_to_pos = $(this).offset().left + 28;
 		$('.arrow-up').css({ 'left': point_to_pos});
