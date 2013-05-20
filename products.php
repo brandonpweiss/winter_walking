@@ -111,123 +111,125 @@ print('<div id="'.$fetchdetails[model].'" class="collapse">
 	</div>
 </div>');
 };
-// $query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 8 AND id <=14');
-// while ($fetch = mysqli_fetch_array($query2)) {
-// print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
-// 			<span class="title">'.$fetch[name].'</span>
-// 			<img src=" '.$fetch[img_url].' " alt="shoe">
-// 		</button>');
-// };
+/*
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 8 AND id <=14');
+while ($fetch = mysqli_fetch_array($query2)) {
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
+			<span class="title">'.$fetch[name].'</span>
+			<img src=" '.$fetch[img_url].' " alt="shoe">
+		</button>');
+};
 
-// $query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=8 AND id <=14');
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=8 AND id <=14');
 
-// while ($fetchdetails = mysqli_fetch_array($query2)) {
-// print('<div id="'.$fetchdetails[model].'" class="collapse">
-// 	<div class="detailsInner clearfix">
-// 	<div class="wrap">
-// 		<div class="arrow-up"></div>
-// 		<div id="left">
-// 			<div class="inner">
-// 				<h1>'.$fetchdetails[name].'</h1>
-// 				<p>'.$fetchdetails[description].'</p>
-// 					<div id="sizes">
-// 						<a href="#" class="size"><div class="sizebox">S</div></a>
-// 						<a href="#" class="size"><div class="sizebox">M</div></a>
-// 						<a href="#" class="size"><div class="sizebox">L</div></a>
-// 						<a href="#" class="size"><div class="sizebox">XL</div></a>
-// 						<a href="#" class="expert">CONTACT AN EXPERT ></a>
-// 					</div>
-// 			</div>
-// 		</div>
+while ($fetchdetails = mysqli_fetch_array($query2)) {
+print('<div id="'.$fetchdetails[model].'" class="collapse">
+	<div class="detailsInner clearfix">
+	<div class="wrap">
+		<div class="arrow-up"></div>
+		<div id="left">
+			<div class="inner">
+				<h1>'.$fetchdetails[name].'</h1>
+				<p>'.$fetchdetails[description].'</p>
+					<div id="sizes">
+						<a href="#" class="size"><div class="sizebox">S</div></a>
+						<a href="#" class="size"><div class="sizebox">M</div></a>
+						<a href="#" class="size"><div class="sizebox">L</div></a>
+						<a href="#" class="size"><div class="sizebox">XL</div></a>
+						<a href="#" class="expert">CONTACT AN EXPERT ></a>
+					</div>
+			</div>
+		</div>
 
-// 				<div id="right">
-// 					<div class="inner">
-// 						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
-// 					</div>
-// 				</div>
-// 	</div>
-// 	</div>
-// </div>');
-// };
-// $query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 15 AND id <=21');
-// //print list of products.
-// while ($fetch = mysqli_fetch_array($query2)) {
-// print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
-// 			<span class="title">'.$fetch[name].'</span>
-// 			<img src=" '.$fetch[img_url].' " alt="shoe">
-// 		</button>');
-// };
+				<div id="right">
+					<div class="inner">
+						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
+					</div>
+				</div>
+	</div>
+	</div>
+</div>');
+};
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 15 AND id <=21');
+//print list of products.
+while ($fetch = mysqli_fetch_array($query2)) {
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
+			<span class="title">'.$fetch[name].'</span>
+			<img src=" '.$fetch[img_url].' " alt="shoe">
+		</button>');
+};
 
-// $query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=15 AND id <=21');
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=15 AND id <=21');
 
-// while ($fetchdetails = mysqli_fetch_array($query2)) {
-// print('<div id="'.$fetchdetails[model].'" class="collapse">
-// 	<div class="detailsInner clearfix">
-// 	<div class="wrap">
-// 		<div class="arrow-up"></div>
-// 		<div id="left">
-// 			<div class="inner">
-// 				<h1>'.$fetchdetails[name].'</h1>
-// 				<p>'.$fetchdetails[description].'</p>
-// 					<div id="sizes">
-// 						<a href="#" class="size"><div class="sizebox">S</div></a>
-// 						<a href="#" class="size"><div class="sizebox">M</div></a>
-// 						<a href="#" class="size"><div class="sizebox">L</div></a>
-// 						<a href="#" class="size"><div class="sizebox">XL</div></a>
-// 						<a href="#" class="expert">CONTACT AN EXPERT ></a>
-// 					</div>
-// 			</div>
-// 		</div>
+while ($fetchdetails = mysqli_fetch_array($query2)) {
+print('<div id="'.$fetchdetails[model].'" class="collapse">
+	<div class="detailsInner clearfix">
+	<div class="wrap">
+		<div class="arrow-up"></div>
+		<div id="left">
+			<div class="inner">
+				<h1>'.$fetchdetails[name].'</h1>
+				<p>'.$fetchdetails[description].'</p>
+					<div id="sizes">
+						<a href="#" class="size"><div class="sizebox">S</div></a>
+						<a href="#" class="size"><div class="sizebox">M</div></a>
+						<a href="#" class="size"><div class="sizebox">L</div></a>
+						<a href="#" class="size"><div class="sizebox">XL</div></a>
+						<a href="#" class="expert">CONTACT AN EXPERT ></a>
+					</div>
+			</div>
+		</div>
 
-// 				<div id="right">
-// 					<div class="inner">
-// 						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
-// 					</div>
-// 				</div>
-// 	</div>
-// 	</div>
-// </div>');
-// };
+				<div id="right">
+					<div class="inner">
+						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
+					</div>
+				</div>
+	</div>
+	</div>
+</div>');
+};
 
-// $query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 22 AND id <=28');
-// while ($fetch = mysqli_fetch_array($query2)) {
-// print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
-// 			<span class="title">'.$fetch[name].'</span>
-// 			<img src=" '.$fetch[img_url].' " alt="shoe">
-// 		</button>');
-// };
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 22 AND id <=28');
+while ($fetch = mysqli_fetch_array($query2)) {
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
+			<span class="title">'.$fetch[name].'</span>
+			<img src=" '.$fetch[img_url].' " alt="shoe">
+		</button>');
+};
 
-// $query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=22 AND id <=28');
+$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=22 AND id <=28');
 
-// while ($fetchdetails = mysqli_fetch_array($query2)) {
-// print('<div id="'.$fetchdetails[model].'" class="collapse">
-// 	<div class="detailsInner clearfix">
-// 	<div class="wrap">
-// 		<div class="arrow-up"></div>
-// 		<div id="left">
-// 			<div class="inner">
-// 				<h1>'.$fetchdetails[name].'</h1>
-// 				<p>'.$fetchdetails[description].'</p>
-// 					<div id="sizes">
-// 						<a href="#" class="size"><div class="sizebox">S</div></a>
-// 						<a href="#" class="size"><div class="sizebox">M</div></a>
-// 						<a href="#" class="size"><div class="sizebox">L</div></a>
-// 						<a href="#" class="size"><div class="sizebox">XL</div></a>
-// 						<a href="#" class="expert">CONTACT AN EXPERT ></a>
-// 					</div>
-// 			</div>
-// 		</div>
+while ($fetchdetails = mysqli_fetch_array($query2)) {
+print('<div id="'.$fetchdetails[model].'" class="collapse">
+	<div class="detailsInner clearfix">
+	<div class="wrap">
+		<div class="arrow-up"></div>
+		<div id="left">
+			<div class="inner">
+				<h1>'.$fetchdetails[name].'</h1>
+				<p>'.$fetchdetails[description].'</p>
+					<div id="sizes">
+						<a href="#" class="size"><div class="sizebox">S</div></a>
+						<a href="#" class="size"><div class="sizebox">M</div></a>
+						<a href="#" class="size"><div class="sizebox">L</div></a>
+						<a href="#" class="size"><div class="sizebox">XL</div></a>
+						<a href="#" class="expert">CONTACT AN EXPERT ></a>
+					</div>
+			</div>
+		</div>
 
-// 				<div id="right">
-// 					<div class="inner">
-// 						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
-// 					</div>
-// 				</div>
-// 	</div>
-// 	</div>
-// </div>');
-// };
-// print('</div>');
+				<div id="right">
+					<div class="inner">
+						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
+					</div>
+				</div>
+	</div>
+	</div>
+</div>');
+};
+
+print('</div>');*/
 mysqli_close($con);
 ?>
 </section>
@@ -246,7 +248,9 @@ if (s1val > 10) {
 
 $('.versatility').each(function(){
 	if ($(this).hasClass('hide2') || $(this).hasClass('hide3') || $(this).hasClass('hide4')) {
-
+		if ($(this).hasClass('hide1')) {
+			$(this).removeClass('hide1');
+		};
 	} else if ($(this).hasClass('hide1')) {
 		$(this).removeClass('hide1').css('display','inline-block');
 	};
@@ -254,10 +258,12 @@ $('.versatility').each(function(){
 
 $('.traction').each(function(){
 	if ($(this).hasClass('hide2') || $(this).hasClass('hide3') || $(this).hasClass('hide4')) {
-
+		if ($(this).hasClass('hide1')) {
+			$(this).removeClass('hide1');
+		};
 	} else if ($(this).hasClass('hide1')) {
 		$(this).removeClass('hide1').css('display','inline-block');
-	};
+};
 });
 
 }
@@ -277,7 +283,9 @@ if (s2val > 10) {
 
 $('.security').each(function(){
 	if ($(this).hasClass('hide1') || $(this).hasClass('hide3') || $(this).hasClass('hide4')) {
-
+		if ($(this).hasClass('hide2')) {
+			$(this).removeClass('hide2');
+		};
 	} else if ($(this).hasClass('hide2')) {
 		$(this).removeClass('hide2').css('display','inline-block');
 	};
@@ -285,7 +293,9 @@ $('.security').each(function(){
 
 $('.easyonoff').each(function(){
 	if ($(this).hasClass('hide1') || $(this).hasClass('hide3') || $(this).hasClass('hide4')) {
-
+		if ($(this).hasClass('hide2')) {
+			$(this).removeClass('hide2');
+		};
 	} else if ($(this).hasClass('hide2')) {
 		$(this).removeClass('hide2').css('display','inline-block');
 	};
@@ -308,18 +318,22 @@ if (s3val > 10) {
 
 $('.indstrength').each(function(){
 	if ($(this).hasClass('hide2') || $(this).hasClass('hide1') || $(this).hasClass('hide4')) {
-
+		if ($(this).hasClass('hide3')) {
+			$(this).removeClass('hide3');
+		};
 	} else if ($(this).hasClass('hide3')) {
 		$(this).removeClass('hide3').css('display','inline-block');
-	}
+	};
 });
 
 $('.economical').each(function(){
 	if ($(this).hasClass('hide2') || $(this).hasClass('hide1') || $(this).hasClass('hide4')) {
-
+		if ($(this).hasClass('hide3')) {
+			$(this).removeClass('hide3');
+		};
 	} else if ($(this).hasClass('hide3')) {
 		$(this).removeClass('hide3').css('display','inline-block');
-	}
+	};
 });
 
 }
@@ -339,18 +353,22 @@ if (s4val > 10) {
 
 $('.nocoverage').each(function(){
 	if ($(this).hasClass('hide2') || $(this).hasClass('hide3') || $(this).hasClass('hide1')) {
-
+		if ($(this).hasClass('hide4')) {
+			$(this).removeClass('hide4');
+		};
 	} else if ($(this).hasClass('hide4')) {
 		$(this).removeClass('hide4').css('display','inline-block');
-	}
+	};
 });
 
 $('.protectionwarmth').each(function(){
 	if ($(this).hasClass('hide2') || $(this).hasClass('hide3') || $(this).hasClass('hide1')) {
-
+		if ($(this).hasClass('hide4')) {
+			$(this).removeClass('hide4');
+		};
 	} else if ($(this).hasClass('hide4')) {
 		$(this).removeClass('hide4').css('display','inline-block');
-	}
+	};
 });
 
 }
