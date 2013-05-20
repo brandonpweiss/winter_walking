@@ -108,6 +108,7 @@ mysqli_close($con);
 $('#s1').slider({
           formater: function(value) {
             var s1val = value;
+            $('.details').slideUp();
 if (s1val > 10) {
 	$('.traction').addClass('hide1').fadeOut('slow','swing');
 } else if (s1val < 10) {
@@ -143,6 +144,7 @@ $('.traction').each(function(){
 $('#s2').slider({
           formater: function(value) {
             var s2val = value;
+            $('.details').slideUp();
 if (s2val > 10) {
 	$('.easyonoff').addClass('hide2').fadeOut('slow','swing');
 } else if (s2val < 10) {
@@ -178,6 +180,7 @@ $('.easyonoff').each(function(){
 $('#s3').slider({
           formater: function(value) {
             var s3val = value;
+            $('.details').slideUp();
 if (s3val > 10) {
 	$('.economical').addClass('hide3').fadeOut('slow','swing');
 } else if (s3val < 10) {
@@ -213,6 +216,7 @@ $('.economical').each(function(){
 $('#s4').slider({
           formater: function(value) {
             var s4val = value;
+            $('.details').slideUp();
 if (s4val > 10) {
 	$('.protectionwarmth').addClass('hide4').fadeOut('slow','swing');
 } else if (s4val < 10) {
