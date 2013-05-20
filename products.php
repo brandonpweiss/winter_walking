@@ -68,168 +68,36 @@
 </section>
 <!-- /////////////////////// -->
 <section id="products">
-<!-- //////////////////////// -->
 <?php
+$i = 0;
+$a = 7;
+$b = 1;
+$c = 0;
 include ('config.php');
-print('<div class="wrap clearfix">');
+
 $query = mysqli_query ($con, 'SELECT * FROM products');
 
 while ($fetch = mysqli_fetch_array($query)) {
-print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-target="#'.$fetch[model].'" data-parent="#products" type="button">
+if ($c == 0) {
+print('<div class="wrap clearfix">');
+};
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" product-row="'.$b.'" type="button">
 			<span class="title">'.$fetch[name].'</span>
 			<img src=" '.$fetch[img_url].' " alt="shoe">
 		</button>');
-};
+$i++;
+$c++;
+// };
+
+if ($i == $a) {
 print('</div>');
-$query = mysqli_query ($con, 'SELECT * FROM products');
-
-while ($fetchdetails = mysqli_fetch_array($query)) {
-print('<div id="'.$fetchdetails[model].'" class="collapse">
-	<div class="detailsInner clearfix">
-	<div class="wrap">
-		<div class="arrow-up"></div>
-		<div id="left">
-			<div class="inner">
-				<h1>'.$fetchdetails[name].'</h1>
-				<p>'.$fetchdetails[description].'</p>
-					<div id="sizes">
-						<a href="#" class="size"><div class="sizebox">S</div></a>
-						<a href="#" class="size"><div class="sizebox">M</div></a>
-						<a href="#" class="size"><div class="sizebox">L</div></a>
-						<a href="#" class="size"><div class="sizebox">XL</div></a>
-						<a href="#" class="expert">CONTACT AN EXPERT ></a>
-					</div>
-			</div>
-		</div>
-
-				<div id="right">
-					<div class="inner">
-						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
-					</div>
-				</div>
-	</div>
-	</div>
-</div>');
-};
-/*
-$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 8 AND id <=14');
-while ($fetch = mysqli_fetch_array($query2)) {
-print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
-			<span class="title">'.$fetch[name].'</span>
-			<img src=" '.$fetch[img_url].' " alt="shoe">
-		</button>');
+print('<div class="details" id="row'.$b.'" product-row="'.$b.'"></div>');
+$a = $a + 7;
+$b++;
+$c = 0;
 };
 
-$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=8 AND id <=14');
-
-while ($fetchdetails = mysqli_fetch_array($query2)) {
-print('<div id="'.$fetchdetails[model].'" class="collapse">
-	<div class="detailsInner clearfix">
-	<div class="wrap">
-		<div class="arrow-up"></div>
-		<div id="left">
-			<div class="inner">
-				<h1>'.$fetchdetails[name].'</h1>
-				<p>'.$fetchdetails[description].'</p>
-					<div id="sizes">
-						<a href="#" class="size"><div class="sizebox">S</div></a>
-						<a href="#" class="size"><div class="sizebox">M</div></a>
-						<a href="#" class="size"><div class="sizebox">L</div></a>
-						<a href="#" class="size"><div class="sizebox">XL</div></a>
-						<a href="#" class="expert">CONTACT AN EXPERT ></a>
-					</div>
-			</div>
-		</div>
-
-				<div id="right">
-					<div class="inner">
-						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
-					</div>
-				</div>
-	</div>
-	</div>
-</div>');
 };
-$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 15 AND id <=21');
-//print list of products.
-while ($fetch = mysqli_fetch_array($query2)) {
-print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
-			<span class="title">'.$fetch[name].'</span>
-			<img src=" '.$fetch[img_url].' " alt="shoe">
-		</button>');
-};
-
-$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=15 AND id <=21');
-
-while ($fetchdetails = mysqli_fetch_array($query2)) {
-print('<div id="'.$fetchdetails[model].'" class="collapse">
-	<div class="detailsInner clearfix">
-	<div class="wrap">
-		<div class="arrow-up"></div>
-		<div id="left">
-			<div class="inner">
-				<h1>'.$fetchdetails[name].'</h1>
-				<p>'.$fetchdetails[description].'</p>
-					<div id="sizes">
-						<a href="#" class="size"><div class="sizebox">S</div></a>
-						<a href="#" class="size"><div class="sizebox">M</div></a>
-						<a href="#" class="size"><div class="sizebox">L</div></a>
-						<a href="#" class="size"><div class="sizebox">XL</div></a>
-						<a href="#" class="expert">CONTACT AN EXPERT ></a>
-					</div>
-			</div>
-		</div>
-
-				<div id="right">
-					<div class="inner">
-						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
-					</div>
-				</div>
-	</div>
-	</div>
-</div>');
-};
-
-$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >= 22 AND id <=28');
-while ($fetch = mysqli_fetch_array($query2)) {
-print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " data-toggle="collapse" data-parent="#products" data-target="#'.$fetch[model].' " type="button">
-			<span class="title">'.$fetch[name].'</span>
-			<img src=" '.$fetch[img_url].' " alt="shoe">
-		</button>');
-};
-
-$query2 = mysqli_query ($con, 'SELECT * FROM products WHERE id >=22 AND id <=28');
-
-while ($fetchdetails = mysqli_fetch_array($query2)) {
-print('<div id="'.$fetchdetails[model].'" class="collapse">
-	<div class="detailsInner clearfix">
-	<div class="wrap">
-		<div class="arrow-up"></div>
-		<div id="left">
-			<div class="inner">
-				<h1>'.$fetchdetails[name].'</h1>
-				<p>'.$fetchdetails[description].'</p>
-					<div id="sizes">
-						<a href="#" class="size"><div class="sizebox">S</div></a>
-						<a href="#" class="size"><div class="sizebox">M</div></a>
-						<a href="#" class="size"><div class="sizebox">L</div></a>
-						<a href="#" class="size"><div class="sizebox">XL</div></a>
-						<a href="#" class="expert">CONTACT AN EXPERT ></a>
-					</div>
-			</div>
-		</div>
-
-				<div id="right">
-					<div class="inner">
-						<img src=" '.$fetchdetails[img_url].' " alt="'.$fetchdetails[name].'">
-					</div>
-				</div>
-	</div>
-	</div>
-</div>');
-};
-
-print('</div>');*/
 mysqli_close($con);
 ?>
 </section>
@@ -380,12 +248,65 @@ $('.protectionwarmth').each(function(){
 
 ////////////////////////////////////////////////////////
 $(document).ready(function(){
+	/*
 	$('.product').click(function()
 	{
-		var details = $(this).attr('data-target');
+		// var details = $(this).attr('data-target');
 		var point_to_pos = $(this).offset().left + 28;
 		$('.arrow-up').css({ 'left': point_to_pos});
 	});
+*/
+
+		$('.product').click(function()
+	{
+		var row = $(this).attr('product-row');
+		var number = $(this).attr('product-number');
+		var name = $(this).attr('product-name');
+		var description = $(this).attr('product-description');
+		var imgurl = $(this).attr('product-image');
+
+		var openRow = $('.open').attr('product-row');
+
+		if ($(this).hasClass('clicked'))
+		{
+			console.log("close same button");
+		$('.details').slideUp();
+		$(this).removeClass('clicked');
+		}
+		else if ($('.product').hasClass('clicked'))
+		{
+			if (row == openRow) {
+				console.log("open another button in same row");
+				console.log(row , openRow);
+				$('.clicked').removeClass('clicked');
+				$('.open').removeClass('open');
+
+				$('#row'+row+'').html('<div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div>');
+
+				$(this).addClass('clicked');
+				$('#row'+row+'').addClass('open');
+			} else {
+				console.log("open another button in diff row");
+				console.log(row , openRow);
+				$('.open').slideUp().removeClass('open');
+				$('.clicked').removeClass('clicked');
+				$('#row'+row+'').html('<div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div>');
+				$('#row'+row+'').addClass('open').slideDown();
+				$(this).addClass('clicked');
+			};
+		}
+		else
+		{
+			console.log("open same button");
+			$('#row'+row+'').html('<div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div>');
+			$('#row'+row+'').addClass('open').slideDown();
+			$(this).addClass('clicked');
+		};
+
+		var point_to_pos = $(this).offset().left + 28;
+		$('.arrow-up').css({ 'left': point_to_pos});
+	});
+
 });
 
 </script>
