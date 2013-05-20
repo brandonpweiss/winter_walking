@@ -7,11 +7,20 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="style.css">
+		<style type="text/css">
+	#tagline{
+		color: #e5e5e5;
+	}
+	</style>
 	<script src="jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-slider.js"></script>
 </head>
 <body>
+		<div id="logobox">
+  <img id="logo" src="img/logowhite.png" alt="Winter Walking we dont just make ice cleats, we perfect them">
+    <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
+</div>
 <?php include('header.php');?>
 <div class="divider"></div>
 <section id="top" class="clearfix">

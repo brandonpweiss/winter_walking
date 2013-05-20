@@ -6,7 +6,7 @@
 		<p>If you would like to place an order or get a specific quote, please visit the Ordering page.</p>
 </div>
 	<div class="column" id="column2">
-		<img src="img/xfr.png" alt="">
+
 </div>
 	<div class="column" id="column3">
 <ul>
