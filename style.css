@@ -204,9 +204,13 @@ nav ul li{
 	top: -10px;
 }
 
+footer .wrap{
+	max-width: 1280px;	
+}
 .wrap{
 	max-width: 980px;
 	margin: 0 auto;
+	padding: 0px 10px 0px 10px;
 }
 
 .winter{
@@ -391,12 +395,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 .detailsInner{
-	background: #FFFFFF;
-	outline: #cccccc solid thin;
+	background: none;
 	margin-top: 10px;
-	-webkit-box-shadow: inset 1px 1px 3px 1px rgba(1, 1, 1, .4);
-        box-shadow: inset 1px 1px 3px 1px rgba(1, 1, 1, .4);
-        padding: 40px 0px 40px 0px;
+    padding: 40px 40px 40px 40px;
 }
 
 .arrow-up {
@@ -404,10 +405,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	height: 0;
 	border-left: 30px solid transparent;
 	border-right: 30px solid transparent;
-	border-bottom: 30px solid white;
+	border-bottom: 30px solid #c3c3c3;
 	position: absolute;
 	top: -0;
 	z-index: 999;
+	display:none;
 	left: 0;
 }
 
@@ -527,7 +529,7 @@ footer{
 }
 
 h1#myModalLabel{
-	color: #333333;
+	color: #000000;
 	font-size: 50px;
 	padding-top: 20px;
 	padding-bottom: 0px;
@@ -538,6 +540,7 @@ h1#myModalLabel{
 }
 .modal-header{
 text-align: center;
+color: #333333;
 }
 form label{
 	font-family: langdon;
@@ -586,3 +589,94 @@ a.ctabox:hover{
 #matrix img#featuredshoe{
 	z-index: 1;
 }
+
+#facts{
+	background: #eff0f5;
+		border-bottom: 2px solid #777777;
+}
+#facts img#meanshoe{
+	display:block;
+	width: 33.3%;
+	margin: 0 auto;
+	float:left;
+}
+#facts .wrap{
+	max-width: 1280px;
+	padding: 20px 0px 0px 0px;
+}
+
+#facts .column{
+	float:left;
+	width:33.3%;
+}
+
+#facts ul li{
+	margin-top: 20px;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 0px;
+}
+#facts li h1, #aboutus h1{
+	font-size: 30px;
+	padding-bottom: 0px;
+}
+#facts li p{
+	margin-top: 10px;
+}
+#facts p.direct{
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+	letter-spacing: 0px;
+}
+#facts li p, #facts ul li{
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
+#facts ul.iceberg li{
+list-style: circle;
+margin-top: 10px;
+margin-left: 30px;
+}
+#aboutus .bold{
+	font-family: langdon;
+	text-transform: uppercase;
+	letter-spacing: 0px;
+	font-size: 30px;
+}
+#aboutus{
+	clear:both;
+	background: url(img/subtle_grunge.jpg);
+	padding-bottom: 30px;
+	padding-top: 100px;
+}
+#aboutus p{
+	text-align: left;
+	padding: 10px 0px 0px 0px;
+	margin: 0 auto;
+	position: relative;
+	letter-spacing: 0px;
+	font-size: 16px;
+}
+#patent{
+	margin-top: 15px;
+}
+#patent #left p{
+	line-height: 20px;
+	font-size: 16px;
+	letter-spacing: 0px;
+	padding: 10px 0px 0px 0px;
+}
+#patent #left .bold{
+	letter-spacing: 0px;
+	line-height: 25px;
+	margin-top: 20px;
+	font-size: 30px;
+}
+
+#patent #right img{
+	padding-left: 100px;
+}
+

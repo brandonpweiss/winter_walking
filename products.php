@@ -22,7 +22,6 @@
     <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
 </div>
 <?php include('header.php');?>
-<div class="divider"></div>
 <section id="top" class="clearfix">
 <div class="wrap" class="clearfix">
 	<div id="instructions">

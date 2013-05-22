@@ -1,5 +1,5 @@
-<footer class="clearfix">
-	<div class="wrap">
+<footer>
+	<div class="wrap clearfix">
 		<div class="column" id="column1">
 		<p>Winter Walking's full line of All-Traction Footwear™ can help you to reduce accidents, lower worker's compensation costs and keep employees working safely.</p>
 

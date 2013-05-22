@@ -101,6 +101,6 @@ supplied adjustment tool.</div>
 	</div>
 </section>
 <?php include('footer.php');?>
-		<script src="scroll.js"></script>
+	<script src="scroll.js"></script>
 </body>
 </html>

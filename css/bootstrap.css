@@ -5188,12 +5188,13 @@ input[type="submit"].btn.btn-mini {
 
 .modal {
   position: fixed;
-  top: 10%;
+  margin-top: 0px;
+  top: 20%;
   left: 50%;
-  z-index: 1050;
+  z-index: 1050000;
   width: 560px;
   margin-left: -280px;
-  background-color: #ffffff;
+  background: url(../img/subtle_grunge.png);
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.3);
   *border: 1px solid #999;
@@ -5221,6 +5222,7 @@ input[type="submit"].btn.btn-mini {
   top: 10%;
 }
 
+
 .modal-header {
   padding: 9px 15px;
   border-bottom: 1px solid #eee;
@@ -5228,6 +5230,8 @@ input[type="submit"].btn.btn-mini {
 
 .modal-header .close {
   margin-top: 2px;
+  position: relative;
+  z-index: 100000;
 }
 
 .modal-header h3 {
@@ -5237,8 +5241,7 @@ input[type="submit"].btn.btn-mini {
 
 .modal-body {
   position: relative;
-  max-height: 400px;
-  padding: 15px;
+  height: 450px;
   overflow-y: auto;
 }
 
