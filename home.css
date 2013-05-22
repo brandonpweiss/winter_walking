@@ -55,6 +55,7 @@ footer{
 	max-width: 40%;
 	float:right;
 	padding-top: 0px;
+		padding-bottom: 60px;
 	padding-right: 7%;
 	background-image: linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
 background-image: -o-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
