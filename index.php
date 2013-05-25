@@ -43,8 +43,8 @@
 	<div id="instructions">
 	<div class="inner">
 		<div class="winter">INTRODUCING THE</div>
-		<h1>ICE GRIPS<sup>&reg;</sup> ROTORS</h1>
-		<p>ICEGRIPS® ROTORS is a uniquely versatile ice and snow walking device that allows workers to move safely from indoor surfaces to outdoor surfaces without putting on and taking off their traction gear. If your employees are constantly walking in and out of building or moving from icy surfaces to clean surfaces, ICEGRIPS® ROTORS is the solution you’ve been waiting for.</p><br>
+		<h1>ICE GRIPS<sup>&reg;</sup> <br>ROTORS</h1>
+		<p><span class="bold">ICEGRIPS® ROTORS</span> is a uniquely versatile ice and snow walking device that allows workers to move safely from indoor surfaces to outdoor surfaces without putting on and taking off their traction gear. If your employees are constantly walking in and out of building or moving from icy surfaces to clean surfaces, ICEGRIPS® ROTORS is the solution you’ve been waiting for.</p><br>
 		<p>No more continually putting on and taking off your traction gear and being faced with the prospect of carrying a wet and dirty device around. ICEGRIPS® ROTORS solve the problem with a twist!</p>
 		<a href="#" id="learn" class="ctabox">LEARN MORE ABOUT THIS PRODUCT ></a>
 	</div>
@@ -60,27 +60,27 @@
 			<img src="img/tractionspikes.png" id="words" alt="traction spikes hidden for indoor surfaces">
 		<img src="img/icegrip1.png" id="shoe1" alt="Ice Grip1">
 		<div class="info">
-		<div class="position">POSITION ONE</div>
+		<div class="position">&bull;&nbsp;POSITION ONE&nbsp;&bull;</div>
 		<div class="title">HIDDEN</div>
-		<div class="blueline"></div>
+		<div class="blueline"><img src="img/lilboot.png" alt="lilboot"></div>
 		<div class="description">With the rotors closed, the traction spikes hide up inside the sole offering ideal traction for indoor/dry surfaces.</div>
 		</div>
 
 	</article>
 	<article id="two">
 		<img src="img/icegrip2.png" alt="Ice Grip2">
-		<div class="position">POSITION TWO</div>
+		<div class="position">&bull;&nbsp;POSITION TWO&nbsp;&bull;</div>
 		<div class="title">ROTATED</div>
-		<div class="blueline"></div>
+		<div class="blueline"><img src="img/lilboot.png" alt="lilboot"></div>
 		<div class="description">When transitioning from indoor to outdoor or dry to slippery, the rotors easily pull out and flip over using your fingers or the 
 supplied adjustment tool.</div>
 	</article>
 	<article id="three">
 		<img src="img/icegrip3.png" id="shoe3" alt="Ice Grip3">
 		<img src="img/tractionspikesexposed.png" id="words" alt="traction spikes exposed for outdoor surfaces">
-		<div class="position">POSITION THREE</div>
+		<div class="position">&bull;&nbsp;POSITION THREE&nbsp;&bull;</div>
 		<div class="title">EXPOSED</div>
-		<div class="blueline"></div>
+		<div class="blueline"><img src="img/lilboot.png" alt="lilboot"></div>
 		<div class="description">With the rotors open, the traction spikes face down offering excellent traction for slippery and icy outdoor conditions.  </div>
 	</article>
 	</div>

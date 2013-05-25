@@ -147,12 +147,19 @@ body{
 section{
 	height: 100%;
 }
-
+.bold{
+	font-weight: bold;
+}
 a{
 	text-decoration:none;
 }
 a:hover{
 	text-decoration:none;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
 }
 .content{
 	max-width: 1280px;
@@ -175,11 +182,12 @@ nav{
 	position: relative;
 }
 nav a{
-	font-family: karbonlight;
-	font-size: 16px;
+	font-family: nexabold;
+	font-size: 12px;
+	font-weight: 100;
 	text-decoration: none;
 	color: #333333;
-	padding: 6px 20px 6px 20px;
+	padding: 6px 40px 6px 40px;
 	position: relative;
 	z-index: 9999;
 	letter-spacing: 2px;
@@ -191,7 +199,7 @@ max-width: 80px;
 }
 
 nav a:hover{
-	background: url(img/subtle_grunge_blue.png) 0 0;
+	color: #4fd2e8;
 }
 nav ul li{
 	display:inline;
@@ -205,14 +213,14 @@ nav ul li{
 }
 
 footer .wrap{
-	max-width: 1280px;	
+	max-width: 1170px;	
+	margin: 0 auto;
 }
 .wrap{
 	max-width: 980px;
 	margin: 0 auto;
 	padding: 0px 10px 0px 10px;
 }
-
 .winter{
 	font-family: nexabold;
 	color: #46bfdf;
@@ -380,12 +388,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	height: 65px;
 	padding: 15px;
 }
-
+.position{
+	margin-top: 60px;
+}
 .title{
 	display: block;
 	text-align:center;
 	text-decoration: none;
 	font-size: 14px;
+	color:#333333;
 	letter-spacing: 1px;
 	font-family: langdon;
 	margin: 0 auto;
@@ -484,22 +495,66 @@ footer{
 	color: #FFFFFF;
 	padding: 20px 0px 60px 0px;
 	font-family: karbonmedium;
-	letter-spacing: 0px;
+	letter-spacing: 1px;
 	line-height: 20px;
 	opacity: .7;
 	clear:both;
 }
-.column{
-	float:left;
-	width: 33.3%;
+
+footer .wrap h2{
+	color:#4fd2e8;
+	font-family: langdon;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+footer .bold{
+	font-weight: bold;
+}
+footer .wrap ul li a{
+	color:#4fd2e8;
+}
+footer #column2 p a{
+	color:#4fd2e8;
+}
+footer .wrap ul li a:hover, footer #column2 p a:hover{
+	color: #FFFFFF;
 }
 
-#column1, #column3{
+footer ul{
+	margin-top: 20px;
+}
+.column{
+	float:left;
 	padding-top: 16px;
 	font-family: karbonlight;
 	font-weight: 100;
 	font-size: 16px;
 }
+#column1{
+	width: 22%;
+	padding-right: 50px;
+}
+#column2{
+	width: 30%;
+	padding-right: 50px;
+}
+#column3{
+	display:block;
+	width: 380px;
+}
+#column3 #line1{
+	max-width: 100%;
+}
+#column3 input{
+		border-radius: 0px;
+		margin-bottom: 30px;
+		font-weight: bold;
+}
+#line1 input{
+	display:inline-block;
+	width: 46%;
+}
+
 .column a{
 	color: #FFFFFF;
 	-webkit-transition:color .3s ease-in-out;
@@ -512,11 +567,14 @@ footer{
 .column a:hover{
 	color: #4fd2e8;
 }
-#column2{
-	text-align: center;
-	padding-top: 30px;
+#column2 ul li{
+	font-weight: bold;
+	letter-spacing: 0px;
+	margin-top: 3px;
 }
-
+#column2 ul{
+	margin-bottom: 20px;
+}
 #column1 p{
 	margin-bottom:20px;
 }
@@ -586,9 +644,7 @@ a.ctabox:hover{
 	color: #333333;
 }
 
-#matrix img#featuredshoe{
-	z-index: 1;
-}
+
 
 #facts{
 	background: #eff0f5;
@@ -601,7 +657,7 @@ a.ctabox:hover{
 	float:left;
 }
 #facts .wrap{
-	max-width: 1280px;
+	max-width: 1170px;
 	padding: 20px 0px 0px 0px;
 }
 
@@ -652,6 +708,10 @@ margin-left: 30px;
 	padding-bottom: 30px;
 	padding-top: 100px;
 }
+#aboutus .wrap{
+	max-width: 1170px;
+	margin: 0 auto;
+}
 #aboutus p{
 	text-align: left;
 	padding: 10px 0px 0px 0px;
@@ -663,6 +723,7 @@ margin-left: 30px;
 #patent{
 	margin-top: 15px;
 }
+
 #patent #left p{
 	line-height: 20px;
 	font-size: 16px;
