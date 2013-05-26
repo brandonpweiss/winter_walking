@@ -378,14 +378,14 @@ $('.details').remove();
 $('.product').removeClass('on');
 $(this).addClass('on');
 $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
-$('.details').css('left','-50%').css('width','200%').slideDown();
+$('.details').css('left','-50%').css('width','203%').slideDown();
 		};
 
 } else {
 	$('.details').slideUp(function() {
     $('.details').remove();
     $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
-			$('.details').css('left','-50%').css('width','200%').slideDown();
+			$('.details').css('left','-50%').css('width','203%').slideDown();
 	});
 	$('.product').removeClass('on');
 	$(this).addClass('on');
@@ -393,7 +393,7 @@ $('.details').css('left','-50%').css('width','200%').slideDown();
 
 } else {
 			$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
-			$('.details').css('left','-50%').css('width','200%').slideDown();
+			$('.details').css('left','-50%').css('width','203%').slideDown();
 			$(this).addClass('on');
 };
 	$('.product').each(function() {
