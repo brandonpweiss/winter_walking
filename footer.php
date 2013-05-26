@@ -52,17 +52,17 @@ $errors .= '<span>Please enter a comment or message.</span><br/>';
 };
 /*#############FIN##############*/
 
-$message "
+$message ="
 This is a message sent via winterwalking.com
-First Name: "$firstname"
-Last Name: "$lastname"
-Company Name: "$company"
-Phone Number: "$phone"
-Email: "$email"
-Message: "$comments"
+First Name: $firstname
+Last Name: $lastname
+Company Name: $company
+Phone Number: $phone
+Email: $email
+Message: $comments
 ";
-$headers = "From: <"$email">\n";
-$headers .= "Reply-To: <"$email">\n";
+$headers = "From: <$email>\n";
+$headers .= "Reply-To: <$email>\n";
 
 if ($errors != null) {
 echo "<script>";

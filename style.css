@@ -158,12 +158,14 @@ section{
 section#home {
 	min-height: 800px;
 	margin-bottom: -140px;
+	overflow: hidden;
 }
 section#top {
 	max-height: 50%;
 }
 section#products{
 	height: auto;
+	overflow: hidden;
 }
 section#facts {
 	height: auto;
