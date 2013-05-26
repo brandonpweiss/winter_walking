@@ -28,8 +28,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+	height: 100%;
+}
 body {
 	line-height: 1;
+	height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -146,6 +150,11 @@ body{
 
 section{
 	height: 100%;
+	position:relative;
+}
+section#home {
+	min-height: 800px;
+	margin-bottom: -140px;
 }
 .bold{
 	font-weight: bold;
@@ -213,7 +222,7 @@ nav ul li{
 }
 
 footer .wrap{
-	max-width: 1170px;	
+	max-width: 1170px;
 	margin: 0 auto;
 }
 .wrap{
@@ -296,6 +305,7 @@ h1, a.size{
 	display:inline-block;
 	padding-top: 93px;
 	position: relative;
+	height: inherit;
 }
 .category{
 	margin-top: 10px;
