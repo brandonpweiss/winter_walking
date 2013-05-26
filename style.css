@@ -71,6 +71,9 @@ table {
 .productdetails {
 	display: none;
 }
+.modal-body {
+	height: 505px;
+}
 /*fonts*/
 
 @font-face {
