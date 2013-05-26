@@ -307,6 +307,43 @@ $(document).ready(function(){
 });
 ////////////// find current row //////////////
 		var itemnumber = $(this).attr('id');
+	if (i/7 <= 1){
+			var currentrow = 1;
+			var lastitem = i-1;
+	}else if (i/7 > 1 && i/7 <= 2) {
+			if (itemnumber <= 7){
+			var currentrow = 1;
+			var lastitem = 7;
+		} else if (itemnumber >= 8 && itemnumber <= 14){
+			var currentrow = 2;
+			var lastitem = i-1;
+		};
+	}else if (i/7 > 2 && i/7 <= 3) {
+		if (itemnumber <= 7){
+			var currentrow = 1;
+			var lastitem = 7;
+		} else if (itemnumber >= 8 && itemnumber <= 14){
+			var currentrow = 2;
+			var lastitem = 14;
+		} else if (itemnumber >= 15 && itemnumber <= 21){
+			var currentrow = 3;
+			var lastitem = i-1;
+		};
+	}else if (i/7 > 3 && i/7 <= 4) {
+		if (itemnumber <= 7){
+			var currentrow = 1;
+			var lastitem = 7;
+		} else if (itemnumber >= 8 && itemnumber <= 14){
+			var currentrow = 2;
+			var lastitem = 14;
+		} else if (itemnumber >= 15 && itemnumber <= 21){
+			var currentrow = 3;
+			var lastitem = 21;
+		} else if (itemnumber >= 22 && itemnumber <= 28){
+			var currentrow = 4;
+			var lastitem = i-1;
+		};
+	}else if (i/7 > 4 && i/7 <= 5) {
 		if (itemnumber <= 7){
 			var currentrow = 1;
 			var lastitem = 7;
@@ -321,8 +358,10 @@ $(document).ready(function(){
 			var lastitem = 28;
 		} else if (itemnumber >= 29 && itemnumber <= 35){
 			var currentrow = 5;
-			var lastitem = 35;
+			var lastitem = i-1;
 		};
+	};
+
 /////////////////////////////////////////////
 if ($('.details').length){
 
@@ -332,28 +371,38 @@ if (currentrow == detailsrow) {
 	if ($(this).hasClass('on')) {
 	$('.details').slideUp(function() {
     $('.details').remove();
-    $(this).removeClass('on');
 	});
+	$(this).removeClass('on');
 		} else {
 $('.details').remove();
+$('.product').removeClass('on');
+$(this).addClass('on');
 $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
-$('.details').slideDown();
+$('.details').css('left','-50%').css('width','200%').slideDown();
 		};
 
 } else {
 	$('.details').slideUp(function() {
     $('.details').remove();
     $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
-			$('.details').slideDown();
+			$('.details').css('left','-50%').css('width','200%').slideDown();
 	});
+	$('.product').removeClass('on');
+	$(this).addClass('on');
   };
 
 } else {
 			$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
-			$('.details').slideDown();
+			$('.details').css('left','-50%').css('width','200%').slideDown();
 			$(this).addClass('on');
 };
-
+	$('.product').each(function() {
+		if ($(this).hasClass('on')) {
+			$(this).children('img').css('-moz-box-shadow','0 0 2px 4px #4fd2e8').css('-webkit-box-shadow','0 0 2px #4fd2e8').css('box-shadow','0 0 2px 4px #4fd2e8');
+		} else {
+			$(this).children('img').attr('style','');
+		};
+	});
 
 		var point_to_pos = $(this).offset().left + 28;
 		$('.arrow-up').css({ 'left': point_to_pos});

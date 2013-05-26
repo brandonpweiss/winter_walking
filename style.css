@@ -156,6 +156,19 @@ section#home {
 	min-height: 800px;
 	margin-bottom: -140px;
 }
+section#top {
+	max-height: 50%;
+}
+section#products{
+	height: auto;
+}
+section#facts {
+	height: auto;
+}
+section#aboutus {
+	height: auto;
+}
+
 .bold{
 	font-weight: bold;
 }
@@ -189,6 +202,7 @@ nav{
 .details{
 	display: none;
 	position: relative;
+	background-color: #FFFFFF;
 }
 nav a{
 	font-family: nexabold;
@@ -374,10 +388,9 @@ a.product img:hover, button.product img:hover{
 -webkit-box-shadow: 0 0 2px #4fd2e8;
 box-shadow: 0 0 2px 4px #4fd2e8;
 }
-
 .product{
 	display:inline-block;
-	margin: 30px 13px 0px 13px;
+	margin: 20px 13px 15px 13px;
 }
 
 .product img{
@@ -417,8 +430,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .detailsInner{
 	background: none;
-	margin-top: 10px;
-    padding: 40px 40px 40px 40px;
+	/*margin-top: 10px;*/
+    /*padding: 40px 40px 40px 40px;*/
+    padding: 40px 0px;
+    margin: 0 auto;
 }
 
 .arrow-up {
