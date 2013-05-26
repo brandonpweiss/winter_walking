@@ -40,6 +40,8 @@
   </div>
 <?php include('header.php');?>
 <section id="home" class="clearfix">
+	<div class="outer">
+	<div class="content clearfix">
 	<div id="instructions">
 	<div class="inner">
 		<div class="winter">INTRODUCING THE</div>
@@ -49,13 +51,16 @@
 		<a href="#" id="learn" class="ctabox">LEARN MORE ABOUT THIS PRODUCT ></a>
 	</div>
 	</div>
-	<div id="matrix">
-		<img id="featuredshoe" src="img/featuredshoe.png" alt="Ice Grip Rotors">
+	</div>
 	</div>
 </section>
 <a name="rotors"></a>
 <section id="stageone" class="clearfix">
 	<div class="wrap">
+		<div class="content">
+		<div class="winter">GRIPS WITH</div>
+		<h1>TRIPLE ACTION</h1>
+		</div>
 	<article id="one">
 			<img src="img/tractionspikes.png" id="words" alt="traction spikes hidden for indoor surfaces">
 		<img src="img/icegrip1.png" id="shoe1" alt="Ice Grip1">

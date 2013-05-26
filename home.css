@@ -29,16 +29,14 @@ h1, a.size{
 
 #home{
 	background: #f4f4f4;
-	border-bottom: 2px solid #777777;
 }
-
 #instructions{
-	max-width: 500px;
-	margin-left: 16%;
-	padding-top: 80px;
+	width: 500px;
+	float:left;
+	padding: 40px 0px 40px 0px;
 }
 #instructions h1{
-	font-size: 65px;
+	font-size: 80px;
 }
 #instructions p{
 	color: #222222;
@@ -53,29 +51,7 @@ footer{
 	background: url(img/mochaGrunge.jpg);
 	opacity: 1;
 }
-#matrix{
-	max-width: 40%;
-	float:right;
-	padding: 0px 7% 60px 0px;
-	background-image: linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
-background-image: -o-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
-background-image: -moz-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
-background-image: -webkit-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
-background-image: -ms-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
 
-background-image: -webkit-gradient(
-	linear,
-	right top,
-	left top,
-	color-stop(0.06, rgb(187,190,195)),
-	color-stop(0.35, rgb(244,244,244))
-);
-}
-
-#matrix img#featuredshoe{
-	z-index: 1;
-	width: 100%;
-}
 
 #stageone{
 	background: url(img/mochaGrunge2.jpg);
@@ -108,7 +84,7 @@ article#three #words{
 }
 
 .wrap{
-	max-width: 1280px;
+	width: 1280px;
 }
 
 .info{
@@ -127,7 +103,7 @@ article#three #words{
 	font-size: 60px;
 	text-align: center;
 	display:inline;
-	color:#4fd2e8;
+	color:#37a0d0;
 }
 
 .description{
@@ -171,9 +147,9 @@ article#three #words{
 #right a{
 	margin-top: 10px;
 }
-
-@media only screen and (min-width: 1441px) {
-#instructions{
-		margin-left: 20%;
-}
+.outer{
+	width: 1280px;
+	margin: 0 auto;
+	background: url(img/featuredshoe2.png)top right no-repeat;
+	padding-bottom: 250px;
 }

@@ -26,9 +26,9 @@
 	<div class="columninner">
 <h2>HOW TO ORDER</h2>
 <ul>
-<li>REQUEST A SPECIFIC PRODUCT QUOTE</li>
-<li>REQUEST A PRODUCT INFORMATION KIT</li>
-<li>REQUEST TO BE CONTACTED BY AN EXPERT</li>
+<li><a href="#myModal" role="button" data-toggle="modal">REQUEST A SPECIFIC PRODUCT QUOTE ></a></li>
+<li><a href="#myModal" role="button" data-toggle="modal">REQUEST A PRODUCT INFORMATION KIT ></a></li>
+<li><a href="#myModal" role="button" data-toggle="modal">REQUEST TO BE CONTACTED BY AN EXPERT ></a></li>
 </ul>
 
 <p>For individual purchases and retail customers, 
@@ -38,6 +38,7 @@ please visit <a href="http://www.wintercleats.com">www.wintercleats.com</a></p>
 
 <div class="column" id="column3">
 	<div class="columninner">
+		<h2>QUICK CONTACT</h2>
 <form action="">
 	<div id="line1">
 	<input type="text" placeholder="FIRST NAME">

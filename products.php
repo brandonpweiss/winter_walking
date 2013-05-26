@@ -26,10 +26,9 @@
 <div class="wrap" class="clearfix">
 	<div id="instructions">
 	<div class="inner">
-		<div class="winter">WINTER WALKING</div>
-		<h1>FIND A MATCH</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ex corporis rem. Optio, temporibus, odit, dignissimos possimus voluptatibus reiciendis pariatur porro atque repellat iusto voluptas molestiae fugit illo quasi quisquam commodi velit similique voluptate error!</p><br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, numquam facilis libero quas eaque voluptatibus laboriosam distinctio similique eligendi maxime. Natus, nostrum amet culpa voluptas veritatis illo velit ipsa optio reprehenderit odit quae.</p>
+		<div class="winter">FIND YOUR</div>
+		<h1>PERFECT SOLUTION</h1>
+		<p>From Non-Slip Shoes to All-Traction™ Footwear, Ice Cleats to Ice Creepers, we're as obsessed with creating the most effective products as you are with finding them.  Every product we make was created through years of research and communication with you, the end user.  Browse our entire product line below, or use the &nbsp;<span class="winter">FEATURE MATRIX</span> on the right to find the best solution for your specific environment!</p>
 	</div>
 	</div>
 	<div id="matrix">
@@ -336,14 +335,14 @@ if (currentrow == detailsrow) {
 	});
 		} else {
 $('.details').remove();
-$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><br><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
 $('.details').slideDown();
 		};
 
 } else {
 	$('.details').slideUp(function() {
     $('.details').remove();
-    $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+    $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a>br<a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
 			$('.details').slideDown();
 	});
   };
