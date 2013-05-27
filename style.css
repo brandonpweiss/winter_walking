@@ -142,6 +142,8 @@ body{
 	background: #fff url(img/mochaGrunge.jpg) 0 0;
 	font-family: karbonlight;
 	letter-spacing: 2px;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 .bold{
 	font-weight: bold;
@@ -686,7 +688,7 @@ a.ctabox:hover{
 	border-bottom: 2px solid #777777;
 }
 #facts .outer{
-	width:1280px;
+	max-width:1280px;
 	margin: 0 auto;
 	background: url(img/bigboot.png) top right no-repeat;;
 }
