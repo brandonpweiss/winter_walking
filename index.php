@@ -11,6 +11,7 @@
 	<script src="jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-slider.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <script>
 // var point_to_pos = $('.pointTo').offset().left;
@@ -56,7 +57,7 @@
 </section>
 <a name="rotors"></a>
 <section id="stageone" class="clearfix">
-	<div class="wrap">
+	<div class="wrap clearfix">
 		<div class="content">
 		<div class="winter">GRIPS WITH</div>
 		<h1>TRIPLE ACTION</h1>
@@ -91,7 +92,7 @@ supplied adjustment tool.</div>
 	</div>
 </section>
 <section id="removable" class="clearfix">
-	<div class="wrap">
+	<div class="wrap clearfix">
 	<img src="img/bootup.png" id="bootup" alt="BootUp">
 	<div id="right">
 		<div class="inner">
