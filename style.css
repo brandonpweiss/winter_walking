@@ -28,12 +28,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-html {
-	height: 100%;
-}
 body {
 	line-height: 1;
-	height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -70,9 +66,6 @@ table {
 }
 .productdetails {
 	display: none;
-}
-.modal-body {
-	height: 505px;
 }
 /*fonts*/
 
@@ -149,36 +142,9 @@ body{
 	background: #fff url(img/mochaGrunge.jpg) 0 0;
 	font-family: karbonlight;
 	letter-spacing: 2px;
-<<<<<<< HEAD
 	max-width: 100%;
 	overflow-x: hidden;
-=======
 }
-
-section{
-	height: 100%;
-	position:relative;
-}
-section#home {
-	min-height: 800px;
-	margin-bottom: -140px;
-	overflow: hidden;
-}
-section#top {
-	max-height: 50%;
-}
-section#products{
-	height: auto;
-	overflow: hidden;
->>>>>>> master
-}
-section#facts {
-	height: auto;
-}
-section#aboutus {
-	height: auto;
-}
-
 .bold{
 	font-weight: bold;
 }
@@ -212,7 +178,6 @@ nav{
 .details{
 	display: none;
 	position: relative;
-	background-color: #FFFFFF;
 }
 nav a{
 	font-family: nexabold;
@@ -245,13 +210,8 @@ nav ul li{
 	top: -10px;
 }
 
-<<<<<<< HEAD
 .wrap{
 	width: 980px;
-=======
-footer .wrap{
-	max-width: 1170px;
->>>>>>> master
 	margin: 0 auto;
 	padding: 0px 10px 0px 10px;	
 }
@@ -333,7 +293,6 @@ h1, a.size{
 	display:inline-block;
 	padding-top: 93px;
 	position: relative;
-	height: inherit;
 }
 .category{
 	margin-top: 10px;
@@ -408,9 +367,10 @@ a.product img:active, button.product img:active{
 box-shadow: none;
 
 }
+
 .product{
 	display:inline-block;
-	margin: 20px 13px 15px 13px;
+	margin: 30px 13px 0px 13px;
 }
 
 .product img{
@@ -464,10 +424,8 @@ box-shadow: none;
 
 .detailsInner{
 	background: none;
-	/*margin-top: 10px;*/
-    /*padding: 40px 40px 40px 40px;*/
-    padding: 40px 0px;
-    margin: 0 auto;
+	margin-top: 10px;
+    padding: 40px 40px 40px 40px;
 }
 
 .arrow-up {
