@@ -1,3 +1,79 @@
+<?php
+if (isset($_POST['submit'])) {
+/*#############FIRST NAME##############*/
+if ($_POST['firstName'] != "") {
+$firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
+}else{
+$errors .= '<span>Please enter your First Name.</span><br/>';
+};
+/*#############LAST NAME##############*/
+if ($_POST['lastName'] != "") {
+$lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
+}else{
+$errors .= '<span>Please enter your Last Name.</span><br/>';
+};
+/*#############COMPANY##############*/
+if ($_POST['company'] != "") {
+$company = filter_var($_POST['company'], FILTER_SANITIZE_STRING);
+}else{
+$errors .= '<span>Please enter your companies name.</span><br/>';
+};
+/*#############EMAIL##############*/
+if ($_POST['email'] != "") {
+    $sanemail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
+    if (!filter_var($sanemail, FILTER_VALIDATE_EMAIL)) {
+   $errors .= '<span>Please enter a valid email address.</span><br/>';
+} else {
+    $email = $sanemail;
+};
+
+} else {
+    $errors .= '<span>Please enter your email address.</span><br/>';
+};
+/*#############PHONE##############*/
+if ($_POST['phoneNumber'] != "") {
+    $sanphone = filter_var($_POST['phoneNumber'], FILTER_SANITIZE_NUMBER_INT);
+
+    if (!filter_var($sanphone, FILTER_VALIDATE_INT)) {
+   $errors .= '<span>Please enter a valid phone number.</span><br/>';
+} else {
+   $phone = $sanphone;
+};
+
+} else {
+    $errors .= '<span>Please enter your phone number.</span><br/>';
+};
+/*#############COMMENTS##############*/
+if ($_POST['comments'] != "") {
+$comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
+}else{
+$errors .= '<span>Please enter a comment or message.</span><br/>';
+};
+/*#############FIN##############*/
+
+$message ="
+This is a message sent via winterwalking.com
+First Name: $firstname
+Last Name: $lastname
+Company Name: $company
+Phone Number: $phone
+Email: $email
+Message: $comments
+";
+$headers = "From: <$email>\n";
+$headers .= "Reply-To: <$email>\n";
+
+if ($errors != null) {
+echo "<script>";
+echo "alert('$errors');";
+echo "</script>";
+} else {
+mail("contact@winterwalking.com", "Customer Message", $message, $headers);
+};
+};
+?>
+
 <footer>
 	<div class="wrap clearfix">
 		<div class="column" id="column1">
@@ -31,23 +107,28 @@
 <li><a href="#myModal" role="button" data-toggle="modal">REQUEST TO BE CONTACTED BY AN EXPERT ></a></li>
 </ul>
 
-<p>For individual purchases and retail customers, 
+<p>For individual purchases and retail customers,
 please visit <a href="http://www.wintercleats.com">www.wintercleats.com</a></p>
 </div>
 </div>
 
 <div class="column" id="column3">
 	<div class="columninner">
+<<<<<<< HEAD
 		<h2>QUICK CONTACT</h2>
 <form action="">
+=======
+<form method="post" action="<?$_SERVER['PHP_SELF'];?>">
+>>>>>>> master
 	<div id="line1">
-	<input type="text" placeholder="FIRST NAME">
-	<input type="text" placeholder="LAST NAME">
+	<input type="text" name="firstName" placeholder="FIRST NAME">
+	<input type="text" name="lastName" placeholder="LAST NAME">
 	</div>
-	<input type="text" placeholder="COMPANY NAME">
-	<input type="text" placeholder="PHONE NUMBER">
-	<input type="text" placeholder="EMAIL ADDRESS">
-	<input type="text" placeholder="COMMENTS">
+	<input type="text" name="company" placeholder="COMPANY NAME">
+	<input type="text" name="phoneNumber" placeholder="PHONE NUMBER">
+	<input type="email" name="email" placeholder="EMAIL ADDRESS">
+	<input type="text" name="comments" placeholder="COMMENTS">
+	<input type="submit" value="SEND">
 </form>
 </div>
 </div>
