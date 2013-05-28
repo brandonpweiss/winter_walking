@@ -51,6 +51,27 @@ footer{
 	background: url(img/mochaGrunge.jpg);
 	opacity: 1;
 }
+<<<<<<< HEAD
+=======
+#matrix{
+	max-width: 40%;
+	float:right;
+	padding: 0px 7% 0px 0px;
+	background-image: linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
+background-image: -o-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
+background-image: -moz-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
+background-image: -webkit-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
+background-image: -ms-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
+
+background-image: -webkit-gradient(
+	linear,
+	right top,
+	left top,
+	color-stop(0.06, rgb(187,190,195)),
+	color-stop(0.35, rgb(244,244,244))
+);
+}
+>>>>>>> master
 
 
 #stageone{
@@ -89,14 +110,14 @@ article#three #words{
 
 .info{
 	clear:both;
-	text-align:center;	
+	text-align:center;
 }
 
 .position{
 	font-family: langdon;
 	color: #FFFFFF;
 	font-size: 20px;
-	text-align: center;	
+	text-align: center;
 }
 .title{
 	font-family: langdon;
@@ -129,7 +150,7 @@ article#three #words{
 
 #removable{
 	background: #f4f4f4;
-	height: 650px;	
+	height: 650px;
 }
 
 #bootup{
