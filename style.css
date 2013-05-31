@@ -388,6 +388,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37a0d0', end
 	clear:both;
 	background: url(img/subtle_grunge.png) 0 0 repeat;
 	padding: 0px 0px 40px 0px;
+	overflow:hidden;
 }
 
 button.product#supergrip img{
