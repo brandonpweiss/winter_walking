@@ -21,74 +21,35 @@
   </div>
 <?php include('header.php');?>
 <section id="facts">
+	<div class="outer">
 	<div class="wrap clearfix">
-	<div class="column" id="left">
-		<ul>
-			<li>
-				<h1>Every Step We Take...</h1>
-				<p>With every step your employees take, they are exposed to the risk of slipping and falling. The more they walk, the more they are exposed. Additionally, slippery conditions such as ice, snow, oils, grease and even rain substantially increase that risk. According to the Bureau of Labor Statistics, nearly <span class="bold">15% off all lost workday accidents are due to slips, trips and falls.</span></p>
-			</li>
-			<li>
-				<h1>$34,000 Per Slip and Fall</h1>
-				<p>The National Safety Council publishes annual figures on lost workdays. Their figures take into account both direct and indirect costs. According to their 2005-2006 figures, the current total cost for each lost workday is a whopping $34,000!</p>
-			</li>
-			<li>
-				<h1>Enormous Effect to the Bottom Line</h1>
-				<p>Annually, most companies will see <span class="bold">between 2%-5%</span> of their workforce experience lost workdays due to accidental slips and falls. At a rate of $34,000 per accident, these costs mount quickly and have a dramatic effect on the businesses bottom line.</p>
-				<p>For over 30 years, Winter Walking has specialized in the reduction of workplace slips and falls through the implementation of All-Traction™ Footwear, including ice cleats and indoor footwear. From manufacturing facilities to service and delivery personnel, Winter Walking has been helping to keep working professionals on their feet and doing their jobs.</p>
-			</li>
-		</ul>
-	</div>
-	<img src="img/meanshoe.png" id="meanshoe" alt="ShoeGrips">
-	<div class="column" id="right">
-		<ul>
-			<li>
-				<h1>THE ICEBERG EFFECT</h1>
-				<p>Many companies track the cost of these accidents by tracking things such as workers’ compensation claims and medical costs. These costs, known as “direct costs,” are easy to track.</p>
-				<p>Unfortunately, the direct costs do not represent the whole picture. “Indirect costs” such as lost productivity, replacement hiring and additional training are much harder to track and actually have a much larger financial impact. Often, the indirect costs can be as much as 10 times that of the direct costs.</p>
-			</li>
-					</ul>
-				<p class="direct">Direct costs such as:</p>
-			<ul class="iceberg">
-				<li>Workers’ compensation</li>
-				<li>Medical costs, etc.</li>
-			</ul>
-				<p class="direct">Indirect costs such as:</p>
-			<ul class="iceberg">
-				<li>Lost/decreased productivity</li>
-				<li>Administrative costs</li>
-				<li>Overtime pay</li>
-				<li>Replacement hiring</li>
-				<li>Managerial costs</li>
-				<li>Employee morale</li>
-				<li>Slowed work pace due to other employees fear of injury</li>
-			</ul>
-	</div>
-	</div>
-</section>
-<section id="aboutus">
-	<div class="wrap">
-	<article id="about">
-		<span class="bold">WE TAKE SLIPS AND FALLS VERY SERIOUSLY.</span>
-		<p>Winter Walking didn't become the largest and oldest manufacturer of All-Traction™ Footwear by chance.  Every product in our line was created through years of research and communication with you, the end user. Reducing slips and falls is our business.</p>
-	</article>
-<article id="patent" class="clearfix">
-<div class="column" id="left">
-<p class="bold">Winter Walking didn't become the largest and oldest manufacturer of All-Traction™ Footwear by chance.</p>
+	<div id="inner">
+<div class="winter">WE TAKE SLIPS AND FALLS</div>
+<h1>EXTREMELY<br>SERIOUSLY</h1>
+<p>Winter Walking is North America's leading manufacturer of All-Traction™ Footwear.  We've been improving worker's safety with the world's largest organizations for over 30 years, earning an unparalleled expertise in the nuances of accident prevention.  Whether indoors or outdoors, ice or snow, oil, grease, or chemicals, Winter Walking has studied all the variables to provide you with the best solutions.</p>
 
-<p>Every slip resistant footwear item in our line was created through years of research and communication with you, the end-user.</p>
+<p>From Non-Slip Shoes to All-Traction™ Footwear, Ice Cleats to Ice Creepers, we're as obsessed with creating the most effective products as you are with finding them.  Your search ends here - <a href="#myModal" class="speak" role="button" data-toggle="modal">speak to our experts today.</a></p>
 
-<p>In many cases, the designs we create are so uniquely beneficial that we were awarded patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
+<h3>RESEARCH & DEVELOPMENT</h3>
+<p>Winter Walking didn't become the largest and oldest manufacturer of All-Traction™ Footwear by chance.  Every product in our line was created through years of research and development with you, the end user.  Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
 
-<p>We currently hold several dozen utility patents relating to non-slip and slip resistant footwear.</p>
+<a href="history.pdf">Download The History of Ice Cleats</a>
 
-<p>Reducing slips and falls is our business.</p>
-<a href="#myModal" class="ctabox" role="button" data-toggle="modal">SPEAK TO AN EXPERT NOW ></a>
+<h3>CUSTOMER SERVICE & INVENTORY</h3>
+<p>Winter Walking has spent over 30 years reducing workplace slips and falls though the implementation of All-Traction™ Footwear.  No one knows as much about accident prevention as our team of experts, and no one will work harder to find the perfect solution for the unique challenges in your workplace.  Once we've identified the right solution, our massive inventory levels enable us to get the product you need out the door and in your hands while you still need it — not months later.</p>  
+
+<a href="guide.pdf">Download The Ice Cleats Selection Guide</a>
+
+<h3>SAFETY & FINANCIAL BENEFITS</h3>
+<p>According to the Bureau of Labor Statistics, nearly 15% of all lost workday accidents are due to slips, trips, and falls.  When assessing the cost of a lost workday accident, we commonly identify "direct costs" first, including workers’ compensation claims and up-front medical costs.  However, the true cost of a lost workday accident becomes most apparent when considering the "indirect costs" such as lost/decreased productivity, replacement hiring, overtime pay, administrative and managerial costs, etc.  This so-called "iceberg effect" is why the National Safety Council estimates the current total cost for each lost workday at $34,000!  As most companies will see between 2-5% of their workforce experience lost workdays due to accidental slips and falls, these massive costs will have a drastic effect on the businesses bottom line.</p>
+
+<p>With over a dozen products in our line specifically designed to increase traction and reduce slips and falls, Winter Walking can help you to contain these costs.</p>
+
+<a href="#myModal" role="button" data-toggle="modal">Calculate Your Potential Savings</a>
+
+
+</div>
 	</div>
-	<div class="column" id="right">
-		<img src="img/patent.png" alt="All Traction Footwear Patent">
-	</div>
-	</article>
 	</div>
 </section>
 <?php include('footer.php');?>

@@ -11,6 +11,7 @@
 	<script src="jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-slider.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <script>
 // var point_to_pos = $('.pointTo').offset().left;
@@ -40,7 +41,9 @@
   </div>
 <?php include('header.php');?>
 <section id="home" class="clearfix">
-	<div id="instructions">
+	<div class="content clearfix">
+	<img src="img/featuredshoe2.png" alt="Shoe">
+		<div id="instructions">
 	<div class="inner">
 		<div class="winter">INTRODUCING THE</div>
 		<h1>ICE GRIPS<sup>&reg;</sup> <br>ROTORS</h1>
@@ -49,16 +52,18 @@
 		<a href="#" id="learn" class="ctabox">LEARN MORE ABOUT THIS PRODUCT ></a>
 	</div>
 	</div>
-	<div id="matrix">
-		<img id="featuredshoe" src="img/featuredshoe.png" alt="Ice Grip Rotors">
 	</div>
 </section>
 <a name="rotors"></a>
 <section id="stageone" class="clearfix">
-	<div class="wrap">
+	<div class="wrap clearfix">
+		<div class="content">
+		<div class="winter">GRIPS WITH</div>
+		<h1>TRIPLE ACTION</h1>
+		</div>
 	<article id="one">
-			<img src="img/tractionspikes.png" id="words" alt="traction spikes hidden for indoor surfaces">
-		<img src="img/icegrip1.png" id="shoe1" alt="Ice Grip1">
+		<img class="words" src="img/tractionspikes.png" id="words" alt="traction spikes hidden for indoor surfaces">
+		<img class="shoez" src="img/icegrip1.png" id="shoe1" alt="Ice Grip1">
 		<div class="info">
 		<div class="position">&bull;&nbsp;POSITION ONE&nbsp;&bull;</div>
 		<div class="title">HIDDEN</div>
@@ -68,7 +73,7 @@
 
 	</article>
 	<article id="two">
-		<img src="img/icegrip2.png" alt="Ice Grip2">
+		<img class="shoez" src="img/icegrip2.png" alt="Ice Grip2">
 		<div class="position">&bull;&nbsp;POSITION TWO&nbsp;&bull;</div>
 		<div class="title">ROTATED</div>
 		<div class="blueline"><img src="img/lilboot.png" alt="lilboot"></div>
@@ -76,8 +81,8 @@
 supplied adjustment tool.</div>
 	</article>
 	<article id="three">
-		<img src="img/icegrip3.png" id="shoe3" alt="Ice Grip3">
-		<img src="img/tractionspikesexposed.png" id="words" alt="traction spikes exposed for outdoor surfaces">
+		<img class="shoez" src="img/icegrip3.png" id="shoe3" alt="Ice Grip3">
+		<img class="words" src="img/tractionspikesexposed.png" id="words" alt="traction spikes exposed for outdoor surfaces">
 		<div class="position">&bull;&nbsp;POSITION THREE&nbsp;&bull;</div>
 		<div class="title">EXPOSED</div>
 		<div class="blueline"><img src="img/lilboot.png" alt="lilboot"></div>
@@ -86,7 +91,7 @@ supplied adjustment tool.</div>
 	</div>
 </section>
 <section id="removable" class="clearfix">
-	<div class="wrap">
+	<div class="wrap clearfix">
 	<img src="img/bootup.png" id="bootup" alt="BootUp">
 	<div id="right">
 		<div class="inner">

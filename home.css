@@ -29,16 +29,14 @@ h1, a.size{
 
 #home{
 	background: #f4f4f4;
-	border-bottom: 2px solid #777777;
 }
-
 #instructions{
-	max-width: 500px;
-	margin-left: 16%;
-	padding-top: 80px;
+	width: 50%;
+	float:left;
+	padding: 40px 0px 40px 0px;
 }
 #instructions h1{
-	font-size: 65px;
+	font-size: 80px;
 }
 #instructions p{
 	color: #222222;
@@ -49,33 +47,14 @@ h1, a.size{
 	padding: 0px;
 	padding-left: 0px;
 }
+#home img{
+	width: 50%;
+}
 footer{
 	background: url(img/mochaGrunge.jpg);
 	opacity: 1;
 }
-#matrix{
-	max-width: 40%;
-	float:right;
-	padding: 0px 7% 0px 0px;
-	background-image: linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
-background-image: -o-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
-background-image: -moz-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
-background-image: -webkit-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
-background-image: -ms-linear-gradient(right , rgb(187,190,195) 6%, rgb(244,244,244) 35%);
 
-background-image: -webkit-gradient(
-	linear,
-	right top,
-	left top,
-	color-stop(0.06, rgb(187,190,195)),
-	color-stop(0.35, rgb(244,244,244))
-);
-}
-
-#matrix img#featuredshoe{
-	z-index: 1;
-	width: 100%;
-}
 
 #stageone{
 	background: url(img/mochaGrunge2.jpg);
@@ -87,18 +66,12 @@ background-image: -webkit-gradient(
 	float:left;
 	width: 33.3%;
 	text-align: center;
-}
-
-article#one{
 	position: relative;
 }
+
 article#one img#words{
 	position: absolute;
-	left: 350px;
-}
-
-article#three{
-	position: relative;
+	left: 80%;
 }
 
 article#three #words{
@@ -108,26 +81,27 @@ article#three #words{
 }
 
 .wrap{
+	width: 90%;
 	max-width: 1280px;
 }
 
 .info{
 	clear:both;
-	text-align:center;
+	text-align:center;	
 }
 
 .position{
 	font-family: langdon;
 	color: #FFFFFF;
 	font-size: 20px;
-	text-align: center;
+	text-align: center;	
 }
 .title{
 	font-family: langdon;
 	font-size: 60px;
 	text-align: center;
 	display:inline;
-	color:#4fd2e8;
+	color:#37a0d0;
 }
 
 .description{
@@ -153,13 +127,14 @@ article#three #words{
 
 #removable{
 	background: #f4f4f4;
-	height: 650px;
+	height: 650px;	
 }
 
 #bootup{
 	position: relative;
 	float:left;
 	margin-top: -150px;
+	max-width: 50%;
 }
 
 #right .inner{
@@ -172,8 +147,96 @@ article#three #words{
 	margin-top: 10px;
 }
 
-@media only screen and (min-width: 1441px) {
+@media only screen and (max-width: 1024px){
+	article#three #words{
+	position: absolute;
+	left: -70px;
+	top: 300px;
+}
+}
+@media only screen and (max-width: 838px) {
 #instructions{
-		margin-left: 20%;
+	width: 40%;
+}
+}
+@media only screen and (max-width: 768px) {
+.content{
+	max-width: 700px;
+}
+#home img{
+	width: 60%;
+}
+#instructions h1{
+	font-size: 50px;
+}
+h1{
+	font-size: 50px;
+}
+#instructions p{
+	color: #222222;
+	font-size: 14px;
+	line-height: 18px;
+}
+h1{
+	padding-bottom: 10px;
+}
+a.ctabox{
+	color: #FFFFFF;
+	background: url(img/subtle_grunge_blue.png) top;
+	display: inline-block;
+	padding: 10px;
+	font-family: langdon;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+}
+img.shoez{
+	height: 500px;
+}
+img.words{
+	display:none;
+}
+}
+@media only screen and (max-width: 700px) {
+#home #instructions{
+	float:none;
+	clear:both;
+	width: 100%;
+}
+#home .content img{
+	width: 50%;
+	float:none;
+	position: relative;
+	margin-left: -25%;
+	left: 50%;
+	display:none;
+}
+#stageone article{
+	float:none;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+img.shoez{
+	height: auto;
+}
+#bootup{
+	position: relative;
+	float:none;
+	margin-left: -40%;
+	left: 50%;
+	margin-top: -150px;
+	max-width: 80%;
+}
+#right{
+	width: 100%;
+}
+#right .inner{
+	text-align: left;
+	position: relative;
+	top: 0px;
 }
 }
