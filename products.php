@@ -93,8 +93,9 @@ if ($c == 0) {
 print('<div class="wrap clearfix">');
 };
 */
-print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" id="" type="button">
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-features="'.$fetch[features].'" ice="'.$fetch[ice].'" snow="'.$fetch[snow].'" oil="'.$fetch[oil].'" fats="'.$fetch[fats].'" soaps="'.$fetch[soaps].'" chemicals="'.$fetch[chemicals].'" liquids="'.$fetch[liquids].'" mud="'.$fetch[mud].'" indoor="'.$fetch[indoor].'" outdoor="'.$fetch[outdoor].'" driving="'.$fetch[driving].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" id="" type="button">
 			<span class="title">'.$fetch[name].'</span>
+			<span class="sub-title">'.$fetch[upper_style].'</span>
 			<img src=" '.$fetch[img_url].' " alt="shoe">
 		</button>');
 // $i++;
@@ -293,7 +294,20 @@ $(document).ready(function(){
 		var number = $(this).attr('product-number');
 		var name = $(this).attr('product-name');
 		var description = $(this).attr('product-description');
+		var features = $(this).attr('product-features');
 		var imgurl = $(this).attr('product-image');
+		var ice = $(this).attr('ice');
+		var snow = $(this).attr('snow');
+		var oil = $(this).attr('oil');
+		var fats = $(this).attr('fats');
+		var soaps = $(this).attr('soaps');
+		var chemicals = $(this).attr('chemicals');
+		var liquids = $(this).attr('liquids');
+		var mud = $(this).attr('mud');
+		var indoor = $(this).attr('indoor');
+		var outdoor = $(this).attr('outdoor');
+		var driving = $(this).attr('driving');
+
 		// var currentrow = 'null';
 //////////////number visibile items //////////
 		var i = 1;
@@ -377,14 +391,14 @@ if (currentrow == detailsrow) {
 $('.details').remove();
 $('.product').removeClass('on');
 $(this).addClass('on');
-$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"></div><div class="views-info"></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
 $('.details').css('left','-50%').css('width','203%').slideDown();
 		};
 
 } else {
 	$('.details').slideUp(function() {
     $('.details').remove();
-    $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+    $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"></div><div class="views-info"></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
 			$('.details').css('left','-50%').css('width','203%').slideDown();
 	});
 	$('.product').removeClass('on');
@@ -392,7 +406,7 @@ $('.details').css('left','-50%').css('width','203%').slideDown();
   };
 
 } else {
-			$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><h1>'+name+'</h1><p>'+description+'</p><div id="sizes"><a href="#" class="size"><div class="sizebox">S</div></a><a href="#" class="size"><div class="sizebox">M</div></a><a href="#" class="size"><div class="sizebox">L</div></a><a href="#" class="size"><div class="sizebox">XL</div></a><a href="#" class="expert">CONTACT AN EXPERT ></a></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+			$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"></div><div class="views-info"></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
 			$('.details').css('left','-50%').css('width','203%').slideDown();
 			$(this).addClass('on');
 };
@@ -406,10 +420,46 @@ $('.details').css('left','-50%').css('width','203%').slideDown();
 
 		var point_to_pos = $(this).offset().left + 28;
 		$('.arrow-up').css({ 'left': point_to_pos});
+
+	$('.features').click(function()
+	{
+			$('.ideal-info').hide();
+			$('.sizechart-info').hide();
+			$('.views-info').hide();
+
+			$('.features-info').show();
+	});
+	$('.ideal').click(function()
+	{
+			$('.features-info').hide();
+			$('.sizechart-info').hide();
+			$('.views-info').hide();
+
+			$('.ideal-info').show();
+	});
+	$('.sizechart').click(function()
+	{
+			$('.ideal-info').hide();
+			$('.features-info').hide();
+			$('.views-info').hide();
+
+			$('.sizechart-info').show();
+	});
+	$('.views').click(function()
+	{
+			$('.ideal-info').hide();
+			$('.sizechart-info').hide();
+			$('.features-info').hide();
+
+			$('.views-info').show();
+	});
+
 	});
 
 });
 
 </script>
+
+
 </body>
 </html>
