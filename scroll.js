@@ -5,10 +5,6 @@ function scrollToAnchor(aid){
 $("#learn").click(function() {
    scrollToAnchor('rotors');
 });
-$("#footernav").click(function() {
-   scrollToAnchor('footer');
-});
-
 
 
 
