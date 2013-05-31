@@ -178,6 +178,59 @@ nav{
 .details{
 	display: none;
 	position: relative;
+	background-color: #FFFFFF;
+	border-top:solid 12px lightgray;
+	border-bottom:solid 12px lightgray;
+}
+.cta-details-blue a{
+	color:#46bfdf;
+	font-size: 1.5em;
+	font-family: langdon;
+	text-transform: uppercase;
+	line-height: 1.15em;
+}
+.cta-details-blue {
+	margin-bottom: 20px;
+}
+.features, .ideal, .sizechart, .views {
+	color:rgba(0,0,0,0.7);
+	font-size: 1.4em;
+	font-family: langdon;
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+.details-moreinfo {
+	margin-top:40px;
+}
+.moreinfo-section {
+	margin-top: 20px;
+	/*min-height: 298px;*/
+}
+.ideal-info table {
+    table-layout:fixed;
+    width:100%;
+}
+.ideal-info table, .ideal-info th, .ideal-info td
+{
+border: 1px solid black;
+}
+.ideal-info td
+{
+padding:5px 50pc 5px 5px;
+}
+/*.ideal-info, .sizechart-info, .views-info, .features-info{
+
+}*/
+.features-info ul{
+	list-style-type: disc;
+	margin-left: 15px;
+	line-height: 1.4em;
+	color:#46bfdf;
+	font-family: karbonsemibold;
+	letter-spacing: 0px;
+}
+.ideal-info, .sizechart-info, .views-info{
+	display: none;
 }
 nav a{
 	font-family: nexabold;
@@ -516,7 +569,7 @@ footer{
 	clear:both;
 }
 footer .wrap{
-	max-width: 980px;	
+	max-width: 980px;
 	margin: 0 auto;
 }
 footer .wrap h2{
@@ -580,7 +633,7 @@ footer input{
 }
 
 #line1 input:nth-child(2){
-	float:right;	
+	float:right;
 }
 
 .column a{
@@ -778,7 +831,7 @@ a.ctabox:hover{
 }
 
 #line1 input:nth-child(2){
-	float:none;	
+	float:none;
 }
 }
 @media only screen and (max-width: 1000px){
@@ -801,7 +854,7 @@ a.ctabox:hover{
 #column2{
 	max-width: 100%;
 	padding: 0px;
-	
+
 }
 #column1{
 	max-width: 100%;
