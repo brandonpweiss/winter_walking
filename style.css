@@ -381,6 +381,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37a0d0', end
 		font-size: 12px;
 		margin-top:5px;
 }
+button.product:active {
+	padding: 0px 6px;
+}
 .main-image{
 	width: 490px;
 	height: 490px;
