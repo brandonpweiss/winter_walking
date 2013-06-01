@@ -102,16 +102,16 @@ mail("contact@winterwalking.com", "Customer Message", $message, $headers);
 	<div class="columninner">
 <h2>HOW TO ORDER</h2>
 <ul>
-<li>REQUEST A SPECIFIC PRODUCT QUOTE</li>
-<li>REQUEST A PRODUCT INFORMATION KIT</li>
-<li>REQUEST TO BE CONTACTED BY AN EXPERT</li>
+<li><a href="#myModal" role="button" data-toggle="modal">REQUEST A SPECIFIC PRODUCT QUOTE</a></li>
+<li><a href="#myModal" role="button" data-toggle="modal">REQUEST A PRODUCT INFORMATION KIT</a></li>
+<li><a href="#myModal" role="button" data-toggle="modal">REQUEST TO BE CONTACTED BY AN EXPERT</a></li>
 </ul>
 
 <p>For individual purchases and retail customers,
 please visit <a href="http://www.wintercleats.com">www.wintercleats.com</a></p>
 </div>
 </div>
-
+<a name="footer"></a>
 <div class="column" id="column3">
 	<div class="columninner">
 <form method="post" action="<?$_SERVER['PHP_SELF'];?>">
@@ -123,7 +123,7 @@ please visit <a href="http://www.wintercleats.com">www.wintercleats.com</a></p>
 	<input type="text" name="phoneNumber" placeholder="PHONE NUMBER">
 	<input type="email" name="email" placeholder="EMAIL ADDRESS">
 	<input type="text" name="comments" placeholder="COMMENTS">
-	<input type="submit" value="SEND">
+	<input class="send" type="submit" value="SEND">
 </form>
 </div>
 </div>

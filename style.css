@@ -142,6 +142,8 @@ body{
 	background: #fff url(img/mochaGrunge.jpg) 0 0;
 	font-family: karbonlight;
 	letter-spacing: 2px;
+	width: 100%;
+	overflow-x:hidden;
 }
 .bold{
 	font-weight: bold;
@@ -179,8 +181,9 @@ nav{
 	display: none;
 	position: relative;
 	background-color: #FFFFFF;
-	border-top:solid 12px lightgray;
-	border-bottom:solid 12px lightgray;
+	-webkit-box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);
+box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);
+border-bottom: #777777 solid thin;
 }
 .cta-details-blue a{
 	color:#46bfdf;
@@ -197,11 +200,12 @@ nav{
 	font-size: 1.4em;
 	font-family: langdon;
 	text-transform: uppercase;
-	margin-right: 20px;
+	margin-right: 14px;
 }
 .details-moreinfo {
 	margin-top:40px;
 }
+
 .moreinfo-section {
 	margin-top: 20px;
 	/*min-height: 298px;*/
@@ -219,14 +223,12 @@ border: 1px solid black;
 padding:5px 50pc 5px 5px;
 }
 /*.ideal-info, .sizechart-info, .views-info, .features-info{
-
 }*/
 .features-info ul{
 	list-style-type: disc;
 	margin-left: 15px;
 	line-height: 1.4em;
-	color:#46bfdf;
-	font-family: karbonsemibold;
+	color:#666666;
 	letter-spacing: 0px;
 }
 .ideal-info, .sizechart-info, .views-info{
@@ -627,7 +629,7 @@ footer input{
 }
 #line1 input{
 	display:inline-block;
-	width: 165px;
+	width: 164px;
 }
 #line1 input:nth-child(1){
 	margin-right: 7px;
@@ -812,6 +814,50 @@ a.ctabox:hover{
 #patent #right img{
 	padding-left: 100px;
 }
+.winter.see{
+	clear:both;
+	margin-top: 60px;
+	text-align: center;
+}
+a.quote{
+	-webkit-transition: .3s color ease-in-out;
+	-moz-transition: .3s color ease-in-out;
+	-o-transition: .3s color ease-in-out;
+	-ms-transition: .3s color ease-in-out;
+	transition: .3s color ease-in-out;
+}
+a.quote:hover{
+	color: #666666;
+}
+footer input.send{
+	background: #FFFFFF;
+	border:none;
+	font-size: 30px;
+	font-family: langdon;
+	color: #666666;
+	padding: 10px;
+	float:right;
+}
+
+footer input.send:hover{
+	background: #FFFFFF;
+	border:none;
+	font-size: 30px;
+	font-family: langdon;
+	color: #46bfdf;
+	padding: 10px;
+	float:right;
+}
+
+#sticky_navigation_wrapper {
+	height: 32px;
+}
+
+#sticky_navigation {
+	width: 100%;
+	position: relative;
+	z-index: 999999;
+}
 
 @media only screen and (max-width:1024px) {
 #facts #inner{
@@ -834,12 +880,18 @@ a.ctabox:hover{
 #line1 input:nth-child(2){
 	float:none;
 }
+#column3{
+	float:right;
+}
 }
 @media only screen and (max-width: 1000px){
 #top #instructions{
 	float:none;
 	position: relative;
 	width: 100%;
+}
+#top{
+	padding-bottom: 0px;
 }
 #matrix{
 	display:block;
@@ -874,8 +926,21 @@ a.ctabox:hover{
 	background: url(img/bigboot.png) top center no-repeat;
 	padding-bottom: 200px;
 }
+h1, a.size{
+	font-family: langdon;
+	letter-spacing: -1px;
+	font-size: 50px;
+	padding-bottom: 30px;
+	color: #eeeeee;
+}
 }
 @media only screen and (max-width: 700px){
+.winter.see{
+	clear:both;
+	margin-top: 60px;
+	text-align: center;
+	display:none;
+}
 #matrix{
 	display:none;
 }
@@ -929,7 +994,7 @@ nav a{
 @media only screen and (max-width: 400px){
 nav a{
 	font-family: nexalight;
-	font-size: 5px;
+	font-size: 8px;
 	font-weight: 100;
 	text-decoration: none;
 	color: #333333;
