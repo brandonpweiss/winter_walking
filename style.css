@@ -874,6 +874,18 @@ footer input.send:hover{
 	z-index: 999999;
 }
 
+a.request{
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+a.request:hover{
+	color: #666666;
+}
+
+
 @media only screen and (max-width:1024px) {
 #facts #inner{
 	background: rgba(255,255,255,.5);
