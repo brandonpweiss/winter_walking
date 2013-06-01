@@ -6,7 +6,7 @@ echo '
       <nav>
     <ul>
       <li><a href="index.php">FEATURED</a></li>
-      <li><a href="products.php">OUR PRODUCTS</a></li>
+      <li><a class="hide2" href="products.php">OUR PRODUCTS</a></li>
       <li><a href="information.php">OUR COMPANY</a></li>
       <li id="contact1"><a href="#myModal" role="button" data-toggle="modal">CONTACT</a></li>
       <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
