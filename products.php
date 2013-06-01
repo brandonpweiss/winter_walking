@@ -85,7 +85,7 @@ $c = 0;
 */
 include ('config.php');
 
-$query = mysqli_query ($con, 'SELECT * FROM products');
+$query = mysqli_query ($con, 'SELECT * FROM products ORDER BY name ASC');
 print('<div class="wrap clearfix">');
 while ($fetch = mysqli_fetch_array($query)) {
 /*
@@ -93,7 +93,7 @@ if ($c == 0) {
 print('<div class="wrap clearfix">');
 };
 */
-print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-features="'.$fetch[features].'" ice="'.$fetch[ice].'" snow="'.$fetch[snow].'" oil="'.$fetch[oil].'" fats="'.$fetch[fats].'" soaps="'.$fetch[soaps].'" chemicals="'.$fetch[chemicals].'" liquids="'.$fetch[liquids].'" mud="'.$fetch[mud].'" indoor="'.$fetch[indoor].'" outdoor="'.$fetch[outdoor].'" driving="'.$fetch[driving].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" id="" type="button">
+print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-features="'.$fetch[features].'" ice="'.$fetch[ice].'" snow="'.$fetch[snow].'" oil="'.$fetch[oil].'" fats="'.$fetch[fats].'" soaps="'.$fetch[soaps].'" chemicals="'.$fetch[chemicals].'" liquids="'.$fetch[liquids].'" mud="'.$fetch[mud].'" indoor="'.$fetch[indoor].'" outdoor="'.$fetch[outdoor].'" driving="'.$fetch[driving].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" image1="'.$fetch[img_url1].'" image2="'.$fetch[img_url2].'" image3="'.$fetch[img_url3].'" image4="'.$fetch[img_url4].'" xs="'.$fetch[XS].'" s="'.$fetch[S].'" m="'.$fetch[M].'" l="'.$fetch[L].'" xl="'.$fetch[XL].'" xxl="'.$fetch[XXL].'" xxxl="'.$fetch[XXXL].'"  xxxxl="'.$fetch[XXXXL].'" id="" type="button">
 			<span class="title">'.$fetch[name].'</span>
 			<span class="sub-title">'.$fetch[upper_style].'</span>
 			<img src=" '.$fetch[img_url].' " alt="shoe">
@@ -149,12 +149,7 @@ $('.traction').each(function(){
 		$(this).removeClass('hide1').fadeIn('slow','swing');
 };
 });
-
 }
-
-
-
-
 }
 });
 
@@ -188,12 +183,7 @@ $('.easyonoff').each(function(){
 		$(this).removeClass('hide2').fadeIn('slow','swing');
 	};
 });
-
 }
-
-
-
-
 }
 });
 
@@ -227,12 +217,7 @@ $('.economical').each(function(){
 		$(this).removeClass('hide3').fadeIn('slow','swing');
 	};
 });
-
 }
-
-
-
-
 }
 });
 
@@ -266,19 +251,15 @@ $('.protectionwarmth').each(function(){
 		$(this).removeClass('hide4').fadeIn('slow','swing');
 	};
 });
-
 }
-
-
-
-
 }
 });
 
 ////////////////////////
 
 ////////////////////////////////////////////////////////
-$(document).ready(function(){
+// $(document).ready(function(){
+	(function(){
 	/*
 	$('.product').click(function()
 	{
@@ -287,7 +268,6 @@ $(document).ready(function(){
 		$('.arrow-up').css({ 'left': point_to_pos});
 	});
 */
-
 		$('.product').click(function()
 	{
 ///////////////////////////////////////////////
@@ -307,7 +287,68 @@ $(document).ready(function(){
 		var indoor = $(this).attr('indoor');
 		var outdoor = $(this).attr('outdoor');
 		var driving = $(this).attr('driving');
+		var image1 = $(this).attr('image1');
+		var image2 = $(this).attr('image2');
+		var image3 = $(this).attr('image3');
+		var image4 = $(this).attr('image4');
 
+
+		var s = $(this).attr('s');
+
+		var m = $(this).attr('m');
+
+		var l = $(this).attr('l');
+
+		var xl = $(this).attr('xl');
+
+		var xxl = $(this).attr('xxl');
+
+		var xxxl = $(this).attr('xxxl');
+
+		var xxxxl = $(this).attr('xxxxl');
+
+		var xs = $(this).attr('xs');
+
+		if (xs == 1) {
+			xs = '&#x2713;';
+		} else if (xs == 0) {
+			xs = '&#32;';
+		};
+				if (s == 1) {
+			s = '&#x2713;';
+		} else if (s == 0) {
+			s = '&#32;';
+		};
+				if (m == 1) {
+			m = '&#x2713;';
+		} else if (m == 0) {
+			m = '&#32;';
+		};
+				if (l == 1) {
+			l = '&#x2713;';
+		} else if (l == 0) {
+			l = '&#32;';
+		};
+				if (xl == 1) {
+			xl = '&#x2713;';
+		} else if (xl == 0) {
+			xl = '&#32;';
+		};
+				if (xxl == 1) {
+			xxl = '&#x2713;';
+		} else if (xxl == 0) {
+			xxl = '&#32;';
+		};
+				if (xxxl == 1) {
+			xxxl = '&#x2713;';
+		} else if (xxxl == 0) {
+			xxxl = '&#32;';
+		};
+				if (xxxxl == 1) {
+			xxxxl = '&#x2713;';
+		} else if (xxxxl == 0) {
+			xxxxl = '&#32;';
+		};
 		// var currentrow = 'null';
 //////////////number visibile items //////////
 		var i = 1;
@@ -391,14 +432,14 @@ if (currentrow == detailsrow) {
 $('.details').remove();
 $('.product').removeClass('on');
 $(this).addClass('on');
-$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"></div><div class="views-info"></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"><table border="1" bordercolor="#0000"><tr><td>XS</td><td>S</td><td>M</td><td>L</td><td>XL</td><td>XXL</td><td>XXXL</td><td>XXXXL</td></tr><tr><td>'+xs+'</td><td>'+s+'</td><td>'+m+'</td><td>'+l+'</td><td>'+xl+'</td><td>'+xxl+'</td><td>'+xxxl+'</td><td>'+xxxxl+'</td></tr></table></div><div class="views-info"><div class="main-image"><img src="'+image1+'"></div><div class="image1"><img src="'+image1+'"></div><div class="image2"><img src="'+image2+'"></div><div class="image3"><img src="'+image3+'"></div><div class="image4"><img src="'+image4+'"></div></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
 $('.details').css('left','-50%').css('width','203%').slideDown();
 		};
 
 } else {
 	$('.details').slideUp(function() {
     $('.details').remove();
-    $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"></div><div class="views-info"></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+    $('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"><table border="1" bordercolor="#0000"><tr><td>XS</td><td>S</td><td>M</td><td>L</td><td>XL</td><td>XXL</td><td>XXXL</td><td>XXXXL</td></tr><tr><td>'+xs+'</td><td>'+s+'</td><td>'+m+'</td><td>'+l+'</td><td>'+xl+'</td><td>'+xxl+'</td><td>'+xxxl+'</td><td>'+xxxxl+'</td></tr></table></div><div class="views-info"><div class="main-image"><img src="'+image1+'"></div><div class="image1"><img src="'+image1+'"></div><div class="image2"><img src="'+image2+'"></div><div class="image3"><img src="'+image3+'"></div><div class="image4"><img src="'+image4+'"></div></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
 			$('.details').css('left','-50%').css('width','203%').slideDown();
 	});
 	$('.product').removeClass('on');
@@ -406,7 +447,7 @@ $('.details').css('left','-50%').css('width','203%').slideDown();
   };
 
 } else {
-			$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"></div><div class="views-info"></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
+			$('<div class="details" current-row="'+currentrow+'"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a href="#">REQUEST A QUOTE &rsaquo;</a><br><a href="#">SPEAK TO AND EXPERT &rsaquo;</a></div><h1>'+name+'</h1><p>'+description+'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a><a href="javascript:void(0);" class="views">Views</a></div><div class="moreinfo-section"><div class="features-info">'+features+'</div><div class="ideal-info"><table border="1" bordercolor="#49aaee"><tr><td>Ice</td><td>'+ice+'</td></tr><tr><td>Snow</td><td>'+snow+'</td></tr><tr><td>Oil</td><td>'+oil+'</td></tr><tr><td>fats</td><td>'+fats+'</td></tr><tr><td>Soaps</td><td>'+soaps+'</td></tr><tr><td>Chemicals</td><td>'+chemicals+'</td></tr><tr><td>Liquids</td><td>'+liquids+'</td></tr><tr><td>Mud</td><td>'+mud+'</td></tr><tr><td>Indoor</td><td>'+indoor+'</td></tr><tr><td>Outdoor</td><td>'+outdoor+'</td></tr><tr><td>Driving</td><td>'+driving+'</td></tr></table></div><div class="sizechart-info"><table border="1" bordercolor="#0000"><tr><td>XS</td><td>S</td><td>M</td><td>L</td><td>XL</td><td>XXL</td><td>XXXL</td><td>XXXXL</td></tr><tr><td>'+xs+'</td><td>'+s+'</td><td>'+m+'</td><td>'+l+'</td><td>'+xl+'</td><td>'+xxl+'</td><td>'+xxxl+'</td><td>'+xxxxl+'</td></tr></table></div><div class="views-info"><div class="main-image"><img src="'+image1+'"></div><div class="image1"><img src="'+image1+'"></div><div class="image2"><img src="'+image2+'"></div><div class="image3"><img src="'+image3+'"></div><div class="image4"><img src="'+image4+'"></div></div></div></div></div><div id="right"><div class="inner"><img src="'+imgurl+'"></div></div></div></div></div>').insertAfter('#'+lastitem);
 			$('.details').css('left','-50%').css('width','203%').slideDown();
 			$(this).addClass('on');
 };
@@ -421,45 +462,69 @@ $('.details').css('left','-50%').css('width','203%').slideDown();
 		var point_to_pos = $(this).offset().left + 28;
 		$('.arrow-up').css({ 'left': point_to_pos});
 
-	$('.features').click(function()
+	$(".features").click(function()
 	{
-			$('.ideal-info').hide();
-			$('.sizechart-info').hide();
-			$('.views-info').hide();
+			$(".ideal-info").hide();
+			$(".sizechart-info").hide();
+			$(".views-info").hide();
 
-			$('.features-info').show();
+			$(".features-info").show();
 	});
-	$('.ideal').click(function()
+	$(".ideal").click(function()
 	{
-			$('.features-info').hide();
-			$('.sizechart-info').hide();
-			$('.views-info').hide();
+		console.log("hello world!");
+			$(".features-info").hide();
+			$(".sizechart-info").hide();
+			$(".views-info").hide();
 
-			$('.ideal-info').show();
+			$(".ideal-info").show();
 	});
-	$('.sizechart').click(function()
+	$(".sizechart").click(function()
 	{
-			$('.ideal-info').hide();
-			$('.features-info').hide();
-			$('.views-info').hide();
+			$(".ideal-info").hide();
+			$(".features-info").hide();
+			$(".views-info").hide();
 
-			$('.sizechart-info').show();
+			$(".sizechart-info").show();
 	});
-	$('.views').click(function()
+	$(".views").click(function()
 	{
-			$('.ideal-info').hide();
-			$('.sizechart-info').hide();
-			$('.features-info').hide();
+			$(".ideal-info").hide();
+			$(".sizechart-info").hide();
+			$(".features-info").hide();
 
-			$('.views-info').show();
+			$(".views-info").show();
 	});
 
+	$(".image1").click(function()
+	{
+		var img1 = $(this).html();
+		$(".main-image").html(img1);
 	});
+	$(".image2").click(function()
+	{
+		var img2 = $(this).html();
+		$(".main-image").html(img2);
+	});
+	$(".image3").click(function()
+	{
+		var img3 = $(this).html();
+		$(".main-image").html(img3);
+	});
+	$(".image4").click(function()
+	{
+		var img4 = $(this).html();
+		$(".main-image").html(img4);
+	});
+
 
 });
-
+})();
 </script>
-
-
 </body>
 </html>
+
+
+
+
+
