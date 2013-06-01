@@ -472,7 +472,6 @@ $('.details').css('left','-50%').css('width','203%').slideDown();
 	});
 	$(".ideal").click(function()
 	{
-		console.log("hello world!");
 			$(".features-info").hide();
 			$(".sizechart-info").hide();
 			$(".views-info").hide();
