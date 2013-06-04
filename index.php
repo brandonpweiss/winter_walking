@@ -11,6 +11,7 @@
 	<script src="jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-slider.js"></script>
+	<script src="modernizr.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <script>

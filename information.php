@@ -36,12 +36,12 @@
 <h3>RESEARCH & DEVELOPMENT</h3>
 <p>Winter Walking didn't become the largest and oldest manufacturer of All-Traction™ Footwear by chance.  Every product in our line was created through years of research and development with you, the end user.  Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
 
-<a href="history.pdf">Download The History of Ice Cleats</a>
+<a target="_blank"  href="history.pdf">Download The History of Ice Cleats</a>
 
 <h3>CUSTOMER SERVICE & INVENTORY</h3>
 <p>Winter Walking has spent over 30 years reducing workplace slips and falls though the implementation of All-Traction™ Footwear.  No one knows as much about accident prevention as our team of experts, and no one will work harder to find the perfect solution for the unique challenges in your workplace.  Once we've identified the right solution, our massive inventory levels enable us to get the product you need out the door and in your hands while you still need it — not months later.</p>  
 
-<a href="guide.pdf">Download The Ice Cleats Selection Guide</a>
+<a target="_blank" href="guide.pdf">Download The Ice Cleats Selection Guide</a>
 
 <h3>SAFETY & FINANCIAL BENEFITS</h3>
 <p>According to the Bureau of Labor Statistics, nearly 15% of all lost workday accidents are due to slips, trips, and falls.  When assessing the cost of a lost workday accident, we commonly identify "direct costs" first, including workers’ compensation claims and up-front medical costs.  However, the true cost of a lost workday accident becomes most apparent when considering the "indirect costs" such as lost/decreased productivity, replacement hiring, overtime pay, administrative and managerial costs, etc.  This so-called "iceberg effect" is why the National Safety Council estimates the current total cost for each lost workday at $34,000!  As most companies will see between 2-5% of their workforce experience lost workdays due to accidental slips and falls, these massive costs will have a drastic effect on the businesses bottom line.</p>
