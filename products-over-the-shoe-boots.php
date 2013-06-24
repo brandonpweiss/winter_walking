@@ -29,7 +29,7 @@
 <?php
 include ('config.php');
 
-$query = mysqli_query ($con, 'SELECT * FROM products ORDER BY name ASC');
+$query = mysqli_query ($con, 'SELECT * FROM products WHERE category = \'over shoe boots\' ORDER BY name ASC');
 print('<div class="wrap clearfix">');
 print('<aside id="filter">');
 print('<form method="post" action="htmlentities($_SERVER["PHP_SELF"]);">');
@@ -44,11 +44,6 @@ print('<div class="opt-wrap"><input type="checkbox" name="low-cut" value="low-cu
 print('<div class="opt-wrap"><input type="checkbox" name="mid-calf" value="mid-calf" id="mid-calf"><label for="mid-calf">Mid Calf<span></span></label></div>');
 print('<div class="opt-wrap"><input type="checkbox" name="knee-high" value="knee-high" id="knee-high"><label for="knee-high">Knee High<span></span></label></div>');
 print('<div class="opt-wrap"><input type="checkbox" name="insulated" value="insulated" id="insulated"><label for="insulated">Insulated<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"><label for="stripping">Floor Stripping<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="oil-grease" value="oil-grease" id="oil-grease"><label for="oil-grease">Oil/Grease<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="food-processing" value="food-processing" id="food-processing"><label for="food-processing">Food Processing<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over-sock" id="over-sock"><label for="over-sock">Over the Sock<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="steel-toe" value="steel-toe" id="steel-toe"><label for="steel-toe">Steel Toe<span></span></label></div>');
 print('<input type="submit" name ="filter-submit" class="filter-submit" value="Filter Products">');
 print('</form>');
 print('</aside>');

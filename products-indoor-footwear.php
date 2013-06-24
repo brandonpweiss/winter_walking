@@ -29,21 +29,10 @@
 <?php
 include ('config.php');
 
-$query = mysqli_query ($con, 'SELECT * FROM products ORDER BY name ASC');
+$query = mysqli_query ($con, 'SELECT * FROM products WHERE category = \'indoor\' ORDER BY name ASC');
 print('<div class="wrap clearfix">');
 print('<aside id="filter">');
 print('<form method="post" action="htmlentities($_SERVER["PHP_SELF"]);">');
-print('<div class="opt-wrap"><input type="checkbox" name="gritted" value="gritted" id="gritted"><label for="gritted">Gritted<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="spiked" value="spiked" id="spiked"><label for="spiked">Spiked<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="safer-driving" value="safer-driving" id="safer-driving"><label for="safer-driving">Safe for Driving<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="non-sparking" value="non-sparking" id="non-sparking"><label for="non-sparking">Non-Sparking<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="defined-heel" value="defined-heel" id="defined-heel"><label for="defined-heel">Defined Heel<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"><label for="extreme-ice">Extreme Ice<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="safer-indoors" value="safer-indoors" id="safer-indoors"><label for="safer-indoors">Safe for Indoors<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="low-cut" value="low-cut" id="low-cut"><label for="low-cut">Low Cut<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="mid-calf" value="mid-calf" id="mid-calf"><label for="mid-calf">Mid Calf<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="knee-high" value="knee-high" id="knee-high"><label for="knee-high">Knee High<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="insulated" value="insulated" id="insulated"><label for="insulated">Insulated<span></span></label></div>');
 print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"><label for="stripping">Floor Stripping<span></span></label></div>');
 print('<div class="opt-wrap"><input type="checkbox" name="oil-grease" value="oil-grease" id="oil-grease"><label for="oil-grease">Oil/Grease<span></span></label></div>');
 print('<div class="opt-wrap"><input type="checkbox" name="food-processing" value="food-processing" id="food-processing"><label for="food-processing">Food Processing<span></span></label></div>');

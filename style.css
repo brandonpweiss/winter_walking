@@ -432,7 +432,27 @@ a.product img:hover, button.product img:hover{
 -webkit-box-shadow: 0 0 2px #37a0d0;
 box-shadow: 0 0 2px 4px #37a0d0;
 }
-
+.opt-wrap {
+	width: 100%;
+	margin: 15px 0px;
+}
+aside#filter label{
+	display: inline-block;
+	margin-left: 6%;
+}
+form .filter-submit {
+	margin: 15% 0px 0px 10%;
+	text-transform: uppercase;
+}
+aside#filter {
+	width: 20%;
+	float: left;
+	margin-top: 70px;
+}
+.product-bttn-wrapper {
+	float: left;
+	width: 80%;
+}
 #contact2{
 	display:none;
 }
