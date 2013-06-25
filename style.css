@@ -139,7 +139,7 @@ table {
 
 
 body{
-	background: #fff url(img/mochaGrunge.jpg) 0 0;
+	background: #ffffff url(img/mochaGrunge.jpg) 0 0;
 	font-family: karbonlight;
 	letter-spacing: 2px;
 	width: 100%;
@@ -176,6 +176,26 @@ nav{
 	margin-top: 15px;
 	-webkit-box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
         box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
+}
+nav#productnav{
+	background: #000000 url(img/mochaGrunge.png) center center;
+	text-align: center;
+	height: 20px;
+	padding: 5px 0px 4px 0px;
+	position: relative;
+        margin-top: -4px;
+}
+nav#productnav ul li a{
+color: #eeeeee;
+	font-size: 10px;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+nav#productnav ul li a:hover{
+	color: #46BFDF;
 }
 .details{
 	display: none;
@@ -433,25 +453,62 @@ a.product img:hover, button.product img:hover{
 box-shadow: 0 0 2px 4px #37a0d0;
 }
 .opt-wrap {
-	width: 100%;
-	margin: 15px 0px;
+	float:left;
+	display:inline-block;
+	margin-left: 10px;
+	width: 160px;
+	padding: 3px;
+}
+.opt-wrap input{
+	float:left;
+	display:inline-block;
 }
 aside#filter label{
 	display: inline-block;
-	margin-left: 6%;
+	margin-top: 4px;
+	margin-left: 10px;
+	color: #ededed;
 }
 form .filter-submit {
-	margin: 15% 0px 0px 10%;
+	margin-top: 10px;
 	text-transform: uppercase;
+	background: url(img/subtle_grunge_blue.png);
+    border: medium none;
+ 	color: #ededed;
+    font-family: langdon;
+    font-size: 25px;
+    padding: 5px 40px 5px 40px;
+ 	margin: 0 auto;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin-top: 0px;
+    outline: solid #007b99 medium;
+}
+form .filter-submit:hover {
+	background: url(img/subtle_grunge_blue2.png);
+}
+form .filter-submit:active {
+	background: #333333;
+	outline: solid #555555 medium;
 }
 aside#filter {
-	width: 20%;
-	float: left;
-	margin-top: 70px;
+	background: url(img/mochaGrunge.jpg);
+	width: 100%;
+	color: #ededed;
+	padding: 20px 0px 40px 0px;
+}
+aside#filter h1{
+color: #46BFDF;
+font-size: 25px;
+letter-spacing: 1px;
+padding-bottom: 10px;
+margin-left: 15px;
 }
 .product-bttn-wrapper {
 	float: left;
-	width: 80%;
+	width: 100%;
 }
 #contact2{
 	display:none;
@@ -868,7 +925,7 @@ a.quote:hover{
 	color: #666666;
 }
 footer input.send{
-	background: #FFFFFF;
+	background: url(img/sutble_grunge_blue.png);
 	border:none;
 	font-size: 30px;
 	font-family: langdon;

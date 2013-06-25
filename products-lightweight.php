@@ -24,6 +24,7 @@
     <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
 </div>
 <?php include('header.php');?>
+<?php include('nav2.php');?>
 </div>
 <section id="products">
 <?php
