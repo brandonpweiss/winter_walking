@@ -39,7 +39,7 @@
 <div class="tops">
 	<div id="white">
 	<div id="logobox">
-  <img id="logo" src="img/logo.png" alt="Winter Walking we dont just make ice cleats, we perfect them">
+ <a href="index.php"><img id="logo" src="img/logo.png" alt="Winter Walking we dont just make ice cleats, we perfect them"></a>
     <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
   </div>
   </div>

@@ -20,7 +20,7 @@
 <body>
 	<div class="tops2">
 		<div id="logobox">
-  <img id="logo" src="img/logowhite.png" alt="Winter Walking we dont just make ice cleats, we perfect them">
+   <a href="index.php"><img id="logo" src="img/logowhite.png" alt="Winter Walking we dont just make ice cleats, we perfect them"></a>
     <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
 </div>
 <?php include('header.php');?>
