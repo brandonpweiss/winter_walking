@@ -33,10 +33,6 @@ include('config.php');
 if ( isset( $_POST['filter-submit'] ) )
 {
 
-if ( $_POST['insulated'] == 'insulated') {
-	$filter_query .= "AND `insulated` = 1";
-};
-
 if ( $_POST['stripping'] == 'stripping') {
 	$filter_query .= "AND `stripping` = 1";
 };
@@ -65,12 +61,6 @@ print('<aside id="filter">');
 print('<div class="content">');
 print('<h1>GET A GRIP: </h1>');
 print('<form method="post" action="products-indoor-footwear.php">');
-
-print('<div class="opt-wrap"><input type="checkbox" name="insulated" value="insulated" id="insulated"');
-if ($_POST['insulated'] == 'insulated'){
-print('checked = "checked"');
-};
-print('><label for="insulated">Insulated<span></span></label></div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
 if ($_POST['stripping'] == 'stripping'){
