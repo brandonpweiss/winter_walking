@@ -26,27 +26,185 @@
 <?php include('header.php');?>
 <?php include('nav2.php');?>
 </div>
-<?php 
+
+<?php
+include('config.php');
+
+if ( isset( $_POST['filter-submit'] ) )
+{
+
+if ($_POST['gritted'] == 'gritted') {
+	$filter_query .= " WHERE `gritted` = 1 ";
+};
+
+if ( $_POST['spiked'] == 'spiked') {
+	$filter_query .= " WHERE `spiked` = 1 ";
+};
+
+if ( $_POST['safer-driving'] == 'safer-driving') {
+	$filter_query .= " WHERE `safer-driving` = 1 ";
+};
+
+if ( $_POST['non-sparking'] == 'non-sparking') {
+	$filter_query .= " WHERE `non-sparking` = 1 ";
+};
+
+if ( $_POST['defined-heel'] == 'defined-heel') {
+	$filter_query .= " WHERE `defined-heel` = 1 ";
+};
+
+if ( $_POST['extreme-ice'] == 'extreme-ice') {
+	$filter_query .= " WHERE `extreme-ice` = 1 ";
+};
+
+if ( $_POST['safer-indoors'] == 'safer-indoors') {
+	$filter_query .= " WHERE `safer-indoors` = 1 ";
+};
+
+if ( $_POST['low-cut'] == 'low-cut') {
+	$filter_query .= " WHERE `low-cut` = 1 ";
+};
+
+if ( $_POST['mid-calf'] == 'mid-calf') {
+	$filter_query .= " WHERE `mid-calf` = 1 ";
+};
+
+if ( $_POST['knee-high'] == 'knee-high') {
+	$filter_query .= " WHERE `knee-high` = 1 ";
+};
+
+if ( $_POST['insulated'] == 'insulated') {
+	$filter_query .= " WHERE `insulated` = 1 ";
+};
+
+if ( $_POST['stripping'] == 'stripping') {
+	$filter_query .= " WHERE `stripping` = 1 ";
+};
+
+if ( $_POST['oil-grease'] == 'oil-grease') {
+	$filter_query .= " WHERE `oil-grease` = 1 ";
+};
+
+if ( $_POST['food-processing'] == 'food-processing') {
+	$filter_query .= " WHERE `food-processing` = 1 ";
+};
+
+if ( $_POST['over-sock'] == 'over-sock') {
+	$filter_query .= " WHERE `over-sock` = 1 ";
+};
+
+if ( $_POST['steel-toe'] == 'steel-toe') {
+	$filter_query .= " WHERE `steel-toe` = 1 ";
+};
+
+$filter_query = str_replace('  ', ' AND ', $filter_query);
+$filter_query = str_replace('AND WHERE', ' AND ', $filter_query);
+
+};
+
+// print($filter_query);
+
 print('<aside id="filter">');
 print('<div class="content">');
 print('<h1>GET A GRIP: </h1>');
-print('<form method="post" action="htmlentities($_SERVER["PHP_SELF"]);">');
-print('<div class="opt-wrap"><input type="checkbox" name="gritted" value="gritted" id="gritted"><label for="gritted">Gritted<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="spiked" value="spiked" id="spiked"><label for="spiked">Spiked<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="safer-driving" value="safer-driving" id="safer-driving"><label for="safer-driving">Safe for Driving<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="non-sparking" value="non-sparking" id="non-sparking"><label for="non-sparking">Non-Sparking<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="defined-heel" value="defined-heel" id="defined-heel"><label for="defined-heel">Defined Heel<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"><label for="extreme-ice">Extreme Ice<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="safer-indoors" value="safer-indoors" id="safer-indoors"><label for="safer-indoors">Safe for Indoors<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="low-cut" value="low-cut" id="low-cut"><label for="low-cut">Low Cut<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="mid-calf" value="mid-calf" id="mid-calf"><label for="mid-calf">Mid Calf<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="knee-high" value="knee-high" id="knee-high"><label for="knee-high">Knee High<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="insulated" value="insulated" id="insulated"><label for="insulated">Insulated<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"><label for="stripping">Floor Stripping<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="oil-grease" value="oil-grease" id="oil-grease"><label for="oil-grease">Oil/Grease<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="food-processing" value="food-processing" id="food-processing"><label for="food-processing">Food Processing<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over-sock" id="over-sock"><label for="over-sock">Over the Sock<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="steel-toe" value="steel-toe" id="steel-toe"><label for="steel-toe">Steel Toe<span></span></label></div>');
+print('<form method="post" action="products.php">');
+
+print('<div class="opt-wrap"><input type="checkbox" name="gritted" value="gritted" id="gritted"');
+if ($_POST['gritted'] == 'gritted'){
+print('checked = "checked"');
+};
+print('><label for="gritted">Gritted<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="spiked" value="spiked" id="spiked"');
+if ($_POST['spiked'] == 'spiked'){
+print('checked = "checked"');
+};
+print('><label for="spiked">Spiked<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="safer-driving" value="safer-driving" id="safer-driving"');
+if ($_POST['safer-driving'] == 'safer-driving'){
+print('checked = "checked"');
+};
+print('><label for="safer-driving">Safe for Driving<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="non-sparking" value="non-sparking" id="non-sparking"');
+if ($_POST['non-sparking'] == 'non-sparking'){
+print('checked = "checked"');
+};
+print('><label for="non-sparking">Non-Sparking<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="defined-heel" value="defined-heel" id="defined-heel"');
+if ($_POST['defined-heel'] == 'defined-heel'){
+print('checked = "checked"');
+};
+print('><label for="defined-heel">Defined Heel<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
+if ($_POST['extreme-ice'] == 'extreme-ice'){
+print('checked = "checked"');
+};
+print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="safer-indoors" value="safer-indoors" id="safer-indoors"');
+if ($_POST['safer-indoors'] == 'safer-indoors'){
+print('checked = "checked"');
+};
+print('><label for="safer-indoors">Safe for Indoors<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="low-cut" value="low-cut" id="low-cut"');
+if ($_POST['low-cut'] == 'low-cut'){
+print('checked = "checked"');
+};
+print('><label for="low-cut">Low Cut<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="mid-calf" value="mid-calf" id="mid-calf"');
+if ($_POST['mid-calf'] == 'mid-calf'){
+print('checked = "checked"');
+};
+print('><label for="mid-calf">Mid Calf<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="knee-high" value="knee-high" id="knee-high"');
+if ($_POST['knee-high'] == 'knee-high'){
+print('checked = "checked"');
+};
+print('><label for="knee-high">Knee High<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="insulated" value="insulated" id="insulated"');
+if ($_POST['insulated'] == 'insulated'){
+print('checked = "checked"');
+};
+print('><label for="insulated">Insulated<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
+if ($_POST['stripping'] == 'stripping'){
+print('checked = "checked"');
+};
+print('><label for="stripping">Floor Stripping<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="oil-grease" value="oil-grease" id="oil-grease"');
+if ($_POST['oil-grease'] == 'oil-grease'){
+print('checked = "checked"');
+};
+print('><label for="oil-grease">Oil/Grease<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="food-processing" value="food-processing" id="food-processing"');
+if ($_POST['food-processing'] == 'food-processing'){
+print('checked = "checked"');
+};
+print('><label for="food-processing">Food Processing<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over-sock" id="over-sock"');
+if ($_POST['over-sock'] == 'over-sock'){
+print('checked = "checked"');
+};
+print('><label for="over-sock">Over the Sock<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="steel-toe" value="steel-toe" id="steel-toe"');
+if ($_POST['steel-toe'] == 'steel-toe'){
+print('checked = "checked"');
+};
+print('><label for="steel-toe">Steel Toe<span></span></label></div>');
+
 print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
 print('</form>');
 print('</div>');
@@ -55,8 +213,14 @@ print('</aside>');
 <section id="products">
 <?php
 include ('config.php');
-$query = mysqli_query ($con, 'SELECT * FROM products ORDER BY name ASC');
+$query = mysqli_query ($con, "SELECT * FROM products $filter_query ORDER BY name ASC");
 print('<div class="wrap clearfix">');
+$result = mysqli_num_rows($query);
+if ($result <= 0)
+{
+	print ("<span class='message'>Oh No!, There are no products that match your criteria. Try un-checking one or more options.</span>");
+};
+
 print('<div class="product-bttn-wrapper">');
 while ($fetch = mysqli_fetch_array($query)) {
 print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-features="'.$fetch[features].'" ice="'.$fetch[ice].'" snow="'.$fetch[snow].'" oil="'.$fetch[oil].'" fats="'.$fetch[fats].'" soaps="'.$fetch[soaps].'" chemicals="'.$fetch[chemicals].'" liquids="'.$fetch[liquids].'" mud="'.$fetch[mud].'" indoor="'.$fetch[indoor].'" outdoor="'.$fetch[outdoor].'" driving="'.$fetch[driving].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" image1="'.$fetch[img_url1].'" image2="'.$fetch[img_url2].'" image3="'.$fetch[img_url3].'" image4="'.$fetch[img_url4].'" xs="'.$fetch[XS].'" s="'.$fetch[S].'" m="'.$fetch[M].'" l="'.$fetch[L].'" xl="'.$fetch[XL].'" xxl="'.$fetch[XXL].'" xxxl="'.$fetch[XXXL].'"  xxxxl="'.$fetch[XXXXL].'" id="" type="button">

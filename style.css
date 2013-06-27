@@ -225,7 +225,13 @@ border-bottom: #777777 solid thin;
 .details-moreinfo {
 	margin-top:40px;
 }
-
+.message {
+	color: #333333;
+	font-size: 30px;
+	letter-spacing: 1px;
+	margin-top: 30px;
+	display: block;
+}
 .moreinfo-section {
 	margin-top: 20px;
 	/*min-height: 298px;*/
@@ -477,7 +483,7 @@ form .filter-submit {
  	color: #ededed;
     font-family: langdon;
     font-size: 25px;
-    padding: 5px 40px 5px 40px;
+    /*padding: 5px 40px 5px 40px;*/ /* Removed by RC was causing problem in safari */
  	margin: 0 auto;
     margin-bottom: 10px;
     width: 80px;
