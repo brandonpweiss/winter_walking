@@ -58,9 +58,13 @@ if ( $_POST['steel-toe'] == 'steel-toe') {
 // print($filter_query);
 
 print('<aside id="filter">');
-print('<div class="content">');
+print('<div class="content clearfix">');
 print('<h1>GET A GRIP: </h1>');
 print('<form method="post" action="products-indoor-footwear.php">');
+print('<div class="filterreset">');
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
+print('<button href="products.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
+print('</div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
 if ($_POST['stripping'] == 'stripping'){
@@ -91,8 +95,6 @@ if ($_POST['steel-toe'] == 'steel-toe'){
 print('checked = "checked"');
 };
 print('><label for="steel-toe">Steel Toe<span></span></label></div>');
-
-print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
 print('</form>');
 print('</div>');
 print('</aside>');

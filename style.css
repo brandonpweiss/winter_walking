@@ -492,6 +492,10 @@ form .filter-submit {
     margin-top: 0px;
     outline: solid #007b99 medium;
 }
+.filterreset{
+	width: 80px;
+	float:right;
+}
 form .filter-reset {
 	margin-top: 10px;
 	text-transform: uppercase;

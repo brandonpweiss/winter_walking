@@ -105,10 +105,13 @@ $filter_query = str_replace('AND WHERE', ' AND ', $filter_query);
 // print($filter_query);
 
 print('<aside id="filter">');
-print('<div class="content">');
+print('<div class="content clearfix">');
 print('<h1>GET A GRIP: </h1>');
 print('<form method="post" action="products.php">');
-
+print('<div class="filterreset">');
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
+print('<button href="products.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
+print('</div>');
 print('<div class="opt-wrap"><input type="checkbox" name="gritted" value="gritted" id="gritted"');
 if ($_POST['gritted'] == 'gritted'){
 print('checked = "checked"');
@@ -204,9 +207,6 @@ if ($_POST['steel-toe'] == 'steel-toe'){
 print('checked = "checked"');
 };
 print('><label for="steel-toe">Steel Toe<span></span></label></div>');
-
-print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
-print('<button href="products.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 print('</form>');
 print('</div>');
 print('</aside>');
