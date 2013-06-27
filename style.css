@@ -1027,6 +1027,15 @@ a.request:hover{
 }
 }
 @media only screen and (max-width: 1000px){
+nav#productnav ul li a{
+padding: 6px 15px 6px 15px;
+}
+aside#filter {
+	background: url(img/mochaGrunge.jpg);
+	width: 90%;
+	color: #ededed;
+	padding: 20px 0px 40px 0px;
+}
 #top #instructions{
 	float:none;
 	position: relative;
