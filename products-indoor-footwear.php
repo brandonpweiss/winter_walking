@@ -26,22 +26,100 @@
 <?php include('header.php');?>
 <?php include('nav2.php');?>
 </div>
+
+<?php
+include('config.php');
+
+if ( isset( $_POST['filter-submit'] ) )
+{
+
+if ( $_POST['insulated'] == 'insulated') {
+	$filter_query .= "AND `insulated` = 1";
+};
+
+if ( $_POST['stripping'] == 'stripping') {
+	$filter_query .= "AND `stripping` = 1";
+};
+
+if ( $_POST['oil-grease'] == 'oil-grease') {
+	$filter_query .= "AND `oil-grease` = 1";
+};
+
+if ( $_POST['food-processing'] == 'food-processing') {
+	$filter_query .= "AND `food-processing` = 1";
+};
+
+if ( $_POST['over-sock'] == 'over-sock') {
+	$filter_query .= "AND `over-sock` = 1";
+};
+
+if ( $_POST['steel-toe'] == 'steel-toe') {
+	$filter_query .= "AND `steel-toe` = 1";
+};
+
+};
+
+// print($filter_query);
+
+print('<aside id="filter">');
+print('<div class="content">');
+print('<h1>GET A GRIP: </h1>');
+print('<form method="post" action="products-indoor-footwear.php">');
+
+print('<div class="opt-wrap"><input type="checkbox" name="insulated" value="insulated" id="insulated"');
+if ($_POST['insulated'] == 'insulated'){
+print('checked = "checked"');
+};
+print('><label for="insulated">Insulated<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
+if ($_POST['stripping'] == 'stripping'){
+print('checked = "checked"');
+};
+print('><label for="stripping">Floor Stripping<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="oil-grease" value="oil-grease" id="oil-grease"');
+if ($_POST['oil-grease'] == 'oil-grease'){
+print('checked = "checked"');
+};
+print('><label for="oil-grease">Oil/Grease<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="food-processing" value="food-processing" id="food-processing"');
+if ($_POST['food-processing'] == 'food-processing'){
+print('checked = "checked"');
+};
+print('><label for="food-processing">Food Processing<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over-sock" id="over-sock"');
+if ($_POST['over-sock'] == 'over-sock'){
+print('checked = "checked"');
+};
+print('><label for="over-sock">Over the Sock<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="steel-toe" value="steel-toe" id="steel-toe"');
+if ($_POST['steel-toe'] == 'steel-toe'){
+print('checked = "checked"');
+};
+print('><label for="steel-toe">Steel Toe<span></span></label></div>');
+
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
+print('</form>');
+print('</div>');
+print('</aside>');
+?>
+
 <section id="products">
 <?php
 include ('config.php');
-
-$query = mysqli_query ($con, 'SELECT * FROM products WHERE category = \'indoor\' ORDER BY name ASC');
+$query = mysqli_query ($con, "SELECT * FROM products WHERE category = 'indoor' $filter_query ORDER BY name ASC");
 print('<div class="wrap clearfix">');
-print('<aside id="filter">');
-print('<form method="post" action="htmlentities($_SERVER["PHP_SELF"]);">');
-print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"><label for="stripping">Floor Stripping<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="oil-grease" value="oil-grease" id="oil-grease"><label for="oil-grease">Oil/Grease<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="food-processing" value="food-processing" id="food-processing"><label for="food-processing">Food Processing<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over-sock" id="over-sock"><label for="over-sock">Over the Sock<span></span></label></div>');
-print('<div class="opt-wrap"><input type="checkbox" name="steel-toe" value="steel-toe" id="steel-toe"><label for="steel-toe">Steel Toe<span></span></label></div>');
-print('<input type="submit" name ="filter-submit" class="filter-submit" value="Filter Products">');
-print('</form>');
-print('</aside>');
+
+$result = mysqli_num_rows($query);
+if ($result <= 0)
+{
+	print ("<span class='message'>Oh No!, There are no products that match your criteria. Try un-checking one or more options.</span>");
+};
+
 print('<div class="product-bttn-wrapper">');
 while ($fetch = mysqli_fetch_array($query)) {
 print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-features="'.$fetch[features].'" ice="'.$fetch[ice].'" snow="'.$fetch[snow].'" oil="'.$fetch[oil].'" fats="'.$fetch[fats].'" soaps="'.$fetch[soaps].'" chemicals="'.$fetch[chemicals].'" liquids="'.$fetch[liquids].'" mud="'.$fetch[mud].'" indoor="'.$fetch[indoor].'" outdoor="'.$fetch[outdoor].'" driving="'.$fetch[driving].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" image1="'.$fetch[img_url1].'" image2="'.$fetch[img_url2].'" image3="'.$fetch[img_url3].'" image4="'.$fetch[img_url4].'" xs="'.$fetch[XS].'" s="'.$fetch[S].'" m="'.$fetch[M].'" l="'.$fetch[L].'" xl="'.$fetch[XL].'" xxl="'.$fetch[XXL].'" xxxl="'.$fetch[XXXL].'"  xxxxl="'.$fetch[XXXXL].'" id="" type="button">
