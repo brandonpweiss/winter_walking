@@ -487,10 +487,35 @@ form .filter-submit {
  	margin: 0 auto;
     margin-bottom: 10px;
     width: 80px;
-    height: 80px;
+    height: 35px;
     position: relative;
     margin-top: 0px;
     outline: solid #007b99 medium;
+}
+form .filter-reset {
+	margin-top: 10px;
+	text-transform: uppercase;
+	background: url(img/subtle_grunge.png);
+    border: medium none;
+ 	color: #333333;
+    font-family: langdon;
+    font-size: 25px;
+    /*padding: 5px 40px 5px 40px;*/ /* Removed by RC was causing problem in safari */
+ 	margin: 0 auto;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 35px;
+    position: relative;
+    margin-top: 0px;
+    outline: solid #cccccc medium;
+}
+form .filter-reset:hover {
+	background: url(img/mochaGrunge.png);
+	color: #ededed;
+}
+form .filter-reset:active {
+	background: #333333;
+	outline: solid #555555 medium;
 }
 form .filter-submit:hover {
 	background: url(img/subtle_grunge_blue2.png);

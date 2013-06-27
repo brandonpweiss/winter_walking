@@ -206,6 +206,7 @@ print('checked = "checked"');
 print('><label for="steel-toe">Steel Toe<span></span></label></div>');
 
 print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
+print('<button href="products.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 print('</form>');
 print('</div>');
 print('</aside>');
