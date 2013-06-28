@@ -24,7 +24,15 @@
     <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
 </div>
 <?php include('header.php');?>
-<?php include('nav2.php');?>
+<nav id="productnav">
+		<ul>
+			<li><a href="featured-product.php">FEATURED PRODUCT</a></li>
+			<li><a href="all-products.php" class="active">ALL PRODUCTS</a></li>
+			<li><a href="products-indoor-footwear.php">INDOOR FOOTWEAR</a></li>
+			<li><a href="products-over-the-shoe-boots.php">OVER THE SHOE BOOTS</a></li>
+			<li><a href="products-lightweight.php">LIGHTWEIGHT</a></li>
+		</ul>
+	</nav>
 </div>
 
 <?php

@@ -1,21 +1,4 @@
-<?php
-echo '
-  <header>
-  <div id="sticky_navigation_wrapper">
-    <div id="sticky_navigation">
-      <nav>
-    <ul>
-      <li><a href="index.php">FEATURED</a></li>
-      <li><a class="hide2" href="featured-product.php">OUR PRODUCTS</a></li>
-      <li><a href="information.php">OUR COMPANY</a></li>
-      <li id="contact1"><a href="#myModal" role="button" data-toggle="modal">CONTACT</a></li>
-      <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
-    </ul>
-      </nav>
-    </div>
-  </div>
-</header>';
-?>
+
 
 
 <?php

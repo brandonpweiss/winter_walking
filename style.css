@@ -197,6 +197,9 @@ color: #eeeeee;
 nav#productnav ul li a:hover{
 	color: #46BFDF;
 }
+nav#productnav ul li a.active{
+	color:#46BFDF;
+}
 .details{
 	display: none;
 	position: relative;
@@ -274,6 +277,10 @@ nav a{
 }
 
 nav a:hover{
+	color: #37a0d0;
+}
+
+nav a.active{
 	color: #37a0d0;
 }
 nav ul li{
@@ -964,9 +971,14 @@ footer input.send{
 	border:none;
 	font-size: 30px;
 	font-family: langdon;
-	color: #666666;
+	color: #46bfdf;
 	padding: 10px;
 	float:right;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
 }
 
 footer input.send:hover{
@@ -974,7 +986,7 @@ footer input.send:hover{
 	border:none;
 	font-size: 30px;
 	font-family: langdon;
-	color: #46bfdf;
+	color: #666666;
 	padding: 10px;
 	float:right;
 }

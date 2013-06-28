@@ -1,0 +1,154 @@
+#home .content{
+	padding-bottom: 0px;
+}
+.winter{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+#home p{
+	line-height: 25px;
+}
+#home h1{
+	font-size: 70px;
+}
+#instructions{
+	margin-top: 30px;
+}
+.two img{
+	float:left;
+	margin-left: -200px;
+}
+.two #instructions{
+	float:right;
+}
+#buttons{
+	background: #FFFFFF;
+	padding: 90px 0px 90px 0px;
+	text-align:center;
+}
+#buttons .content{
+	max-width: 90%;
+}
+.button{
+	display:block;
+	float:left;
+	text-align: center;
+	width: 33.3%;
+	max-height:180px;
+}
+
+.button .inner{
+	position: relative;
+	display:block;
+	outline: none;
+	border:none;
+	-webkit-box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
+box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
+	display:inline-block;
+	background: #eeeeee; /* Old browsers */
+	height: 180px;
+	text-align: center;
+}
+
+#home .content .button .inner img{
+	display:block;
+	width: 350px;
+	position: relative;
+	top: -80px;
+	z-index: 3;
+}
+.button p{
+	clear:both;
+	text-align: center;
+	position: relative;
+	top: -200px;
+	z-index: 100;
+	color: #FFFFFF;
+	background: rgba(1,1,1,.6);
+	width: 200px;
+	margin: 0 auto;
+}
+.button a.viewmore{
+	display:block;
+	position: relative;
+	top: -200px;
+	z-index: 100;
+	background: rgba(1,1,1,.6);
+	width: 200px;
+	margin: 0 auto;
+	color: #46BFDF;
+	padding-bottom: 5px;
+	font-family: nexabold;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+img.gfsview{
+	margin-top: -50px;
+	min-width: 400px;
+}
+.button a.viewmore:hover{
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+@media only screen and (max-width:1024px) {
+#home .content .button .inner img{
+	display:block;
+	width: 200px;
+	position: relative;
+	top: 0px;
+	z-index: 3;
+}
+img.gfsview{
+	margin-top: -50px;
+	min-width: 250px;
+}
+.button p{
+	clear:both;
+	text-align: center;
+	position: relative;
+	top: -50px;
+	z-index: 100;
+	color: #FFFFFF;
+	background: rgba(1,1,1,.6);
+	width: 200px;
+	margin: 0 auto;
+}
+.button a.viewmore{
+	display:block;
+	position: relative;
+	top: -50px;
+	z-index: 100;
+	background: rgba(1,1,1,.6);
+	width: 200px;
+	margin: 0 auto;
+	color: #46BFDF;
+	padding-bottom: 5px;
+	font-family: nexabold;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+}
+@media only screen and (max-width:640px) {
+	#instructions{
+		margin-top: 0px;
+	}
+	#home h1{
+		font-size: 40px;
+	}
+#buttons{
+	display:none;
+}
+li.one{
+	background: url(img/featuredshoemobile.png) center center no-repeat;
+}
+li.two{
+	background: url(img/sparespikemobile.png) center center no-repeat;
+}
+}

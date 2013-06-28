@@ -18,9 +18,24 @@
 	<div id="white">
 	<div id="logobox">
    <a href="index.php"><img id="logo" src="img/logo.png" alt="Winter Walking we dont just make ice cleats, we perfect them"></a>
-    <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
+    <div id="tagline">WE DONT JUST MAKE ICE CLEATS, WE PERFECT THEM</div>
   </div>
   </div>
+  <header>
+  <div id="sticky_navigation_wrapper">
+    <div id="sticky_navigation">
+      <nav>
+    <ul>
+      <li><a href="index.php">HOME</a></li>
+      <li><a class="hide2" href="featured-product.php">OUR PRODUCTS</a></li>
+      <li><a href="information.php" class="active">OUR COMPANY</a></li>
+      <li id="contact1"><a href="#myModal" role="button" data-toggle="modal">CONTACT</a></li>
+      <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
+    </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 <?php include('header.php');?>
 </div>
 <section id="facts">
@@ -31,7 +46,7 @@
 <h1>EXTREMELY<br>SERIOUSLY</h1>
 <p>Winter Walking is North America's leading manufacturer of All-Traction™ Footwear.  We've been improving worker's safety with the world's largest organizations for over 30 years, earning an unparalleled expertise in the nuances of accident prevention.  Whether indoors or outdoors, ice or snow, oil, grease, or chemicals, Winter Walking has studied all the variables to provide you with the best solutions.</p>
 
-<p>From Non-Slip Shoes to All-Traction™ Footwear, Ice Cleats to Ice Creepers, we're as obsessed with creating the most effective products as you are with finding them.  Your search ends here - <a href="#myModal" class="speak" role="button" data-toggle="modal">speak to our experts today.</a></p>
+<p>From Non-Slip Shoes to All-Traction™ Footwear, Ice Cleats to Ice Creepers, we're as obsessed with creating the most effective products as you are with finding them.  Your search ends here - <br><br><br><a href="#myModal" class="speak" role="button" data-toggle="modal">speak to our experts today.</a></p>
 
 <h3>RESEARCH & DEVELOPMENT</h3>
 <p>Winter Walking didn't become the largest and oldest manufacturer of All-Traction™ Footwear by chance.  Every product in our line was created through years of research and development with you, the end user.  Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
