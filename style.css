@@ -866,6 +866,9 @@ a.ctabox{
 a.ctabox:hover{
 	color: #333333;
 }
+a.learn{
+	display:none;
+}
 
 
 #facts{
@@ -1010,6 +1013,9 @@ a.request{
 }
 a.request:hover{
 	color: #666666;
+}
+img#sparespike2{
+	display:none;
 }
 
 
@@ -1173,5 +1179,12 @@ nav a{
 #logo{
 	width: 50%;
 }
+#tagline{
+	font-size: 10px;
+}
+#instructions{
+	padding: 0px;
+}
+
 }
 

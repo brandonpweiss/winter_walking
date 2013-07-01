@@ -21,7 +21,7 @@
 	<div class="tops2">
 		<div id="logobox">
    <a href="index.php"><img id="logo" src="img/logowhite.png" alt="Winter Walking we dont just make ice cleats, we perfect them"></a>
-    <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
+    <div id="tagline">WE DONT JUST MAKE ICE CLEATS, WE PERFECT THEM</div>
 </div>
 <header>
   <div id="sticky_navigation_wrapper">
@@ -111,7 +111,7 @@ print('<h1>GET A GRIP: </h1>');
 print('<form method="post" action="products-over-the-shoe-boots.php">');
 print('<div class="filterreset">');
 print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
-print('<button href="products.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
+print('<button href="products-over-the-shoe-boot.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 print('</div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="gritted" value="gritted" id="gritted"');

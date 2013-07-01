@@ -33,7 +33,7 @@ h1, a.size{
 #instructions{
 	width: 50%;
 	float:left;
-	padding: 40px 0px 40px 0px;
+	padding: 0px 0px 40px 0px;
 }
 #instructions h1{
 	font-size: 80px;
@@ -207,11 +207,19 @@ img.words{
 	width: 100%;
 }
 #home .content img{
-	width: 50%;
+	width: 40%;
 	float:none;
 	position: relative;
-	margin-left: -25%;
+	margin-left: -20%;
 	left: 50%;
+}
+#home{
+	text-align:center;
+}
+#home .winter{
+font-size: 12px;
+}
+#home p{
 	display:none;
 }
 #stageone article{
@@ -219,6 +227,12 @@ img.words{
 	width: 100%;
 	text-align: center;
 	position: relative;
+}
+img#sparespike2{
+	display:block;
+}
+img#sparespike{
+	display:none;
 }
 img.shoez{
 	height: auto;
@@ -238,5 +252,25 @@ img.shoez{
 	text-align: left;
 	position: relative;
 	top: 0px;
+}
+
+a.ctabox{
+	color: #FFFFFF;
+	background: url(img/subtle_grunge_blue.png) top;
+	display: inline-block;
+	padding: 10px;
+	font-family: langdon;
+	letter-spacing: 1px;
+	margin-top: 0px;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+}
+a.view{
+	display:none;
+}
+a.learn{
+	display:block;
 }
 }

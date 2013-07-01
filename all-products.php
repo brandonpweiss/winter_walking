@@ -21,7 +21,7 @@
 	<div class="tops2">
 		<div id="logobox">
   <a href="index.php"><img id="logo" src="img/logowhite.png" alt="Winter Walking we dont just make ice cleats, we perfect them"></a>
-    <div id="tagline">WE DONT JUSTMAKE ICE CLEATS, WE PERFECT THEM</div>
+    <div id="tagline">WE DONT JUST MAKE ICE CLEATS, WE PERFECT THEM</div>
 </div>
 <header>
   <div id="sticky_navigation_wrapper">
@@ -130,10 +130,10 @@ $filter_query = str_replace('AND WHERE', ' AND ', $filter_query);
 print('<aside id="filter">');
 print('<div class="content clearfix">');
 print('<h1>GET A GRIP: </h1>');
-print('<form method="post" action="products.php">');
+print('<form method="post" action="all-products.php">');
 print('<div class="filterreset">');
 print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
-print('<button href="products.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
+print('<button href="all-products.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 print('</div>');
 print('<div class="opt-wrap"><input type="checkbox" name="gritted" value="gritted" id="gritted"');
 if ($_POST['gritted'] == 'gritted'){

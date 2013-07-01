@@ -67,7 +67,24 @@
 <section id="home" class="clearfix">
 <div class="flexslider">
 		<ul class="slides">
-		<li class="one">
+<li class="two">
+		<div class="content clearfix">
+		<div id="instructions">
+		<div class="inner">
+		<img src="img/sparespike.png" id="sparespike2" alt="Shoe">
+		<div class="winter">WE DON'T JUST MAKE ICE CLEATS</div>
+		<h1>WE PERFECT THEM.</h1>
+		<p><span class="bold">WINTER WALKING </span>has been helping safety managers reduce employee slips and falls for almost <span class="bold">40 YEARS</span>.  Our experience is unparalleled. Every product in our line has been created through years of research and development with you, the end user. Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
+		<div class="ctaboxes">
+		<a href="all-products.php" class="ctabox view">VIEW OUR PRODUCT LINE ></a>
+			<a href="information.php" class="ctabox learn">LEARN MORE ></a>
+		</div>
+	</div>
+	</div>
+		<img src="img/sparespike.png" id="sparespike" alt="Shoe">
+	</div>
+		</li>
+			<li class="one">
 		<div class="content clearfix">
 	<img src="img/featuredshoe2.png" alt="Shoe">
 		<div id="instructions">
@@ -82,23 +99,13 @@
 	</div>
 	</div>
 		</li>
-<li class="two">
-		<div class="content clearfix">
-		<div id="instructions">
-		<div class="inner">
-		<div class="winter">WE DON'T JUST MAKE ICE CLEATS</div>
-		<h1>WE PERFECT THEM.</h1>
-		<p><span class="bold">WINTER WALKING </span>has been helping safety managers reduce employee slips and falls for almost <span class="bold">40 YEARS</span>.  Our experience is unparalleled. Every product in our line has been created through years of research and development with you, the end user. Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
-		<div class="ctaboxes">
-		<a href="all-products.php" class="ctabox">VIEW OUR PRODUCT LINE ></a>
-		</div>
-	</div>
-	</div>
-		<img src="img/sparespike.png" alt="Shoe">
-	</div>
-		</li>
 		</ul>
 	</div>
+<article id="line">
+	<p>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</p>
+	<p>According to the Bureau of Labor Statistics, nearly <span class="blue">15%</span> of all lost workday accidents are due to slips, trips, and falls.</p>
+	<p>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</p>
+</article>
 	<article id="buttons">
 		<div class="content clearfix">
 		<div class="button buttonone">
@@ -123,8 +130,7 @@
 	</div>
 </section>
 <?php include('footer.php');?>
-	<script src="scroll.js"></script>
-	<script>
+<script>
 			$(window).load(function() {
 	  			$('.flexslider').flexslider({
 		   	 		animation: "slide",
@@ -135,6 +141,8 @@
 	  			});
 			});
 		</script>
+	<script src="scroll.js"></script>
+
 	<script>
 /*####### STICKY NAV SCRIPT ##########*/
 	var nav_pos = $('nav').offset().top;

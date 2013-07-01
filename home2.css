@@ -93,7 +93,16 @@ img.gfsview{
 	color: #FFFFFF;
 	cursor: pointer;
 }
-
+#line{
+	text-align: center;
+	padding: 30px;
+	color: #FFFFFF;
+	background: url(img/mochaGrunge.jpg);
+	position: relative;
+}
+.blue{
+		color: #46BFDF;
+}
 @media only screen and (max-width:1024px) {
 #home .content .button .inner img{
 	display:block;
@@ -144,11 +153,5 @@ img.gfsview{
 	}
 #buttons{
 	display:none;
-}
-li.one{
-	background: url(img/featuredshoemobile.png) center center no-repeat;
-}
-li.two{
-	background: url(img/sparespikemobile.png) center center no-repeat;
 }
 }
