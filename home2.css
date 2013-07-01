@@ -144,6 +144,11 @@ img.gfsview{
 	transition: color .3s ease-in-out;
 }
 }
+@media only screen and (max-width: 768px){
+	img#sparespike{
+		width: 80%;
+	}
+}
 @media only screen and (max-width:640px) {
 	#instructions{
 		margin-top: 0px;

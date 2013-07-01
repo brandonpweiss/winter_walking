@@ -327,6 +327,7 @@ nav ul li{
 	float:right;
 }
 #home .content{
+	padding-top: 30px;
 	padding-bottom: 50px;
 }
 #matrix .inner{
@@ -871,6 +872,7 @@ a.learn{
 }
 
 
+
 #facts{
 	background: #f5f7fb;
 	border-bottom: 2px solid #777777;
@@ -1141,6 +1143,7 @@ nav a{
 	margin: 0 auto;
 	width: 100%;
 }
+
 }
 @media only screen and (max-width: 600px){
 	nav a{
@@ -1184,6 +1187,10 @@ nav a{
 }
 #instructions{
 	padding: 0px;
+}
+#home .content{
+	padding-top: 0px;
+	padding-bottom: 50px;
 }
 
 }
