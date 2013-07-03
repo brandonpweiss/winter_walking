@@ -223,7 +223,7 @@ border-bottom: #777777 solid thin;
 	font-size: 1.4em;
 	font-family: langdon;
 	text-transform: uppercase;
-	margin-right: 14px;
+	margin-right: 2.5em;
 }
 .details-moreinfo {
 	margin-top:40px;
@@ -260,7 +260,7 @@ padding:5px 50pc 5px 5px;
 	color:#666666;
 	letter-spacing: 0px;
 }
-.ideal-info, .sizechart-info, .views-info{
+.ideal-info, .sizechart-info{
 	display: none;
 }
 nav a{
@@ -419,14 +419,13 @@ button.product:active {
 	padding: 0px 6px;
 }
 .main-image{
-	width: 490px;
-	height: 490px;
+	width: 470px;
+	height: 470px;
 	display: block;
-	border: 1px solid #CCC;
 	margin-bottom: 10px;
 }
 .image1, .image2, .image3, .image4 {
-	width: 114px;
+	width: 109px;
 	display: inline-block;
 	border: 1px solid #CCC;
 	cursor: pointer;
@@ -441,7 +440,7 @@ button.product:active {
 #products{
 	clear:both;
 	background: url(img/subtle_grunge.png) 0 0 repeat;
-	padding: 0px 0px 40px 0px;
+	padding: 40px 0px 40px 0px;
 	overflow:hidden;
 }
 
@@ -504,6 +503,19 @@ form .filter-submit {
 	width: 80px;
 	float:right;
 }
+
+.show-filter {
+	margin: 0px 0px 0px 47%;
+	background: #FFF url(img/mochaGrunge.jpg) 0 0;
+    border: medium none;
+    width: 70px;
+    height: 35px;
+    text-transform: uppercase;
+    color: #ededed;
+    font-family: langdon;
+    font-size: 25px;
+}
+
 form .filter-reset {
 	margin-top: 10px;
 	text-transform: uppercase;
@@ -536,11 +548,13 @@ form .filter-submit:active {
 	background: #333333;
 	outline: solid #555555 medium;
 }
-aside#filter {
+#filter {
 	background: url(img/mochaGrunge.jpg);
 	width: 100%;
 	color: #ededed;
 	padding: 20px 0px 40px 0px;
+
+	display: none;
 }
 aside#filter h1{
 color: #46BFDF;
@@ -644,7 +658,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 #right{
 	float:left;
-	width: 50%;
+	width: 48%;
+	margin-left: 2%;
 }
 
 #left .inner p{
