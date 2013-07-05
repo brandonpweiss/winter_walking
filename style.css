@@ -139,7 +139,8 @@ table {
 
 
 body{
-	background: #ffffff url(img/mochaGrunge.jpg) 0 0;
+	/*background: #ffffff url(img/mochaGrunge.jpg) 0 0;*/
+	background: url(img/subtle_grunge.png) 0 0 repeat;
 	font-family: karbonlight;
 	letter-spacing: 2px;
 	width: 100%;
@@ -183,7 +184,8 @@ nav#productnav{
 	height: 20px;
 	padding: 5px 0px 4px 0px;
 	position: relative;
-        margin-top: -4px;
+    margin-top: -4px;
+    z-index: 1;
 }
 nav#productnav ul li a{
 color: #eeeeee;
@@ -202,11 +204,13 @@ nav#productnav ul li a.active{
 }
 .details{
 	display: none;
-	position: relative;
-	background-color: #FFFFFF;
-	-webkit-box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);
-box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);
-border-bottom: #777777 solid thin;
+	/*position: relative;*/
+	/*background-color: #FFFFFF;*/
+/*	-webkit-box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);
+box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);*/
+/*	border-top: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;*/
+	background-color: rgba(255, 255, 255, 0.6);
 }
 .cta-details-blue a{
 	color:#46bfdf;
@@ -220,10 +224,10 @@ border-bottom: #777777 solid thin;
 }
 .features, .ideal, .sizechart, .views {
 	color:rgba(0,0,0,0.7);
-	font-size: 1.4em;
+	font-size: 1em;
 	font-family: langdon;
 	text-transform: uppercase;
-	margin-right: 2.5em;
+	margin-right: 10%;
 }
 .details-moreinfo {
 	margin-top:40px;
@@ -275,7 +279,9 @@ nav a{
 	letter-spacing: 2px;
 	top: 1px;
 }
-
+.tops2 {
+	background: #FFF url(img/mochaGrunge.jpg) 0 0;
+}
 nav a:hover{
 	color: #37a0d0;
 }
@@ -337,7 +343,7 @@ nav ul li{
 h1, a.size{
 	font-family: langdon;
 	letter-spacing: -1px;
-	font-size: 80px;
+	font-size: 3em;
 	padding-bottom: 30px;
 	color: #eeeeee;
 }
@@ -419,13 +425,13 @@ button.product:active {
 	padding: 0px 6px;
 }
 .main-image{
-	width: 470px;
-	height: 470px;
+	width: 360px;
+	height: 360px;
 	display: block;
 	margin-bottom: 10px;
 }
 .image1, .image2, .image3, .image4 {
-	width: 109px;
+	width: 83px;
 	display: inline-block;
 	border: 1px solid #CCC;
 	cursor: pointer;
@@ -438,7 +444,7 @@ button.product:active {
 }
 
 #products{
-	clear:both;
+	/*clear:both;*/
 	background: url(img/subtle_grunge.png) 0 0 repeat;
 	padding: 40px 0px 40px 0px;
 	overflow:hidden;
@@ -466,11 +472,11 @@ a.product img:hover, button.product img:hover{
 box-shadow: 0 0 2px 4px #37a0d0;
 }
 .opt-wrap {
-	float:left;
+/*	float:left;
 	display:inline-block;
 	margin-left: 10px;
-	width: 160px;
-	padding: 3px;
+	width: 160px;*/
+	padding: 6px 0px;
 }
 .opt-wrap input{
 	float:left;
@@ -480,7 +486,7 @@ aside#filter label{
 	display: inline-block;
 	margin-top: 4px;
 	margin-left: 10px;
-	color: #ededed;
+	/*color: #ededed;*/
 }
 form .filter-submit {
 	margin-top: 10px;
@@ -489,19 +495,19 @@ form .filter-submit {
     border: medium none;
  	color: #ededed;
     font-family: langdon;
-    font-size: 25px;
+    font-size: 1.2em;
     /*padding: 5px 40px 5px 40px;*/ /* Removed by RC was causing problem in safari */
  	margin: 0 auto;
     margin-bottom: 10px;
-    width: 80px;
-    height: 35px;
+    width: 100%;
+    height: 25px;
     position: relative;
-    margin-top: 0px;
+    margin-top: 40px;
     outline: solid #007b99 medium;
 }
 .filterreset{
-	width: 80px;
-	float:right;
+/*	width: 80px;
+	float:right;*/
 }
 
 .show-filter {
@@ -523,14 +529,14 @@ form .filter-reset {
     border: medium none;
  	color: #333333;
     font-family: langdon;
-    font-size: 25px;
+    font-size: 1.2em;
     /*padding: 5px 40px 5px 40px;*/ /* Removed by RC was causing problem in safari */
  	margin: 0 auto;
     margin-bottom: 10px;
-    width: 80px;
-    height: 35px;
+    width: 100%;
+    height: 25px;
     position: relative;
-    margin-top: 0px;
+    margin-top: 10px;
     outline: solid #cccccc medium;
 }
 form .filter-reset:hover {
@@ -549,23 +555,24 @@ form .filter-submit:active {
 	outline: solid #555555 medium;
 }
 #filter {
-	background: url(img/mochaGrunge.jpg);
+/*	background: url(img/mochaGrunge.jpg);
 	width: 100%;
 	color: #ededed;
-	padding: 20px 0px 40px 0px;
-
-	display: none;
+	padding: 20px 0px 40px 0px;*/
+	/*display: none;*/
+	float: left;
+	margin: 20px 45px 0px 0px;
+	color: #000000;
 }
 aside#filter h1{
 color: #46BFDF;
 font-size: 25px;
 letter-spacing: 1px;
 padding-bottom: 10px;
-margin-left: 15px;
 }
 .product-bttn-wrapper {
 	float: left;
-	width: 100%;
+	width: 80%;
 }
 #contact2{
 	display:none;
@@ -573,7 +580,7 @@ margin-left: 15px;
 
 .product{
 	display:inline-block;
-	margin: 20px 13px 15px 13px;
+	margin: 20px 8px;
 }
 
 .product img{
@@ -611,6 +618,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	width: 70px;
 	margin-bottom: 7px;
 	text-transform: uppercase;
+	height: 45px;
 }
 
 .sub-title{
@@ -625,6 +633,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	max-width: 70px;
 	margin-bottom: 7px;
 	text-transform: uppercase;
+	height: 35px
 }
 .detailsInner{
 	background: none;
@@ -723,6 +732,7 @@ footer{
 	letter-spacing: 1px;
 	line-height: 20px;
 	clear:both;
+	background: #FFF url(img/mochaGrunge.jpg) 0 0;
 }
 footer .wrap{
 	max-width: 980px;
@@ -840,8 +850,9 @@ text-align: center;
 color: #333333;
 }
 form label{
-	font-family: langdon;
+	/*font-family: langdon;*/
 	text-transform: uppercase;
+	font-size: .7em;
 }
 
 form input{
