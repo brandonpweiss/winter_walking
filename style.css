@@ -602,6 +602,64 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	padding: 15px;
 }
 
+#add-product-form .product-form-section {
+	margin-top: 30px;
+	padding-bottom: 40px;
+	border-bottom: solid thin #ccc;
+}
+
+#add-product-form .submit {
+	float: right;
+	margin: 30px 0px 40px 0px;
+	padding: 5px 10px;
+}
+
+#add-product-form input[type="file"] {
+	line-height: 0;
+}
+
+#add-product-form .product-form-section span {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 1.4em;
+	font-family: nexabold;
+	text-transform: uppercase;
+}
+
+#add-product-form .product-form-section label {
+	margin-bottom: 8px;
+	font-size: .8em;
+}
+
+#add-product-form .product-form-section .field-wrap,
+#add-product-form .product-form-section .field-wrap label,
+#add-product-form .product-form-section .half-field-wrap,
+#add-product-form .product-form-section .half-field-wrap label{
+	display: inline-block;
+}
+
+#add-product-form .product-form-section .field-wrap {
+	height: 60px;
+	width: 23%;
+	margin-right: 1%;
+}
+
+#add-product-form .product-form-section .half-field-wrap {
+	height: 60px;
+	width: 48%;
+	margin-right: 1%;
+}
+
+#add-product-form .product-form-section .full-field-wrap {
+	margin-bottom: 20px;
+
+}
+
+#add-product-form .product-form-section .full-field-wrap textarea{
+	width: 100%;
+	resize: none;
+}
+
 
 .position{
 	margin-top: 60px;

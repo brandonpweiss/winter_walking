@@ -1,3 +1,9 @@
+<?php
+if ( isset( $_POST['filter-reset'] ) )
+{
+header('Location:'.$_SERVER['PHP_SELF']);
+};
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -229,7 +235,7 @@ print('checked = "checked"');
 print('><label for="steel-toe">Steel Toe<span></span></label></div>');
 print('<div class="filterreset">');
 print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
-print('<button href="all-products.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
+print('<button id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 // print('</div>');
 print('</form>');
 print('</div>');
