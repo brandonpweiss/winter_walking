@@ -27,8 +27,8 @@
       <nav>
     <ul>
       <li><a href="index.php">HOME</a></li>
-      <li><a class="hide2" href="featured-product.php">OUR PRODUCTS</a></li>
-      <li><a href="information.php" class="active">OUR COMPANY</a></li>
+      <li><a class="hide2" href="featured-product.php">PRODUCTS</a></li>
+      <li><a href="information.php" class="active">COMPANY</a></li>
       <li id="contact1"><a href="#myModal" role="button" data-toggle="modal">CONTACT</a></li>
       <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
     </ul>

@@ -20,8 +20,11 @@ echo '
     <input  type="text"  placeholder="last name" name="last_name" maxlength="80" size="30"><br><br>
     <label>Company Name</label>
     <input  type="text"  placeholder="company name" name="last_name" maxlength="80" size="30"><br><br>
+       <label>Number of Employees Exposed</label>
+    <input  type="text"  placeholder="Enter a Number" name="last_name" maxlength="80" size="30"><br><br>
     	<label>Email</label>
     <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30"><br><br>
+   
     	<label>Comments</label>
     <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea><br><br>
     <button type="submit" value="Submit" id="submit">SUBMIT</button>

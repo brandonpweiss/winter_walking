@@ -35,8 +35,8 @@ header('Location:'.$_SERVER['PHP_SELF']);
       <nav>
     <ul>
       <li><a href="index.php">HOME</a></li>
-      <li><a class="hide2 active" href="featured-product.php">OUR PRODUCTS</a></li>
-      <li><a href="information.php">OUR COMPANY</a></li>
+      <li><a class="hide2 active" href="featured-product.php">PRODUCTS</a></li>
+      <li><a href="information.php">COMPANY</a></li>
       <li id="contact1"><a href="#myModal" role="button" data-toggle="modal">CONTACT</a></li>
       <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
     </ul>
@@ -47,11 +47,11 @@ header('Location:'.$_SERVER['PHP_SELF']);
 <?php include('header.php');?>
 <nav id="productnav">
 		<ul>
-			<li><a href="featured-product.php">FEATURED PRODUCT</a></li>
 			<li><a href="all-products.php" class="active">ALL PRODUCTS</a></li>
-			<li><a href="products-indoor-footwear.php">INDOOR FOOTWEAR</a></li>
-			<li><a href="products-over-the-shoe-boots.php">OVER THE SHOE BOOTS</a></li>
 			<li><a href="products-lightweight.php">LIGHTWEIGHT</a></li>
+			<li><a href="products-over-the-shoe-boots.php">OVER THE SHOE BOOTS</a></li>
+			<li><a href="products-indoor-footwear.php">INDOOR FOOTWEAR</a></li>
+			<li><a href="featured-product.php">FEATURED PRODUCT</a></li>
 		</ul>
 	</nav>
 </div>
