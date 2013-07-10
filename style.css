@@ -1104,7 +1104,11 @@ img#sparespike2{
 	display:none;
 }
 
-
+@media only screen and (min-width: 1441px){
+	section#home{
+		
+	}
+}
 @media only screen and (max-width:1024px) {
 #facts #inner{
 	background: rgba(255,255,255,.5);
