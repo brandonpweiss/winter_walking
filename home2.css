@@ -103,6 +103,28 @@ img.gfsview{
 .blue{
 		color: #46BFDF;
 }
+
+#sticky_navigation_wrapper {
+	height: 32px;
+}
+#sticky_navigation_wrapper nav{
+	height: 40px;
+}
+#sticky_navigation {
+	width: 100%;
+	position: relative;
+	z-index: 999999;
+}
+
+#sticky_navigation nav ul li img{
+	width: 75px;
+	position: relative;
+	top: 5px;
+}
+#sticky_navigation nav ul li a{
+	position: relative;
+	top: -35px;
+}
 @media only screen and (max-width:1024px) {
 #home .content .button .inner img{
 	display:block;

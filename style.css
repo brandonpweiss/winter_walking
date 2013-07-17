@@ -1082,23 +1082,11 @@ footer input.send:hover{
 #sticky_navigation_wrapper {
 	height: 32px;
 }
-#sticky_navigation_wrapper nav{
-	height: 40px;
-}
+
 #sticky_navigation {
 	width: 100%;
 	position: relative;
 	z-index: 999999;
-}
-
-#sticky_navigation nav ul li img{
-	width: 75px;
-	position: relative;
-	top: 5px;
-}
-#sticky_navigation nav ul li a{
-	position: relative;
-	top: -35px;
 }
 
 a.request{
@@ -1114,6 +1102,7 @@ a.request:hover{
 img#sparespike2{
 	display:none;
 }
+
 @media only screen and (min-width: 1441px){
 	section#home{
 		
@@ -1206,11 +1195,6 @@ h1, a.size{
 	.hide2{
 		display:none;
 	}
-#sticky_navigation nav ul li a{
-	position: relative;
-	top: 0px;
-}
-
 .winter.see{
 	clear:both;
 	margin-top: 60px;
