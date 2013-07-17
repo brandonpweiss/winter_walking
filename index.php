@@ -163,7 +163,7 @@
 
 		if ( (top_pos > nav_pos) && ($(window).width() > 640) )
 		{
-			$('#sticky_navigation').css({ 'position': 'fixed', 'top':5, 'left':0, 'z-index':999});
+			$('#sticky_navigation').css({ 'position': 'fixed', 'top':-15, 'left':0, 'z-index':999});
 		}
 		else
 		{

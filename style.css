@@ -1082,7 +1082,9 @@ footer input.send:hover{
 #sticky_navigation_wrapper {
 	height: 32px;
 }
-
+#sticky_navigation_wrapper nav{
+	height: 40px;
+}
 #sticky_navigation {
 	width: 100%;
 	position: relative;
@@ -1092,11 +1094,11 @@ footer input.send:hover{
 #sticky_navigation nav ul li img{
 	width: 75px;
 	position: relative;
-	top: -20px;
+	top: 5px;
 }
 #sticky_navigation nav ul li a{
 	position: relative;
-	top: -55px;
+	top: -35px;
 }
 
 a.request{
