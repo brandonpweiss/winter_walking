@@ -129,11 +129,13 @@
 				<p>Indoor Footwear</p>
 				<a href="products-indoor-footwear.php" class="viewmore">VIEW MORE ></a>
 			</div></div>
-		<div class="button buttonthree"><div class="inner">
+		<div class="button buttonthree">
+			<div class="inner">
 				<img src="img/products/grips.png" alt="AltaGrips">
 				<p>Over the Shoe Boots</p>
 				<a href="products-over-the-shoe-boots.php" class="viewmore">VIEW MORE ></a>
-			</div></div>
+			</div>
+		</div>
 	</div>
 	</article>
 </section>

@@ -1,16 +1,40 @@
-#home .content{
+#home .tops .content{
 	padding-bottom: 0px;
+	width: 60%;
 }
 .winter{
 	font-size: 20px;
 	margin-bottom: 10px;
 }
-#home p{
-	line-height: 25px;
-}
 #home h1{
-	font-size: 70px;
+	font-size: 60px;
+
 }
+#home img{
+	max-width: 45%;
+	max-height: 400px;
+}
+
+#home li.one .content img{
+	max-width: 35%;
+}
+#home li.two .content img{
+	position: relative;
+	top: 20px;
+}
+a.ctabox{
+	color: #FFFFFF;
+	background: url(img/subtle_grunge_blue.png) top;
+	padding: 10px;
+	font-family: langdon;
+	letter-spacing: 1px;
+	margin-top: 30px;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+}
+
 #instructions{
 	margin-top: 30px;
 }
@@ -23,11 +47,14 @@
 }
 #buttons{
 	background: #FFFFFF;
-	padding: 90px 0px 90px 0px;
+	padding: 40px 0px 0px 0px;
 	text-align:center;
 }
 #buttons .content{
-	max-width: 90%;
+	padding-bottom: 30px;
+}
+#buttons .content{
+	max-width: 1100px;
 }
 .button{
 	display:block;
@@ -39,31 +66,32 @@
 
 .button .inner{
 	position: relative;
-	display:block;
-	outline: none;
 	border:none;
 	-webkit-box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	display:inline-block;
 	background: #eeeeee; /* Old browsers */
-	height: 180px;
+	height: 120px;
 	text-align: center;
+	width: 250px;	
 }
-
 #home .content .button .inner img{
 	display:block;
-	width: 350px;
-	position: relative;
-	top: -80px;
+	float:none;
+	margin: 0 auto;
+	width: 200px;
 	z-index: 3;
+	
 }
+
 .button p{
 	clear:both;
 	text-align: center;
 	position: relative;
-	top: -200px;
 	z-index: 100;
 	color: #FFFFFF;
+	top: -18px;
+	padding-bottom: 5px;
 	background: rgba(1,1,1,.6);
 	width: 200px;
 	margin: 0 auto;
@@ -71,8 +99,8 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 .button a.viewmore{
 	display:block;
 	position: relative;
-	top: -200px;
 	z-index: 100;
+	top: -18px;
 	background: rgba(1,1,1,.6);
 	width: 200px;
 	margin: 0 auto;
@@ -85,17 +113,13 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	-ms-transition: color .3s ease-in-out;
 	transition: color .3s ease-in-out;
 }
-img.gfsview{
-	margin-top: -50px;
-	min-width: 400px;
-}
 .button a.viewmore:hover{
 	color: #FFFFFF;
 	cursor: pointer;
 }
 #line{
 	text-align: center;
-	padding: 30px;
+	padding: 15px;
 	color: #FFFFFF;
 	background: url(img/mochaGrunge.jpg);
 	position: relative;
@@ -106,6 +130,7 @@ img.gfsview{
 
 #sticky_navigation_wrapper {
 	height: 32px;
+	display:none;
 }
 #sticky_navigation_wrapper nav{
 	height: 40px;
@@ -125,56 +150,55 @@ img.gfsview{
 	position: relative;
 	top: -35px;
 }
-@media only screen and (max-width:1024px) {
-#home .content .button .inner img{
-	display:block;
+@media only screen and (max-width: 768px){
+#home h1{
+	font-size: 40px;
+}
+.button .inner{
 	width: 200px;
+}
+#home img{
+	max-width: 60%;
+	max-height: 400px;
+}
+
+#home li.one .content img{
+	max-width: 50%;
+}
+#home li.two .content img{
+	position: relative;
+	top: 20px;
+}
+
+}
+@media only screen and (max-width: 700px){
+		#home li.two .content img{
 	position: relative;
 	top: 0px;
-	z-index: 3;
+	left: 55%;
+	outline: red solid thin;
+	padding-top: 20px;
+	}
 }
-img.gfsview{
-	margin-top: -50px;
-	min-width: 250px;
+@media only screen and (max-width:640px) {
+	#home .content{
+	padding-bottom: 0px;
 }
-.button p{
-	clear:both;
-	text-align: center;
-	position: relative;
-	top: -50px;
-	z-index: 100;
+	a.ctabox{
 	color: #FFFFFF;
-	background: rgba(1,1,1,.6);
-	width: 200px;
-	margin: 0 auto;
-}
-.button a.viewmore{
-	display:block;
-	position: relative;
-	top: -50px;
-	z-index: 100;
-	background: rgba(1,1,1,.6);
-	width: 200px;
-	margin: 0 auto;
-	color: #46BFDF;
-	padding-bottom: 5px;
-	font-family: nexabold;
+	background: url(img/subtle_grunge_blue.png) top;
+	padding: 10px;
+	font-family: langdon;
+	letter-spacing: 1px;
+	margin-top: 0px;
 	-webkit-transition: color .3s ease-in-out;
 	-moz-transition: color .3s ease-in-out;
 	-o-transition: color .3s ease-in-out;
 	-ms-transition: color .3s ease-in-out;
-	transition: color .3s ease-in-out;
 }
-}
-@media only screen and (max-width: 768px){
-
-	#home h1{
-	font-size: 40px;
-}
-}
-@media only screen and (max-width:640px) {
 	#instructions{
 		margin-top: 0px;
+		padding-bottom: 40px;
 	}
 	#home h1{
 		font-size: 40px;

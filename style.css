@@ -855,9 +855,6 @@ footer input{
 	margin-right: 7px;
 }
 
-#line1 input:nth-child(2){
-	float:right;
-}
 
 .column a{
 	color: #FFFFFF;
@@ -1059,7 +1056,7 @@ footer input.send{
 	border:none;
 	font-size: 30px;
 	font-family: langdon;
-	color: #46bfdf;
+	color: #555555;
 	padding: 10px;
 	float:right;
 	-webkit-transition: color .3s ease-in-out;
@@ -1072,9 +1069,9 @@ footer input.send{
 footer input.send:hover{
 	background: #FFFFFF;
 	border:none;
+	color: #46bfdf;
 	font-size: 30px;
 	font-family: langdon;
-	color: #666666;
 	padding: 10px;
 	float:right;
 }
