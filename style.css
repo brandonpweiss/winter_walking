@@ -333,7 +333,6 @@ nav ul li{
 	float:right;
 }
 #home .content{
-	padding-top: 30px;
 	padding-bottom: 50px;
 }
 #matrix .inner{
@@ -674,7 +673,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	width: 70px;
 	margin-bottom: 7px;
 	text-transform: uppercase;
-	height: 45px;
+	height: 20px;
 }
 
 .sub-title{
@@ -1090,6 +1089,16 @@ footer input.send:hover{
 	z-index: 999999;
 }
 
+#sticky_navigation nav ul li img{
+	width: 75px;
+	position: relative;
+	top: -20px;
+}
+#sticky_navigation nav ul li a{
+	position: relative;
+	top: -55px;
+}
+
 a.request{
 	-webkit-transition: color .3s ease-in-out;
 	-moz-transition: color .3s ease-in-out;
@@ -1103,7 +1112,6 @@ a.request:hover{
 img#sparespike2{
 	display:none;
 }
-
 @media only screen and (min-width: 1441px){
 	section#home{
 		
@@ -1138,12 +1146,11 @@ img#sparespike2{
 nav#productnav ul li a{
 padding: 6px 15px 6px 15px;
 }
-aside#filter {
-	background: url(img/mochaGrunge.jpg);
-	width: 90%;
-	color: #ededed;
-	padding: 20px 0px 40px 0px;
+.product-bttn-wrapper {
+	float: left;
+	width: 70%;
 }
+
 #top #instructions{
 	float:none;
 	position: relative;
@@ -1197,6 +1204,11 @@ h1, a.size{
 	.hide2{
 		display:none;
 	}
+#sticky_navigation nav ul li a{
+	position: relative;
+	top: 0px;
+}
+
 .winter.see{
 	clear:both;
 	margin-top: 60px;

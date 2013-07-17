@@ -70,7 +70,7 @@
 	</nav>
 </div>
 <section id="home" class="clearfix">
-	<div class="content clearfix">
+	<div class="content clearfix" style="padding-top: 30px">
 	<img src="img/featuredshoe2.png" alt="Shoe">
 		<div id="instructions">
 	<div class="inner">
