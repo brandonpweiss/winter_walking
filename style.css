@@ -551,6 +551,21 @@ form .filter-submit:active {
 	background: #333333;
 	outline: solid #555555 medium;
 }
+.filter-header {
+	text-transform: uppercase;
+    font-family: langdon;
+    font-size: 1.150em;
+    /*color: #37A0D0;*/
+    color: #333;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    display:block;
+    width: 150px;
+}
+.first{
+	margin-top: 0;
+	padding-top: 0;
+}
 #filter {
 /*	background: url(img/mochaGrunge.jpg);
 	width: 100%;
@@ -558,7 +573,7 @@ form .filter-submit:active {
 	padding: 20px 0px 40px 0px;*/
 	/*display: none;*/
 	float: left;
-	margin: 20px 45px 0px 0px;
+	margin: 20px 25px 0px 0px;
 	color: #000000;
 }
 aside#filter h1{
@@ -1102,7 +1117,7 @@ img#sparespike2{
 
 @media only screen and (min-width: 1441px){
 	section#home{
-		
+
 	}
 }
 @media only screen and (max-width:1024px) {

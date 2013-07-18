@@ -162,7 +162,7 @@ $XXXXL = filter_var($_POST['XXXXL'], FILTER_SANITIZE_STRING);
 			{
 				die('There was an issue adding this product. Error: ' . mysqli_error($con));
 			}
-				session_start();
+			session_start();
 			session_destroy();
 			header("location:all-products.php");
 		}
@@ -195,7 +195,10 @@ $XXXXL = filter_var($_POST['XXXXL'], FILTER_SANITIZE_STRING);
 </div>
 <header>
 	<nav>
-		<a href="signout.php" style="float:right;">SIGN OUT</a>
+		<div class="wrap clearfix">
+			<a href="remove-product.php" style="float:left; padding:0;">REMOVE PRODUCT/S</a>
+			<a href="signout.php" style="float:right; padding:0;">SIGN OUT</a>
+		</div>
 	</nav>
 </header>
 <?php include('header.php');?>
