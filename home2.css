@@ -1,4 +1,4 @@
-
+;
 .winter{
 	font-size: 20px;
 	margin-bottom: 10px;
@@ -70,7 +70,7 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	background: #eeeeee; /* Old browsers */
 	height: 120px;
 	text-align: center;
-	width: 250px;	
+	width: 250px;
 }
 #home .content .button .inner img{
 	display:block;
@@ -78,7 +78,7 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	margin: 0 auto;
 	width: 200px;
 	z-index: 3;
-	
+
 }
 
 .button p{
@@ -130,18 +130,32 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	display:block;
 }
 #sticky_navigation_wrapper nav{
-	height: 40px;
+	height: 30px;
 }
 #sticky_navigation {
 	width: 100%;
 	position: relative;
 	z-index: 999999;
 }
+.navLogo {
+	visibility: hidden;
+}
+
+.navLeft {
+	margin-right: 75px;
+}
+.navRight {
+	margin-left: 75px;
+}
+
+#sticky_navigation nav ul {
+	margin-top: -14px;
+}
 
 #sticky_navigation nav ul li img{
 	width: 75px;
 	position: relative;
-	top: 5px;
+	top: 18px;
 }
 #sticky_navigation nav ul li a{
 	position: relative;

@@ -13,7 +13,7 @@
 	<script src="jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="jquery.flexslider.js"></script>
-		
+
 	<script src="modernizr.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -47,15 +47,21 @@
   </div>
   </div>
   <header>
-      <nav>
-    <ul>
-      <li><a href="index.php" class="active">HOME</a></li>
-      <li><a class="hide2" href="featured-product.php">PRODUCTS</a></li>
-      <li><a href="information.php">COMPANY</a></li>
-      <li id="contact1"><a href="#myModal2" role="button" data-toggle="modal">CONTACT</a></li>
-      <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
-    </ul>
-      </nav>
+  	<div id="sticky_navigation_wrapper">
+    	<div id="sticky_navigation">
+	      <nav>
+	    	<ul>
+		      <li class="navLeft"><a href="index.php" class="active">HOME</a></li>
+		      <li><a class="hide2" href="featured-product.php">PRODUCTS</a></li>
+		      <li class="hide2 navLogo"><img src="img/shoe.png" alt="Shoe"></li>
+		      <li><a href="information.php">COMPANY</a></li>
+		      <li id="contact1" class="navRight"><a href="#myModal2" role="button" data-toggle="modal">CONTACT</a></li>
+		      <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
+	    	</ul>
+	      </nav>
+    	</div>
+  	</div>
+<!--
   <div id="sticky_navigation_wrapper">
     <div id="sticky_navigation">
       <nav>
@@ -70,6 +76,8 @@
       </nav>
     </div>
   </div>
+-->
+
 </header>
 <?php include('header.php');?>
 <?php include('nav2.php');?>
@@ -166,10 +174,13 @@
 		if ( (top_pos > nav_pos) && ($(window).width() > 640) )
 		{
 			$('#sticky_navigation').css({ 'position': 'fixed', 'top':-15, 'left':0, 'z-index':999});
+			$('.navLogo').css({ 'visibility': 'visible' });
 		}
 		else
 		{
 			$('#sticky_navigation').css({ 'position': 'relative', 'top':0, 'left':0 });
+			$('.navLogo').css({ 'visibility': 'hidden' });
+
 		}
 	};
 
