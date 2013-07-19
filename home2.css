@@ -1,7 +1,4 @@
-#home .tops .content{
-	padding-bottom: 0px;
-	width: 60%;
-}
+
 .winter{
 	font-size: 20px;
 	margin-bottom: 10px;
@@ -130,7 +127,7 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 
 #sticky_navigation_wrapper {
 	height: 32px;
-	display:none;
+	display:block;
 }
 #sticky_navigation_wrapper nav{
 	height: 40px;

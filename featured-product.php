@@ -127,7 +127,7 @@ supplied adjustment tool.</div>
 		<div class="winter">FEATURING THE UNIQUE PATENTED</div>
 		<h1>REMOVABLE STRAP SYSTEM</h1>
 		<p>ICEGRIPS® ROTORS have been designed with a unique patented removable strap system. The ICEGRIPS® ROTORS straps are not permanently sewn into the sandal, allowing the end-user to change out the heel trap for an ankle strap (for greater security), change out all of the straps for a "bulky boot" kit, or easily replace straps if damaged</p>
-		<a href="#myModal" class="ctabox" role="button" data-toggle="modal">SPEAK TO AN EXPERT ABOUT ICEGRIPS ROTORS ></a><br>
+		<a href="#myModal2" class="ctabox" role="button" data-toggle="modal">SPEAK TO AN EXPERT ABOUT ICEGRIPS ROTORS ></a><br>
 		<a href="all-products.php" class="ctabox">VIEW ALL OUR PRODUCTS ></a>
 		</div>
 		</div>

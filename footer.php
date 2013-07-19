@@ -103,8 +103,8 @@ mail("contact@winterwalking.com", "Customer Message", $message, $headers);
 <h2>HOW TO ORDER</h2>
 <ul>
 <li><a href="#myModal" role="button" data-toggle="modal">REQUEST A SPECIFIC PRODUCT QUOTE</a></li>
-<li><a href="#myModal" role="button" data-toggle="modal">REQUEST A PRODUCT INFORMATION KIT</a></li>
-<li><a href="#myModal" role="button" data-toggle="modal">REQUEST TO BE CONTACTED BY AN EXPERT</a></li>
+<li><a href="#myModal2" role="button" data-toggle="modal">REQUEST A PRODUCT INFORMATION KIT</a></li>
+<li><a href="#myModal2" role="button" data-toggle="modal">REQUEST TO BE CONTACTED BY AN EXPERT</a></li>
 </ul>
 
 <p>For individual purchases and retail customers,

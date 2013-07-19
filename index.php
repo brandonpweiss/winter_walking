@@ -52,7 +52,7 @@
       <li><a href="index.php" class="active">HOME</a></li>
       <li><a class="hide2" href="featured-product.php">PRODUCTS</a></li>
       <li><a href="information.php">COMPANY</a></li>
-      <li id="contact1"><a href="#myModal" role="button" data-toggle="modal">CONTACT</a></li>
+      <li id="contact1"><a href="#myModal2" role="button" data-toggle="modal">CONTACT</a></li>
       <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
     </ul>
       </nav>
