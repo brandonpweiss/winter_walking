@@ -89,8 +89,11 @@ if ( $_POST['safer-indoors'] == 'safer-indoors') {
 print('<section id="products">');
 print('<div class="wrap clearfix">');
 print('<aside id="filter">');
-print('<h1>GET A GRIP: </h1>');
+// print('<h1>GET A GRIP: </h1>');
 print('<form method="post" action="products-lightweight.php">');
+
+/* -------------TRACTION------------------------- */
+print('<span class="filter-header first">TRACTION:</span>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="gritted" value="gritted" id="gritted"');
 if ($_POST['gritted'] == 'gritted'){
@@ -104,6 +107,10 @@ print('checked = "checked"');
 };
 print('><label for="spiked">Spiked<span></span></label></div>');
 
+/* -----REQUIREMENTS--------------------------------- */
+
+print('<span class="filter-header">REQUIREMENTS:</span>');
+
 print('<div class="opt-wrap"><input type="checkbox" name="safer-driving" value="safer-driving" id="safer-driving"');
 if ($_POST['safer-driving'] == 'safer-driving'){
 print('checked = "checked"');
@@ -116,11 +123,23 @@ print('checked = "checked"');
 };
 print('><label for="non-sparking">Non-Sparking<span></span></label></div>');
 
+print('<div class="opt-wrap"><input type="checkbox" name="safer-indoors" value="safer-indoors" id="safer-indoors"');
+if ($_POST['safer-indoors'] == 'safer-indoors'){
+print('checked = "checked"');
+};
+print('><label for="safer-indoors">Safe for Indoors<span></span></label></div>');
+
+/* --------------FEATURES------------------------------ */
+print('<span class="filter-header">FEATURES:</span>');
+
 print('<div class="opt-wrap"><input type="checkbox" name="defined-heel" value="defined-heel" id="defined-heel"');
 if ($_POST['defined-heel'] == 'defined-heel'){
 print('checked = "checked"');
 };
 print('><label for="defined-heel">Defined Heel<span></span></label></div>');
+
+/* -----------WALKING CONDITION------------------- */
+print('<span class="filter-header">WALKING CONDITION:</span>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
 if ($_POST['extreme-ice'] == 'extreme-ice'){
@@ -128,11 +147,6 @@ print('checked = "checked"');
 };
 print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
 
-print('<div class="opt-wrap"><input type="checkbox" name="safer-indoors" value="safer-indoors" id="safer-indoors"');
-if ($_POST['safer-indoors'] == 'safer-indoors'){
-print('checked = "checked"');
-};
-print('><label for="safer-indoors">Safe for Indoors<span></span></label></div>');
 print('<div class="filterreset">');
 print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
 print('<button href="products-lightweight.php" id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');

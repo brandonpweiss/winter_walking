@@ -248,7 +248,7 @@ print('<div class="opt-wrap"><input type="checkbox" name="ice-snow" value="ice-s
 if ($_POST['ice-snow'] == 'ice-snow'){
 print('checked = "checked"');
 };
-print('><label for="stripping">Floor Stripping<span></span></label></div>');
+print('><label for="ice-snow">Ice and Snow<span></span></label></div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
 if ($_POST['stripping'] == 'stripping'){
@@ -275,7 +275,7 @@ print('<div class="opt-wrap"><input type="checkbox" name="sling-device" value="s
 if ($_POST['sling-device'] == 'sling-device'){
 print('checked = "checked"');
 };
-print('><label for="over-sock">Over the Sock<span></span></label></div>');
+print('><label for="sling-device">Sling Device<span></span></label></div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over-sock" id="over-sock"');
 if ($_POST['over-sock'] == 'over-sock'){

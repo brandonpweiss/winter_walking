@@ -83,8 +83,11 @@ if ( $_POST['steel-toe'] == 'steel-toe') {
 print('<section id="products">');
 print('<div class="wrap clearfix">');
 print('<aside id="filter">');
-print('<h1>GET A GRIP: </h1>');
+// print('<h1>GET A GRIP: </h1>');
 print('<form method="post" action="products-indoor-footwear.php">');
+
+/* -----------WALKING CONDITION------------------- */
+print('<span class="filter-header first">WALKING CONDITION:</span>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
 if ($_POST['stripping'] == 'stripping'){
@@ -103,6 +106,9 @@ if ($_POST['food-processing'] == 'food-processing'){
 print('checked = "checked"');
 };
 print('><label for="food-processing">Food Processing<span></span></label></div>');
+
+/* ------------FIT--------------------------------------------------- */
+print('<span class="filter-header">FIT:</span>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over-sock" id="over-sock"');
 if ($_POST['over-sock'] == 'over-sock'){
