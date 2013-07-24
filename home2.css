@@ -183,7 +183,7 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 
 }
 @media only screen and (max-width: 700px){
-		#home li.two .content img{
+#home li.two .content img{
 	position: relative;
 	top: 0px;
 	left: 55%;
