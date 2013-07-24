@@ -547,6 +547,13 @@ $('.details').show();
 		var point_to_pos = $(this).offset().left + 28;
 		$('.arrow-up').css({ 'left': point_to_pos});
 
+		$('.request').click(function()
+	{
+		$('#modelNumber').val(number);
+		$('#modelName').val(name);
+	});
+
+
 	$(".features").click(function()
 	{
 			$(".ideal-info").hide();

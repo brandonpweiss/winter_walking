@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['submit'])) {
+if (isset($_POST['footer-contact-submit'])) {
 /*#############FIRST NAME##############*/
 if ($_POST['firstName'] != "") {
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
@@ -52,24 +52,30 @@ $errors .= '<span>Please enter a comment or message.</span><br/>';
 };
 /*#############FIN##############*/
 
+$wwemail = "contact@winterwalking.com";
+
 $message ="
-This is a message sent via winterwalking.com
+This is a message sent via winterwalking.com's Footer Contact Form.
+
+Client Info:
 First Name: $firstname
 Last Name: $lastname
 Company Name: $company
 Phone Number: $phone
 Email: $email
+
 Message: $comments
 ";
-$headers = "From: <$email>\n";
-$headers .= "Reply-To: <$email>\n";
+
+$headers = "From: <$wwemail>\n";
+$headers .= "Reply-To: <$wwemail>\n";
 
 if ($errors != null) {
 echo "<script>";
 echo "alert('$errors');";
 echo "</script>";
 } else {
-mail("contact@winterwalking.com", "Customer Message", $message, $headers);
+mail($wwemail, "Footer Contact Form Message", $message, $headers);
 };
 };
 ?>
@@ -123,7 +129,7 @@ please visit <a href="http://www.wintercleats.com">www.wintercleats.com</a></p>
 	<input type="text" name="phoneNumber" placeholder="PHONE NUMBER">
 	<input type="email" name="email" placeholder="EMAIL ADDRESS">
 	<input type="text" name="comments" placeholder="COMMENTS">
-	<input class="send" type="submit" value="SEND">
+	<input class="send" type="submit" name="footer-contact-submit" value="SEND">
 </form>
 </div>
 </div>
