@@ -11,7 +11,6 @@ nav{
 }
 nav a{
 	color: #eeeeee;
-	position: relative;
 }
 #logobox{
 	position: relative;
@@ -87,14 +86,14 @@ article#three #words{
 
 .info{
 	clear:both;
-	text-align:center;	
+	text-align:center;
 }
 
 .position{
 	font-family: langdon;
 	color: #FFFFFF;
 	font-size: 20px;
-	text-align: center;	
+	text-align: center;
 }
 .title{
 	font-family: langdon;
@@ -127,7 +126,7 @@ article#three #words{
 
 #removable{
 	background: #f4f4f4;
-	height: 650px;	
+	height: 650px;
 }
 
 #bootup{

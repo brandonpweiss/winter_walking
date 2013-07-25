@@ -21,21 +21,7 @@
     <div id="tagline">WE DONT JUST MAKE ICE CLEATS, WE PERFECT THEM</div>
   </div>
   </div>
-  <header>
-  <div id="sticky_navigation_wrapper">
-    <div id="sticky_navigation">
-      <nav>
-    <ul>
-      <li><a href="index.php">HOME</a></li>
-      <li><a class="hide2" href="featured-product.php">PRODUCTS</a></li>
-      <li><a href="information.php" class="active">COMPANY</a></li>
-      <li id="contact1"><a href="#myModal" role="button" data-toggle="modal">CONTACT</a></li>
-      <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
-    </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+<?php include('nav.php');?>
 <?php include('header.php');?>
 </div>
 <section id="facts">
@@ -54,7 +40,7 @@
 <a target="_blank"  href="history.pdf">Download The History of Ice Cleats</a>
 
 <h3>CUSTOMER SERVICE & INVENTORY</h3>
-<p>Winter Walking has spent over 30 years reducing workplace slips and falls though the implementation of All-Traction™ Footwear.  No one knows as much about accident prevention as our team of experts, and no one will work harder to find the perfect solution for the unique challenges in your workplace.  Once we've identified the right solution, our massive inventory levels enable us to get the product you need out the door and in your hands while you still need it — not months later.</p>  
+<p>Winter Walking has spent over 30 years reducing workplace slips and falls though the implementation of All-Traction™ Footwear.  No one knows as much about accident prevention as our team of experts, and no one will work harder to find the perfect solution for the unique challenges in your workplace.  Once we've identified the right solution, our massive inventory levels enable us to get the product you need out the door and in your hands while you still need it — not months later.</p>
 
 <a target="_blank" href="guide.pdf">Download The Ice Cleats Selection Guide</a>
 
@@ -71,39 +57,7 @@
 	</div>
 </section>
 <?php include('footer.php');?>
-	<script src="scroll.js"></script>
-	<script>
-/*####### STICKY NAV SCRIPT ##########*/
-	var nav_pos = $('nav').offset().top;
-	var i = 0;
-	var sticky_nav = function()
-	{
-		var top_pos = $(window).scrollTop(); // our current vertical position from the top
-
-		if ( (top_pos > nav_pos) && ($(window).width() > 640) )
-		{
-			$('#sticky_navigation').css({ 'position': 'fixed', 'top':-15, 'left':0, 'z-index':999});
-		}
-		else
-		{
-			$('#sticky_navigation').css({ 'position': 'relative', 'top':0, 'left':0 });
-		}
-	};
-
-	$(window).scroll(function()
-	{
-		if (i <= 0)
-		{
-			nav_pos = $('nav').offset().top - 0;
-			i = 1;
-		};
-		 sticky_nav();
-	});
-
-	$(window).resize(function()
-	{
-			nav_pos = $('nav').offset().top - 0;
-	});
-</script>
+<script src="scroll.js"></script>
+<script src="js/stickynav.js"></script>
 </body>
 </html>

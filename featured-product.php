@@ -14,26 +14,6 @@
 	<script src="modernizr.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<script>
-// var point_to_pos = $('.pointTo').offset().left;
-
-// 	$(window).resize(function()
-// 	{
-// 			point_to_pos = $('.pointTo').offset().left;
-// 	});
-
-	// $(document).ready(function()
-	// {
-	// 	$('.product').click(function()
-	// 	{
-	// 		$(this).toggleClass('pointTo');
-	// 		var point_to_pos = $('.pointTo').offset().left;
-	// 	});
-
-	// });
-</script>
-
-
 </head>
 <body>
 <div class="tops">
@@ -43,21 +23,7 @@
     <div id="tagline">WE DONT JUST MAKE ICE CLEATS, WE PERFECT THEM</div>
   </div>
   </div>
-  <header>
-  <div id="sticky_navigation_wrapper">
-    <div id="sticky_navigation">
-      <nav>
-    <ul>
-      <li><a href="index.php">HOME</a></li>
-      <li><a class="hide2 active" href="featured-product.php">PRODUCTS</a></li>
-      <li><a href="information.php">COMPANY</a></li>
-      <li id="contact1"><a href="#myModal" role="button" data-toggle="modal">CONTACT</a></li>
-      <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
-    </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+<?php include('nav.php');?>
 <?php include('header.php');?>
 <nav id="productnav">
 		<ul>
@@ -106,7 +72,7 @@
 		<div class="position">&bull;&nbsp;POSITION TWO&nbsp;&bull;</div>
 		<div class="title">ROTATED</div>
 		<div class="blueline"><img src="img/lilboot.png" alt="lilboot"></div>
-		<div class="description">When transitioning from indoor to outdoor or dry to slippery, the rotors easily pull out and flip over using your fingers or the 
+		<div class="description">When transitioning from indoor to outdoor or dry to slippery, the rotors easily pull out and flip over using your fingers or the
 supplied adjustment tool.</div>
 	</article>
 	<article id="three">
@@ -132,42 +98,9 @@ supplied adjustment tool.</div>
 		</div>
 		</div>
 	</div>
-	</div>
 </section>
 <?php include('footer.php');?>
-	<script src="scroll.js"></script>
-	<script>
-/*####### STICKY NAV SCRIPT ##########*/
-	var nav_pos = $('nav').offset().top;
-	var i = 0;
-	var sticky_nav = function()
-	{
-		var top_pos = $(window).scrollTop(); // our current vertical position from the top
-
-		if ( (top_pos > nav_pos) && ($(window).width() > 640) )
-		{
-			$('#sticky_navigation').css({ 'position': 'fixed', 'top':-15, 'left':0, 'z-index':999});
-		}
-		else
-		{
-			$('#sticky_navigation').css({ 'position': 'relative', 'top':0, 'left':0 });
-		}
-	};
-
-	$(window).scroll(function()
-	{
-		if (i <= 0)
-		{
-			nav_pos = $('nav').offset().top - 0;
-			i = 1;
-		};
-		 sticky_nav();
-	});
-
-	$(window).resize(function()
-	{
-			nav_pos = $('nav').offset().top - 0;
-	});
-</script>
+<script src="scroll.js"></script>
+<script src="js/stickynav.js"></script>
 </body>
 </html>

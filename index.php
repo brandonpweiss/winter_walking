@@ -25,24 +25,8 @@
     <div id="tagline">WE DONT JUST MAKE ICE CLEATS, WE PERFECT THEM</div>
   </div>
   </div>
-  <header>
-  	<div id="sticky_navigation_wrapper">
-    	<div id="sticky_navigation">
-	      <nav>
-	    	<ul>
-		      <li class="navLeft"><a href="index.php" class="active">HOME</a></li>
-		      <li><a class="hide2" href="featured-product.php">PRODUCTS</a></li>
-		      <li class="navLogo"><img src="img/shoe.png" alt="Shoe"></li>
-		      <li><a href="information.php">COMPANY</a></li>
-		      <li id="contact1" class="navRight"><a href="#myModal2" role="button" data-toggle="modal">CONTACT</a></li>
-		      <li id="contact2"><a href="#" id="footernav">CONTACT</a></li>
-	    	</ul>
-	      </nav>
-    	</div>
-  	</div>
-</header>
+<?php include('nav.php');?>
 <?php include('header.php');?>
-<?php include('nav2.php');?>
 </div>
 <section id="home" class="clearfix">
 <div class="flexslider">
@@ -109,8 +93,6 @@
 	</div>
 	</article>
 </section>
-	</div>
-</section>
 <?php include('footer.php');?>
 <script>
 			$(window).load(function() {
@@ -124,42 +106,6 @@
 			});
 		</script>
 	<script src="scroll.js"></script>
-
-	<script>
-/*####### STICKY NAV SCRIPT ##########*/
-	var nav_pos = $('nav').offset().top;
-	var i = 0;
-	var sticky_nav = function()
-	{
-		var top_pos = $(window).scrollTop(); // our current vertical position from the top
-
-		if ( (top_pos > nav_pos) && ($(window).width() > 640) )
-		{
-			$('#sticky_navigation').css({ 'position': 'fixed', 'top':-15, 'left':0, 'z-index':999});
-			$('.navLogo').css({ 'visibility': 'visible' });
-		}
-		else
-		{
-			$('#sticky_navigation').css({ 'position': 'relative', 'top':0, 'left':0 });
-			$('.navLogo').css({ 'visibility': 'hidden' });
-
-		}
-	};
-
-	$(window).scroll(function()
-	{
-		if (i <= 0)
-		{
-			nav_pos = $('nav').offset().top - 0;
-			i = 1;
-		};
-		 sticky_nav();
-	});
-
-	$(window).resize(function()
-	{
-			nav_pos = $('nav').offset().top - 0;
-	});
-</script>
+	<script src="js/stickynav.js"></script>
 </body>
 </html>

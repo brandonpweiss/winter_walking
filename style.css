@@ -173,19 +173,11 @@ nav{
 	text-align: center;
 	height: 20px;
 	padding: 5px 0px 4px 0px;
-	position: relative;
-	margin-top: 15px;
 	-webkit-box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
-        box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
+    box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
 }
 nav#productnav{
 	background: #000000 url(img/mochaGrunge.png) center center;
-	text-align: center;
-	height: 20px;
-	padding: 5px 0px 4px 0px;
-	position: relative;
-    margin-top: -4px;
-    z-index: 1;
 }
 nav#productnav ul li a{
 color: #eeeeee;
@@ -201,6 +193,35 @@ nav#productnav ul li a:hover{
 }
 nav#productnav ul li a.active{
 	color:#46BFDF;
+}
+#sticky_navigation_wrapper {
+	height: 32px;
+	display:block;
+}
+#sticky_navigation_wrapper nav{
+	height: 30px;
+}
+#sticky_navigation {
+	width: 100%;
+	position: relative;
+	z-index: 999999;
+}
+.navLogo {
+	visibility: hidden;
+	width: 75px;
+}
+
+.navLeft {
+	margin-right: 75px;
+}
+.navRight {
+	margin-left: 75px;
+}
+
+#sticky_navigation nav ul li img{
+	width: 75px;
+	position: absolute;
+	margin-left: -28px;
 }
 .details{
 	display: none;
@@ -274,8 +295,6 @@ nav a{
 	text-decoration: none;
 	color: #333333;
 	padding: 6px 0px 6px 0px;
-	position: relative;
-	z-index: 9999;
 	letter-spacing: 2px;
 	top: 1px;
 }
@@ -290,7 +309,12 @@ nav a.active{
 	color: #37a0d0;
 }
 nav ul li{
-	display:inline;
+	display:inline-block;
+	margin-top: 5px;
+}
+
+#productnav li {
+	margin: 0 25px;
 }
 
 #boot{
@@ -352,7 +376,7 @@ h1, a.size{
 
 #logobox{
 	max-width: 400px;
-	margin: 0 auto;
+	margin: 0 auto 10px;
 	padding: 10px 10px 0px 10px;
 	text-align: center;
 	z-index: 100000;
@@ -1091,7 +1115,7 @@ footer input.send:hover{
 }
 
 #sticky_navigation_wrapper {
-	height: 32px;
+	height: 38px;
 }
 
 #sticky_navigation {
