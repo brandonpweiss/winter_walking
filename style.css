@@ -221,7 +221,7 @@ nav#productnav ul li a.active{
 #sticky_navigation nav ul li img{
 	width: 75px;
 	position: absolute;
-	margin-left: -28px;
+	top: 10px;
 }
 .details{
 	display: none;
@@ -1170,7 +1170,10 @@ img#sparespike2{
 }
 @media only screen and (max-width: 1000px){
 nav#productnav ul li a{
-padding: 6px 15px 6px 15px;
+padding: 6px 0px 6px 0px;
+}
+#productnav li {
+	margin: 0 10px;
 }
 .product-bttn-wrapper {
 	float: left;
@@ -1230,6 +1233,63 @@ h1, a.size{
 .hide2{
 		display:none;
 }
+
+nav{
+	background: #000000 url(img/subtle_grunge.png) center center;
+	text-align: center;
+	height: 20px;
+	padding: 5px 0px 4px 0px;
+	-webkit-box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
+    box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
+}
+nav#productnav{
+	background: #000000 url(img/mochaGrunge.png) center center;
+}
+nav#productnav ul li a{
+color: #eeeeee;
+	font-size: 10px;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+nav#productnav ul li a:hover{
+	color: #46BFDF;
+}
+nav#productnav ul li a.active{
+	color:#46BFDF;
+}
+#sticky_navigation_wrapper {
+	height: 32px;
+	display:block;
+}
+#sticky_navigation_wrapper nav{
+	height: 30px;
+}
+#sticky_navigation {
+	width: 100%;
+	position: relative;
+	z-index: 999999;
+}
+.navLogo {
+	visibility: hidden;
+	width: 75px;
+}
+
+.navLeft {
+	margin-right: -75px;
+}
+.navRight {
+	margin-left: 0px;
+}
+
+#sticky_navigation nav ul li img{
+	width: 0px;
+	position: absolute;
+	margin-left: -28px;
+	display:none;
+}
 .winter.see{
 	clear:both;
 	margin-top: 60px;
@@ -1280,7 +1340,7 @@ nav a{
 	top: 1px;
 }
 #contact1{
-	display:none;
+	display:inline-block;
 }
 #contact2{
 	display:inline-block;
