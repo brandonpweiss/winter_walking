@@ -209,6 +209,7 @@ nav#productnav ul li a.active{
 .navLogo {
 	visibility: hidden;
 	width: 75px;
+	position:relative;
 }
 
 .navLeft {
@@ -221,7 +222,8 @@ nav#productnav ul li a.active{
 #sticky_navigation nav ul li img{
 	width: 75px;
 	position: absolute;
-	top: 10px;
+	top: -10px;
+	left: 10px;
 }
 .details{
 	display: none;
