@@ -5,7 +5,7 @@
 	<title>Winter Walking Products</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<style>
-	@import url("style.css");
+	@import url("http://www.bpwtesting.com/winter_walking/style.css");
 	h1{
 		color: #000000;
 		font-size: 40px;
