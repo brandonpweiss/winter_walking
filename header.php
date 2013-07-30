@@ -126,33 +126,39 @@ $message ="
   <title>Winter Walking Products</title>
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
   <style>
-  @import url('$absolute_url/style.css');
+  body{
+    background: url($absolute_url/img/subtle_grunge.png);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   h1{
     color: #000000;
     font-size: 40px;
-    padding-bottom: 10px;
+    margin-top: -20px;
+    margin-bottom: 0px;
   }
   </style>
 </head>
 <body>
-<div class='tables' style='width: 900px; margin:0 auto;'>
-<img style='width: 75px; margin:0 auto;' src='$absolute_url/img/shoe.png'>
-<p>$sendName wants to share one of our products with you!</p>
-<table style='width: 600px; margin-bottom: 20px; float:left;'>
-  <tr>
-    <td style='font-size: 30px; font-weight:bold;'><h1>$modelName2</h1></td>
-  </tr>
+<div class='tables' style='width: 850px; margin:0 auto;'>
+<img style='width: 274px; position: relative; margin-left: -137px; left:50%;' src='$absolute_url/img/logo.png'>
+<p style='text-align:center;'>$sendName wants to share one of our products with you!</p>
+<div class='productimage' style='text-align:center;'><img style='width: 225px;' src='$absolute_url/$modelImage' alt='shoe'><br>
+<h1>$modelName2</h1>
+</div>
+
+<table style='width: 850px; text-align: center; margin-bottom: 20px;'>
   <tr>
 <td style='font-size: 14px;'>$modelDescription</td>
 </tr>
 </table>
-<div class='productimage' style='float:right; margin-right: 50px;'><img style='width: 180px;' src='$absolute_url/$modelImage' alt='shoe'></div>
 <table style='width: 600px; clear:both; float:left; margin-top: 20px;'>
 <tr><td>FEATURES</td></tr>
 <tr><td>
 $modelFeatures
 </td></tr>
 </table>
+<div style='border: 2px solid black; padding: 20px 20px 40px 20px; background-color: white;'>
 <table style='width: 200px; float:left; margin-left: 20px; margin-top: 20px;'>
 <tr><td>IDEAL CONDITIONS</td></tr>
 <tr><td>Ice</td><td>$modelIC1</td></tr><tr><td>Snow</td><td>$modelIC2</td></tr><tr><td>Oil</td><td>$modelIC3</td></tr><tr><td>fats</td><td>$modelIC4</td></tr><tr><td>Soaps</td><td>$modelIC5</td></tr><tr><td>Chemicals</td><td>$modelIC6</td></tr><tr><td>Liquids</td><td>$modelIC7</td></tr><tr><td>Mud</td><td>$modelIC8</td></tr><tr><td>Indoor</td><td>$modelIC9</td></tr><tr><td>Outdoor</td><td>$modelIC10</td></tr><tr><td>Driving</td><td>$modelIC11</td></tr>
@@ -181,6 +187,9 @@ $modelFeatures
 </tr>
 </table>
 </div>
+</div>
+<pstyle='margin-top: 50px;text-align: center; font-weight: bold;'>Please do not reply to this e-mail</p>
+<p style='text-align: center; font-weight: bold;'>See more on <a href='http://www.winterwalking.com'>www.winterwalking.com</a></p>
 </body>
 </html>
 ";
