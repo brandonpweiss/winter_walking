@@ -126,9 +126,7 @@ $message ="
   <title>Winter Walking Products</title>
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
   <style>
-  body{
-  background: url($absolute_url/img/subtle_grunge.png) 0 0 repeat;
-  }
+  @import url('$absolute_url/style.css');
   h1{
     color: #000000;
     font-size: 40px;
@@ -138,33 +136,29 @@ $message ="
 </head>
 <body>
 <div class='tables' style='width: 900px; margin:0 auto;'>
-<img style='width: 274px; position: relative; margin-left: -137px; left: 50%;' src='$absolute_url/img/logo.png'>
-<p style='text-align: center'>$sendName wants to share one of our products with you:</p>
-<div class='productimage'><img style='width: 200px; position: relative; margin-left: -100px; left: 50%;' src='$absolute_url/$modelImage' alt='shoe'></div>
+<img style='width: 75px; margin:0 auto;' src='$absolute_url/img/shoe.png'>
+<p>$sendName wants to share one of our products with you!</p>
 <table style='width: 600px; margin-bottom: 20px; float:left;'>
   <tr>
-<<<<<<< HEAD
-    <td style='font-size: 30px; font-weight:bold;'><h1 style='color: black; font-family: arial, helvetica, sans-serif; letter-spacing: -1px; font-size: 3em; padding-bottom: 30px; text-transform: uppercase;'>$modelName</h1></td>
-=======
     <td style='font-size: 30px; font-weight:bold;'><h1>$modelName2</h1></td>
->>>>>>> b51a5203331342bb0c37d678fd91826a894dbd81
   </tr>
   <tr>
 <td style='font-size: 14px;'>$modelDescription</td>
 </tr>
 </table>
+<div class='productimage' style='float:right; margin-right: 50px;'><img style='width: 180px;' src='$absolute_url/$modelImage' alt='shoe'></div>
 <table style='width: 600px; clear:both; float:left; margin-top: 20px;'>
-<tr><td><span style='color: black; font-weight: bold;'>FEATURES</span></td></tr>
+<tr><td>FEATURES</td></tr>
 <tr><td>
 $modelFeatures
 </td></tr>
 </table>
 <table style='width: 200px; float:left; margin-left: 20px; margin-top: 20px;'>
-<tr><td><span style='color: black; font-weight: bold;'>IDEAL CONDITIONS</span></td></tr>
-<tr><td>Ice</td><td><span style='color: black; font-weight:bold;'>$modelIC1</span></td></tr><tr><td>Snow</td><td>$modelIC2</td></tr><tr><td>Oil</td><td>$modelIC3</td></tr><tr><td>fats</td><td>$modelIC4</td></tr><tr><td>Soaps</td><td>$modelIC5</td></tr><tr><td>Chemicals</td><td>$modelIC6</td></tr><tr><td>Liquids</td><td>$modelIC7</td></tr><tr><td>Mud</td><td>$modelIC8</td></tr><tr><td>Indoor</td><td>$modelIC9</td></tr><tr><td>Outdoor</td><td>$modelIC10</td></tr><tr><td>Driving</td><td>$modelIC11</td></tr>
+<tr><td>IDEAL CONDITIONS</td></tr>
+<tr><td>Ice</td><td>$modelIC1</td></tr><tr><td>Snow</td><td>$modelIC2</td></tr><tr><td>Oil</td><td>$modelIC3</td></tr><tr><td>fats</td><td>$modelIC4</td></tr><tr><td>Soaps</td><td>$modelIC5</td></tr><tr><td>Chemicals</td><td>$modelIC6</td></tr><tr><td>Liquids</td><td>$modelIC7</td></tr><tr><td>Mud</td><td>$modelIC8</td></tr><tr><td>Indoor</td><td>$modelIC9</td></tr><tr><td>Outdoor</td><td>$modelIC10</td></tr><tr><td>Driving</td><td>$modelIC11</td></tr>
 </table>
 <table style='width: 300px; top: 20px; position: relative; clear:both;'>
-<tr><td><span style='color: black; font-weight: bold;'>SIZES</span></td></tr>
+<tr><td>SIZES</td></tr>
 <tr>
   <td>XS</td>
   <td>S</td>
