@@ -82,7 +82,7 @@ header($_SERVER['PHP_SELF']);
 if (isset($_POST['product-share-submit'])) {
 
 /*#############PRODUCT DATA##############*/
-$modelName = $_POST['modelName'];
+$modelName2 = $_POST['modelName2'];
 $modelDescription = $_POST['modelDescription'];
 $modelFeatures = $_POST['modelFeatures'];
 $modelImage = $_POST['modelImage'];
@@ -140,7 +140,7 @@ $message ="
 <p>$sendName wants to share one of our products with you!</p>
 <table style='width: 600px; margin-bottom: 20px; float:left;'>
   <tr>
-    <td style='font-size: 30px; font-weight:bold;'><h1>$modelName</h1></td>
+    <td style='font-size: 30px; font-weight:bold;'><h1>$modelName2</h1></td>
   </tr>
   <tr>
 <td style='font-size: 14px;'>$modelDescription</td>
@@ -278,7 +278,7 @@ header($_SERVER['PHP_SELF']);
 <div class="modal-body">
   <div class="form">
   <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?$_SERVER['PHP_SELF'];?>">
-    <input type="hidden" id="modelName" name="modelName" value="">
+    <input type="hidden" id="modelName2" name="modelName2" value="">
     <input type="hidden" id="modelDescription" name="modelDescription" value="">
     <input type="hidden" id="modelFeatures" name="modelFeatures" value="">
     <input type="hidden" id="modelImage" name="modelImage" value="">
