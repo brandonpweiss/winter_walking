@@ -153,17 +153,17 @@ $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 /*#############RECIPIDNTS EMAIL##############*/
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-$message ='
+$message ="
 $sendName wants to share one of our products with you!
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
+  <meta charset='UTF-8'>
   <title>Winter Walking Products</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
   <style>
-  @import url("style.css");
+  @import url('style.css');
   h1{
     color: #000000;
     font-size: 40px;
@@ -172,27 +172,27 @@ $sendName wants to share one of our products with you!
   </style>
 </head>
 <body>
-<div class="tables" style="width: 900px">
-<table style="width: 600px; margin-bottom: 20px; float:left;">
+<div class='tables' style='width: 900px'>
+<table style='width: 600px; margin-bottom: 20px; float:left;'>
   <tr>
-    <td style="font-size: 30px; font-weight:bold;"><h1>$modelName</h1></td>
+    <td style='font-size: 30px; font-weight:bold;'><h1>$modelName</h1></td>
   </tr>
   <tr>
-<td style="font-size: 14px;">$modelDescription</td>
+<td style='font-size: 14px;'>$modelDescription</td>
 </tr>
 </table>
-<div class="productimage" style="float:right; margin-right: 50px;"><img style="width: 180px;" src="$modelImage" alt="shoe"></div>
-<table style="width: 600px; clear:both; float:left; margin-top: 20px;">
+<div class='productimage' style='float:right; margin-right: 50px;'><img style='width: 180px;' src='$modelImage' alt='shoe'></div>
+<table style='width: 600px; clear:both; float:left; margin-top: 20px;'>
 <tr><td>FEATURES</td></tr>
 <tr><td>
 $modelFeatures
 </td></tr>
 </table>
-<table style="width: 200px; float:left; margin-left: 20px; margin-top: 20px;">
+<table style='width: 200px; float:left; margin-left: 20px; margin-top: 20px;'>
 <tr><td>IDEAL CONDITIONS</td></tr>
 <tr><td>Ice</td><td>$modelIC1</td></tr><tr><td>Snow</td><td>$modelIC2</td></tr><tr><td>Oil</td><td>$modelIC3</td></tr><tr><td>fats</td><td>$modelIC4</td></tr><tr><td>Soaps</td><td>$modelIC5</td></tr><tr><td>Chemicals</td><td>$modelIC6</td></tr><tr><td>Liquids</td><td>$modelIC7</td></tr><tr><td>Mud</td><td>$modelIC8</td></tr><tr><td>Indoor</td><td>$modelIC9</td></tr><tr><td>Outdoor</td><td>$modelIC10</td></tr><tr><td>Driving</td><td>$modelIC11</td></tr>
 </table>
-<table style="width: 300px; top: 20px; position: relative; clear:both;">
+<table style='width: 300px; top: 20px; position: relative; clear:both;'>
 <tr><td>SIZES</td></tr>
 <tr>
   <td>XS</td>
@@ -218,7 +218,7 @@ $modelFeatures
 </div>
 </body>
 </html>
-';
+";
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
