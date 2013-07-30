@@ -188,7 +188,7 @@ $modelFeatures
 </table>
 </div>
 </div>
-<pstyle='margin-top: 50px;text-align: center; font-weight: bold;'>Please do not reply to this e-mail</p>
+<p style='margin-top: 50px; text-align: center; font-weight: bold;'>Please do not reply to this e-mail</p>
 <p style='text-align: center; font-weight: bold;'>See more on <a href='http://www.winterwalking.com'>www.winterwalking.com</a></p>
 </body>
 </html>
@@ -201,8 +201,8 @@ $headers .= "From: Winter Walking <no-reply@winterwalking.com>" . "\r\n";
 $headers .= "Reply-To: No-Reply <no-reply@winterwalking.com>" . "\r\n";
 
 mail($email, "$sendName wants to share one of our products with you!", $message, $headers);
-header($_SERVER['PHP_SELF']);
 };
+echo htmlspecialchars($str);
 ?>
 
 <!-- Contact Form -->
