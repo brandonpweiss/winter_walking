@@ -1,39 +1,14 @@
 <?php
 if (isset($_POST['nav-contact-submit'])) {
-/*#############FIRST NAME##############*/
-if ($_POST['firstName'] != "") {
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
-}else{
-$errors .= '<span>Please enter your First Name.</span><br/>';
-};
-/*#############LAST NAME##############*/
-if ($_POST['lastName'] != "") {
+
 $lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
-}else{
-$errors .= '<span>Please enter your Last Name.</span><br/>';
-};
-/*#############COMPANY##############*/
-if ($_POST['company'] != "") {
+
 $company = filter_var($_POST['company'], FILTER_SANITIZE_STRING);
-}else{
-$errors .= '<span>Please enter your companies name.</span><br/>';
-};
-/*#############EMAIL##############*/
-if ($_POST['email'] != "") {
-    $sanemail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-    if (!filter_var($sanemail, FILTER_VALIDATE_EMAIL)) {
-   $errors .= '<span>Please enter a valid email address.</span><br/>';
-} else {
-    $email = $sanemail;
-};
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-} else {
-    $errors .= '<span>Please enter your email address.</span><br/>';
-};
-/*#############COMMENTS##############*/
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
-/*#############FIN##############*/
 
 $wwemail = "contact@winterwalking.com";
 
@@ -52,57 +27,29 @@ Message: $comments
 $headers = "From: <$wwemail>\n";
 $headers .= "Reply-To: <$wwemail>\n";
 
-if ($errors != null) {
-echo "<script>";
-echo "alert('$errors');";
-echo "</script>";
-} else {
 mail($wwemail, "Main Contact Form Message", $message, $headers);
-};
+header($_SERVER['PHP_SELF']);
 };
 
 /*==========================================================*/
 
 if (isset($_POST['request-contact-submit'])) {
-/*#############PRODUCT DATA##############*/
+
 $modelNumber = filter_var($_POST['modelNumber'], FILTER_SANITIZE_STRING);
+
 $modelName = filter_var($_POST['modelName'], FILTER_SANITIZE_STRING);
-/*#############FIRST NAME##############*/
-if ($_POST['firstName'] != "") {
+
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
-}else{
-$errors .= '<span>Please enter your First Name.</span><br/>';
-};
-/*#############LAST NAME##############*/
-if ($_POST['lastName'] != "") {
+
 $lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
-}else{
-$errors .= '<span>Please enter your Last Name.</span><br/>';
-};
-/*#############COMPANY##############*/
-if ($_POST['company'] != "") {
+
 $company = filter_var($_POST['company'], FILTER_SANITIZE_STRING);
-}else{
-$errors .= '<span>Please enter your companies name.</span><br/>';
-};
-/*#############EMAIL##############*/
-if ($_POST['email'] != "") {
-    $sanemail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-    if (!filter_var($sanemail, FILTER_VALIDATE_EMAIL)) {
-   $errors .= '<span>Please enter a valid email address.</span><br/>';
-} else {
-    $email = $sanemail;
-};
+$mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-} else {
-    $errors .= '<span>Please enter your email address.</span><br/>';
-};
-/*#############EMPLOYEES##############*/
 $employees = filter_var($_POST['employees'], FILTER_SANITIZE_STRING);
-/*#############COMMENTS##############*/
+
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
-/*#############FIN##############*/
 
 $wwemail = "contact@winterwalking.com";
 
@@ -126,13 +73,8 @@ Message: $comments
 $headers = "From: <$wwemail>\n";
 $headers .= "Reply-To: <$wwemail>\n";
 
-if ($errors != null) {
-echo "<script>";
-echo "alert('$errors');";
-echo "</script>";
-} else {
 mail($wwemail, "Quote Request/Speak to an Expert Message", $message, $headers);
-};
+header($_SERVER['PHP_SELF']);
 };
 
 /*==========================================================*/
@@ -140,8 +82,29 @@ mail($wwemail, "Quote Request/Speak to an Expert Message", $message, $headers);
 if (isset($_POST['product-share-submit'])) {
 
 /*#############PRODUCT DATA##############*/
-$modelNumber = $_POST['modelNumber'];
 $modelName = $_POST['modelName'];
+$modelDescription = $_POST['modelDescription'];
+$modelFeatures = $_POST['modelFeatures'];
+$modelImage = $_POST['modelImage'];
+$modelIC1 = $_POST['modelIC1'];
+$modelIC2 = $_POST['modelIC2'];
+$modelIC3 = $_POST['modelIC3'];
+$modelIC4 = $_POST['modelIC4'];
+$modelIC5 = $_POST['modelIC5'];
+$modelIC6 = $_POST['modelIC6'];
+$modelIC7 = $_POST['modelIC7'];
+$modelIC8 = $_POST['modelIC8'];
+$modelIC9 = $_POST['modelIC9'];
+$modelIC10 = $_POST['modelIC10'];
+$modelIC11 = $_POST['modelIC11'];
+$modelS1 = $_POST['modelS1'];
+$modelS2 = $_POST['modelS2'];
+$modelS3 = $_POST['modelS3'];
+$modelS4 = $_POST['modelS4'];
+$modelS5 = $_POST['modelS5'];
+$modelS6 = $_POST['modelS6'];
+$modelS7 = $_POST['modelS7'];
+$modelS8 = $_POST['modelS8'];
 
 /*#############SENDERS NAME##############*/
 $sendName = filter_var($_POST['sendName'], FILTER_SANITIZE_STRING);
@@ -153,9 +116,9 @@ $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 /*#############RECIPIDNTS EMAIL##############*/
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-$message ="
-$sendName wants to share one of our products with you!
+$absolute_url = "http://www.bpwtesting.com/winter_walking/";
 
+$message ="
 <!doctype html>
 <html lang='en'>
 <head>
@@ -163,7 +126,7 @@ $sendName wants to share one of our products with you!
   <title>Winter Walking Products</title>
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
   <style>
-  @import url('style.css');
+  @import url('$absolute_url/style.css');
   h1{
     color: #000000;
     font-size: 40px;
@@ -172,7 +135,9 @@ $sendName wants to share one of our products with you!
   </style>
 </head>
 <body>
-<div class='tables' style='width: 900px'>
+<div class='tables' style='width: 900px; margin:0 auto;'>
+<img style='width: 75px; margin:0 auto;' src='$absolute_url/img/shoe.png'>
+<p>$sendName wants to share one of our products with you!</p>
 <table style='width: 600px; margin-bottom: 20px; float:left;'>
   <tr>
     <td style='font-size: 30px; font-weight:bold;'><h1>$modelName</h1></td>
@@ -181,7 +146,7 @@ $sendName wants to share one of our products with you!
 <td style='font-size: 14px;'>$modelDescription</td>
 </tr>
 </table>
-<div class='productimage' style='float:right; margin-right: 50px;'><img style='width: 180px;' src='$modelImage' alt='shoe'></div>
+<div class='productimage' style='float:right; margin-right: 50px;'><img style='width: 180px;' src='$absolute_url/$modelImage' alt='shoe'></div>
 <table style='width: 600px; clear:both; float:left; margin-top: 20px;'>
 <tr><td>FEATURES</td></tr>
 <tr><td>
@@ -223,10 +188,11 @@ $modelFeatures
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-$headers .= "From: No-Reply <no-reply@winterwalking.com>" . "\r\n";
+$headers .= "From: Winter Walking <no-reply@winterwalking.com>" . "\r\n";
 $headers .= "Reply-To: No-Reply <no-reply@winterwalking.com>" . "\r\n";
 
 mail($email, "$sendName wants to share one of our products with you!", $message, $headers);
+header($_SERVER['PHP_SELF']);
 };
 ?>
 

@@ -197,7 +197,7 @@ $('.details').show();
 		$("#modelName").val(name);
 		$("#modelDescription").val(description);
 		$("#modelFeatures").val(features);
-		$("#modelImage").val(image1);
+		$("#modelImage").val(imgurl);
 		$("#modelIC1").val(ice);
 		$("#modelIC2").val(snow);
 		$("#modelIC3").val(oil);
