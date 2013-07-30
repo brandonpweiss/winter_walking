@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Winter Walking</title>
+	<title>Winter Walking | Ice Grips Rotors</title>
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">

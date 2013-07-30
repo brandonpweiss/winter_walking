@@ -500,7 +500,7 @@ box-shadow: 0 0 2px 4px #37a0d0;
 	display:inline-block;
 	margin-left: 10px;
 	width: 160px;*/
-	padding: 6px 0px;
+	padding: 2px 0px;
 }
 .opt-wrap input{
 	float:left;
@@ -583,7 +583,6 @@ form .filter-submit:active {
     /*color: #37A0D0;*/
     color: #333;
     margin-top: 35px;
-    margin-bottom: 10px;
     display:block;
     width: 150px;
 }
@@ -725,6 +724,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	letter-spacing: 1px;
 	font-family: karbonlight;
 	margin: 0 auto;
+	margin-top: 28px;
 	max-width: 70px;
 	margin-bottom: 7px;
 	text-transform: uppercase;
