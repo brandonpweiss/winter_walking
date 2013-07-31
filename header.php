@@ -1,4 +1,6 @@
 <?php
+$page_url = $_SERVER['PHP_SELF'];
+
 if (isset($_POST['nav-contact-submit'])) {
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
 
@@ -28,7 +30,7 @@ $headers = "From: <$wwemail>\n";
 $headers .= "Reply-To: <$wwemail>\n";
 
 mail($wwemail, "Main Contact Form Message", $message, $headers);
-header($_SERVER['PHP_SELF']);
+die();
 };
 
 /*==========================================================*/
@@ -74,7 +76,7 @@ $headers = "From: <$wwemail>\n";
 $headers .= "Reply-To: <$wwemail>\n";
 
 mail($wwemail, "Quote Request/Speak to an Expert Message", $message, $headers);
-header($_SERVER['PHP_SELF']);
+die();
 };
 
 /*==========================================================*/
@@ -83,6 +85,7 @@ if (isset($_POST['product-share-submit'])) {
 
 /*#############PRODUCT DATA##############*/
 $modelName2 = $_POST['modelName2'];
+
 $modelDescription = $_POST['modelDescription'];
 $modelFeatures = $_POST['modelFeatures'];
 $modelImage = $_POST['modelImage'];
@@ -122,7 +125,6 @@ $message ="
 <!doctype html>
 <html lang='en'>
 <head>
-  <meta charset='UTF-8'>
   <title>Winter Walking Products</title>
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
   <style>
@@ -195,14 +197,14 @@ $modelFeatures
 ";
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
 $headers .= "From: Winter Walking <no-reply@winterwalking.com>" . "\r\n";
 $headers .= "Reply-To: No-Reply <no-reply@winterwalking.com>" . "\r\n";
 
 mail($email, "$sendName wants to share one of our products with you!", $message, $headers);
+die();
 };
-echo htmlspecialchars($str);
 ?>
 
 <!-- Contact Form -->
