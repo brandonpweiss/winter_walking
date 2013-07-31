@@ -30,7 +30,6 @@ $headers = "From: <$wwemail>\n";
 $headers .= "Reply-To: <$wwemail>\n";
 
 mail($wwemail, "Main Contact Form Message", $message, $headers);
-die();
 };
 
 /*==========================================================*/
@@ -76,7 +75,6 @@ $headers = "From: <$wwemail>\n";
 $headers .= "Reply-To: <$wwemail>\n";
 
 mail($wwemail, "Quote Request/Speak to an Expert Message", $message, $headers);
-die();
 };
 
 /*==========================================================*/
@@ -203,7 +201,6 @@ $headers .= "From: Winter Walking <no-reply@winterwalking.com>" . "\r\n";
 $headers .= "Reply-To: No-Reply <no-reply@winterwalking.com>" . "\r\n";
 
 mail($email, "$sendName wants to share one of our products with you!", $message, $headers);
-die();
 };
 ?>
 
