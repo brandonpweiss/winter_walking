@@ -501,6 +501,7 @@ box-shadow: 0 0 2px 4px #37a0d0;
 	margin-left: 10px;
 	width: 160px;*/
 	padding: 2px 0px;
+	font-family: karbon;
 }
 .opt-wrap input{
 	float:left;
@@ -597,7 +598,7 @@ form .filter-submit:active {
 	padding: 20px 0px 40px 0px;*/
 	/*display: none;*/
 	float: left;
-	margin: 20px 25px 0px 0px;
+	margin: 20px 20px 0px 0px;
 	color: #000000;
 }
 aside#filter h1{
@@ -722,13 +723,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	font-size: 12px;
 	color:#333333;
 	letter-spacing: 1px;
-	font-family: karbonlight;
+	font-family: karbon;
 	margin: 0 auto;
 	margin-top: 28px;
 	max-width: 70px;
 	margin-bottom: 7px;
 	text-transform: uppercase;
-	height: 35px
+	height: 35px;
 }
 .detailsInner{
 	background: url(img/subtle_grunge.png);

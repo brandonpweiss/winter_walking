@@ -37,8 +37,6 @@
 <h3>RESEARCH & DEVELOPMENT</h3>
 <p>Winter Walking didn't become the largest and oldest manufacturer of All-Traction™ Footwear by chance.  Every product in our line was created through years of research and development with you, the end user.  Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
 
-<a target="_blank"  href="history.pdf">Download The History of Ice Cleats</a>
-
 <h3>CUSTOMER SERVICE & INVENTORY</h3>
 <p>Winter Walking has spent over 30 years reducing workplace slips and falls though the implementation of All-Traction™ Footwear.  No one knows as much about accident prevention as our team of experts, and no one will work harder to find the perfect solution for the unique challenges in your workplace.  Once we've identified the right solution, our massive inventory levels enable us to get the product you need out the door and in your hands while you still need it — not months later.</p>
 
