@@ -143,6 +143,8 @@ print('<div class="wrap clearfix">');
 print('<aside id="filter">');
 print('<form method="post" action="all-products.php">');
 
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
+
 /* -------------TRACTION------------------------- */
 print('<span class="filter-header first">TRACTION:</span>');
 
@@ -288,16 +290,10 @@ print('checked = "checked"');
 print('><label for="knee-high">Knee High<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
-
-
-print('<div class="filterreset">');
-print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
 print('<button id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 // print('</div>');
 print('</form>');
-print('</div>');
 print('</aside>');
-// print('<button class="show-filter">&#x25BC;</button>');
 ?>
 
 <?php
@@ -312,11 +308,11 @@ if ($result <= 0)
 
 print('<div class="product-bttn-wrapper">');
 while ($fetch = mysqli_fetch_array($query)) {
-print ('<button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-features="'.$fetch[features].'" ice="'.$fetch[ice].'" snow="'.$fetch[snow].'" oil="'.$fetch[oil].'" fats="'.$fetch[fats].'" soaps="'.$fetch[soaps].'" chemicals="'.$fetch[chemicals].'" liquids="'.$fetch[liquids].'" mud="'.$fetch[mud].'" indoor="'.$fetch[indoor].'" outdoor="'.$fetch[outdoor].'" driving="'.$fetch[driving].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" image1="'.$fetch[img_url1].'" image2="'.$fetch[img_url2].'" image3="'.$fetch[img_url3].'" image4="'.$fetch[img_url4].'" xs="'.$fetch[XS].'" s="'.$fetch[S].'" m="'.$fetch[M].'" l="'.$fetch[L].'" xl="'.$fetch[XL].'" xxl="'.$fetch[XXL].'" xxxl="'.$fetch[XXXL].'"  xxxxl="'.$fetch[XXXXL].'" id="" type="button">
+print ('<a href="product-details.php?model='.$fetch[model].'"><button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-features="'.$fetch[features].'" ice="'.$fetch[ice].'" snow="'.$fetch[snow].'" oil="'.$fetch[oil].'" fats="'.$fetch[fats].'" soaps="'.$fetch[soaps].'" chemicals="'.$fetch[chemicals].'" liquids="'.$fetch[liquids].'" mud="'.$fetch[mud].'" indoor="'.$fetch[indoor].'" outdoor="'.$fetch[outdoor].'" driving="'.$fetch[driving].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" image1="'.$fetch[img_url1].'" image2="'.$fetch[img_url2].'" image3="'.$fetch[img_url3].'" image4="'.$fetch[img_url4].'" xs="'.$fetch[XS].'" s="'.$fetch[S].'" m="'.$fetch[M].'" l="'.$fetch[L].'" xl="'.$fetch[XL].'" xxl="'.$fetch[XXL].'" xxxl="'.$fetch[XXXL].'"  xxxxl="'.$fetch[XXXXL].'" id="" type="button">
 			<span class="title">'.$fetch[name].'</span>
 			<span class="sub-title">'.$fetch[upper_style].'</span>
 			<img src=" '.$fetch[img_url].' " alt="shoe">
-		</button>');
+		</button></a>');
 };
 print('</div>');
 print('</div>');
