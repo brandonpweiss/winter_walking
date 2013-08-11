@@ -166,12 +166,15 @@ header{
 	background: url(img/mochaGrunge.jpg) 0 0;
 }
 nav{
-	background: #000000 url(img/subtle_grunge.png) center center;
+	background: url(img/mochaGrunge.jpg) 0 0;	
 	text-align: center;
 	height: 20px;
 	padding: 5px 0px 4px 0px;
 	-webkit-box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
     box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
+}
+nav a{
+	color: #eeeeee;
 }
 nav#productnav{
 	background: #000000 url(img/mochaGrunge.png) center center;
@@ -270,6 +273,8 @@ box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);*/
 .ideal-info table, .ideal-info th, .ideal-info td, .sizechart-info table, .sizechart-info th, .sizechart-info td
 {
 border: 1px solid black;
+background-color: #777777;
+color: #ffffff;
 }
 .ideal-info td, .sizechart-info td
 {
@@ -292,7 +297,6 @@ nav a{
 	font-size: 12px;
 	font-weight: 100;
 	text-decoration: none;
-	color: #333333;
 	padding: 6px 0px 6px 0px;
 	letter-spacing: 2px;
 	top: 1px;
@@ -722,7 +726,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	font-size: 12px;
 	color:#333333;
 	letter-spacing: 1px;
-	font-family: karbonlight;
+	font-family: karbonmedium;
 	margin: 0 auto;
 	margin-top: 28px;
 	max-width: 70px;
@@ -1132,6 +1136,10 @@ a.request{
 	-o-transition: color .3s ease-in-out;
 	-ms-transition: color .3s ease-in-out;
 	transition: color .3s ease-in-out;
+}
+a.grey{
+	color: #777777;
+	display:block;
 }
 a.request:hover{
 	color: #666666;

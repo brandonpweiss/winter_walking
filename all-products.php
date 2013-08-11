@@ -14,34 +14,27 @@ header('Location:'.$_SERVER['PHP_SELF']);
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="style.css">
-		<style type="text/css">
-	#tagline{
-		color: #e5e5e5;
-	}
-	</style>
 	<script src="jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-slider.js"></script>
 </head>
 <body>
-	<div class="tops2">
-		<div id="logobox">
-  <a href="index.php"><img id="logo" src="img/logowhite.png" alt="Winter Walking we dont just make ice cleats, we perfect them"></a>
+<div class="tops">
+	<div id="white">
+	<div id="logobox">
+   <a href="index.php"><img id="logo" src="img/logo.png" alt="Winter Walking we dont just make ice cleats, we perfect them"></a>
     <div id="tagline">WE DONT JUST MAKE ICE CLEATS, WE PERFECT THEM</div>
-</div>
+  </div>
+  </div>
 <?php include('nav.php');?>
 <?php include('header.php');?>
 <nav id="productnav">
 		<ul>
 			<li><a href="all-products.php" class="active">ALL PRODUCTS</a></li>
-			<li><a href="products-lightweight.php">LIGHTWEIGHT</a></li>
-			<li><a href="products-over-the-shoe-boots.php">OVER THE SHOE BOOTS</a></li>
-			<li><a href="products-indoor-footwear.php">INDOOR FOOTWEAR</a></li>
 			<li><a href="featured-product.php">FEATURED PRODUCT</a></li>
 		</ul>
 	</nav>
 </div>
-
 <?php
 include('config.php');
 
