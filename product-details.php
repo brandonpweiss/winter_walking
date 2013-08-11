@@ -20,6 +20,13 @@
 </div>
 <?php include('nav.php');?>
 <?php include('header.php');?>
+<?php
+include ('config.php');
+$product_model = $_GET["model"];
+$query = mysqli_query ($con, "SELECT * FROM products WHERE model = '$product_model'");
+$p = mysqli_fetch_array($query);
+
+print ('
 <nav id="productnav">
 		<ul>
 			<li><a href="all-products.php" class="active">ALL PRODUCTS</a></li>
@@ -27,11 +34,8 @@
 		</ul>
 	</nav>
 </div>
-<?php
-include ('config.php');
-$product_model = $_GET["model"];
-$query = mysqli_query ($con, "SELECT * FROM products WHERE model = '$product_model'");
-while ($p = mysqli_fetch_array($query)) {
+');
+
 	$xs = $p[XS];
 	$s = $p[S];
 	$m = $p[M];
@@ -82,8 +86,6 @@ while ($p = mysqli_fetch_array($query)) {
 			$xxxxl = '&#32;';
 		};
 print ('<div class="details"><div class="detailsInner clearfix"><div class="wrap"><div class="arrow-up"></div><div id="left"><div class="inner"><div class="cta-details-blue"><a class="request grey"  href="all-products.php">&lsaquo; BACK</a><br><a class="request"  href="#myModal" role="button" data-toggle="modal">REQUEST A QUOTE &rsaquo;</a><br><a class="request request1" href="#myModal" role="button" data-toggle="modal">SPEAK TO AN EXPERT &rsaquo;</a><br><a class="request request2"  href="#myModal3" role="button" data-toggle="modal">SHARE &rsaquo;</a></div><h1>'.$p[name].'</h1><p>'.$p[description].'</p><div class="details-moreinfo"><a href="javascript:void(0);" class="features">Features</a><a href="javascript:void(0);" class="ideal">Ideal Conditions</a><a href="javascript:void(0);" class="sizechart">Size Chart</a></div><div class="moreinfo-section"><div class="features-info">'.$p[features].'</div><div class="ideal-info"><table border="1" bordercolor="white"><tr><td>Ice</td><td>'.$p[ice].'</td></tr><tr><td>Snow</td><td>'.$p[snow].'</td></tr><tr><td>Oil</td><td>'.$p[oil].'</td></tr><tr><td>fats</td><td>'.$p[fats].'</td></tr><tr><td>Soaps</td><td>'.$p[soaps].'</td></tr><tr><td>Chemicals</td><td>'.$p[chemicals].'</td></tr><tr><td>Liquids</td><td>'.$p[liquids].'</td></tr><tr><td>Mud</td><td>'.$p[mud].'</td></tr><tr><td>Indoor</td><td>'.$p[indoor].'</td></tr><tr><td>Outdoor</td><td>'.$p[outdoor].'</td></tr><tr><td>Driving</td><td>'.$p[driving].'</td></tr></table></div><div class="sizechart-info"><table border="1" bordercolor="#0000" style="background-color:grey; color: white;"><tr><td>XS</td><td>S</td><td>M</td><td>L</td><td>XL</td><td>XXL</td><td>XXXL</td><td>XXXXL</td></tr><tr><td>'.$xs.'</td><td>'.$s.'</td><td>'.$m.'</td><td>'.$l.'</td><td>'.$xl.'</td><td>'.$xxl.'</td><td>'.$xxxl.'</td><td>'.$xxxxl.'</td></tr></table></div></div></div></div><div id="right"><div class="inner"><div class="views-info"><div class="main-image"><img src="'.$p[img_url].'"></div><div class="image1"><img src="'.$p[img_url].'"></div><div class="image2"><img src="'.$p[img_url2].'"></div><div class="image3"><img src="'.$p[img_url3].'"></div><div class="image4"><img src="'.$p[img_url4].'"></div></div></div></div></div></div></div>');
-
-};
 ?>
 <?php include('footer.php');?>
 <script src="js/products.js"></script>
