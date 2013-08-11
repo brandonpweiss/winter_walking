@@ -168,6 +168,7 @@ header{
 nav{
 	background: #000000 url(img/subtle_grunge.png) center center;
 	text-align: center;
+	text-transform: uppercase;
 	height: 20px;
 	padding: 5px 0px 4px 0px;
 	-webkit-box-shadow:  1px 1px 1px 1px rgba(1, 1, 1, .5);
@@ -590,6 +591,9 @@ form .filter-submit:active {
 	margin-top: 0;
 	padding-top: 0;
 }
+.product-thumb-wrap {
+	display: inline-block;
+}
 #filter {
 /*	background: url(img/mochaGrunge.jpg);
 	width: 100%;
@@ -597,7 +601,8 @@ form .filter-submit:active {
 	padding: 20px 0px 40px 0px;*/
 	/*display: none;*/
 	float: left;
-	margin: 20px 20px 0px 0px;
+	width: 15%;
+	/*margin: 20px 20px 0px 0px;*/
 	color: #000000;
 }
 aside#filter h1{
@@ -607,7 +612,7 @@ letter-spacing: 1px;
 padding-bottom: 10px;
 }
 .product-bttn-wrapper {
-	float: left;
+	float: right;
 	width: 80%;
 }
 #contact2{
@@ -616,7 +621,7 @@ padding-bottom: 10px;
 
 .product{
 	display:inline-block;
-	margin: 20px 8px;
+	margin: 0 6px 20px;
 }
 
 .product img{
@@ -1176,10 +1181,6 @@ padding: 6px 0px 6px 0px;
 }
 #productnav li {
 	margin: 0 10px;
-}
-.product-bttn-wrapper {
-	float: left;
-	width: 70%;
 }
 
 #top #instructions{

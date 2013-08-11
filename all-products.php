@@ -34,9 +34,6 @@ header('Location:'.$_SERVER['PHP_SELF']);
 <nav id="productnav">
 		<ul>
 			<li><a href="all-products.php" class="active">ALL PRODUCTS</a></li>
-			<li><a href="products-lightweight.php">LIGHTWEIGHT</a></li>
-			<li><a href="products-over-the-shoe-boots.php">OVER THE SHOE BOOTS</a></li>
-			<li><a href="products-indoor-footwear.php">INDOOR FOOTWEAR</a></li>
 			<li><a href="featured-product.php">FEATURED PRODUCT</a></li>
 		</ul>
 	</nav>
@@ -301,19 +298,28 @@ include ('config.php');
 $query = mysqli_query ($con, "SELECT * FROM products $filter_query ORDER BY name ASC");
 
 $result = mysqli_num_rows($query);
+
 if ($result <= 0)
 {
+
 	print ("<span class='message'>Oh No!, There are no products that match your criteria. Try un-checking one or more options.</span>");
+
 };
 
 print('<div class="product-bttn-wrapper">');
+
 while ($fetch = mysqli_fetch_array($query)) {
-print ('<a href="product-details.php?model='.$fetch[model].'"><button class="product '.$fetch[traction_versatility].' '.$fetch[easyonoff_security].' '.$fetch[economical_indstrength].' '.$fetch[protectionwarmth_nocoverage].' " product-number="'.$fetch[model].'" product-description="'.$fetch[description].'" product-features="'.$fetch[features].'" ice="'.$fetch[ice].'" snow="'.$fetch[snow].'" oil="'.$fetch[oil].'" fats="'.$fetch[fats].'" soaps="'.$fetch[soaps].'" chemicals="'.$fetch[chemicals].'" liquids="'.$fetch[liquids].'" mud="'.$fetch[mud].'" indoor="'.$fetch[indoor].'" outdoor="'.$fetch[outdoor].'" driving="'.$fetch[driving].'" product-name="'.$fetch[name].'" product-image="'.$fetch[img_url].'" image1="'.$fetch[img_url1].'" image2="'.$fetch[img_url2].'" image3="'.$fetch[img_url3].'" image4="'.$fetch[img_url4].'" xs="'.$fetch[XS].'" s="'.$fetch[S].'" m="'.$fetch[M].'" l="'.$fetch[L].'" xl="'.$fetch[XL].'" xxl="'.$fetch[XXL].'" xxxl="'.$fetch[XXXL].'"  xxxxl="'.$fetch[XXXXL].'" id="" type="button">
-			<span class="title">'.$fetch[name].'</span>
-			<span class="sub-title">'.$fetch[upper_style].'</span>
-			<img src=" '.$fetch[img_url].' " alt="shoe">
-		</button></a>');
+
+	print ('<a class="product-thumb-wrap" href="product-details.php?model='.$fetch[model].'">
+				<button class="product" type="button">
+					<span class="title">'.$fetch[name].'</span>
+					<span class="sub-title">'.$fetch[upper_style].'</span>
+					<img src=" '.$fetch[img_url].' " alt="shoe">
+				</button>
+			</a>');
+
 };
+
 print('</div>');
 print('</div>');
 mysqli_close($con);
