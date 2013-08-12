@@ -115,6 +115,9 @@ print ('
 						</div>
 						<div class="sizechart-info">
 							<table border="1" bordercolor="#0000" style="background-color:grey; color: white;">
+							<style>
+							th, td {padding: 10px 3px 10px 3px}
+							</style>
 								<tr>
 									<th>SIZES</th>
 									<th>XS</th>
