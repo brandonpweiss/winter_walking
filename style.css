@@ -166,7 +166,7 @@ header{
 	background: url(img/mochaGrunge.jpg) 0 0;
 }
 nav{
-	background: url(img/mochaGrunge.jpg) 0 0;	
+	background: url(img/mochaGrunge.jpg) 0 0;
 	text-align: center;
 	text-transform: uppercase;
 	height: 20px;
@@ -267,7 +267,7 @@ box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);*/
 	margin-top: 20px;
 	/*min-height: 298px;*/
 }
-.ideal-info table ,.sizechart-info table{
+.ideal-info table /*,.sizechart-info table*/{
     table-layout:fixed;
     width:100%;
 }
@@ -276,10 +276,12 @@ box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);*/
 border: 1px solid black;
 background-color: #777777;
 color: #ffffff;
+min-width: 30px;
 }
 .ideal-info td, .sizechart-info td
 {
-padding:5px 50pc 5px 5px;
+padding:8px 8px;
+text-align: center;
 }
 /*.ideal-info, .sizechart-info, .views-info, .features-info{
 }*/
