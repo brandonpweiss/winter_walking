@@ -489,7 +489,7 @@ button.product{
 	text-decoration: none;
 	outline: none;
 	border: none;
-	background: none;
+	background: none;	
 }
 
 a.product{
@@ -598,6 +598,7 @@ form .filter-submit:active {
 	padding-top: 0;
 }
 .product-thumb-wrap {
+	margin-bottom: 40px;
 	display: inline-block;
 }
 #filter {
@@ -721,9 +722,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	font-family: langdon;
 	margin: 0 auto;
 	width: 70px;
-	margin-bottom: 7px;
+	margin-bottom: 5px;
 	text-transform: uppercase;
-	height: 20px;
 }
 
 .sub-title{
@@ -735,11 +735,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	letter-spacing: 1px;
 	font-family: karbonmedium;
 	margin: 0 auto;
-	margin-top: 28px;
 	max-width: 70px;
-	margin-bottom: 7px;
+	margin-bottom: 3px;
 	text-transform: uppercase;
-	height: 35px;
 }
 .detailsInner{
 	background: url(img/subtle_grunge.png);
@@ -841,6 +839,10 @@ footer{
 	line-height: 20px;
 	clear:both;
 	background: #FFF url(img/mochaGrunge.jpg) 0 0;
+}
+footer p.copyright{
+	margin-top: 20px;
+	font-size: 12px;
 }
 footer .wrap{
 	max-width: 980px;

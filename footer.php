@@ -87,7 +87,6 @@ mail($wwemail, "Footer Contact Form Message", $message, $headers);
 		<h2>INFORMATION</h2>
 
 <div class="bold">Winter Walking</div>
-<p>A Jordan David Company</p>
 
 <ul>
 <li>Winter Walking Safety</li>
@@ -100,7 +99,7 @@ mail($wwemail, "Footer Contact Form Message", $message, $headers);
 <li>E <a href="mailto:info@winterwalking.com">info@winterwalking.com</a></li>
 </ul>
 
-<p>All content copyright 2013 © Winter Walking.  Do not reuse or reproduce without permission.</p>
+<p class="copyright">All content copyright 2013 © Winter Walking.  Do not reuse or reproduce without permission.</p>
 
 </div>
 </div>
@@ -114,7 +113,7 @@ mail($wwemail, "Footer Contact Form Message", $message, $headers);
 </ul>
 
 <p>For individual purchases and retail customers,
-please visit <a href="http://www.wintercleats.com">www.wintercleats.com</a></p>
+please visit <a href="http://www.wintercleats.com" target="_blank">www.wintercleats.com</a></p>
 </div>
 </div>
 <a name="footer"></a>
