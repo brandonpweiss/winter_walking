@@ -1355,6 +1355,11 @@ nav a{
 	letter-spacing: 2px;
 	top: 1px;
 }
+nav ul li{
+	display:inline-block;
+	/*margin-top: 5px;*/
+	margin:5px 0px 0px 0px;
+}
 #contact1{
 	display:inline-block;
 }
