@@ -53,8 +53,8 @@
 	<img src="img/featuredshoe2.png" alt="Shoe">
 		<div id="instructions">
 		<div class="inner">
-		<div class="winter">EMPLOYEE SLIPS AND FALLS?</div>
-		<h1>GET A GRIP.</h1>
+		<div class="winter">We Spend 365 Days a Year thinking about Winter...</div>
+		<h1>SO YOU DON'T HAVE TO.</h1>
 		<p>You're in the right place.  <span class="bold">WINTER WALKING </span>has been helping safety managers reduce employee slips and falls for almost <span class="bold">40 YEARS</span>.  Our experience is unparalleled. Every product in our line has been created through years of research and development with you, the end user. Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
 		<div class="ctaboxes">
 		<a href="information.php" class="ctabox">LEARN MORE ></a>

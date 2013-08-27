@@ -9,6 +9,7 @@ $("#footernav").click(function() {
    scrollToAnchor('footer');
 });
 
-
-
+$("#contact2").click(function() {
+   scrollToAnchor('footer');
+});
 
