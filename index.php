@@ -38,7 +38,7 @@
 		<img src="img/sparespike.png" id="sparespike2" alt="Shoe">
 		<div class="winter">WE DON'T JUST MAKE ICE CLEATS</div>
 		<h1>WE PERFECT THEM.</h1>
-		<p><span class="bold">WINTER WALKING </span>has been helping safety managers reduce employee slips and falls for almost <span class="bold">40 YEARS</span>.  Our experience is unparalleled. Every product in our line has been created through years of research and development with you, the end user. Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
+		<p>Here at <span class="bold">Winter Walking,</span> we hold over a dozen patents on ice cleats and traction footwear.  When we are not making new items, we are making the old ones better.  Our product are durable, unique and quite simply...better.</p>
 		<div class="ctaboxes">
 		<a href="all-products.php" class="ctabox view">VIEW OUR PRODUCT LINE ></a>
 			<a href="information.php" class="ctabox learn">LEARN MORE ></a>
@@ -48,19 +48,36 @@
 		<img src="img/sparespike.png" id="sparespike" alt="Shoe">
 	</div>
 		</li>
-			<li class="one">
+	<li class="one">
 		<div class="content clearfix">
 	<img src="img/featuredshoe2.png" alt="Shoe">
 		<div id="instructions">
 		<div class="inner">
 		<div class="winter">We Spend 365 Days a Year thinking about Winter...</div>
 		<h1>SO YOU DON'T HAVE TO.</h1>
-		<p>You're in the right place.  <span class="bold">WINTER WALKING </span>has been helping safety managers reduce employee slips and falls for almost <span class="bold">40 YEARS</span>.  Our experience is unparalleled. Every product in our line has been created through years of research and development with you, the end user. Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
+		<p>Ice cleats and traction gear is all that we do at <span class="bold">Winter Walking</span>.  Even in the middle of the summer, when you're at the beach, we are still focused on ice cleats.  It's part what makes us so good at what we do.</p>
 		<div class="ctaboxes">
 		<a href="information.php" class="ctabox">LEARN MORE ></a>
 		</div>
 	</div>
 	</div>
+	</div>
+		</li>
+	<li class="three">
+		<div class="content clearfix">
+		<div id="instructions">
+		<div class="inner">
+		<img src="img/newsole.png" id="newsole2" alt="Shoe">
+		<div class="winter">Still searching for the perfect ice cleat?</div>
+		<h1>LOOK NO FURTHER.</h1>
+		<p>At <span class="bold">Winter Walking,</span> we have over 20 different custom designed ice cleats and traction items in our line.  Each item is designed for a specific situation.  We match the best product to your situation and leave you with the perfect solution.</p>
+		<div class="ctaboxes">
+		<a href="all-products.php" class="ctabox view">VIEW OUR PRODUCT LINE ></a>
+			<a href="information.php" class="ctabox learn">LEARN MORE ></a>
+		</div>
+	</div>
+	</div>
+		<img src="img/newsole.png" id="newsole" alt="Shoe">
 	</div>
 		</li>
 		</ul>
@@ -80,7 +97,7 @@
 			</div></div>
 		<div class="button buttontwo"><div class="inner">
 				<img class="gfsview" src="img/products/gfs.png" alt="Grippers for Strippers">
-				<p>Indoor Footwear</p>
+				<p>Maximum Traction</p>
 				<a href="products-indoor-footwear.php" class="viewmore">VIEW MORE ></a>
 			</div></div>
 		<div class="button buttonthree">

@@ -256,6 +256,19 @@ box-shadow: inset 2px 2px 1px 1px rgba(1, 1, 1, .4);*/
 .details-moreinfo {
 	margin-top:40px;
 }
+.details-moreinfo a{
+		color:#46bfdf;
+	font-size: 18px;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+.details-moreinfo a:hover{
+		color:#999999;
+		font-size: 18px;
+}
 .message {
 	color: #333333;
 	font-size: 30px;
@@ -1013,7 +1026,7 @@ a.learn{
 #facts .outer{
 	max-width:1280px;
 	margin: 0 auto;
-	background: url(img/bigboot.png) top right no-repeat;
+	background: url(img/newsole.png) top right no-repeat;
 	padding-bottom: 200px;
 }
 #facts .wrap{
@@ -1156,6 +1169,14 @@ a.request:hover{
 img#sparespike2{
 	display:none;
 }
+img#newsole2{
+	display:none;
+}
+#home img#newsole{
+	width: 170px;
+	position: relative;
+	left: -100px;
+}
 
 @media only screen and (min-width: 1441px){
 	section#home{
@@ -1233,7 +1254,7 @@ padding: 6px 0px 6px 0px;
 #facts .outer{
 	max-width:1280px;
 	margin: 0 auto;
-	background: url(img/bigboot.png) top center no-repeat;
+	background: url(img/newsole.png) top center no-repeat;
 	padding-bottom: 200px;
 }
 h1, a.size{
@@ -1340,9 +1361,21 @@ nav a{
 	margin: 0 auto;
 	width: 100%;
 }
-
+	#home img#newsole{
+		display:none;
+	}
+	#home img#newsole2{
+		display:block;
+		max-width: 130px;
+		left: 360px;
+	}
 }
 @media only screen and (max-width: 600px){
+	#home img#newsole2{
+		display:block;
+		max-width: 70px;
+		left: 270px;
+	}
 	nav a{
 	font-family: nexabold;
 	font-size: 12px;
@@ -1369,6 +1402,11 @@ nav ul li{
 }
 
 @media only screen and (max-width: 400px){
+	#home img#newsole2{
+		display:block;
+		max-width: 70px;
+		left: 160px;
+	}
 nav a{
 	font-family: nexalight;
 	font-size: 12px;
