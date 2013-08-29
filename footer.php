@@ -89,7 +89,7 @@ mail($wwemail, "Footer Contact Form Message", $message, $headers);
 <div class="bold">Winter Walking</div>
 
 <ul>
-<li>Winter Walking Safety</li>
+<li>Winter Walking</li>
 <li>400 Babylon Road</li>
 <li>Horsham, PA 19044</li>
 </ul>
