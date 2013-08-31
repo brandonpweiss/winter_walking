@@ -226,18 +226,71 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
   <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?$_SERVER['PHP_SELF'];?>">
     <input type="hidden" id="modelNumber" name="modelNumber" value="">
     <input type="hidden" id="modelName" name="modelName" value="">
+    <div style="float: left;">
    	<label>First Name</label>
-    <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"><br><br>
-    	<label>Last Name</label>
-    <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"><br><br>
+    <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"></div>
+    	<div style="float: right;">
+      <label>Last Name</label>
+    <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
+    <div style="float: left;">
     <label>Company Name</label>
-    <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"><br><br>
+    <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
+       <div style="float: right;">
        <label>Number of Employees Exposed</label>
-    <input  type="text"  placeholder="Enter a Number" name="employees" maxlength="80" size="30"><br><br>
-    	<label>Email</label>
-    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30"><br><br>
-
-    	<label>Comments</label>
+    <input  type="text"  placeholder="Enter a Number" name="employees" maxlength="80" size="30"></div>
+    <?php
+    include ('config.php');
+    $query1 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
+    $query2 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
+    $query3 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
+    print '<div style="float: left;">';
+    print '<label>Product 1</label><select name="product_1">';
+    while ($prod1 = mysqli_fetch_array($query1)) {
+    print '<option value="'.$prod1[name].'">'.$prod1[name].'</option>' ;
+    }
+    print ' </select></div>';
+    print '<div style="float: right; margin-top: 5px;">';
+    print '<label>Quantity</label><select name="product_1_quantity">';
+    $i = 50;
+    while ($i <= 2000) {
+    print '<option value="'.$i.'">'.$i.'</option>' ;
+    $i = $i + 50;
+    }
+    print '</select></div>';
+    print '<div style="float: left; margin-top: 5px;">';
+    print '<label>Product 2</label><select name="product_2"><option>-</option>';
+    while ($prod2 = mysqli_fetch_array($query2)) {
+    print '<option value="'.$prod2[name].'">'.$prod2[name].'</option>' ;
+    }
+    print '</select></div>';
+    print '<div style="float: right; margin-top: 5px;">';
+    print '<label>Quantity</label><select name="product_2_quantity"><option>-</option>';
+    $i = 50;
+    while ($i <= 2000) {
+    print '<option value="'.$i.'">'.$i.'</option>' ;
+    $i = $i + 50;
+    }
+    print '</select></div>';
+    print '<div style="float: left; margin-top: 5px;">';
+    print '<label>Product 3</label><select name="product_3"><option>-</option>';
+    while ($prod3 = mysqli_fetch_array($query3)) {
+    print '<option value="'.$prod3[name].'">'.$prod3[name].'</option>' ;
+    }
+    print '</select></div>';
+    print '<div style="float: right; margin-top: 5px;">';
+    print'<label>Quantity</label><select name="product_3_quantity"><option>-</option>';
+    $i = 50;
+    while ($i <= 2000) {
+    print '<option value="'.$i.'">'.$i.'</option>' ;
+    $i = $i + 50;
+    }
+    print '</select></div>';
+    ?>
+    <br><br>
+    <div style="clear: both; margin-top: 5px;">
+    <label>Email</label>
+    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30"></div>
+    <label>Comments</label>
     <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea><br><br>
     <button type="submit" value="Submit" name="request-contact-submit" id="submit">SUBMIT</button>
   </form>

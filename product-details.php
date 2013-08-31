@@ -86,6 +86,20 @@ print ('
 			$xxxxl = '&#32;';
 		};
 
+		if ($p[img_url4] != null && $p[img_url2] != null && $p[img_url3] != null) {
+		 $image1 = '<div class="image1"><img src="'.$p[img_url].'"></div>';
+		};
+		if ($p[img_url4] != null) {
+			$image2 = '<div class="image2"><img src="'.$p[img_url4].'"></div>';
+		};
+		if ($p[img_url2] != null) {
+			$image3 = '<div class="image3"><img src="'.$p[img_url2].'"></div>';
+		};
+		if ($p[img_url3] != null) {
+			$image4 = '<div class="image4"><img src="'.$p[img_url3].'"></div>';
+		};
+
+
 print ('
 <div class="details">
 	<div class="detailsInner clearfix">
@@ -171,20 +185,9 @@ print ('
 				<div class="inner">
 					<div class="views-info">
 						<div class="main-image">
-							<img src="'.$p[img_url4].'">
-						</div>
-						<div class="image1">
-							<img src="'.$p[img_url4].'">
-						</div>
-						<div class="image2">
 							<img src="'.$p[img_url].'">
 						</div>
-						<div class="image3">
-							<img src="'.$p[img_url2].'">
-						</div>
-						<div class="image4">
-							<img src="'.$p[img_url3].'">
-						</div>
+						'.$image1.''.$image2.''.$image3.''.$image4.'
 					</div>
 				</div>
 			</div>
