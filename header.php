@@ -6,6 +6,16 @@ $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
 
 $lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
 
+$address_1 = filter_var($_POST['address_1'], FILTER_SANITIZE_STRING);
+
+$address_2 = filter_var($_POST['address_2'], FILTER_SANITIZE_STRING);
+
+$city = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
+
+$state = filter_var($_POST['state'], FILTER_SANITIZE_STRING);
+
+$zip = filter_var($_POST['zip'], FILTER_SANITIZE_STRING);
+
 $company = filter_var($_POST['company'], FILTER_SANITIZE_STRING);
 
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
@@ -20,6 +30,10 @@ This is a message sent via winterwalking.com's Main Contact Form.
 Client Info:
 First Name: $firstname
 Last Name: $lastname
+Address: $address_1 $address_2
+City: $city
+State: $state
+Zip Code: $zip
 Company Name: $company
 Email: $email
 
