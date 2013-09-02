@@ -298,7 +298,7 @@ padding:8px 8px;
 text-align: center;
 }
 .ideal-info table tr:nth-child(odd){
-background: #18404B;	
+background: #18404B;
 }
 .ideal-info table tr:nth-child(even){
 		background: #2F454B;
@@ -519,7 +519,7 @@ button.product{
 	text-decoration: none;
 	outline: none;
 	border: none;
-	background: none;	
+	background: none;
 }
 
 a.product{
@@ -754,6 +754,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	width: 70px;
 	margin-bottom: 5px;
 	text-transform: uppercase;
+	padding-top: 5px;
 }
 
 .sub-title{

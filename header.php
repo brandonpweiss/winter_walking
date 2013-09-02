@@ -50,6 +50,18 @@ $mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $employees = filter_var($_POST['employees'], FILTER_SANITIZE_STRING);
 
+$product_1  = filter_var($_POST['product_1'], FILTER_SANITIZE_STRING);
+
+$product_1_quantity  = filter_var($_POST['product_1_quantity'], FILTER_SANITIZE_STRING);
+
+$product_2  = filter_var($_POST['product_2'], FILTER_SANITIZE_STRING);
+
+$product_2_quantity  = filter_var($_POST['product_1_quantity'], FILTER_SANITIZE_STRING);
+
+$product_3  = filter_var($_POST['product_3'], FILTER_SANITIZE_STRING);
+
+$product_3_quantity  = filter_var($_POST['product_1_quantity'], FILTER_SANITIZE_STRING);
+
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
 $wwemail = "contact@winterwalking.com";
@@ -58,6 +70,7 @@ $message ="
 This is a message sent via winterwalking.com's Request a quote/Speak to an expert form.
 
 Client Info:
+
 First Name: $firstname
 Last Name: $lastname
 Company Name: $company
@@ -65,10 +78,19 @@ Number of Employees: $employees
 Email: $email
 
 Product Info:
-Name: $modelName
-Model Number: $modelNumber
 
-Message: $comments
+Product 1: $product_1
+Quantity: $product_1_quantity
+
+Product 1: $product_2
+Quantity: $product_2_quantity
+
+Product 1: $product_3
+Quantity: $product_3_quantity
+
+Message:
+
+$comments
 ";
 
 $headers = "From: <$wwemail>\n";
@@ -190,15 +212,39 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
 
 <div class="modal-body">
   <div class="form">
-  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?$_SERVER['PHP_SELF'];?>">
+  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<div style="float: left;">
     <label>First Name</label>
-    <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"><br><br>
+    <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"></div>
+      <div style="float: right;">
       <label>Last Name</label>
-    <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"><br><br>
+    <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
+    <div style="clear: both; margin-top: 5px;">
+    <label>Address Line 1</label>
+    <input  type="text"  placeholder="123 Main Street" name="address_1" maxlength="80" size="30"></div>
+    <label>Address Line 2</label>
+    <input  type="text"  placeholder="Suite 456" name="address_2" maxlength="80" size="30">
+    <div style="float: left;">
+    <label>City</label>
+    <input  type="text"  placeholder="City" name="city" maxlength="80" size="30"></div>
+    <div style="float: right;">
+    <label>State</label>
+    <select name="state">
+    <?php
+    include ('config.php');
+    $query = mysqli_query ($con, "SELECT * FROM states ORDER BY id ASC");
+    while ($st = mysqli_fetch_array($query)) {
+    print '<option value="'.$st[abbr].'">'.$st[abbr].'</option>';
+    }
+    ?>
+    </select></div>
+    <div style="clear: both; margin-top: 5px;">
+    <label>Zip Code</label>
+    <input  type="text"  placeholder="zip" name="12345" maxlength="80" size="30"></div>
     <label>Company Name</label>
-    <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"><br><br>
+    <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30">
       <label>Email</label>
-    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30"><br><br>
+    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30">
 
       <label>Comments</label>
     <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea><br><br>
@@ -223,9 +269,7 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
 
 <div class="modal-body">
   <div class="form">
-  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?$_SERVER['PHP_SELF'];?>">
-    <input type="hidden" id="modelNumber" name="modelNumber" value="">
-    <input type="hidden" id="modelName" name="modelName" value="">
+  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <div style="float: left;">
    	<label>First Name</label>
     <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"></div>
@@ -240,7 +284,8 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
     <input  type="text"  placeholder="Enter a Number" name="employees" maxlength="80" size="30"></div>
     <?php
     include ('config.php');
-    $query1 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
+    $p_model = $_GET["model"];
+    $query1 = mysqli_query ($con, "SELECT * FROM products WHERE '$p_model' = model ORDER BY name ASC");
     $query2 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
     $query3 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
     print '<div style="float: left;">';
@@ -312,7 +357,7 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
 
 <div class="modal-body">
   <div class="form">
-  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?$_SERVER['PHP_SELF'];?>">
+  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <label>Your Name</label>
     <input  type="text" placeholder="Your Name" name="sendName" maxlength="80" size="30"><br><br>
       <label>Your Email</label>

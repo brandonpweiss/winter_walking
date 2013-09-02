@@ -308,9 +308,9 @@ while ($fetch = mysqli_fetch_array($query)) {
 
 	print ('<a class="product-thumb-wrap" href="product-details.php?model='.$fetch[model].'">
 				<button class="product" type="button">
+					<img src=" '.$fetch[img_url].' " alt="shoe">
 					<span class="title">'.$fetch[name].'</span>
 					<span class="sub-title">'.$fetch[upper_style].'</span>
-					<img src=" '.$fetch[img_url].' " alt="shoe">
 				</button>
 			</a>');
 
