@@ -392,9 +392,6 @@ nav ul li{
 #home .content img{
 	float:right;
 }
-#home .content{
-	padding-bottom: 50px;
-}
 #matrix .inner{
 	padding-left: 20px;
 }
@@ -1190,11 +1187,6 @@ img#sparespike2{
 }
 img#newsole2{
 	display:none;
-}
-#home img#newsole{
-	width: 170px;
-	position: relative;
-	left: -100px;
 }
 
 @media only screen and (min-width: 1441px){

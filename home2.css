@@ -7,13 +7,15 @@
 
 }
 #home img{
-	max-width: 45%;
-	max-height: 400px;
+	max-width: 50%;
+}
+#home img#newsole{
+	width: 402px;
+}
+#home img#featuredshoe{
+	width: 470px;	
 }
 
-#home li.one .content img{
-	max-width: 35%;
-}
 #home li.two .content img{
 	position: relative;
 	top: 20px;

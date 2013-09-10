@@ -45,12 +45,12 @@
 		</div>
 	</div>
 	</div>
-		<img src="img/newsole.png" id="newsole" alt="Shoe">
+		<img src="img/newsole2.png" id="newsole" alt="Shoe">
 	</div>
 		</li>
 		<li class="one">
 		<div class="content clearfix">
-	<img src="img/featuredshoe2.png" alt="Shoe">
+	<img src="img/featuredshoe3.png" id="featuredshoe" alt="Shoe">
 		<div id="instructions">
 		<div class="inner">
 		<div class="winter">We Spend 365 Days a Year thinking about Winter...</div>
