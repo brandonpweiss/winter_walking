@@ -15,6 +15,9 @@
 #home img#featuredshoe{
 	width: 470px;	
 }
+#home img#featuredshoe2{
+	display:none;
+}
 
 #home li.two .content img{
 	position: relative;
@@ -68,10 +71,19 @@ a.ctabox{
 	-webkit-box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	display:inline-block;
-	background: #eeeeee; /* Old browsers */
+	background: #eeeeee;
 	height: 120px;
 	text-align: center;
 	width: 250px;
+}
+.buttonthree .inner{
+	background: url('img/button3shoe.jpg');
+}
+.buttontwo .inner{
+	background: url('img/button2shoe.jpg');
+}
+.buttonone .inner{
+	background: url('img/button1shoe.jpg');
 }
 #home .content .button .inner img{
 	display:block;
@@ -88,7 +100,7 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	position: relative;
 	z-index: 100;
 	color: #FFFFFF;
-	top: -18px;
+	top: 88px;
 	padding-bottom: 5px;
 	background: rgba(1,1,1,.6);
 	width: 200px;
@@ -98,7 +110,7 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	display:block;
 	position: relative;
 	z-index: 100;
-	top: -18px;
+	top: 88px;
 	background: rgba(1,1,1,.6);
 	width: 200px;
 	margin: 0 auto;
@@ -127,6 +139,12 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 }
 
 @media only screen and (max-width: 768px){
+#home img#featuredshoe{
+	display:none;	
+}
+#home img#featuredshoe2{
+	display:block;
+}
 #home h1{
 	font-size: 40px;
 }
@@ -156,6 +174,12 @@ box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .2);
 	}
 }
 @media only screen and (max-width:640px) {
+	footer img{
+		display:none;
+	}
+	.contactform{
+		display:block;
+	}
 	#home .content{
 	padding-bottom: 0px;
 }

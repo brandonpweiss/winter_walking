@@ -1188,7 +1188,9 @@ img#sparespike2{
 img#newsole2{
 	display:none;
 }
-
+.contactform{
+		display:none;
+}
 @media only screen and (min-width: 1441px){
 	section#home{
 

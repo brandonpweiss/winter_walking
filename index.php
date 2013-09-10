@@ -50,7 +50,8 @@
 		</li>
 		<li class="one">
 		<div class="content clearfix">
-	<img src="img/featuredshoe3.png" id="featuredshoe" alt="Shoe">
+		<img src="img/featuredshoe3.png" id="featuredshoe" alt="Shoe">
+		<img src="img/featuredshoe.png" id="featuredshoe2" alt="Shoe">
 		<div id="instructions">
 		<div class="inner">
 		<div class="winter">We Spend 365 Days a Year thinking about Winter...</div>
@@ -91,18 +92,15 @@
 		<div class="content clearfix">
 		<div class="button buttonone">
 			<div href="products-lightweight.php" class="inner">
-				<img class="spare" src="img/products/spare-spike-sole.png" alt="Spare Spike">
 				<p>Lightweight Ice Cleats</p>
 				<a href="products-lightweight.php"class="viewmore">VIEW MORE ></a>
 			</div></div>
 		<div class="button buttontwo"><div class="inner">
-				<img class="gfsview" src="img/products/gfs.png" alt="Grippers for Strippers">
 				<p>Maximum Traction</p>
 				<a href="products-indoor-footwear.php" class="viewmore">VIEW MORE ></a>
 			</div></div>
 		<div class="button buttonthree">
 			<div class="inner">
-				<img src="img/products/grips.png" alt="AltaGrips">
 				<p>Over the Shoe Boots</p>
 				<a href="products-over-the-shoe-boots.php" class="viewmore">VIEW MORE ></a>
 			</div>

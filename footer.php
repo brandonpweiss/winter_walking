@@ -118,7 +118,9 @@ please visit <a href="http://www.wintercleats.com" target="_blank">www.wintercle
 </div>
 <a name="footer"></a>
 <div class="column" id="column3">
-	<div class="columninner">
+<div class="columninner">
+<img src="img/wwbiglogo.png" alt="Winter Walking">
+<div class="contactform">
 <form method="post" action="<?$_SERVER['PHP_SELF'];?>">
 	<div id="line1">
 	<input type="text" name="firstName" placeholder="FIRST NAME">
@@ -130,6 +132,7 @@ please visit <a href="http://www.wintercleats.com" target="_blank">www.wintercle
 	<input type="text" name="comments" placeholder="COMMENTS">
 	<input class="send" type="submit" name="footer-contact-submit" value="SEND">
 </form>
+</div>
 </div>
 </div>
 
