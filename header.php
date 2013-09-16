@@ -1,22 +1,18 @@
 <?php
 $page_url = $_SERVER['PHP_SELF'];
 
-if (isset($_POST['nav-contact-submit'])) {
+if (isset($_POST['contact-submit'])) {
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
 
 $lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
 
-$address_1 = filter_var($_POST['address_1'], FILTER_SANITIZE_STRING);
+$company = filter_var($_POST['company'], FILTER_SANITIZE_STRING);
 
-$address_2 = filter_var($_POST['address_2'], FILTER_SANITIZE_STRING);
-
-$city = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
+$employees = filter_var($_POST['employees'], FILTER_SANITIZE_NUMBER_INT);
 
 $state = filter_var($_POST['state'], FILTER_SANITIZE_STRING);
 
-$zip = filter_var($_POST['zip'], FILTER_SANITIZE_STRING);
-
-$company = filter_var($_POST['company'], FILTER_SANITIZE_STRING);
+$phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
 
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
@@ -30,12 +26,61 @@ This is a message sent via winterwalking.com's Main Contact Form.
 Client Info:
 First Name: $firstname
 Last Name: $lastname
-Address: $address_1 $address_2
+Company Name: $company
+Number of Employees Exposed: $employees
+State: $state
+Email: $email
+Phone: $phone
+
+Message: $comments
+";
+
+$headers = "From: <$wwemail>\n";
+$headers .= "Reply-To: <$wwemail>\n";
+
+mail($wwemail, "Main Contact Form Message", $message, $headers);
+};
+
+
+if (isset($_POST['request-info-submit'])) {
+$firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
+
+$lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
+
+$company = filter_var($_POST['company'], FILTER_SANITIZE_STRING);
+
+$employees = filter_var($_POST['employees'], FILTER_SANITIZE_NUMBER_INT);
+
+$address_1 = filter_var($_POST['address_1'], FILTER_SANITIZE_STRING);
+
+$city = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
+
+$state = filter_var($_POST['state'], FILTER_SANITIZE_STRING);
+
+$zip = filter_var($_POST['zip'], FILTER_SANITIZE_STRING);
+
+$phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
+
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
+$comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
+
+$wwemail = "contact@winterwalking.com";
+
+$message ="
+This is a message sent via winterwalking.com's Main Contact Form.
+
+Client Info:
+First Name: $firstname
+Last Name: $lastname
+Company Name: $company
+Number of Employees Exposed: $employees
+Address: $address_1
 City: $city
 State: $state
 Zip Code: $zip
-Company Name: $company
 Email: $email
+Phone: $phone
 
 Message: $comments
 ";
@@ -48,11 +93,7 @@ mail($wwemail, "Main Contact Form Message", $message, $headers);
 
 /*==========================================================*/
 
-if (isset($_POST['request-contact-submit'])) {
-
-$modelNumber = filter_var($_POST['modelNumber'], FILTER_SANITIZE_STRING);
-
-$modelName = filter_var($_POST['modelName'], FILTER_SANITIZE_STRING);
+if (isset($_POST['request-quote-submit'])) {
 
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
 
@@ -60,9 +101,11 @@ $lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
 
 $company = filter_var($_POST['company'], FILTER_SANITIZE_STRING);
 
-$mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-$employees = filter_var($_POST['employees'], FILTER_SANITIZE_STRING);
+$phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
+
+$employees = filter_var($_POST['employees'], FILTER_SANITIZE_NUMBER_INT);
 
 $product_1  = filter_var($_POST['product_1'], FILTER_SANITIZE_STRING);
 
@@ -70,11 +113,11 @@ $product_1_quantity  = filter_var($_POST['product_1_quantity'], FILTER_SANITIZE_
 
 $product_2  = filter_var($_POST['product_2'], FILTER_SANITIZE_STRING);
 
-$product_2_quantity  = filter_var($_POST['product_1_quantity'], FILTER_SANITIZE_STRING);
+$product_2_quantity  = filter_var($_POST['product_2_quantity'], FILTER_SANITIZE_STRING);
 
 $product_3  = filter_var($_POST['product_3'], FILTER_SANITIZE_STRING);
 
-$product_3_quantity  = filter_var($_POST['product_1_quantity'], FILTER_SANITIZE_STRING);
+$product_3_quantity  = filter_var($_POST['product_3_quantity'], FILTER_SANITIZE_STRING);
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
@@ -88,8 +131,9 @@ Client Info:
 First Name: $firstname
 Last Name: $lastname
 Company Name: $company
-Number of Employees: $employees
+Number of Employees Exposed: $employees
 Email: $email
+Phone: $phone
 
 Product Info:
 
@@ -214,9 +258,9 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
 };
 ?>
 
-<!-- Contact Form -->
+<!-- Contact an expert -->
 
-<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="myModal4" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h1 id="myModalLabel">CONTACT &nbsp;<span class="blue">WINTER WALKING</span></h1>
@@ -227,42 +271,31 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
 <div class="modal-body">
   <div class="form">
   <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-<div style="float: left;">
+    <div style="float: left;">
     <label>First Name</label>
     <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"></div>
       <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
-    <div style="clear: both; margin-top: 5px;">
-    <label>Address Line 1</label>
-    <input  type="text"  placeholder="123 Main Street" name="address_1" maxlength="80" size="30"></div>
-    <label>Address Line 2</label>
-    <input  type="text"  placeholder="Suite 456" name="address_2" maxlength="80" size="30">
     <div style="float: left;">
-    <label>City</label>
-    <input  type="text"  placeholder="City" name="city" maxlength="80" size="30"></div>
-    <div style="float: right;">
-    <label>State</label>
-    <select name="state">
-    <?php
-    include ('config.php');
-    $query = mysqli_query ($con, "SELECT * FROM states ORDER BY id ASC");
-    while ($st = mysqli_fetch_array($query)) {
-    print '<option value="'.$st[abbr].'">'.$st[abbr].'</option>';
-    }
-    ?>
-    </select></div>
-    <div style="clear: both; margin-top: 5px;">
-    <label>Zip Code</label>
-    <input  type="text"  placeholder="zip" name="12345" maxlength="80" size="30"></div>
     <label>Company Name</label>
-    <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30">
+    <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
+       <div style="float: right;">
+       <label>Number of Employees Exposed</label>
+    <input  type="text"  placeholder="Enter a Number" name="employees" maxlength="80" size="30"></div>
+    <div style="float: left;">
+    <label>State</label>
+    <input  type="text"  placeholder="State" name="State" maxlength="80" size="30">
+</div>
+    <div style="float: right;">
+      <label>Phone</label>
+    <input  type="text"  placeholder="2345678910" name="phone" maxlength="80" size="30"></div>
+    <div style="clear: both; margin-top: 5px;">
       <label>Email</label>
-    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30">
-
+    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30"></div>
       <label>Comments</label>
     <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea><br><br>
-    <button type="submit" value="Submit" name ="nav-contact-submit" id="submit">SUBMIT</button>
+    <button type="submit" value="Submit" name ="contact-submit" id="submit">SUBMIT</button>
   </form>
   </div>
 
@@ -271,12 +304,68 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
 
 
 
-<!-- Reqest a quote/Speak to an expert form -->
+<!-- Request Information -->
+
+<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h1 id="myModalLabel">REQUEST &nbsp;<span class="blue">PRODUCT INFORMATION</span></h1>
+  </div>
+
+
+
+<div class="modal-body">
+  <div class="form">
+  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <div style="float: left;">
+    <label>First Name</label>
+    <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"></div>
+      <div style="float: right;">
+      <label>Last Name</label>
+    <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
+    <div style="float: left;">
+    <label>Company Name</label>
+    <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
+       <div style="float: right;">
+       <label>Number of Employees Exposed</label>
+    <input  type="text"  placeholder="Enter a Number" name="employees" maxlength="80" size="30"></div>
+    <div style="float: left;">
+    <label>Address Line 1</label>
+    <input  type="text"  placeholder="123 Main Street" name="address_1" maxlength="80" size="30"></div>
+    <div style="float: right;">
+    <label>City</label>
+    <input  type="text"  placeholder="City" name="City" maxlength="80" size="30"></div>
+    <div style="float: left;">
+    <label>State</label>
+    <input  type="text"  placeholder="State" name="State" maxlength="80" size="30">
+</div>
+      <div style="float: right;">
+    <label>Zip Code</label>
+    <input  type="text"  placeholder="12345" name="zip" maxlength="80" size="30"></div>
+    <div style="float: left;">
+      <label>Phone</label>
+    <input  type="text"  placeholder="2345678910" name="phone" maxlength="80" size="30"></div>
+    <div style="float: right;">
+      <label>Email</label>
+    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30"></div>
+  <div style="clear: both; margin-top: 5px;">
+      <label>Comments</label>
+    <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea></div><br><br>
+    <button type="submit" value="Submit" name ="request-info-submit" id="submit">SUBMIT</button>
+  </form>
+  </div>
+
+</div>
+</div>
+
+
+
+<!-- Reqest a quote -->
 
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h1 id="myModalLabel">CONTACT &nbsp;<span class="blue">WINTER WALKING</span></h1>
+    <h1 id="myModalLabel">REQUEST A &nbsp;<span class="blue">PRODUCT QUOTE</span></h1>
   </div>
 
 
@@ -299,7 +388,11 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
     <?php
     include ('config.php');
     $p_model = $_GET["model"];
+  if ($p_model)  {
     $query1 = mysqli_query ($con, "SELECT * FROM products WHERE '$p_model' = model ORDER BY name ASC");
+  } else {
+        $query1 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
+  };
     $query2 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
     $query3 = mysqli_query ($con, "SELECT * FROM products ORDER BY name ASC");
     print '<div style="float: left;">';
@@ -309,13 +402,8 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
     }
     print ' </select></div>';
     print '<div style="float: right; margin-top: 5px;">';
-    print '<label>Quantity</label><select name="product_1_quantity">';
-    $i = 50;
-    while ($i <= 2000) {
-    print '<option value="'.$i.'">'.$i.'</option>' ;
-    $i = $i + 50;
-    }
-    print '</select></div>';
+    print '<label>Quantity</label><input  type="text"  placeholder="1000" name="product_1_quantity" maxlength="7" size="30">';
+    print '</div>';
     print '<div style="float: left; margin-top: 5px;">';
     print '<label>Product 2</label><select name="product_2"><option>-</option>';
     while ($prod2 = mysqli_fetch_array($query2)) {
@@ -323,13 +411,8 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
     }
     print '</select></div>';
     print '<div style="float: right; margin-top: 5px;">';
-    print '<label>Quantity</label><select name="product_2_quantity"><option>-</option>';
-    $i = 50;
-    while ($i <= 2000) {
-    print '<option value="'.$i.'">'.$i.'</option>' ;
-    $i = $i + 50;
-    }
-    print '</select></div>';
+    print '<label>Quantity</label><input  type="text"  placeholder="1000" name="product_2_quantity" maxlength="7" size="30">';
+    print '</div>';
     print '<div style="float: left; margin-top: 5px;">';
     print '<label>Product 3</label><select name="product_3"><option>-</option>';
     while ($prod3 = mysqli_fetch_array($query3)) {
@@ -337,18 +420,15 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
     }
     print '</select></div>';
     print '<div style="float: right; margin-top: 5px;">';
-    print'<label>Quantity</label><select name="product_3_quantity"><option>-</option>';
-    $i = 50;
-    while ($i <= 2000) {
-    print '<option value="'.$i.'">'.$i.'</option>' ;
-    $i = $i + 50;
-    }
-    print '</select></div>';
+    print '<label>Quantity</label><input  type="text"  placeholder="1000" name="product_3_quantity" maxlength="7" size="30">';
+    print '</div>';
     ?>
     <br><br>
     <div style="clear: both; margin-top: 5px;">
+               <label>Phone</label>
+    <input  type="text"  placeholder="2345678910" name="phone" maxlength="80" size="30"></div>
     <label>Email</label>
-    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30"></div>
+    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30">
     <label>Comments</label>
     <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea><br><br>
     <button type="submit" value="Submit" name="request-contact-submit" id="submit">SUBMIT</button>

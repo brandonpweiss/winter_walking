@@ -38,6 +38,25 @@ header('Location:'.$_SERVER['PHP_SELF']);
 <?php
 include('config.php');
 
+$lw = ($_GET['lightweight']);
+$max = ($_GET['maxtraction']);
+if ($lw == 'true') {
+	$filter_query .= " WHERE `sling-device` = 1 ";
+} else if ($max == 'true') {
+	$filter_query .= " WHERE `extreme-ice` = 1 ";
+};
+
+// $ind = ($_GET['indoor']);
+// if ($ind = 'true') {
+// 	$filter_query .= " WHERE `category` = 'indoor' ";
+// };
+
+// $os = ($_GET['overshoe']);
+// if ($os = 'true') {
+// 	$filter_query .= " WHERE `category` = 'over shoe boots' ";
+// };
+
+
 if ( isset( $_POST['filter-submit'] ) )
 {
 

@@ -93,16 +93,16 @@
 		<div class="button buttonone">
 			<div href="products-lightweight.php" class="inner">
 				<p>Lightweight Ice Cleats</p>
-				<a href="products-lightweight.php"class="viewmore">VIEW MORE ></a>
+				<a href="/all-products.php?lightweight=true"class="viewmore">VIEW MORE ></a>
 			</div></div>
 		<div class="button buttontwo"><div class="inner">
 				<p>Maximum Traction</p>
-				<a href="products-indoor-footwear.php" class="viewmore">VIEW MORE ></a>
+				<a href="/all-products.php?maxtraction=true" class="viewmore">VIEW MORE ></a>
 			</div></div>
 		<div class="button buttonthree">
 			<div class="inner">
-				<p>Over the Shoe Boots</p>
-				<a href="products-over-the-shoe-boots.php" class="viewmore">VIEW MORE ></a>
+				<p>Featured Product</p>
+				<a href="featured-product.php" class="viewmore">VIEW MORE ></a>
 			</div>
 		</div>
 	</div>
