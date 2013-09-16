@@ -125,15 +125,142 @@ print ('
 					</div>
 					<div class="moreinfo-section">
 						<div class="features-info">'.$p[features].'</div>
-						<div class="ideal-info"><table border="1" bordercolor="white"><tr><td>Ice</td><td>'.$p[ice].'</td></tr><tr><td>Snow</td><td>'.$p[snow].'</td></tr><tr><td>Oil</td><td>'.$p[oil].'</td></tr><tr><td>fats</td><td>'.$p[fats].'</td></tr><tr><td>Soaps</td><td>'.$p[soaps].'</td></tr><tr><td>Chemicals</td><td>'.$p[chemicals].'</td></tr><tr><td>Liquids</td><td>'.$p[liquids].'</td></tr><tr><td>Mud</td><td>'.$p[mud].'</td></tr><tr><td>Indoor</td><td>'.$p[indoor].'</td></tr><tr><td>Outdoor</td><td>'.$p[outdoor].'</td></tr><tr><td>Driving</td><td>'.$p[driving].'</td></tr></table>
-						</div>
-						<div class="sizechart-info">
+						<div class="ideal-info">
+							<!--<table border="1" bordercolor="white">-->
+							<table border="1" bordercolor="#0000" style="background-color:grey; color: white;">
+							<style>
+							th, td {padding: 10px 3px 10px 3px}
+							</style>');
+							print ('<tr>
+									<th></th>
+									<th>Ice</th>
+									<th>Snow</th>
+									<th>Oil</th>
+									<th>Fats</th>
+									<th>Soaps</th>
+									<th>Chemicals</th>
+									<th>Liquids</th>
+									<th>Mud</th>
+									<th>Indoor</th>
+									<th>Outdoor</th>
+									<th>Driving</th>
+								</tr>');
+							print ('<tr>');
+								print ('<th>Great</th>');
+									print ('<td>');
+										if ($p[ice] == 'great'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[snow] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[oil] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[fats] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[soaps] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[chemicals] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[liquids] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[mud] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[indoor] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[outdoor] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[driving] == 'great') { print ('&#x2713;'); };
+									print ('</td>');
+								print ('</tr>');
+							print ('<tr>');
+								print ('<th>Good</th>');
+									print ('<td>');
+										if ($p[ice] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[snow] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[oil] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[fats] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[soaps] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[chemicals] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[liquids] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[mud] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[indoor] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[outdoor] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[driving] == 'good') {print ('&#x2713;');};
+									print ('</td>');
+								print ('</tr>');
+							print ('<tr>');
+								print ('<th>Not Recommended</th>');
+									print ('<td>');
+										if ($p[ice] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[snow] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[oil] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[fats] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[soaps] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[chemicals] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[liquids] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[mud] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[indoor] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[outdoor] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+									print ('<td>');
+										if ($p[driving] == 'n/a') {print ('&#x2713;');};
+									print ('</td>');
+								print ('</tr>');
+								print('</table></div>');
+			print ('<div class="sizechart-info">
 							<table border="1" bordercolor="#0000" style="background-color:grey; color: white;">
 							<style>
 							th, td {padding: 10px 3px 10px 3px}
 							</style>
 								<tr>
-									<th>SIZES</th>
+									<th></th>
 									<th>XS</th>
 									<th>S</th>
 									<th>M</th>
@@ -144,18 +271,7 @@ print ('
 									<th>XXXXL</th>
 								</tr>
 								<tr>
-									<th>AVAILIBILITY</th>
-									<td>'.$xs.'</td>
-									<td>'.$s.'</td>
-									<td>'.$m.'</td>
-									<td>'.$l.'</td>
-									<td>'.$xl.'</td>
-									<td>'.$xxl.'</td>
-									<td>'.$xxxl.'</td>
-									<td>'.$xxxxl.'</td>
-								</tr>
-								<tr>
-									<th>MENS</th>
+									<th>FITS MENS</th>
 									<td>'.$p[XSM].'</td>
 									<td>'.$p[SM].'</td>
 									<td>'.$p[MM].'</td>
@@ -166,7 +282,7 @@ print ('
 									<td>'.$p[XXXXLM].'</td>
 								</tr>
 								<tr>
-									<th>WOMANS</th>
+									<th>FITS WOMANS</th>
 									<td>'.$p[XSW].'</td>
 									<td>'.$p[SW].'</td>
 									<td>'.$p[MW].'</td>
