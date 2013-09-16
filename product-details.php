@@ -125,6 +125,7 @@ print ('
 					</div>
 					<div class="moreinfo-section">
 						<div class="features-info">'.$p[features].'</div>
+						<div class="spacer" style="height: 20px;"></div>
 						<div class="ideal-info">
 							<!--<table border="1" bordercolor="white">-->
 							<table border="1" bordercolor="#0000" style="background-color:grey; color: white;">
@@ -146,7 +147,7 @@ print ('
 									<th>Driving</th>
 								</tr>');
 							print ('<tr>');
-								print ('<th>Great</th>');
+								print ('<th>Excellent</th>');
 									print ('<td>');
 										if ($p[ice] == 'great'){ print ('&#x2713;'); };
 									print ('</td>');
@@ -257,7 +258,7 @@ print ('
 			print ('<div class="sizechart-info">
 							<table border="1" bordercolor="#0000" style="background-color:grey; color: white;">
 							<style>
-							th, td {padding: 10px 3px 10px 3px}
+							th, td {padding: 5px 3px 5px 3px}
 							</style>
 								<tr>
 									<th></th>

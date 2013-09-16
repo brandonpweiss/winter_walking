@@ -93,7 +93,7 @@
 		<div class="button buttonone">
 			<div href="products-lightweight.php" class="inner">
 				<p>Lightweight Ice Cleats</p>
-				<a href="githall-products.php?lightweight=true"class="viewmore">VIEW MORE ></a>
+				<a href="all-products.php?lightweight=true"class="viewmore">VIEW MORE ></a>
 			</div></div>
 		<div class="button buttontwo"><div class="inner">
 				<p>Maximum Traction</p>
