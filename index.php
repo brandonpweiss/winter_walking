@@ -93,11 +93,11 @@
 		<div class="button buttonone">
 			<div href="products-lightweight.php" class="inner">
 				<p>Lightweight Ice Cleats</p>
-				<a href="/all-products.php?lightweight=true"class="viewmore">VIEW MORE ></a>
+				<a href="githall-products.php?lightweight=true"class="viewmore">VIEW MORE ></a>
 			</div></div>
 		<div class="button buttontwo"><div class="inner">
 				<p>Maximum Traction</p>
-				<a href="/all-products.php?maxtraction=true" class="viewmore">VIEW MORE ></a>
+				<a href="all-products.php?maxtraction=true" class="viewmore">VIEW MORE ></a>
 			</div></div>
 		<div class="button buttonthree">
 			<div class="inner">
