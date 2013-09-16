@@ -18,7 +18,7 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
-$wwemail = "contact@winterwalking.com";
+$wwemail = "info@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Main Contact Form.
@@ -65,7 +65,7 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
-$wwemail = "contact@winterwalking.com";
+$wwemail = "info@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Main Contact Form.
@@ -121,7 +121,7 @@ $product_3_quantity  = filter_var($_POST['product_3_quantity'], FILTER_SANITIZE_
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
-$wwemail = "contact@winterwalking.com";
+$wwemail = "info@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Request a quote/Speak to an expert form.
