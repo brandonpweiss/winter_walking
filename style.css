@@ -633,6 +633,7 @@ form .filter-submit:active {
 .product-thumb-wrap {
 	margin-bottom: 30px;
 	display: inline-block;
+	vertical-align:bottom;
 }
 #filter {
 /*	background: url(img/mochaGrunge.jpg);

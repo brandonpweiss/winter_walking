@@ -100,16 +100,8 @@ if ( $_POST['safer-indoors'] == 'safer-indoors') {
 	$filter_query .= " WHERE `safer-indoors` = 1 ";
 };
 
-if ( $_POST['low-cut'] == 'low-cut') {
-	$filter_query .= " WHERE `low-cut` = 1 ";
-};
-
-if ( $_POST['mid-calf'] == 'mid-calf') {
-	$filter_query .= " WHERE `mid-calf` = 1 ";
-};
-
-if ( $_POST['knee-high'] == 'knee-high') {
-	$filter_query .= " WHERE `knee-high` = 1 ";
+if ( $_POST['overshoe'] == 'overshoe') {
+	$filter_query .= " WHERE `category` = 'over shoe boots' ";
 };
 
 if ( $_POST['insulated'] == 'insulated') {
@@ -281,25 +273,13 @@ print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over
 if ($_POST['over-sock'] == 'over-sock'){
 print('checked = "checked"');
 };
-print('><label for="over-sock">Over the Sock<span></span></label></div>');
+print('><label for="over-sock">Over Sock<span></span></label></div>');
 
-print('<div class="opt-wrap"><input type="checkbox" name="low-cut" value="low-cut" id="low-cut"');
-if ($_POST['low-cut'] == 'low-cut'){
+print('<div class="opt-wrap"><input type="checkbox" name="overshoe" value="overshoe" id="overshoe"');
+if ($_POST['overshoe'] == 'overshoe'){
 print('checked = "checked"');
 };
-print('><label for="low-cut">Low Cut<span></span></label></div>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="mid-calf" value="mid-calf" id="mid-calf"');
-if ($_POST['mid-calf'] == 'mid-calf'){
-print('checked = "checked"');
-};
-print('><label for="mid-calf">Mid Calf<span></span></label></div>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="knee-high" value="knee-high" id="knee-high"');
-if ($_POST['knee-high'] == 'knee-high'){
-print('checked = "checked"');
-};
-print('><label for="knee-high">Knee High<span></span></label></div>');
+print('><label for="overshoe">Over Shoe<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
 print('<button id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
