@@ -108,13 +108,11 @@ print ('
 			<div id="left">
 				<div class="inner">
 					<div class="cta-details-blue">
-						<a class="request grey"  href="all-products.php">&lsaquo; BACK</a>
+						<a class="request"  href="#myModal" role="button" data-toggle="modal">&lsaquo; REQUEST A QUOTE</a>
 						<br>
-						<a class="request"  href="#myModal" role="button" data-toggle="modal">REQUEST A QUOTE &rsaquo;</a>
+						<a class="request request1" href="#myModal" role="button" data-toggle="modal">&lsaquo; SPEAK TO AN EXPERT</a>
 						<br>
-						<a class="request request1" href="#myModal" role="button" data-toggle="modal">SPEAK TO AN EXPERT &rsaquo;</a>
-						<br>
-						<a class="request request2"  href="#myModal3" role="button" data-toggle="modal">SHARE &rsaquo;</a>
+						<a class="request request2"  href="#myModal3" role="button" data-toggle="modal">&lsaquo; SHARE </a>
 					</div>
 					<h1>'.$p[name].'</h1>
 					<p>'.$p[description].'</p>
