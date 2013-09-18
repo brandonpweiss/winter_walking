@@ -22,7 +22,7 @@ $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 $wwemail = "test@robcapell.com";
 
 $message ="
-This is a message sent via winterwalking.com's Main Contact Form.
+This is a message sent via winterwalking.com's Speak to an Expert Form.
 
 Client Info:
 First Name: $firstname
@@ -36,10 +36,10 @@ Phone: $phone
 Message: $comments
 ";
 
-$headers = "From: <$wwemail>\n";
-$headers .= "Reply-To: <$wwemail>\n";
+$headers = "From: Winter Walking Website <noreply@winterwalking.com>\n";
+$headers .= "Reply-To: ".$firstname." <".$email.">\n";
 
-mail($wwemail, "Main Contact Form Message", $message, $headers);
+mail($wwemail, "Speak to an Expert Requested", $message, $headers);
 };
 
 
@@ -70,7 +70,7 @@ $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 $wwemail = "test@robcapell.com";
 
 $message ="
-This is a message sent via winterwalking.com's Main Contact Form.
+This is a message sent via winterwalking.com's Request Product Information Kit Form.
 
 Client Info:
 First Name: $firstname
@@ -87,10 +87,10 @@ Phone: $phone
 Message: $comments
 ";
 
-$headers = "From: <$wwemail>\n";
-$headers .= "Reply-To: <$wwemail>\n";
+$headers = "From: Winter Walking Website <noreply@winterwalking.com>\n";
+$headers .= "Reply-To: ".$firstname." <".$email.">\n";
 
-mail($wwemail, "Main Contact Form Message", $message, $headers);
+mail($wwemail, "Product Information Kit Requested", $message, $headers);
 };
 
 /*==========================================================*/
@@ -127,7 +127,7 @@ $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 $wwemail = "test@robcapell.com";
 
 $message ="
-This is a message sent via winterwalking.com's Request a quote/Speak to an expert form.
+This is a message sent via winterwalking.com's Request a quote Form.
 
 Client Info:
 
@@ -139,25 +139,23 @@ Email: $email
 Phone: $phone
 
 Product Info:
-
 Product 1: $product_1
 Quantity: $product_1_quantity
 
-Product 1: $product_2
+Product 2: $product_2
 Quantity: $product_2_quantity
 
-Product 1: $product_3
+Product 3: $product_3
 Quantity: $product_3_quantity
 
 Message:
-
 $comments
 ";
 
-$headers = "From: <$wwemail>\n";
-$headers .= "Reply-To: <$wwemail>\n";
+$headers = "From: Winter Walking Website <noreply@winterwalking.com>\n";
+$headers .= "Reply-To: ".$firstname." <".$email.">\n";
 
-mail($wwemail, "Quote Request/Speak to an Expert Message", $message, $headers);
+mail($wwemail, "Product Quote Requested", $message, $headers);
 };
 
 /*==========================================================*/
@@ -254,8 +252,8 @@ $p[features]
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
-$headers .= "From: Winter Walking <no-reply@winterwalking.com>" . "\r\n";
-$headers .= "Reply-To: No-Reply <no-reply@winterwalking.com>" . "\r\n";
+$headers .= "From: Winter Walking <noreply@winterwalking.com>" . "\r\n";
+$headers .= "Reply-To: No-Reply <noreply@winterwalking.com>" . "\r\n";
 
 mail($email, "$sendName wants to share one of our products with you!", $message, $headers);
 };
@@ -288,8 +286,7 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
     <input  type="text"  placeholder="Enter a Number" name="employees" maxlength="80" size="30"></div>
     <div style="float: left;">
     <label>State</label>
-    <input  type="text"  placeholder="State" name="State" maxlength="80" size="30">
-</div>
+    <input  type="text"  placeholder="State" name="state" maxlength="80" size="30"></div>
     <div style="float: right;">
       <label>Phone</label>
     <input  type="text"  placeholder="2345678910" name="phone" maxlength="80" size="30"></div>
@@ -337,10 +334,10 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
     <input  type="text"  placeholder="123 Main Street" name="address_1" maxlength="80" size="30"></div>
     <div style="float: right;">
     <label>City</label>
-    <input  type="text"  placeholder="City" name="City" maxlength="80" size="30"></div>
+    <input  type="text"  placeholder="City" name="city" maxlength="80" size="30"></div>
     <div style="float: left;">
     <label>State</label>
-    <input  type="text"  placeholder="State" name="State" maxlength="80" size="30">
+    <input  type="text"  placeholder="State" name="state" maxlength="80" size="30">
 </div>
       <div style="float: right;">
     <label>Zip Code</label>
@@ -377,9 +374,9 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
   <div class="form">
   <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <div style="float: left;">
-   	<label>First Name</label>
+    <label>First Name</label>
     <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"></div>
-    	<div style="float: right;">
+      <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
     <div style="float: left;">
@@ -434,7 +431,7 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
     <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30">
     <label>Comments</label>
     <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea><br><br>
-    <button type="submit" value="Submit" name="request-contact-submit" id="submit">SUBMIT</button>
+    <button type="submit" value="Submit" name="request-quote-submit" id="submit">SUBMIT</button>
   </form>
   </div>
 
