@@ -290,7 +290,7 @@ print('</aside>');
 
 <?php
 include ('config.php');
-$query = mysqli_query ($con, "SELECT * FROM products $filter_query ORDER BY name ASC");
+$query = mysqli_query ($con, "SELECT * FROM products $filter_query ORDER BY sortorder ASC");
 
 $result = mysqli_num_rows($query);
 
