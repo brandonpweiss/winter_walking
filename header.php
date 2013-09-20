@@ -40,6 +40,8 @@ $headers = "From: Winter Walking Website <noreply@winterwalking.com>\n";
 $headers .= "Reply-To: ".$firstname." <".$email.">\n";
 
 mail($wwemail, "Speak to an Expert Requested", $message, $headers);
+header('Location: thankyou.php');
+die();
 };
 
 
@@ -91,6 +93,8 @@ $headers = "From: Winter Walking Website <noreply@winterwalking.com>\n";
 $headers .= "Reply-To: ".$firstname." <".$email.">\n";
 
 mail($wwemail, "Product Information Kit Requested", $message, $headers);
+header('Location: thankyou.php');
+die();
 };
 
 /*==========================================================*/
@@ -156,6 +160,8 @@ $headers = "From: Winter Walking Website <noreply@winterwalking.com>\n";
 $headers .= "Reply-To: ".$firstname." <".$email.">\n";
 
 mail($wwemail, "Product Quote Requested", $message, $headers);
+header('Location: thankyou.php');
+die();
 };
 
 /*==========================================================*/
@@ -256,6 +262,8 @@ $headers .= "From: Winter Walking <noreply@winterwalking.com>" . "\r\n";
 $headers .= "Reply-To: No-Reply <noreply@winterwalking.com>" . "\r\n";
 
 mail($email, "$sendName wants to share one of our products with you!", $message, $headers);
+header('Location: thankyou.php');
+die();
 };
 ?>
 
