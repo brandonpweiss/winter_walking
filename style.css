@@ -492,14 +492,15 @@ button.product:active {
 	display: block;
 	margin-bottom: 10px;
 }
-.image1, .image2, .image3, .image4 {
-	width: 83px;
+.image1, .image2, .image3, .image4, .image5, .image6 {
+	width: 145px;
 	display: inline-block;
 	border: 1px solid #CCC;
 	cursor: pointer;
 }
-.image1, .image2, .image3 {
+.image1, .image2, .image3, .image4, .image5 {
 	margin-right: 8px;
+	margin-bottom: 8px;
 }
 #productlist{
 	text-align: center;

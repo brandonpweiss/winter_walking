@@ -73,3 +73,13 @@ $(".image4").click(function()
 		var img4 = $(this).html();
 		$(".main-image").html(img4);
 	});
+$(".image5").click(function()
+	{
+		var img5 = $(this).html();
+		$(".main-image").html(img5);
+	});
+$(".image6").click(function()
+	{
+		var img6 = $(this).html();
+		$(".main-image").html(img6);
+	});
