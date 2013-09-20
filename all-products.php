@@ -56,7 +56,7 @@ if ($lw == 'true') {
 // 	$filter_query .= " WHERE `category` = 'over shoe boots' ";
 // };
 
-
+$filter_query =" WHERE `id` < 100 ";
 if ( isset( $_POST['filter-submit'] ) )
 {
 
@@ -310,7 +310,7 @@ while ($fetch = mysqli_fetch_array($query)) {
 					<div class="titles">
 					<span class="title">'.$fetch[name].'</span>
 					<span class="sub-title">'.$fetch[upper_style].'</span>
-										<img src=" '.$fetch[img_url].' " alt="shoe">
+										<img src=" '.$fetch[img_url1].' " alt="shoe">
 					</div>
 				</button>
 			</a>');

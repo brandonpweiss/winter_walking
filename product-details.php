@@ -86,8 +86,8 @@ print ('
 			$xxxxl = '&#32;';
 		};
 
-		if ($p[img_url4] != null && $p[img_url2] != null && $p[img_url3] != null) {
-		 $image1 = '<div class="image1"><img src="'.$p[img_url].'"></div>';
+		if ($p[img_url4] != null && $p[img_url2] != null && $p[img_url3] != null && $p[img_url5] != null && $p[img_url6] != null) {
+		 $image1 = '<div class="image1"><img src="'.$p[img_url1].'"></div>';
 		};
 		if ($p[img_url4] != null) {
 			$image2 = '<div class="image2"><img src="'.$p[img_url4].'"></div>';
@@ -97,6 +97,12 @@ print ('
 		};
 		if ($p[img_url3] != null) {
 			$image4 = '<div class="image4"><img src="'.$p[img_url3].'"></div>';
+		};
+		if ($p[img_url5] != null) {
+			$image5 = '<div class="image5"><img src="'.$p[img_url5].'"></div>';
+		};
+		if ($p[img_url6] != null) {
+			$image6 = '<div class="image6"><img src="'.$p[img_url6].'"></div>';
 		};
 
 
@@ -126,169 +132,208 @@ print ('
 						<div class="spacer" style="height: 20px;"></div>
 						<div class="ideal-info">
 							<!--<table border="1" bordercolor="white">-->
-							<table border="1" bordercolor="#0000" style="background-color:grey; color: white;">
+							<table border="1" bordercolor="#0000" style="background-color:grey; color: white; width: 100%;">
 							<style>
 							th, td {padding: 10px 3px 10px 3px}
 							</style>');
 							print ('<tr>
-									<th></th>
-									<th>Ice</th>
-									<th>Snow</th>
-									<th>Oil</th>
-									<th>Fats</th>
-									<th>Soaps</th>
-									<th>Chemicals</th>
-									<th>Liquids</th>
-									<th>Mud</th>
-									<th>Indoor</th>
-									<th>Outdoor</th>
-									<th>Driving</th>
+									<th>Conditions</th>
+									<th>Excellent</th>
+									<th>Good</th>
+									<th>N/A</th>
 								</tr>');
 							print ('<tr>');
-								print ('<th>Excellent</th>');
+								print ('<th>Ice</th>');
 									print ('<td>');
 										if ($p[ice] == 'great'){ print ('&#x2713;'); };
 									print ('</td>');
 									print ('<td>');
-										if ($p[snow] == 'great') { print ('&#x2713;'); };
+										if ($p[ice] == 'good'){ print ('&#x2713;'); };
 									print ('</td>');
 									print ('<td>');
-										if ($p[oil] == 'great') { print ('&#x2713;'); };
-									print ('</td>');
-									print ('<td>');
-										if ($p[fats] == 'great') { print ('&#x2713;'); };
-									print ('</td>');
-									print ('<td>');
-										if ($p[soaps] == 'great') { print ('&#x2713;'); };
-									print ('</td>');
-									print ('<td>');
-										if ($p[chemicals] == 'great') { print ('&#x2713;'); };
-									print ('</td>');
-									print ('<td>');
-										if ($p[liquids] == 'great') { print ('&#x2713;'); };
-									print ('</td>');
-									print ('<td>');
-										if ($p[mud] == 'great') { print ('&#x2713;'); };
-									print ('</td>');
-									print ('<td>');
-										if ($p[indoor] == 'great') { print ('&#x2713;'); };
-									print ('</td>');
-									print ('<td>');
-										if ($p[outdoor] == 'great') { print ('&#x2713;'); };
-									print ('</td>');
-									print ('<td>');
-										if ($p[driving] == 'great') { print ('&#x2713;'); };
+										if ($p[ice] == 'n/a'){ print ('&#x2713;'); };
 									print ('</td>');
 								print ('</tr>');
 							print ('<tr>');
-								print ('<th>Good</th>');
-									print ('<td>');
-										if ($p[ice] == 'good') {print ('&#x2713;');};
+								print ('<th>Snow</th>');
+																	print ('<td>');
+										if ($p[snow] == 'great'){ print ('&#x2713;'); };
 									print ('</td>');
 									print ('<td>');
-										if ($p[snow] == 'good') {print ('&#x2713;');};
+										if ($p[snow] == 'good'){ print ('&#x2713;'); };
 									print ('</td>');
 									print ('<td>');
-										if ($p[oil] == 'good') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[fats] == 'good') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[soaps] == 'good') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[chemicals] == 'good') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[liquids] == 'good') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[mud] == 'good') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[indoor] == 'good') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[outdoor] == 'good') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[driving] == 'good') {print ('&#x2713;');};
+										if ($p[snow] == 'n/a'){ print ('&#x2713;'); };
 									print ('</td>');
 								print ('</tr>');
 							print ('<tr>');
-								print ('<th>Not Recommended</th>');
-									print ('<td>');
-										if ($p[ice] == 'n/a') {print ('&#x2713;');};
+								print ('<th>Oil</th>');
+																	print ('<td>');
+										if ($p[oil] == 'great'){ print ('&#x2713;'); };
 									print ('</td>');
 									print ('<td>');
-										if ($p[snow] == 'n/a') {print ('&#x2713;');};
+										if ($p[oil] == 'good'){ print ('&#x2713;'); };
 									print ('</td>');
 									print ('<td>');
-										if ($p[oil] == 'n/a') {print ('&#x2713;');};
+										if ($p[oil] == 'n/a'){ print ('&#x2713;'); };
+									print ('</td>');
+
+								print ('</tr>');
+								print ('<tr>');
+									print ('<th>Fats</th>');
+									print ('<td>');
+										if ($p[fats] == 'great'){ print ('&#x2713;'); };
 									print ('</td>');
 									print ('<td>');
-										if ($p[fats] == 'n/a') {print ('&#x2713;');};
+										if ($p[fats] == 'good'){ print ('&#x2713;'); };
 									print ('</td>');
 									print ('<td>');
-										if ($p[soaps] == 'n/a') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[chemicals] == 'n/a') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[liquids] == 'n/a') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[mud] == 'n/a') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[indoor] == 'n/a') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[outdoor] == 'n/a') {print ('&#x2713;');};
-									print ('</td>');
-									print ('<td>');
-										if ($p[driving] == 'n/a') {print ('&#x2713;');};
+										if ($p[fats] == 'n/a'){ print ('&#x2713;'); };
 									print ('</td>');
 								print ('</tr>');
+								print ('<tr>');
+									print ('<th>Soaps</th>');
+									print ('<td>');
+										if ($p[soaps] == 'great'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[soaps] == 'good'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[soaps] == 'n/a'){ print ('&#x2713;'); };
+									print ('</td>');
+								print ('</tr>');
+								print ('<tr>');
+									print ('<th>Chemicals</th>');
+									print ('<td>');
+										if ($p[chemicals] == 'great'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[chemicals] == 'good'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[chemicals] == 'n/a'){ print ('&#x2713;'); };
+									print ('</td>');
+								print ('</tr>');
+								print ('<tr>');
+									print ('<th>Liquids</th>');
+									print ('<td>');
+										if ($p[liquids] == 'great'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[liquids] == 'good'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[liquids] == 'n/a'){ print ('&#x2713;'); };
+									print ('</td>');
+								print ('</tr>');
+								print ('<tr>');
+									print ('<th>Mud</th>');
+									print ('<td>');
+										if ($p[mud] == 'great'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[mud] == 'good'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[mud] == 'n/a'){ print ('&#x2713;'); };
+									print ('</td>');
+								print ('</tr>');
+								print ('<tr>');
+									print ('<th>Indoor</th>');
+									print ('<td>');
+										if ($p[indoor] == 'great'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[indoor] == 'good'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[indoor] == 'n/a'){ print ('&#x2713;'); };
+									print ('</td>');
+								print ('</tr>');
+								print ('<tr>');
+									print ('<th>Outdoor</th>');
+									print ('<td>');
+										if ($p[outdoor] == 'great'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[outdoor] == 'good'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[outdoor] == 'n/a'){ print ('&#x2713;'); };
+									print ('</td>');
+								print ('</tr>');
+								print ('<tr>');
+									print ('<th>Driving</th>');
+									print ('<td>');
+										if ($p[driving] == 'great'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[driving] == 'good'){ print ('&#x2713;'); };
+									print ('</td>');
+									print ('<td>');
+										if ($p[driving] == 'n/a'){ print ('&#x2713;'); };
+									print ('</td>');
+								print ('</tr>');
+
 								print('</table></div>');
 			print ('<div class="sizechart-info">
-							<table border="1" bordercolor="#0000" style="background-color:grey; color: white;">
+							<table border="1" bordercolor="#0000" style="background-color:grey; color: white; width:100%">
 							<style>
 							th, td {padding: 5px 3px 5px 3px}
 							</style>
 								<tr>
-									<th></th>
-									<th>XS</th>
-									<th>S</th>
-									<th>M</th>
-									<th>L</th>
-									<th>XL</th>
-									<th>XXL</th>
-									<th>XXXL</th>
-									<th>XXXXL</th>
-								</tr>
-								<tr>
+									<th>SIZES</th>
+									<th>MODEL</th>
 									<th>FITS MENS</th>
-									<td>'.$p[XSM].'</td>
-									<td>'.$p[SM].'</td>
-									<td>'.$p[MM].'</td>
-									<td>'.$p[LM].'</td>
-									<td>'.$p[XLM].'</td>
-									<td>'.$p[XXLM].'</td>
-									<td>'.$p[XXXLM].'</td>
-									<td>'.$p[XXXXLM].'</td>
+									<th>FITS WOMANS</th>
 								</tr>
 								<tr>
-									<th>FITS WOMANS</th>
+									<th>XS</th>
+									<td>'.$p[xsmodel].'</td>
+									<td>'.$p[XSM].'</td>
 									<td>'.$p[XSW].'</td>
+								</tr>
+								<tr>
+									<th>S</th>
+									<td>'.$p[smodel].'</td>
+									<td>'.$p[SM].'</td>
 									<td>'.$p[SW].'</td>
+								</tr>
+								<tr>
+									<th>M</th>
+									<td>'.$p[mmodel].'</td>
+									<td>'.$p[MM].'</td>
 									<td>'.$p[MW].'</td>
+								</tr>
+								<tr>
+									<th>L</th>
+									<td>'.$p[lmodel].'</td>
+									<td>'.$p[LM].'</td>
 									<td>'.$p[LW].'</td>
+								</tr>
+								<tr>
+									<th>XL</th>
+									<td>'.$p[xlmodel].'</td>
+									<td>'.$p[XLM].'</td>
 									<td>'.$p[XLW].'</td>
+								</tr>
+								<tr>
+									<th>XXL</th>
+									<td>'.$p[xxlmodel].'</td>
+									<td>'.$p[XXLM].'</td>
 									<td>'.$p[XXLW].'</td>
+								</tr>
+								<tr>
+									<th>XXXL</th>
+									<td>'.$p[xxxlmodel].'</td>
+									<td>'.$p[XXXLM].'</td>
 									<td>'.$p[XXXLW].'</td>
+								</tr>
+								<tr>
+									<th>XXXXL</th>
+									<td>'.$p[xxxxlmodel].'</td>
+									<td>'.$p[XXXXLM].'</td>
 									<td>'.$p[XXXXLW].'</td>
 								</tr>
 							</table>
@@ -300,9 +345,9 @@ print ('
 				<div class="inner">
 					<div class="views-info">
 						<div class="main-image">
-							<img src="'.$p[img_url].'">
+							<img src="'.$p[img_url1].'">
 						</div>
-						'.$image1.''.$image2.''.$image3.''.$image4.'
+						'.$image1.''.$image2.''.$image3.''.$image4.''.$image5.''.$image6.'
 					</div>
 				</div>
 			</div>
