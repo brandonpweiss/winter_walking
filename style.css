@@ -289,16 +289,16 @@ margin-top: 30px;
     table-layout:fixed;
     width:100%;
 }*/
-
 .ideal-info table, .ideal-info th, .ideal-info td, .sizechart-info table, .sizechart-info th, .sizechart-info td
 {
 border: 1px solid black;
 color: #ffffff;
-min-width: 60px;
+font-size: .9em;
+padding: 1px;
+min-width: 30px;
 }
 .ideal-info td, .sizechart-info td
 {
-padding:4px 4px;
 text-align: center;
 }
 /*.ideal-info table tr:nth-child(odd){
