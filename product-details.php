@@ -114,11 +114,11 @@ print ('
 			<div id="left">
 				<div class="inner">
 					<div class="cta-details-blue">
-						<a class="request"  href="#myModal" role="button" data-toggle="modal">&rsaquo; REQUEST A QUOTE</a>
+						<a class="request"  href="#myModal" role="button" data-toggle="modal">&lsaquo; REQUEST A QUOTE</a>
 						<br>
-						<a class="request request1" href="#myModal" role="button" data-toggle="modal">&rsaquo; SPEAK TO AN EXPERT</a>
+						<a class="request request1" href="#myModal" role="button" data-toggle="modal">&lsaquo; SPEAK TO AN EXPERT</a>
 						<br>
-						<a class="request request2"  href="#myModal3" role="button" data-toggle="modal">&rsaquo; SHARE </a>
+						<a class="request request2"  href="#myModal3" role="button" data-toggle="modal">&lsaquo; SHARE </a>
 					</div>
 					<h1>'.$p[name].'</h1>
 					<p>'.$p[description].'</p>
