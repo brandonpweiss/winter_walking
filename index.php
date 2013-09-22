@@ -86,26 +86,34 @@
 	</div>
 <article id="line">
 	<p>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</p>
-	<p>According to the Bureau of Labor Statistics, nearly <span class="blue">15%</span> of all lost workday accidents are due to slips, trips, and falls.</p>
+	<p>"It's not just about improving traction underfoot, it's about creating a safe work environment."</p>
 	<p>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</p>
 </article>
 	<article id="buttons">
 		<div class="content clearfix">
+		<a href="all-products.php?lightweight=true" class="buttonz">
 		<div class="button buttonone">
-			<div href="products-lightweight.php" class="inner">
+			<div class="inner">
 				<p>Lightweight Ice Cleats</p>
-				<a href="all-products.php?lightweight=true"class="viewmore">VIEW MORE ></a>
-			</div></div>
+				<span class="viewmore">VIEW MORE ></span>
+			</div>
+		</div>
+		</a>
+		<a href="all-products.php?maxtraction=true" class="buttonz">
 		<div class="button buttontwo"><div class="inner">
 				<p>Maximum Traction</p>
-				<a href="all-products.php?maxtraction=true" class="viewmore">VIEW MORE ></a>
-			</div></div>
+				<span class="viewmore">VIEW MORE ></span>
+			</div>
+		</div>
+	</a>
+	<a href="featured-product.php" class="buttonz">
 		<div class="button buttonthree">
 			<div class="inner">
 				<p>Featured Product</p>
-				<a href="featured-product.php" class="viewmore">VIEW MORE ></a>
+				<span class="viewmore">VIEW MORE ></span>
 			</div>
 		</div>
+	</a>
 	</div>
 	</article>
 </section>

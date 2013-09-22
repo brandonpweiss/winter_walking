@@ -313,62 +313,6 @@ die();
 
 
 
-<!-- Request Information -->
-
-<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h1 id="myModalLabel">REQUEST &nbsp;<span class="blue">PRODUCT INFORMATION</span></h1>
-  </div>
-
-
-
-<div class="modal-body">
-  <div class="form">
-  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <div style="float: left;">
-    <label>First Name</label>
-    <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"></div>
-      <div style="float: right;">
-      <label>Last Name</label>
-    <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
-    <div style="float: left;">
-    <label>Company Name</label>
-    <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
-       <div style="float: right;">
-       <label>Number of Employees Exposed</label>
-    <input  type="text"  placeholder="Enter a Number" name="employees" maxlength="80" size="30"></div>
-    <div style="float: left;">
-    <label>Address Line 1</label>
-    <input  type="text"  placeholder="123 Main Street" name="address_1" maxlength="80" size="30"></div>
-    <div style="float: right;">
-    <label>City</label>
-    <input  type="text"  placeholder="City" name="city" maxlength="80" size="30"></div>
-    <div style="float: left;">
-    <label>State</label>
-    <input  type="text"  placeholder="State" name="state" maxlength="80" size="30">
-</div>
-      <div style="float: right;">
-    <label>Zip Code</label>
-    <input  type="text"  placeholder="12345" name="zip" maxlength="80" size="30"></div>
-    <div style="float: left;">
-      <label>Phone</label>
-    <input  type="text"  placeholder="2345678910" name="phone" maxlength="80" size="30"></div>
-    <div style="float: right;">
-      <label>Email</label>
-    <input  type="email"  placeholder="youremail@yourdomain.com" name="email" maxlength="80" size="30"></div>
-  <div style="clear: both; margin-top: 5px;">
-      <label>Comments</label>
-    <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea></div><br><br>
-    <button type="submit" value="Submit" name ="request-info-submit" id="submit">SUBMIT</button>
-  </form>
-  </div>
-
-</div>
-</div>
-
-
-
 <!-- Reqest a quote -->
 
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

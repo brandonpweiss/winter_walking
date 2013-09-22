@@ -148,7 +148,7 @@ print('<div class="wrap clearfix">');
 print('<aside id="filter">');
 print('<form method="post" action="all-products.php">');
 
-print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
+
 
 /* -------------TRACTION------------------------- */
 print('<span class="filter-header first">TRACTION:</span>');
@@ -164,6 +164,36 @@ if ($_POST['spiked'] == 'spiked'){
 print('checked = "checked"');
 };
 print('><label for="spiked">Spiked<span></span></label></div>');
+
+
+/* -----------WALKING CONDITION------------------- */
+print('<span class="filter-header">WALKING CONDITION:</span>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
+if ($_POST['extreme-ice'] == 'extreme-ice'){
+print('checked = "checked"');
+};
+print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="outdoor-only" value="outdoor-only" id="outdoor-only"');
+if ($_POST['outdoor-only'] == 'outdoor-only'){
+print('checked = "checked"');
+};
+print('><label for="outdoor-only">Outdoor Only<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="indoor-outdoor" value="indoor-outdoor" id="indoor-outdoor"');
+if ($_POST['indoor-outdoor'] == 'indoor-outdoor'){
+print('checked = "checked"');
+};
+print('><label for="indoor-outdoor">Indoor and Outdoor<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="indoor-only" value="indoor-only" id="indoor-only"');
+if ($_POST['indoor-only'] == 'indoor-only'){
+print('checked = "checked"');
+};
+print('><label for="indoor-only">Indoor Only<span></span></label></div>');
+
+
 
 /* -----REQUIREMENTS--------------------------------- */
 print('<span class="filter-header">REQUIREMENTS:</span>');
@@ -207,60 +237,6 @@ print('checked = "checked"');
 };
 print('><label for="steel-toe">Steel Toe<span></span></label></div>');
 
-/* -----------WALKING CONDITION------------------- */
-print('<span class="filter-header">WALKING CONDITION:</span>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
-if ($_POST['extreme-ice'] == 'extreme-ice'){
-print('checked = "checked"');
-};
-print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="outdoor-only" value="outdoor-only" id="outdoor-only"');
-if ($_POST['outdoor-only'] == 'outdoor-only'){
-print('checked = "checked"');
-};
-print('><label for="outdoor-only">Outdoor Only<span></span></label></div>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="indoor-outdoor" value="indoor-outdoor" id="indoor-outdoor"');
-if ($_POST['indoor-outdoor'] == 'indoor-outdoor'){
-print('checked = "checked"');
-};
-print('><label for="indoor-outdoor">Indoor and Outdoor<span></span></label></div>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="indoor-only" value="indoor-only" id="indoor-only"');
-if ($_POST['indoor-only'] == 'indoor-only'){
-print('checked = "checked"');
-};
-print('><label for="indoor-only">Indoor Only<span></span></label></div>');
-
-/* -----------SLIP HAZARD---------------------------- */
-print('<span class="filter-header">SLIP HAZARD:</span>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="ice-snow" value="ice-snow" id="ice-snow"');
-if ($_POST['ice-snow'] == 'ice-snow'){
-print('checked = "checked"');
-};
-print('><label for="ice-snow">Ice and Snow<span></span></label></div>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
-if ($_POST['stripping'] == 'stripping'){
-print('checked = "checked"');
-};
-print('><label for="stripping">Floor Stripping<span></span></label></div>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="oil-grease" value="oil-grease" id="oil-grease"');
-if ($_POST['oil-grease'] == 'oil-grease'){
-print('checked = "checked"');
-};
-print('><label for="oil-grease">Oil/Grease<span></span></label></div>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="food-processing" value="food-processing" id="food-processing"');
-if ($_POST['food-processing'] == 'food-processing'){
-print('checked = "checked"');
-};
-print('><label for="food-processing">Food Processing<span></span></label></div>');
-
 /* ------------FIT--------------------------------------------------- */
 print('<span class="filter-header">FIT:</span>');
 
@@ -283,6 +259,7 @@ print('checked = "checked"');
 print('><label for="overshoe">Over Shoe<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
 print('<button id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 // print('</div>');
 print('</form>');
