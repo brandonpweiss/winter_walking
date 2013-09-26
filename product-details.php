@@ -1,9 +1,15 @@
 <?php ob_start(); ?>
+<?php
+include ('config.php');
+$product_model = $_GET["model"];
+$query = mysqli_query ($con, "SELECT * FROM products WHERE model = '$product_model'");
+$p = mysqli_fetch_array($query);
+?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Winter Walking Product Details</title>
+	<title><?php print $p[name]; ?> Product Details</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -22,11 +28,6 @@
 <?php include('nav.php');?>
 <?php include('header.php');?>
 <?php
-include ('config.php');
-$product_model = $_GET["model"];
-$query = mysqli_query ($con, "SELECT * FROM products WHERE model = '$product_model'");
-$p = mysqli_fetch_array($query);
-
 print ('
 <nav id="productnav">
 		<ul>
@@ -106,8 +107,9 @@ print ('
 			$image6 = '<div class="image6"><img src="'.$p[img_url6].'"></div>';
 		};
 
-
-print ('
+$nameHP = str_replace("HP's", "<br>High Profile", $p[name]);
+$name = str_replace("LP's", "<br>Low Profile", $nameHP);
+?>
 <div class="details">
 	<div class="detailsInner clearfix">
 		<div class="wrap">
@@ -121,22 +123,25 @@ print ('
 						<br>
 						<a class="request request2"  href="#myModal3" role="button" data-toggle="modal">&lsaquo; SHARE </a>
 					</div>
-					<h1>'.$p[name].'</h1>
-					<p>'.$p[description].'</p>
+					<h1><?php print $name; ?></h1>
+					<p><?php print $p[description]; ?></p>
 					<div class="details-moreinfo">
-						<a href="javascript:void(0);" class="features">Features</a>
+						<?php if ($p[features])
+						{ print'<a href="javascript:void(0);" class="features">Features</a>'; }
+						?>
 						<a href="javascript:void(0);" class="ideal">Ideal Conditions</a>
 						<a href="javascript:void(0);" class="sizechart">Size Chart</a>
 					</div>
 					<div class="moreinfo-section">
-						<div class="features-info">'.$p[features].'</div>
+						<div class="features-info"><?php print $p[features]; ?></div>
 						<div class="spacer" style="height: 20px;"></div>
 						<div class="ideal-info">
 							<!--<table border="1" bordercolor="white">-->
 							<table border="1" bordercolor="#0000" style="background-color:grey; color: white; width: 100%;">
 							<style>
 							th, td {padding: 10px 3px 10px 3px}
-							</style>');
+							</style>
+							<?php
 							print ('<tr>
 									<th>Conditions</th>
 									<th>Excellent</th>
@@ -278,7 +283,8 @@ print ('
 								print ('</tr>');
 
 								print('</table></div>');
-			print ('<div class="sizechart-info">
+								?>
+			<div class="sizechart-info">
 							<table border="1" bordercolor="#0000" style="background-color:grey; color: white; width:100%">
 							<style>
 							th, td {padding: 5px 3px 5px 3px}
@@ -289,54 +295,104 @@ print ('
 									<th>FITS MENS</th>
 									<th>FITS WOMANS</th>
 								</tr>
-								<tr>
-									<th>XS</th>
-									<td>'.$p[xsmodel].'</td>
-									<td>'.$p[XSM].'</td>
-									<td>'.$p[XSW].'</td>
-								</tr>
+								<?php
+								if ($p[XSM] && $p[XSW]) {
+									print('
+									<tr>
+										<th>XS</th>
+										<td>'.$p[xsmodel].'</td>
+										<td>'.$p[XSM].'</td>
+										<td>'.$p[XSW].'</td>
+									</tr>
+									');
+								}
+								if ($p[SM] && $p[SW]) {
+									print('
 								<tr>
 									<th>S</th>
 									<td>'.$p[smodel].'</td>
 									<td>'.$p[SM].'</td>
 									<td>'.$p[SW].'</td>
 								</tr>
+									');
+								}
+								if ($p[MM] && $p[MW]) {
+									print('
 								<tr>
 									<th>M</th>
 									<td>'.$p[mmodel].'</td>
 									<td>'.$p[MM].'</td>
 									<td>'.$p[MW].'</td>
 								</tr>
+									');
+								}
+								if ($p[LM] && $p[LW]) {
+									print('
 								<tr>
 									<th>L</th>
 									<td>'.$p[lmodel].'</td>
 									<td>'.$p[LM].'</td>
 									<td>'.$p[LW].'</td>
 								</tr>
+									');
+								}
+								if ($p[XLM] && $p[XLW]) {
+									print('
 								<tr>
 									<th>XL</th>
 									<td>'.$p[xlmodel].'</td>
 									<td>'.$p[XLM].'</td>
 									<td>'.$p[XLW].'</td>
 								</tr>
+									');
+								}
+								if ($p[XXLM] && $p[XXLW]) {
+									print('
 								<tr>
 									<th>XXL</th>
 									<td>'.$p[xxlmodel].'</td>
 									<td>'.$p[XXLM].'</td>
 									<td>'.$p[XXLW].'</td>
 								</tr>
+									');
+								}
+								if ($p[XXXLM] && $p[XXXLW]) {
+									print('
 								<tr>
 									<th>XXXL</th>
 									<td>'.$p[xxxlmodel].'</td>
 									<td>'.$p[XXXLM].'</td>
 									<td>'.$p[XXXLW].'</td>
 								</tr>
+									');
+								}
+								if ($p[XXXXLM] && $p[XXXXLW]) {
+									print('
 								<tr>
 									<th>XXXXL</th>
 									<td>'.$p[xxxxlmodel].'</td>
 									<td>'.$p[XXXXLM].'</td>
 									<td>'.$p[XXXXLW].'</td>
 								</tr>
+									');
+								}
+								if ($p[model] == 'JD4022 | JD4122' && $p[name] == 'GRIPS Over the Sock') {
+									print('
+									<tr>
+										<th>WHOLE SIZES ONLY</th>
+										<td>JD4022 | JD4122</td>
+										<td>7 - 13</td>
+										<td>7 - 13</td>
+									</tr>
+									<tr>
+										<th>WHOLE SIZES ONLY</th>
+										<td>JD4022 | JD4122</td>
+										<td>7 - 13</td>
+										<td>7 - 13</td>
+									</tr>
+									');
+								}
+								?>
 							</table>
 						</div>
 					</div>
@@ -346,16 +402,15 @@ print ('
 				<div class="inner">
 					<div class="views-info">
 						<div class="main-image">
-							<img src="'.$p[img_url1].'">
+							<img src="<?php print $p[img_url1]; ?>">
 						</div>
-						'.$image1.''.$image2.''.$image3.''.$image4.''.$image5.''.$image6.'
+					<?php print $image1.$image2.$image3.$image4.$image5.$image6; ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>');
-?>
+</div>
 <?php include('footer.php');?>
 <script src="js/products.js"></script>
 <script src="js/stickynav.js"></script>
