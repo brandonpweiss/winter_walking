@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Winter Walking | Ice Grips Rotors</title>
+	<meta name="description" content="ICEGRIPS&#174; ROTORS is a uniquely versatile ice and snow walking device that allows workers to move safely from indoor surfaces to outdoor surfaces without putting on and taking off their traction gear. If your employees are constantly walking in and out of building or moving from icy surfaces to clean surfaces, ICEGRIPS&#174; ROTORS is the solution you’ve been waiting for.">
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">
@@ -39,8 +40,8 @@
 	<div class="inner">
 		<div class="winter">INTRODUCING THE</div>
 		<h1>ICE GRIPS<sup>&reg;</sup> <br>ROTORS</h1>
-		<p><span class="bold">ICEGRIPS® ROTORS</span> is a uniquely versatile ice and snow walking device that allows workers to move safely from indoor surfaces to outdoor surfaces without putting on and taking off their traction gear. If your employees are constantly walking in and out of building or moving from icy surfaces to clean surfaces, ICEGRIPS® ROTORS is the solution you’ve been waiting for.</p><br>
-		<p>No more continually putting on and taking off your traction gear and being faced with the prospect of carrying a wet and dirty device around. ICEGRIPS® ROTORS solve the problem with a twist!</p>
+		<p><span class="bold">ICEGRIPS&#174; ROTORS</span> is a uniquely versatile ice and snow walking device that allows workers to move safely from indoor surfaces to outdoor surfaces without putting on and taking off their traction gear. If your employees are constantly walking in and out of building or moving from icy surfaces to clean surfaces, ICEGRIPS&#174; ROTORS is the solution you’ve been waiting for.</p><br>
+		<p>No more continually putting on and taking off your traction gear and being faced with the prospect of carrying a wet and dirty device around. ICEGRIPS&#174; ROTORS solve the problem with a twist!</p>
 		<a href="#" id="learn" class="ctabox">LEARN MORE ABOUT THIS PRODUCT ></a>
 	</div>
 	</div>
@@ -89,7 +90,7 @@ supplied adjustment tool.</div>
 		<div class="inner">
 		<div class="winter">FEATURING THE UNIQUE PATENTED</div>
 		<h1>REMOVABLE STRAP SYSTEM</h1>
-		<p>ICEGRIPS® ROTORS have been designed with a unique patented removable strap system. The ICEGRIPS® ROTORS straps are not permanently sewn into the sandal, allowing the end-user to change out the heel trap for an ankle strap (for greater security), change out all of the straps for a "bulky boot" kit, or easily replace straps if damaged</p>
+		<p>ICEGRIPS&#174; ROTORS have been designed with a unique patented removable strap system. The ICEGRIPS&#174; ROTORS straps are not permanently sewn into the sandal, allowing the end-user to change out the heel trap for an ankle strap (for greater security), change out all of the straps for a "bulky boot" kit, or easily replace straps if damaged</p>
 		<a href="#myModal2" class="ctabox" role="button" data-toggle="modal">SPEAK TO AN EXPERT ABOUT ICEGRIPS ROTORS ></a><br>
 		<a href="all-products.php" class="ctabox">VIEW ALL OUR PRODUCTS ></a>
 		</div>

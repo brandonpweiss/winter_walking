@@ -5,7 +5,8 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <title>Winter Walking | Contact Us</title>
+  <title>Contact Winter Walking | All-Traction Footwear for Reducing Slips and Falls</title>
+  <meta name="description" content="Over 30 years of slip resistant footwear, including ice grips, crampons, ice cleats, and over the boot footwear.">
     <script src="jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="modernizr.js"></script>

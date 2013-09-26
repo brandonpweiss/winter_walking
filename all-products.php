@@ -9,7 +9,7 @@ header('Location:'.$_SERVER['PHP_SELF']);
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Winter Walking Products</title>
+	<title>Winter Walking | Slip Resistant Footwear from Jordan David.  All Traction Footwear for Reducing Slips and Falls</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
