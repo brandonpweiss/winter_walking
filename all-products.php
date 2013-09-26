@@ -148,10 +148,22 @@ print('<div class="wrap clearfix">');
 print('<aside id="filter">');
 print('<form method="post" action="all-products.php">');
 
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit2" value="FILTER">');
+
+
+/* -----------------------SLIP HAZARD---------------------------- */
+print('<span class="filter-header first">SLIP HAZARD:</span>');
+print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
+if ($_POST['extreme-ice'] == 'extreme-ice'){
+print('checked = "checked"');
+};
+print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
+
+/* -------------------------------------------------------------------- */
 
 
 /* -------------TRACTION------------------------- */
-print('<span class="filter-header first">TRACTION:</span>');
+print('<span class="filter-header">TRACTION:</span>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="gritted" value="gritted" id="gritted"');
 if ($_POST['gritted'] == 'gritted'){
@@ -169,17 +181,11 @@ print('><label for="spiked">Spiked<span></span></label></div>');
 /* -----------WALKING CONDITION------------------- */
 print('<span class="filter-header">WALKING CONDITION:</span>');
 
-print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
-if ($_POST['extreme-ice'] == 'extreme-ice'){
-print('checked = "checked"');
-};
-print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
-
 print('<div class="opt-wrap"><input type="checkbox" name="outdoor-only" value="outdoor-only" id="outdoor-only"');
 if ($_POST['outdoor-only'] == 'outdoor-only'){
 print('checked = "checked"');
 };
-print('><label for="outdoor-only">Outdoor Only<span></span></label></div>');
+print('><label for="outdoor-only">Outdoor<span></span></label></div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="indoor-outdoor" value="indoor-outdoor" id="indoor-outdoor"');
 if ($_POST['indoor-outdoor'] == 'indoor-outdoor'){
@@ -237,6 +243,7 @@ print('checked = "checked"');
 };
 print('><label for="steel-toe">Steel Toe<span></span></label></div>');
 
+
 /* ------------FIT--------------------------------------------------- */
 print('<span class="filter-header">FIT:</span>');
 
@@ -259,6 +266,7 @@ print('checked = "checked"');
 print('><label for="overshoe">Over Shoe<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
+
 print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
 print('<button id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 // print('</div>');

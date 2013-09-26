@@ -119,7 +119,7 @@ $name = str_replace("LP's", "<br>Low Profile", $nameHP);
 					<div class="cta-details-blue">
 						<a class="request"  href="#myModal" role="button" data-toggle="modal">&lsaquo; REQUEST A QUOTE</a>
 						<br>
-						<a class="request request1" href="#myModal" role="button" data-toggle="modal">&lsaquo; SPEAK TO AN EXPERT</a>
+						<a class="request request1" href="#myModal4" role="button" data-toggle="modal">&lsaquo; SPEAK TO AN EXPERT</a>
 						<br>
 						<a class="request request2"  href="#myModal3" role="button" data-toggle="modal">&lsaquo; SHARE </a>
 					</div>

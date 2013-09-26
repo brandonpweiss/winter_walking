@@ -568,7 +568,23 @@ form .filter-submit {
     height: 40px;
     position: relative;
     /*margin-top: 20px;*/
-
+}
+form .filter-submit2 {
+	margin-top: 0px;
+	text-transform: uppercase;
+	background: url(img/subtle_grunge_blue.png);
+    border: medium none;
+ 	color: #ededed;
+    font-family: langdon;
+    font-size: 1.2em;
+    /*padding: 5px 40px 5px 40px;*/ /* Removed by RC was causing problem in safari */
+ 	margin: 0 auto;
+ 	margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    /*margin-top: 20px;*/
 }
 .filterreset{
 /*	width: 80px;
@@ -612,6 +628,9 @@ form .filter-reset:active {
 	outline: solid #555555 medium;
 }
 form .filter-submit:hover {
+	background: url(img/subtle_grunge_blue2.png);
+}
+form .filter-submit2:hover {
 	background: url(img/subtle_grunge_blue2.png);
 }
 form .filter-submit:active {
@@ -758,7 +777,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	letter-spacing: 1px;
 	font-family: langdon;
 	margin: 0 auto;
-	width: 70px;
 	margin-bottom: 5px;
 	text-transform: uppercase;
 	padding-top: 5px;
@@ -773,7 +791,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	letter-spacing: 1px;
 	font-family: karbonmedium;
 	margin: 0 auto;
-	max-width: 70px;
 	margin-bottom: 3px;
 	text-transform: uppercase;
 }
@@ -1293,7 +1310,6 @@ display:none;
 }
 
 nav{
-	background: #000000 url(img/subtle_grunge.png) center center;
 	text-align: center;
 	height: 20px;
 	padding: 5px 0px 4px 0px;

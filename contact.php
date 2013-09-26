@@ -26,7 +26,6 @@
 <div class="content">
 <div id="myModal2" style="max-width: 500px; margin: 0 auto;">
   <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h1 id="myModalLabel" style="color: #666666">CONTACT US</span></h1>
   </div>
 <div class="contactstuff" style="text-align: center;">
