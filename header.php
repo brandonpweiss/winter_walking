@@ -178,6 +178,10 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $absolute_url = "http://www.bpwtesting.com/winter_walking/";
 
+$product_model = $_GET["model"];
+$query = mysqli_query ($con, "SELECT * FROM products WHERE model = '$product_model'");
+$p = mysqli_fetch_array($query);
+
 $message = "
 <!doctype html>
 <html lang='en'>
