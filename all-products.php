@@ -147,6 +147,13 @@ print('checked = "checked"');
 };
 print('><label for="ice-snow">Ice and Snow<span></span></label></div>');
 
+
+print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
+if ($_POST['extreme-ice'] == 'extreme-ice'){
+print('checked = "checked"');
+};
+print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
+
 print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
 if ($_POST['stripping'] == 'stripping'){
 print('checked = "checked"');
@@ -186,12 +193,6 @@ print('><label for="spiked">Spiked<span></span></label></div>');
 
 /* -----------WALKING CONDITION------------------- */
 print('<span class="filter-header">WALKING CONDITION:</span>');
-
-print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
-if ($_POST['extreme-ice'] == 'extreme-ice'){
-print('checked = "checked"');
-};
-print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="outdoor-only" value="outdoor-only" id="outdoor-only"');
 if ($_POST['outdoor-only'] == 'outdoor-only'){
@@ -278,6 +279,7 @@ print('checked = "checked"');
 print('><label for="overshoe">Over Shoe<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER" style="margin-bottom:0px;">');
 print('<button id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 // print('</div>');
 print('</form>');
