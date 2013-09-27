@@ -215,17 +215,17 @@ $message = "
 <td style='font-size: 14px;'>$p[description]</td>
 </tr>
 </table>
-<table style='width: 600px; clear:both; float:left; margin-top: 20px;'>
+<table style='width: 600px; clear:both; float:left; margin-top: 20px; margin-left: 20px;'>
 <tr><td>FEATURES</td></tr>
 <tr><td>
 $p[features]
 </td></tr>
 </table>
 <div style='border: 2px solid black; padding: 20px 20px 40px 20px; background-color: white;'>
-<table style='width: 200px; float:left; margin-left: 20px; margin-top: 20px;'>";
+<table style='width: 200px; float:left; margin-left: -120px; margin-top: 20px;'>";
 
 $message .= "<tr>
-                  <th>Conditions</th>
+                  <th style='color: #555555;'>Conditions</th>
                   <th>Excellent</th>
                   <th>Good</th>
                   <th>N/A</th>
@@ -328,7 +328,7 @@ $message .= "<tr>
                   $message .= "</td>";
                 $message .= "</tr>";
                 $message .= "<tr>
-                  <th>Usage</th>
+                  <th style='color: #555555;'>Usage</th>
                   <th></th>
                   <th></th>
                   <th></th>
@@ -358,7 +358,7 @@ $message .= "<tr>
                   $message .= "</td>";
                 $message .= "</tr>";
                 $message .= "<tr>
-                  <th>Safe for Driving</th>
+                  <th style='color: #555555;'>Safe for Driving</th>
                   <th></th>
                   <th></th>
                   <th></th>
@@ -377,7 +377,7 @@ $message .= "<tr>
                 $message .= "</tr>";
 $message .= "
 </table>
-<table style='width: 300px; top: 20px; position: relative; clear:both;'>
+<table style='width: 300px; top: 0px; position: relative; top: -100px'>
                 <tr>
                   <th>SIZES</th>
                   <th>MODEL</th>
