@@ -1,4 +1,3 @@
-<?php ob_start(); ?>
 <?php
 $page_url = $_SERVER['PHP_SELF'];
 
@@ -178,8 +177,9 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $absolute_url = "http://www.bpwtesting.com/winter_walking/";
 
-$product_model = $_GET["model"];
-$query = mysqli_query ($con, "SELECT * FROM products WHERE model = '$product_model'");
+
+$modelnumber = $_POST['productmodelnumber'];
+$query = mysqli_query ($con, "SELECT * FROM products WHERE model = '$modelnumber'");
 $p = mysqli_fetch_array($query);
 
 $message = "
@@ -206,49 +206,283 @@ $message = "
 <div class='tables' style='width: 850px; margin:0 auto;'>
 <img style='width: 274px; position: relative; margin-left: -137px; left:50%;' src='$absolute_url/img/logo.png'>
 <p style='text-align:center;'>$sendName wants to share one of our products with you!</p>
-<div class='productimage' style='text-align:center;'><img style='width: 225px;' src='$absolute_url/$modelImage' alt='shoe'><br>
-<h1>".$p[name]."</h1>
+<div class='productimage' style='text-align:center;'><img style='width: 225px;' src='$absolute_url/$p[img_url1]' alt='shoe'><br>
+<h1>$p[name]</h1>
 </div>
 
 <table style='width: 850px; text-align: center; margin-bottom: 20px;'>
   <tr>
-<td style='font-size: 14px;'>".$p[description]."</td>
+<td style='font-size: 14px;'>$p[description]</td>
 </tr>
 </table>
 <table style='width: 600px; clear:both; float:left; margin-top: 20px;'>
 <tr><td>FEATURES</td></tr>
 <tr><td>
-".$p[features]."
+$p[features]
 </td></tr>
 </table>
 <div style='border: 2px solid black; padding: 20px 20px 40px 20px; background-color: white;'>
-<table style='width: 200px; float:left; margin-left: 20px; margin-top: 20px;'>
-<tr><td>IDEAL CONDITIONS</td></tr>
-<tr><td>Ice</td><td>".$p[ice]."</td></tr><tr><td>Snow</td><td>".$p[snow]."</td></tr><tr><td>Oil</td><td>".$p[oil]."</td></tr><tr><td>fats</td><td>".$p[fats]."</td></tr><tr><td>Soaps</td><td>".$p[soaps]."</td></tr><tr><td>Chemicals</td><td>".$p[chemicals]."</td></tr><tr><td>Liquids</td><td>".$p[liquids]."</td></tr><tr><td>Mud</td><td>".$p[mud]."</td></tr><tr><td>Indoor</td><td>".$p[indoor]."</td></tr><tr><td>Outdoor</td><td>".$p[outdoor]."</td></tr><tr><td>Driving</td><td>".$p[driving]."</td></tr>
+<table style='width: 200px; float:left; margin-left: 20px; margin-top: 20px;'>";
+
+$message .= "<tr>
+                  <th>Conditions</th>
+                  <th>Excellent</th>
+                  <th>Good</th>
+                  <th>N/A</th>
+                </tr>";
+              $message .= "<tr>";
+                $message .= "<th>Ice</th>";
+                  $message .= "<td>";
+                    if ($p[ice] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[ice] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[ice] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+              $message .= "<tr>";
+                $message .= "<th>Snow</th>";
+                                  $message .= "<td>";
+                    if ($p[snow] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[snow] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[snow] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+              $message .= "<tr>";
+                $message .= "<th>Oil</th>";
+                                  $message .= "<td>";
+                    if ($p[oil] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[oil] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[oil] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+
+                $message .= "</tr>";
+                $message .= "<tr>";
+                  $message .= "<th>Fats</th>";
+                  $message .= "<td>";
+                    if ($p[fats] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[fats] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[fats] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+                $message .= "<tr>";
+                  $message .= "<th>Soaps</th>";
+                  $message .= "<td>";
+                    if ($p[soaps] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[soaps] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[soaps] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+                $message .= "<tr>";
+                  $message .= "<th>Chemicals</th>";
+                  $message .= "<td>";
+                    if ($p[chemicals] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[chemicals] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[chemicals] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+                $message .= "<tr>";
+                  $message .= "<th>Liquids</th>";
+                  $message .= "<td>";
+                    if ($p[liquids] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[liquids] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[liquids] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+                $message .= "<tr>";
+                  $message .= "<th>Mud</th>";
+                  $message .= "<td>";
+                    if ($p[mud] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[mud] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[mud] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+                $message .= "<tr>
+                  <th>Usage</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>";
+                $message .= "<tr>";
+                  $message .= "<th>Indoor</th>";
+                  $message .= "<td>";
+                    if ($p[indoor] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[indoor] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[indoor] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+                $message .= "<tr>";
+                  $message .= "<th>Outdoor</th>";
+                  $message .= "<td>";
+                    if ($p[outdoor] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[outdoor] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[outdoor] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+                $message .= "<tr>
+                  <th>Safe for Driving</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>";
+                $message .= "<tr>";
+                  $message .= "<th>Driving</th>";
+                  $message .= "<td>";
+                    if ($p[driving] == 'great'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[driving] == 'good'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                  $message .= "<td>";
+                    if ($p[driving] == 'n/a'){ $message .= "&#x2713;"; };
+                  $message .= "</td>";
+                $message .= "</tr>";
+$message .= "
 </table>
 <table style='width: 300px; top: 20px; position: relative; clear:both;'>
-<tr><td>SIZES</td></tr>
-<tr>
-  <td>XS</td>
-  <td>S</td>
-  <td>M</td>
-  <td>L</td>
-  <td>XL</td>
-  <td>XXL</td>
-  <td>XXXL</td>
-  <td>XXXXL</td>
-</tr>
-<tr>
-<td>".$xs."</td>
-<td>".$s."</td>
-<td>".$m."</td>
-<td>".$l."</td>
-<td>".$xl."</td>
-<td>".$xxl."</td>
-<td>".$xxxl."</td>
-<td>".$xxxxl."</td>
-</tr>
-</table>
+                <tr>
+                  <th>SIZES</th>
+                  <th>MODEL</th>
+                  <th>FITS MENS</th>
+                  <th>FITS WOMANS</th>
+                </tr>";
+
+if ($p[XSM] && $p[XSW]) {
+                  $message .="
+                  <tr>
+                    <th>XS</th>
+                    <td>'.$p[xsmodel].'</td>
+                    <td>'.$p[XSM].'</td>
+                    <td>'.$p[XSW].'</td>
+                  </tr>
+                  ";
+                }
+                if ($p[SM] && $p[SW]) {
+                  $message .="
+                <tr>
+                  <th>S</th>
+                  <td>'.$p[smodel].'</td>
+                  <td>'.$p[SM].'</td>
+                  <td>'.$p[SW].'</td>
+                </tr>
+                  ";
+                }
+                if ($p[MM] && $p[MW]) {
+                  $message .="
+                <tr>
+                  <th>M</th>
+                  <td>'.$p[mmodel].'</td>
+                  <td>'.$p[MM].'</td>
+                  <td>'.$p[MW].'</td>
+                </tr>
+                  ";
+                }
+                if ($p[LM] && $p[LW]) {
+                  $message .="
+                <tr>
+                  <th>L</th>
+                  <td>'.$p[lmodel].'</td>
+                  <td>'.$p[LM].'</td>
+                  <td>'.$p[LW].'</td>
+                </tr>
+                  ";
+                }
+                if ($p[XLM] && $p[XLW]) {
+                  $message .="
+                <tr>
+                  <th>XL</th>
+                  <td>'.$p[xlmodel].'</td>
+                  <td>'.$p[XLM].'</td>
+                  <td>'.$p[XLW].'</td>
+                </tr>
+                  ";
+                }
+                if ($p[XXLM] && $p[XXLW]) {
+                  $message .="
+                <tr>
+                  <th>XXL</th>
+                  <td>'.$p[xxlmodel].'</td>
+                  <td>'.$p[XXLM].'</td>
+                  <td>'.$p[XXLW].'</td>
+                </tr>
+                  ";
+                }
+                if ($p[XXXLM] && $p[XXXLW]) {
+                  $message .="
+                <tr>
+                  <th>XXXL</th>
+                  <td>'.$p[xxxlmodel].'</td>
+                  <td>'.$p[XXXLM].'</td>
+                  <td>'.$p[XXXLW].'</td>
+                </tr>
+                  ";
+                }
+                if ($p[XXXXLM] && $p[XXXXLW]) {
+                  $message .="
+                <tr>
+                  <th>XXXXL</th>
+                  <td>'.$p[xxxxlmodel].'</td>
+                  <td>'.$p[XXXXLM].'</td>
+                  <td>'.$p[XXXXLW].'</td>
+                </tr>
+                  ";
+                }
+                if ($p[model] == 'JD4022 | JD4122' && $p[name] == 'GRIPS Over the Sock') {
+                  $message .="
+                  <tr>
+                    <th>WHOLE SIZES ONLY</th>
+                    <td>JD4022 | JD4122</td>
+                    <td>7 - 13</td>
+                    <td>7 - 13</td>
+                  </tr>
+                  <tr>
+                    <th>WHOLE SIZES ONLY</th>
+                    <td>JD4022 | JD4122</td>
+                    <td>7 - 13</td>
+                    <td>7 - 13</td>
+                  </tr>
+                  ";
+                }
+
+$message .="</table>
 </div>
 </div>
 <p style='margin-top: 50px; text-align: center; font-weight: bold;'>Please do not reply to this e-mail</p>
@@ -400,12 +634,10 @@ die();
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h1 id="myModalLabel">SHARE</h1>
   </div>
-
-
-
 <div class="modal-body">
   <div class="form">
   <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <input type="hidden" name="productmodelnumber" value="<?php print $product_model; ?>">
     <label>Your Name</label>
     <input  type="text" placeholder="Your Name" name="sendName" maxlength="80" size="30"><br><br>
       <label>Your Email</label>
