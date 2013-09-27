@@ -32,25 +32,21 @@
 	<div id="inner">
 <div class="winter">WE TAKE SLIPS AND FALLS</div>
 <h1>EXTREMELY<br>SERIOUSLY</h1>
-<p>Winter Walking is North America's leading manufacturer of All-Traction™ Footwear.  We've been improving worker's safety with the world's largest organizations for over 30 years, earning an unparalleled expertise in the nuances of accident prevention.  Whether indoors or outdoors, ice or snow, oil, grease, or chemicals, Winter Walking has studied all the variables to provide you with the best solutions.</p>
+<p>Winter Walking is North America's leading manufacturer of industrial ice cleats and winter traction gear. We've been helping the world's largest organizations to reduce their employee slips and falls for over 30 years. We've been around for while, but you won't find us on Amazon or in Wal-Mart because that's not where corporate safety professionals spend their time.</p>
 
-<p>From Non-Slip Shoes to All-Traction™ Footwear, Ice Cleats to Ice Creepers, we're as obsessed with creating the most effective products as you are with finding them.  Your search ends here - <br><br><br><a href="#myModal" class="speak" role="button" data-toggle="modal">speak to our experts today.</a></p>
+<h3>INDUSTRIAL STRENGTH</h3>
+<p>We do not build our ice cleats for casual use on the weekend. Our products are not meant for walking the dog or shoveling the driveway. <em>We build our ice cleats to be industrial strength because they are used in industrial settings</em>. Our ice cleats are designed to hold up in the most rugged of all working conditions. We understand that a worker whose job task requires them to deal with ice and snow for hours at a time, day after day, week after week cannot risk using an ice cleat that may break after a few hours or days. We build our ice cleats to last all season long, year in and year out. We don't just make ice cleats, we perfect them.&#8482;</p>
 
-<h3>RESEARCH & DEVELOPMENT</h3>
-<p>Winter Walking didn't become the largest and oldest manufacturer of All-Traction™ Footwear by chance.  Every product in our line was created through years of research and development with you, the end user.  Our designs have proven to be so uniquely beneficial that we have been awarded several dozen patents by the United States Patent and Trademark Office in Alexandria, Virginia.</p>
+<h3>INNOVATION</h3>
+<p>We have the webs largest selection of unique ice walking items. Sure there are sites with more items, but take a closer look and you'll see a lot of the same thing over and over again. Every ice cleat that Winter Walking offers was custom designed and manufactured by us. We hold a dozen patents on various things from spike placement, to self cleaning treads and from replaceable straps to rear pull-tabs. But the best part is that each one of these concepts sprang from our intense interaction with you, our customer.</p>
 
-<h3>CUSTOMER SERVICE & INVENTORY</h3>
-<p>Winter Walking has spent over 30 years reducing workplace slips and falls though the implementation of All-Traction™ Footwear.  No one knows as much about accident prevention as our team of experts, and no one will work harder to find the perfect solution for the unique challenges in your workplace.  Once we've identified the right solution, our massive inventory levels enable us to get the product you need out the door and in your hands while you still need it — not months later.</p>
+<h3>MORE THAN JUST PRODUCTS</h3>
+<p>Quite possibly you came to this site looking for ice cleats, but in all reality, nobody really <em>wants</em>ice cleats. What you really wanted was to make your slips and falls go away. Here at Winter Walking, rest assured that we will put your employees in the best possible ice cleat for their unique situation, but that's only the beginning. We will stick around to help you implement your program, promote it and monitor its success. From customized training posters and product specific videos to customized web portals and extensive field surveys, we will help you to get what you <em>really</em> wanted from us&#8230;a long term reduction of slips and falls.</p>
 
-<a target="_blank" href="guide.pdf">Download The Ice Cleats Selection Guide</a>
+<h3>CALL US and WE'LL BE HERE</h3>
+<p>We prepare for the Winter by building a massive inventory to help meet your demands when you need it the most. Summers around here can be lonely because our customers only call us when it's snowing, but 99% of our orders ship within 24 hours because we've spent all that time preparing&#8230;and just waiting for you to call.</p>
 
-<h3>SAFETY & FINANCIAL BENEFITS</h3>
-<p>According to the Bureau of Labor Statistics, nearly 15% of all lost workday accidents are due to slips, trips, and falls.  When assessing the cost of a lost workday accident, we commonly identify "direct costs" first, including workers’ compensation claims and up-front medical costs.  However, the true cost of a lost workday accident becomes most apparent when considering the "indirect costs" such as lost/decreased productivity, replacement hiring, overtime pay, administrative and managerial costs, etc.  This so-called "iceberg effect" is why the National Safety Council estimates the current total cost for each lost workday at $34,000!  As most companies will see between 2-5% of their workforce experience lost workdays due to accidental slips and falls, these massive costs will have a drastic effect on the businesses bottom line.</p>
-
-<p>With over a dozen products in our line specifically designed to increase traction and reduce slips and falls, Winter Walking can help you to contain these costs.</p>
-
-<a href="#myModal" role="button" data-toggle="modal">Calculate Your Potential Savings</a>
-
+<p>Ready to get started? <strong><a href="#myModal" class="speak" role="button" data-toggle="modal">SPEAK TO OUR EXPERTS TODAY.</a></strong></p>
 
 </div>
 	</div>
