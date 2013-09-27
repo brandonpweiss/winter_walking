@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 $page_url = $_SERVER['PHP_SELF'];
 
