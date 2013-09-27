@@ -203,7 +203,7 @@ $message = "
   </style>
 </head>
 <body>
-<div class='tables' style='width: 850px; margin:0 auto;'>
+<div class='tables' style='width: 900px; margin: 0 auto;'>
 <img style='width: 274px; position: relative; margin-left: -137px; left:50%;' src='$absolute_url/img/logo.png'>
 <p style='text-align:center;'>$sendName wants to share one of our products with you!</p>
 <div class='productimage' style='text-align:center;'><img style='width: 225px;' src='$absolute_url/$p[img_url1]' alt='shoe'><br>
