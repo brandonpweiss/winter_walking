@@ -19,8 +19,7 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
-// $wwemail = "info@winterwalking.com";
-$wwemail = "test@robcapell.com";
+$wwemail = "info@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Speak to an Expert Form.
@@ -69,8 +68,7 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
-// $wwemail = "info@winterwalking.com";
-$wwemail = "test@robcapell.com";
+$wwemail = "info@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Request Product Information Kit Form.
@@ -128,8 +126,7 @@ $product_3_quantity  = filter_var($_POST['product_3_quantity'], FILTER_SANITIZE_
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
-// $wwemail = "info@winterwalking.com";
-$wwemail = "test@robcapell.com";
+$wwemail = "info@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Request a quote Form.
@@ -206,24 +203,24 @@ $message = "
 <img style='width: 274px; position: relative; margin-left: -137px; left:50%;' src='$absolute_url/img/logo.png'>
 <p style='text-align:center;'>$sendName wants to share one of our products with you!</p>
 <div class='productimage' style='text-align:center;'><img style='width: 225px;' src='$absolute_url/$modelImage' alt='shoe'><br>
-<h1>$p[name]</h1>
+<h1>".$p[name]."</h1>
 </div>
 
 <table style='width: 850px; text-align: center; margin-bottom: 20px;'>
   <tr>
-<td style='font-size: 14px;'>$p[description]</td>
+<td style='font-size: 14px;'>".$p[description]."</td>
 </tr>
 </table>
 <table style='width: 600px; clear:both; float:left; margin-top: 20px;'>
 <tr><td>FEATURES</td></tr>
 <tr><td>
-$p[features]
+".$p[features]."
 </td></tr>
 </table>
 <div style='border: 2px solid black; padding: 20px 20px 40px 20px; background-color: white;'>
 <table style='width: 200px; float:left; margin-left: 20px; margin-top: 20px;'>
 <tr><td>IDEAL CONDITIONS</td></tr>
-<tr><td>Ice</td><td>$p[ice]</td></tr><tr><td>Snow</td><td>$p[snow]</td></tr><tr><td>Oil</td><td>$p[oil]</td></tr><tr><td>fats</td><td>$p[fats]</td></tr><tr><td>Soaps</td><td>$p[soaps]</td></tr><tr><td>Chemicals</td><td>$p[chemicals]</td></tr><tr><td>Liquids</td><td>$p[liquids]</td></tr><tr><td>Mud</td><td>$p[mud]</td></tr><tr><td>Indoor</td><td>$p[indoor]</td></tr><tr><td>Outdoor</td><td>$p[outdoor]</td></tr><tr><td>Driving</td><td>$p[driving]</td></tr>
+<tr><td>Ice</td><td>".$p[ice]."</td></tr><tr><td>Snow</td><td>".$p[snow]."</td></tr><tr><td>Oil</td><td>".$p[oil]."</td></tr><tr><td>fats</td><td>".$p[fats]."</td></tr><tr><td>Soaps</td><td>".$p[soaps]."</td></tr><tr><td>Chemicals</td><td>".$p[chemicals]."</td></tr><tr><td>Liquids</td><td>".$p[liquids]."</td></tr><tr><td>Mud</td><td>".$p[mud]."</td></tr><tr><td>Indoor</td><td>".$p[indoor]."</td></tr><tr><td>Outdoor</td><td>".$p[outdoor]."</td></tr><tr><td>Driving</td><td>".$p[driving]."</td></tr>
 </table>
 <table style='width: 300px; top: 20px; position: relative; clear:both;'>
 <tr><td>SIZES</td></tr>
@@ -238,14 +235,14 @@ $p[features]
   <td>XXXXL</td>
 </tr>
 <tr>
-<td>$xs</td>
-<td>$s</td>
-<td>$m</td>
-<td>$l</td>
-<td>$xl</td>
-<td>$xxl</td>
-<td>$xxxl</td>
-<td>$xxxxl</td>
+<td>".$xs."</td>
+<td>".$s."</td>
+<td>".$m."</td>
+<td>".$l."</td>
+<td>".$xl."</td>
+<td>".$xxl."</td>
+<td>".$xxxl."</td>
+<td>".$xxxxl."</td>
 </tr>
 </table>
 </div>
