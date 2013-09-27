@@ -88,23 +88,24 @@ print ('
 			$xxxxl = '&#32;';
 		};
 
-		if ($p[img_url4] != null && $p[img_url2] != null && $p[img_url3] != null && $p[img_url5] != null && $p[img_url6] != null) {
+		if ($p[img_url1] != null) {
+		$mainimage= '<div class="main-image"><img src="'.$p[img_url1].'"></div>';
 		 $image1 = '<div class="image1"><img src="'.$p[img_url1].'"></div>';
-		};
-		if ($p[img_url4] != null) {
-			$image2 = '<div class="image2"><img src="'.$p[img_url4].'"></div>';
-		};
 		if ($p[img_url2] != null) {
-			$image3 = '<div class="image3"><img src="'.$p[img_url2].'"></div>';
+			$image2 = '<div class="image2"><img src="'.$p[img_url2].'"></div>';
 		};
 		if ($p[img_url3] != null) {
-			$image4 = '<div class="image4"><img src="'.$p[img_url3].'"></div>';
+			$image3 = '<div class="image3"><img src="'.$p[img_url3].'"></div>';
+		};
+		if ($p[img_url4] != null) {
+			$image4 = '<div class="image4"><img src="'.$p[img_url4].'"></div>';
 		};
 		if ($p[img_url5] != null) {
 			$image5 = '<div class="image5"><img src="'.$p[img_url5].'"></div>';
 		};
 		if ($p[img_url6] != null) {
 			$image6 = '<div class="image6"><img src="'.$p[img_url6].'"></div>';
+		};
 		};
 
 $nameHP = str_replace("HP's", "<br>High Profile", $p[name]);
@@ -140,10 +141,13 @@ $name = str_replace("LP's", "<br>Low Profile", $nameHP);
 							<table border="1" bordercolor="#0000" style="background-color:grey; color: white; width: 100%;">
 							<style>
 							th, td {padding: 10px 3px 10px 3px}
+							.caps {
+								text-transform: uppercase;
+							}
 							</style>
 							<?php
 							print ('<tr>
-									<th>Conditions</th>
+									<th class="caps">Conditions</th>
 									<th>Excellent</th>
 									<th>Good</th>
 									<th>N/A</th>
@@ -245,6 +249,12 @@ $name = str_replace("LP's", "<br>Low Profile", $nameHP);
 										if ($p[mud] == 'n/a'){ print ('&#x2713;'); };
 									print ('</td>');
 								print ('</tr>');
+								print ('<tr>
+									<th class="caps">Usage</th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>');
 								print ('<tr>');
 									print ('<th>Indoor</th>');
 									print ('<td>');
@@ -269,6 +279,12 @@ $name = str_replace("LP's", "<br>Low Profile", $nameHP);
 										if ($p[outdoor] == 'n/a'){ print ('&#x2713;'); };
 									print ('</td>');
 								print ('</tr>');
+								print ('<tr>
+									<th class="caps">Safe for Driving</th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>');
 								print ('<tr>');
 									print ('<th>Driving</th>');
 									print ('<td>');
@@ -401,10 +417,8 @@ $name = str_replace("LP's", "<br>Low Profile", $nameHP);
 			<div id="right">
 				<div class="inner">
 					<div class="views-info">
-						<div class="main-image">
-							<img src="<?php print $p[img_url1]; ?>">
-						</div>
-					<?php print $image1.$image2.$image3.$image4.$image5.$image6; ?>
+						<?php print $mainimage; ?>
+						<?php print $image1.$image2.$image3.$image4.$image5.$image6; ?>
 					</div>
 				</div>
 			</div>

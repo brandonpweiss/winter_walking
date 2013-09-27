@@ -39,6 +39,8 @@ header('Location:'.$_SERVER['PHP_SELF']);
 <?php
 include('config.php');
 
+$filter_query .= " WHERE `id` < 100 ";
+
 $lw = ($_GET['lightweight']);
 $max = ($_GET['maxtraction']);
 if ($lw == 'true') {
@@ -47,17 +49,6 @@ if ($lw == 'true') {
 	$filter_query .= " WHERE `extreme-ice` = 1 ";
 };
 
-// $ind = ($_GET['indoor']);
-// if ($ind = 'true') {
-// 	$filter_query .= " WHERE `category` = 'indoor' ";
-// };
-
-// $os = ($_GET['overshoe']);
-// if ($os = 'true') {
-// 	$filter_query .= " WHERE `category` = 'over shoe boots' ";
-// };
-
-$filter_query =" WHERE `id` < 100 ";
 if ( isset( $_POST['filter-submit'] ) )
 {
 
@@ -136,28 +127,43 @@ if ( $_POST['over-sock'] == 'over-sock') {
 if ( $_POST['steel-toe'] == 'steel-toe') {
 	$filter_query .= " WHERE `steel-toe` = 1 ";
 };
-
+};
 $filter_query = str_replace('  ', ' AND ', $filter_query);
 $filter_query = str_replace('AND WHERE', ' AND ', $filter_query);
-
-};
 
 // print($filter_query);
 print('<section id="products">');
 print('<div class="wrap clearfix">');
 print('<aside id="filter">');
 print('<form method="post" action="all-products.php">');
-
-print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit2" value="FILTER">');
-
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER" style="margin-bottom:15px;">');
 
 /* -----------------------SLIP HAZARD---------------------------- */
 print('<span class="filter-header first">SLIP HAZARD:</span>');
-print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
-if ($_POST['extreme-ice'] == 'extreme-ice'){
+
+print('<div class="opt-wrap"><input type="checkbox" name="ice-snow" value="ice-snow" id="ice-snow"');
+if ($_POST['ice-snow'] == 'ice-snow'){
 print('checked = "checked"');
 };
-print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
+print('><label for="ice-snow">Ice and Snow<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="stripping" value="stripping" id="stripping"');
+if ($_POST['stripping'] == 'stripping'){
+print('checked = "checked"');
+};
+print('><label for="stripping">Floor Stripping<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="oil-grease" value="oil-grease" id="oil-grease"');
+if ($_POST['oil-grease'] == 'oil-grease'){
+print('checked = "checked"');
+};
+print('><label for="oil-grease">Oil/Grease<span></span></label></div>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="food-processing" value="food-processing" id="food-processing"');
+if ($_POST['food-processing'] == 'food-processing'){
+print('checked = "checked"');
+};
+print('><label for="food-processing">Food Processing<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
 
@@ -180,6 +186,12 @@ print('><label for="spiked">Spiked<span></span></label></div>');
 
 /* -----------WALKING CONDITION------------------- */
 print('<span class="filter-header">WALKING CONDITION:</span>');
+
+print('<div class="opt-wrap"><input type="checkbox" name="extreme-ice" value="extreme-ice" id="extreme-ice"');
+if ($_POST['extreme-ice'] == 'extreme-ice'){
+print('checked = "checked"');
+};
+print('><label for="extreme-ice">Extreme Ice<span></span></label></div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="outdoor-only" value="outdoor-only" id="outdoor-only"');
 if ($_POST['outdoor-only'] == 'outdoor-only'){
@@ -266,8 +278,6 @@ print('checked = "checked"');
 print('><label for="overshoe">Over Shoe<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
-
-print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER">');
 print('<button id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 // print('</div>');
 print('</form>');
