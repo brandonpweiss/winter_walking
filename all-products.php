@@ -276,7 +276,7 @@ print('<div class="opt-wrap"><input type="checkbox" name="overshoe" value="overs
 if ($_POST['overshoe'] == 'overshoe'){
 print('checked = "checked"');
 };
-print('><label for="overshoe">Over Shoe<span></span></label></div>');
+print('><label for="overshoe">Over the Shoe Boots<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
 print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER" style="margin-bottom:0px;">');
