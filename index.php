@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 <title>Winter Walking | Ice Cleats, Safety Shoes, Slip Resistant Footwear, Creepers and Safety Work Boots</title>
 <meta name="description" content="Our 30 years of making ice cleats, slip resistant shoes, footwear and ice cleats helps you walk safely in snow, ice, oil, grease, water and chemicals.  With over a dozen non slip shoes, we have a solution for your safety.">
+	<link rel="shortcut icon" href="img/favicon.ico"/>
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">

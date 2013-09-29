@@ -11,6 +11,7 @@ $p = mysqli_fetch_array($query);
 	<meta charset="UTF-8">
 	<title><?php print $p[name]; ?> Product Details</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico"/>
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">

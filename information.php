@@ -6,6 +6,7 @@
 	<title>About Winter Walking.  All Traction Footwear for Reducing Slips and Falls</title>
 	<meta name="description" content="Our 30 years of making slip resistant shoes, footwear and ice cleats helps you walk safely in snow, ice, oil, grease, water and chemicals.  With over a dozen non slip shoes, we have a solution for your safety." />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico"/>
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">

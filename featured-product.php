@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Winter Walking | Ice Grips Rotors</title>
 	<meta name="description" content="ICEGRIPS&#174; ROTORS is a uniquely versatile ice and snow walking device that allows workers to move safely from indoor surfaces to outdoor surfaces without putting on and taking off their traction gear. If your employees are constantly walking in and out of building or moving from icy surfaces to clean surfaces, ICEGRIPS&#174; ROTORS is the solution you’ve been waiting for.">
+	<link rel="shortcut icon" href="img/favicon.ico"/>
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">

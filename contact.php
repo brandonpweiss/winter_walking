@@ -2,7 +2,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">

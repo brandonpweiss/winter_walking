@@ -3,8 +3,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Winter Walking Product Details</title>
+	<title>Winter Walking Thanks You</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico"/>
 	<link rel="stylesheet" href="slider.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="normalize.css">
