@@ -17,6 +17,7 @@ header('Location:'.$_SERVER['PHP_SELF']);
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="style.css">
 	<script src="jquery.js"></script>
+	<script src="modernizr.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-slider.js"></script>
 </head>
@@ -280,7 +281,7 @@ print('checked = "checked"');
 print('><label for="overshoe">Over the Shoe Boots<span></span></label></div>');
 
 /* -------------------------------------------------------------------- */
-print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER" style="margin-bottom:0px;">');
+print('<input type="submit" id="filterbutton" name ="filter-submit" class="filter-submit" value="FILTER" style="margin-bottom:0px;"><br>');
 print('<button id="resetbutton" name ="filter-reset" class="filter-reset" value="RESET">RESET</button>');
 // print('</div>');
 print('</form>');

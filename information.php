@@ -12,7 +12,9 @@
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="home.css">
+
 	<script src="jquery.js"></script>
+	<script src="modernizr.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-slider.js"></script>
 </head>
