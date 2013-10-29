@@ -27,7 +27,7 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
 // $wwemail = "info@winterwalking.com";
-$wwemail = "twizted1888@gmail.com";
+$wwemail = "jonathan@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Speak to an Expert Form.
@@ -85,8 +85,8 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
-// $wwemail = "twizted1888@gmail.com";
-$wwemail = "twizted1888@gmail.com";
+// $wwemail = "jonathan@winterwalking.com";
+$wwemail = "jonathan@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Request Product Information Kit Form.
@@ -151,8 +151,8 @@ $product_3_quantity  = filter_var($_POST['product_3_quantity'], FILTER_SANITIZE_
 
 $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
 
-// $wwemail = "twizted1888@gmail.com";
-$wwemail = "twizted1888@gmail.com";
+// $wwemail = "jonathan@winterwalking.com";
+$wwemail = "jonathan@winterwalking.com";
 
 $message ="
 This is a message sent via winterwalking.com's Request a quote Form.
@@ -557,7 +557,7 @@ die();
       <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
-    <input  type="text" placeholder="title" name="title" class="bot-prevention">
+    <input  type="text" name="title" class="bot-prevention">
     <div style="float: left;">
     <label>Company Name</label>
     <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
@@ -601,7 +601,7 @@ die();
       <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
-    <input  type="text" placeholder="title" name="title" class="bot-prevention">
+    <input  type="text" name="title" class="bot-prevention">
     <div style="float: left;">
     <label>Company Name</label>
     <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
@@ -656,7 +656,7 @@ die();
       <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
-    <input  type="text" placeholder="title" name="title" class="bot-prevention">
+    <input  type="text" name="title" class="bot-prevention">
     <div style="float: left;">
     <label>Company Name</label>
     <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
@@ -730,7 +730,7 @@ die();
     <input type="hidden" name="productmodelnumber" value="<?php print $product_model; ?>">
     <label>Your Name</label>
     <input  type="text" placeholder="Your Name" name="sendName" maxlength="80" size="30"><br><br>
-    <input  type="text" placeholder="title" name="title" class="bot-prevention">
+    <input  type="text" name="title" class="bot-prevention">
       <label>Your Email</label>
     <input  type="email"  placeholder="youremail@yourdomain.com" name="sendEmail" maxlength="80" size="30"><br><br><br><br>
     <label>Recipients Name</label>
