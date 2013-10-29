@@ -557,6 +557,9 @@ box-shadow: 0 0 2px 4px #37a0d0;
 	padding: 2px 0px;
 	font-family: karbonmedium;
 }
+.bot-prevention {
+	display: none!important;
+}
 .opt-wrap input{
 	float:left;
 	display:inline-block;

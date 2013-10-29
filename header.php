@@ -3,6 +3,13 @@
 $page_url = $_SERVER['PHP_SELF'];
 
 if (isset($_POST['contact-submit'])) {
+
+$bot_check = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
+if ($bot_check != NULL) {
+  header('Location: thankyou.php');
+  die();
+} else {
+
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
 
 $lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
@@ -43,10 +50,19 @@ $headers .= "Reply-To: ".$firstname." <".$email.">\n";
 mail($wwemail, "Speak to an Expert Requested", $message, $headers);
 header('Location: thankyou.php');
 die();
+
+};
 };
 
 
 if (isset($_POST['request-info-submit'])) {
+
+$bot_check = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
+if ($bot_check != NULL) {
+  header('Location: thankyou.php');
+  die();
+} else {
+
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
 
 $lastname = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
@@ -97,10 +113,17 @@ mail($wwemail, "Product Information Kit Requested", $message, $headers);
 header('Location: thankyou.php');
 die();
 };
+};
 
 /*==========================================================*/
 
 if (isset($_POST['request-quote-submit'])) {
+
+$bot_check = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
+if ($bot_check != NULL) {
+  header('Location: thankyou.php');
+  die();
+} else {
 
 $firstname = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
 
@@ -164,10 +187,17 @@ mail($wwemail, "Product Quote Requested", $message, $headers);
 header('Location: thankyou.php');
 die();
 };
+};
 
 /*==========================================================*/
 
 if (isset($_POST['product-share-submit'])) {
+
+$bot_check = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
+if ($bot_check != NULL) {
+  header('Location: thankyou.php');
+  die();
+} else {
 
 /*#############SENDERS NAME##############*/
 $sendName = filter_var($_POST['sendName'], FILTER_SANITIZE_STRING);
@@ -505,6 +535,7 @@ mail($email, "$sendName wants to share one of our products with you!", $message,
 header('Location: thankyou.php');
 die();
 };
+};
 ?>
 
 <!-- Contact an expert -->
@@ -526,6 +557,7 @@ die();
       <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
+    <input  type="text" placeholder="title" name="title" class="bot-prevention">
     <div style="float: left;">
     <label>Company Name</label>
     <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
@@ -569,6 +601,7 @@ die();
       <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
+    <input  type="text" placeholder="title" name="title" class="bot-prevention">
     <div style="float: left;">
     <label>Company Name</label>
     <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
@@ -623,6 +656,7 @@ die();
       <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
+    <input  type="text" placeholder="title" name="title" class="bot-prevention">
     <div style="float: left;">
     <label>Company Name</label>
     <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
@@ -696,6 +730,7 @@ die();
     <input type="hidden" name="productmodelnumber" value="<?php print $product_model; ?>">
     <label>Your Name</label>
     <input  type="text" placeholder="Your Name" name="sendName" maxlength="80" size="30"><br><br>
+    <input  type="text" placeholder="title" name="title" class="bot-prevention">
       <label>Your Email</label>
     <input  type="email"  placeholder="youremail@yourdomain.com" name="sendEmail" maxlength="80" size="30"><br><br><br><br>
     <label>Recipients Name</label>

@@ -50,13 +50,14 @@
 <br>
 <div class="modal-body">
   <div class="form" style="font-family: karbonlight">
-  <form name="contactform" class="clearfix" id="contactForm" method="post" action="verify.php">
+  <form name="contactform" class="clearfix" id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <div style="float: left;">
     <label>First Name</label>
     <input  type="text" placeholder="first name" name="firstName" maxlength="80" size="30"></div>
       <div style="float: right;">
       <label>Last Name</label>
     <input  type="text"  placeholder="last name" name="lastName" maxlength="80" size="30"></div>
+    <input  type="text" placeholder="title" name="title" class="bot-prevention">
     <div style="float: left;">
     <label>Company Name</label>
     <input  type="text"  placeholder="company name" name="company" maxlength="80" size="30"></div>
@@ -85,12 +86,6 @@
   <div style="clear: both; margin-top: 5px;">
       <label>Comments</label>
     <textarea name="comments"  placeholder="comments..." rows="5" cols="20"></textarea></div><br><br>
-    <div class="recaptcha" style="float:left">
-     <?php
-    require_once('recaptchalib.php');
-  $publickey = "6LcmN-kSAAAAAJ_g4mV62Woh4-sWr_qFyS16653G"; // you got this from the signup page
-  echo recaptcha_get_html($publickey);
-  ?></div>
     <button type="submit" value="Submit" name ="request-info-submit" id="submit">SUBMIT</button>
   </form>
   </div>
