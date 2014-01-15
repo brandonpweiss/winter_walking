@@ -97,6 +97,7 @@
 <li>P 1-888-NO-SLIPS (667-5477)</li>
 <li>F 1-215-441-9642</li>
 <li>E <a href="mailto:info@winterwalking.com">info@winterwalking.com</a></li>
+<li>Connect on <a href="http://www.linkedin.com/company/2453879?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A1622272341383685259121%2CVSRPtargetId%3A2453879%2CVSRPcmpt%3Aprimary">LinkedIn</a></li>
 </ul>
 
 <p class="copyright">All content copyright 2013 © Winter Walking.  Do not reuse or reproduce without permission.</p>

@@ -75,7 +75,7 @@
     <input  type="text"  placeholder="State" name="state" maxlength="80" size="30">
 </div>
       <div style="float: right;">
-    <label>Zip Code</label>
+    <label>Zip and Postal Code</label>
     <input  type="text"  placeholder="12345" name="zip" maxlength="80" size="30"></div>
     <div style="float: left;">
       <label>Phone</label>

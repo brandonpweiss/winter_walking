@@ -124,10 +124,11 @@
 			$(window).load(function() {
 	  			$('.flexslider').flexslider({
 		   	 		animation: "slide",
+		   	 		slideshowSpeed: 10000,  
 		   	 		startAt: 0,
+					pauseOnHover: "true",
 		   	 		initDelay: 0,
-		   	 		touch: true,
-		   	 		pauseOnHover: true
+		   	 		touch: "true"
 	  			});
 			});
 		</script>

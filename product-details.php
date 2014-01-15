@@ -418,7 +418,7 @@ $name = str_replace("LP's", "<br>Low Profile", $nameHP);
 			<div id="right">
 				<div class="inner">
 					<div class="views-info">
-						<?php print $mainimage; ?>
+						<div class="mainimage"><span style="position: relative; top: 20px;"><span style="float:right; color: #666666;"><!--Hover to Zoom--></span></span><?php print $mainimage; ?></div>
 						<?php print $image1.$image2.$image3.$image4.$image5.$image6; ?>
 					</div>
 				</div>
@@ -429,5 +429,11 @@ $name = str_replace("LP's", "<br>Low Profile", $nameHP);
 <?php include('footer.php');?>
 <script src="js/products.js"></script>
 <script src="js/stickynav.js"></script>
+<!--<script src='jquery.zoom.js'></script>
+<script>
+		$(document).ready(function(){
+			$('.mainimage').zoom();
+		});
+	</script>-->
 </body>
 </html>

@@ -266,7 +266,7 @@ print('<div class="opt-wrap"><input type="checkbox" name="sling-device" value="s
 if ($_POST['sling-device'] == 'sling-device'){
 print('checked = "checked"');
 };
-print('><label for="sling-device">Sling Device<span></span></label></div>');
+print('><label for="sling-device">Rubber Sling Device<span></span></label></div>');
 
 print('<div class="opt-wrap"><input type="checkbox" name="over-sock" value="over-sock" id="over-sock"');
 if ($_POST['over-sock'] == 'over-sock'){
@@ -306,13 +306,13 @@ print('<div class="product-bttn-wrapper">');
 while ($fetch = mysqli_fetch_array($query)) {
 
 	print ('<a class="product-thumb-wrap" href="product-details.php?model='.$fetch[model].'">
-				<button class="product" type="button">
+				<span class="product" type="button">
 					<div class="titles">
 					<span class="title">'.$fetch[name].'</span>
 					<span class="sub-title">'.$fetch[upper_style].'</span>
 										<img src=" '.$fetch[img_url1].' " alt="shoe">
 					</div>
-				</button>
+				</span>
 			</a>');
 
 };

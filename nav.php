@@ -5,6 +5,7 @@
 	    		<ul>
 			      <li><a href="index.php">HOME</a></li>
 			      <li class="hide2"><a href="all-products.php">PRODUCTS</a></li>
+			      <li><a href="wordpress">BLOG</a></li>
 			      <!-- <li class="navLogo"><img src="img/shoe.png" alt="Shoe"></li> -->
 			      <li><a href="information.php">COMPANY</a></li>
 			      <li id="contact1"><a href="contact.php">CONTACT</a></li>

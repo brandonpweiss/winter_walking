@@ -3,9 +3,7 @@
 $loginusername = "admin";
 $loginpassword =  "password";
 
-/* database info */
-$con = mysqli_connect("localhost", "root", "root", "winter_walking");
-
+$con = mysqli_connect("winterwalking2.db.4800490.hostedresource.com", "winterwalking2", "Winter22!", "winterwalking2");
 /* check connection */
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());

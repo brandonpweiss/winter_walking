@@ -1,0 +1,240 @@
+body {
+	background: #FFFFFF;
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	color: #333333;
+	margin: 0px;
+	padding: 0px;
+}
+h2 {
+	font-size: 14px;
+}
+.indextext {
+	font-size: 18px;
+	color: #666666;
+	text-align: left;
+	padding-right: 80px;
+	padding-left: 80px;
+	padding-top: 10px;
+	display: block;
+}
+h1 {
+	font-size: 18px;
+	color: #333333;
+}
+
+.text {
+	background: #FFFFFF;
+	font-size: 12px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	text-align: left;
+}table {
+	background: #FFFFFF;
+	margin:0 auto;
+	
+}
+#tablecontent{width:900px; padding:0;}
+
+.navbox {
+	color: #000000;
+	text-align: left;
+	background: #FFFFFF;
+	font-size: 16px;
+}
+.text14 {
+	font-size: 14px;
+	color: #000000;
+}
+a:link {
+	color: #000099;
+	text-decoration: none;
+}
+a:visited {
+	color: #000099;
+	text-decoration: none;
+}
+a:hover {
+	color: #88002A;
+	text-decoration: underline;
+}
+a:active {
+	color: #000099;
+}
+.indextextleft {
+	font-size: 18px;
+	color: #666666;
+	text-align: left;
+	padding-top: 10px;
+}
+.poplist {
+	background: #FFFFFF;
+	font-size: 14px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	line-height: 1.8em;
+}
+li {
+	line-height: 1.7em;
+	list-style: square;
+}
+.darkbluetable {
+	color: #FFFFFF;
+	background: #336699;
+	text-align: left;
+	padding: 8px;
+	border-bottom: 1px solid #666666;
+}
+.lightbluetable {
+	color: #000000;
+	background: #68A7C6;
+	padding: 8px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #666666;
+}
+.tantable {
+	color: #000000;
+	background: #CCCC99;
+	text-align: left;
+	padding: 8px;
+	text-transform: uppercase;
+	vertical-align: middle;
+	border-bottom: 1px solid #666666;
+}
+.titletext {
+	font-size: 16px;
+	color: #666666;
+	text-align: left;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	display: block;
+	font-family: Geneva, Arial, Helvetica, san-serif;
+}
+.textintable {
+	font-size: 12px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	text-align: left;
+}
+.footer {
+	font-size: 9px;
+	color: #999999;
+	text-align: center;
+	padding: 10px;
+}
+.titles {
+	font-size: 18px;
+	color: #333333;
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	background: #F3F3F3;
+	line-height: 1.2em;
+}
+.titletextunderline {
+	font-size: 16px;
+	color: #000000;
+	text-align: left;
+	padding-right: 10px;
+	padding-top: 10px;
+	display: block;
+	border-bottom: 1px solid #A32638;
+}
+
+#tablecontent img{margin:0; padding:0;}
+
+#header{
+	width:900px;
+	position:relative;
+	height:125px;
+	background-image: url(library/navimages/backgroundnav.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#logo{position:absolute; display:block; width:203px; height:125px; top:0; left:62px;}
+#logo img{border:none;}
+#header ul{margin:0; padding:0;}
+#header #leftnav{
+	text-align:right;
+	list-style:none;
+	position:absolute;
+	left:585px;
+	top:25px;
+	font-weight: bold;
+}
+#header #leftnav a{text-align:right; width:150px; padding:0px 5px 0px 0; display:block; font-size:12px; font-family:Helvetica, Arial, sans-serif; color:#002198; text-decoration:none; text-transform:uppercase;}
+#header #leftnav a:hover{color:#003;}
+
+#header #rightnav{
+	text-align:left;
+	list-style:none;
+	position:absolute;
+	left:770px;
+	top:25px;
+	font-weight: bold;
+}
+#header #rightnav a{text-align:left; width:101px; display:block; padding:0px 0px 0 5px; font-size:12px; font-family:Helvetica, Arial, sans-serif; color:#002198; text-decoration:none; text-transform:uppercase;}
+#header #rightnav a:hover{color:#003;}
+
+#header li{list-style:none;}
+
+.leftside ul{
+	margin:0;
+	padding:0;
+}
+.leftside li{
+	list-style:none;
+	padding:0px 0;
+	margin-top: -2px;
+}
+.leftside li a{
+	display:block;
+	font-size:12px;
+	height:22px;
+	text-align:left;
+	background-image:url(images/navbackground.gif);
+	background-repeat:no-repeat;
+	background-position:left top;
+	margin-left: 2px;
+	padding-left: 8px;
+	padding-top: 2px;
+}
+.leftside li a:hover{
+	text-decoration:none;
+	background-position:left top;
+	color:#FFFFFF;
+	background-image: url(images/navbackgroundhover.gif);
+	background-repeat: no-repeat;
+}
+/* apply a class of "onthispage" to have the navigation bar automatically turned to red - example:
+
+<a href="whatever.html" class="onthispage"></a>
+
+Try it out when you don't have any dreamweaver library items.
+
+ */
+.leftside li a.onthispage{
+	background-position:left top;
+	background-image: url(images/navbackgroundhover.gif);
+	color: #FFFFFF;
+}
+.imagespacerightbottom {
+	padding-right: 15px;
+}
+.imageleftspace {
+	padding-left: 12px;
+}
+.sticky_image {
+	float: right;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	height: 282px;
+	width: 305px;
+}
